@@ -189,8 +189,8 @@ Aqui están las opciones del menú
   /*---------------------*/
 /* Contenido de la caja */
 .Playlist_info {
-    position: absolute;
-    margin-right: 50%;
+  display: inline-block;
+  vertical-align: top;
 }
 
 #playlist_image {
@@ -254,5 +254,9 @@ input[type=text] {
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 1rem;
+}
+
+#playlist_imagen {
+    float: left;
 }
 
