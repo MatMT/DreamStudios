@@ -186,17 +186,30 @@ Aqui están las opciones del menú
       
   }
   
-  /*---------------------*/
 /* Contenido de la caja */
 .Playlist_info {
   display: inline-block;
   vertical-align: top;
+  
 }
 
 #playlist_image {
     width: 20%
 }
 
+
+#playlist_description, #playlist_user {
+    opacity: 0.55;
+}
+
+#content {
+    position: relative;
+    margin-left: 30%;
+    padding-top: 2%;
+    z-index: 2;
+}
+
+/* Boton para escuchar */
 #button_play {
 
 border: none;
@@ -213,17 +226,7 @@ transition: all .2s ease-in-out;
 #button_play:hover {
 transform: scale(1.1); 
 }
-
-#playlist_description, #playlist_user {
-    opacity: 0.55;
-}
-
-#content {
-    position: relative;
-    margin-left: 30%;
-    padding-top: 2%;
-    z-index: 2;
-}
+/* parte del usuario que se encuentra en uso */
 
 #user {
     background-color: white;
@@ -245,6 +248,8 @@ transform: scale(1.1);
         color: gray;
     }
 
+/* Buscador de la parte superior */
+
 input[type=text] {
   width: 40%;
   padding: 12px 20px;
@@ -254,9 +259,5 @@ input[type=text] {
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 1rem;
-}
-
-#playlist_imagen {
-    float: left;
 }
 
