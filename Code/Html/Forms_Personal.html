@@ -4,22 +4,21 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Formulario</title>
-        <link rel="stylesheet" href="/Code/Css/forms.css">
+        <link rel="stylesheet" href="../Css/forms.css">
     </head>
     <body>
     <div class="MEGADIV">
         <div class="Logo">
-            <image src="/Code/Assets/images/Logo inicio de sesion.png" id="logo">
+            <image src="../Assets/images/Logo inicio de sesion.png" id="logo">
         </div>
         <div class="Introduction">
             <h1>Registrarse para soñar!</h1>
+            <br>
             <p>¿Hay música en el espacio exterior?</p>
         </div>
         <form id="personal-data">
 
         <div id="datos_form">
-            <div class="fondo_black_opasitive">
-
             </div>
                 <div class="datos">
                     <label for="NameType">¿Como te llamaremos?</label>
@@ -27,22 +26,22 @@
                     <input type="text" name="NameType"  placeholder="Tu nombre de Usuario" class="nombre" id="NameType" required>
                 </div>
                 <div class="datos">
-                    <label for="EmailType">Ingresa tu correo eléctronico</label>
+                    <label for="EmailType">Tu correo eléctronico</label>
                     <br>
                     <input type="email" name="EmailType" placeholder="correo@example.com"  class="nombre" id="EmailType" required>
                 </div>
                 <div class="datos">
                     <label for="PassType">Establece tu contraseña</label>
                     <br>
-                    <input type="password" name="PassType" placeholder="Contraseña123..."  class="nombre" id="PassType" required>
+                    <input type="password" name="PassType" placeholder="Tu contraseña segura"  class="nombre" id="PassType" required>
                 </div>
                 <div class="datos">
                     <label for="AgeType">¿Cuantos años tienes?</label>           
                     <br>         
                     <input type="number" name="AgeType" min="0" max="120" placeholder="0"  id="AgeType" required>
                 </div>
-                <div class="datos_buttom">
-                    ¿Cúal es tu género?           
+                ¿Cúal es tu género?          
+                <div class="datos_button">
                     <br>         
                     <input type="radio" name="GenderType" value="Mujer" id="AgeType" placeholder="Mujer" required><label for="GenderType" >Mujer</label><br>
                     <input type="radio" name="GenderType" value="Hombre" id="AgeType" required><label for="GenderType">Hombre</label><br>
@@ -52,7 +51,6 @@
                 <input type="submit" value="Enviar" class="boton">
                 <input type="reset" value="Borrar" class="boton">
             </div>
-        </div>
         </form>
     </div>
     </body>
