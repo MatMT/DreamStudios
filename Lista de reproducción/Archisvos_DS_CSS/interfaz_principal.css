@@ -19,10 +19,13 @@ body::before{
     height: 100%;
     position: absolute;
 }
-.box_content {
+.box_content, .list {
      color: white;
     font-weight: normal;
     font-size: 1.10rem;
+}
+
+.box_content {
     position: absolute;
 }
 .big_class{
@@ -190,7 +193,7 @@ Aqui están las opciones del menú
 .Playlist_info {
   display: inline-block;
   vertical-align: top;
-  
+ 
 }
 
 #playlist_image {
@@ -204,7 +207,7 @@ Aqui están las opciones del menú
 
 #content {
     position: relative;
-    margin-left: 30%;
+    margin-left: 20%;
     padding-top: 2%;
     z-index: 2;
 }
@@ -221,6 +224,7 @@ border-radius: 3px;
 font-weight: bold;
 font-size: 1.10rem;
 transition: all .2s ease-in-out;
+
 }
 
 #button_play:hover {
@@ -239,6 +243,7 @@ transform: scale(1.1);
   margin: 8px 0;
   display: inline-block;
   box-sizing: border-box;
+
 }
 #user i{
     
@@ -261,3 +266,13 @@ input[type=text] {
   font-size: 1rem;
 }
 
+/* Lista */
+#lista1 li {
+display:inline;
+padding-left:3px;
+padding-right:3px;
+}
+
+#list hr {
+    margin-top: 60%;
+}
