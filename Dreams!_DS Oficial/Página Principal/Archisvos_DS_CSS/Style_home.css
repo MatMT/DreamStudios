@@ -4,6 +4,7 @@
 *{
     margin: 0%;
     padding: 0%;
+    box-sizing: border-box;
 
 }
 
@@ -66,7 +67,6 @@ body{
     min-width: 238px;
     height: 40%;
     min-height: 300px;
-    border: black 1px solid;
     font-family: var(--our-font);
     padding-top: 30px;
     font-size: 13pt;
@@ -118,7 +118,6 @@ body{
 
 .play-list{
     margin-top: 0px;
-    border: black 1px solid;
     position: absolute;
     width: 100%;
     min-width: 238px;
@@ -142,7 +141,7 @@ body{
 
 /* Contenedor principal*/
 
-.container_dreams{
+.background-dreams{
     background-color: black;
     opacity: 0.45;
     width: 85%;
@@ -155,6 +154,34 @@ body{
     display: block;
     position: fixed;
     z-index: 0;
+}
+
+/*Buscador*/
+.container_dreams{
+    position: absolute;
+    left: 238px;
+    width: 85%;
+    height: 87%;
+}
+
+.searcher-container{
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+.searcher-container input{
+    font-family: var(--our-font);
+    background-color: white;
+    font-size: 11pt;
+    color: rgb(99, 99, 99);
+    border-radius: 20px;
+    width: 30%;
+    height: 35px;
+    border: none;
+    padding: 5px 10px;
+    
+    margin-top: 3%;
+    margin-left: 3%;
 }
 
 
