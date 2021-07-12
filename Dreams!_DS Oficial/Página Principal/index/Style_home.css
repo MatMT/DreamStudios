@@ -1,0 +1,170 @@
+:root{
+    --our-font: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/*Este div abarco todo el contenido de la página web*/
+.super_mega_box{
+    background: linear-gradient(40deg,#551cf9 12.29%, #ff5e3b 90.78%);
+    width: 100%;
+    height: 87%;   
+}
+
+/* Barra lateral, está el menú de navegación, y el logo de Dreams!*/
+.box_aside_left{
+    width: 18.25%;
+    min-width: 238px;
+    height: 87%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+.logo_box_aside{
+    width: 100%;
+    min-width: 238px;
+    height: 25%;
+    min-height: 200px;
+}
+
+
+.logo_box_aside img{
+    width: 50%;
+    min-width: 100px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 18%;
+}
+
+.logo_box_aside::before{
+    content: "";
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0.4;
+}
+
+/*Menú de la barra lateral*/
+
+.main_menu_aside{
+    color: white;
+    width: 100%;
+    min-width: 238px;
+    height: 40%;
+    min-height: 300px;
+    border: black 1px solid;
+    font-family: var(--our-font);
+    padding-top: 30px;
+    font-size: 13pt;
+}
+
+.main_menu_aside i{
+    float: left;
+    margin-left: 20px;
+    margin-right: 15px;
+    font-size: 14pt;
+}
+.main_menu_aside div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main_menu_aside div::before{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.home_dreams{
+    background-color: white;
+    width: 248px;
+    height: 55px;
+    margin-left: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #4361ee;
+    z-index: 100;
+    box-shadow: -3px 3px 6px #000;
+    -webkit-box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.733);
+    filter: shadow(color=#000, direction=0, strength=3);
+
+}
+
+.home_dreams i{
+    line-height: 55px;
+    font-size: 18pt;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.home_dreams p{
+    line-height: 55px;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+.play-list{
+    margin-top: 0px;
+    border: black 1px solid;
+    position: absolute;
+    width: 100%;
+    min-width: 238px;
+    color: white;
+    font-size: 13pt;
+    font-family: var(--our-font);
+}
+
+.create_play_list i{
+    float: left;
+    margin-left: 20px;
+    margin-right: 15px;
+    font-size: 14pt;
+}
+
+
+
+
+
+
+
+/* Contenedor principal*/
+
+.container_dreams{
+    background-color: black;
+    opacity: 0.45;
+    width: 85%;
+    height: 87%;
+    position: absolute;
+    left: 238px;
+    float: right;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+    display: block;
+    position: fixed;
+    z-index: 0;
+}
+
+
+/*Resproductor*/
+
+.player_audio_song{
+    background-color: #050a20;
+    width: 100%;
+    height: 13%;
+    position: absolute;
+    top: 86.90%;
+    border-top: white solid 0.5px;
+}

@@ -1,0 +1,18 @@
+Hola!
+
+carpeta oficial para el desarrollo de la página web
+"Dreams!_DS Oficial"
+
+
+Avisos importantes:
+
+    Se relizo un nuevo diseño para la web App Dreams pueden observarlos en la carpeta "Dreams 2.0"
+    
+    Dentro de la carpeta "Dreams!_DS Oficial" se encutran diferentes carpetas, destinadas para las páginas web 
+    que se tiene que desarrollar para formar el sio web.
+   
+    Si falta un recurso y que se encutra dentro de los diseños, me informan al Discord o WhatsApp.
+
+Atentamente 
+Mateo y Martin
+DreamStudios

@@ -1,0 +1,252 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family:Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+html{
+    height: 100%;
+
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.bigbox{
+    height: 100%;
+    background: linear-gradient(60deg, #B436D5, #5D2AEB, #0B0F3E);
+    width: 100%;
+    position: relative;
+}
+
+.bigbox::before{    
+    content: "";
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.33;
+}
+
+.aside_Dreams_left{
+    width: 15%; 
+    height: 100%;
+    background-color: #5F6FFD;
+    position: absolute;
+    float: left;
+}
+
+.logo_dreams_aside{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+.logo_dreams_aside img{
+    width: 45%;
+    margin-top: 10%;
+    margin-left:  27.5%;
+    margin-right: 27.5%;
+}
+.logo_dreams_aside h1{
+    text-align: center;
+    font-size: 22pt;
+}
+
+.menu_options_aside{
+    margin-top: 70%;
+    padding-left: 10%;
+    color: white;
+    font-size: 14pt;
+}
+.menu_options_aside div{
+    width: 90%;
+    height: 37px;
+    padding-top: 7%;
+    padding-left: 10%;
+
+}
+.menu_options_aside img{
+    float: left;
+    margin-right: 8%;
+    width: 12%;
+}
+.menu_options_aside i{
+    float: left;
+    margin-right: 10%;
+    font-size: 16pt;
+}
+
+/*Crear playlist*/
+.create_play_list_aside{
+    margin-top: 50%;
+    padding: 2% 8%;
+    color: white;
+
+}
+.create_play_list_aside hr{
+    margin-bottom: 10%;
+}
+.create_play_list_aside i{
+    float: left;
+    margin-right: 10%;
+    font-size: 14pt;
+}
+
+#home{
+    background-color: white;
+    color: #0104A6;
+    width: 96%;
+}
+
+.menu_options_aside div:hover{
+    transition-property: width;
+    transition-duration: 0.5s;
+    background-color: white;
+    color: #0104A6;
+    width: 96%;
+}
+
+#studios:hover{
+    transition-property: width;
+    transition-duration: 0.5s;
+    background-color: #0104A6;
+    color: white;
+    width: 96%;
+}
+
+/*El reproductor será el pie de página 
+Footer
+*/
+footer{
+    background-color: #79CEEC;
+    width: 100%;
+    height: 15%;
+    position: relative;
+    position: absolute;
+    top: 83.5%;
+}
+
+#line_color_down_footer {
+    background-color: #25A3C1;
+    height: 1.5%;
+    width: 100%;
+    position: absolute;
+    top: 98.5%;
+}
+
+/*Contenido Principal
+Aquii puedes poner la información contenida en el cuerpo
+*/
+
+.content_mean_web_page{
+    height: 83.5%;
+    width: 83%;
+    position: relative;
+    position: absolute;
+    left: 17%;
+}
+.header_content_dreams img{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    opacity: 0.6;
+}
+.footer_content_dreams img{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    opacity: 0.5;
+    position: absolute;
+    top: 60%;
+}
+
+/*Descripción de la canción que está reproduciendose*/
+
+.song_is_playing{
+    width: 27%;
+    height: 90%;
+    position: relative;
+    margin-top: 0.5%;
+    margin-left: 1%;
+    color: white;
+}
+
+.song_is_playing img{
+    height: 75%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.song_is_playing h3{
+    float: right;
+    width: 65%;
+    font-weight:inherit;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    font-size: 11pt;
+}
+.song_is_playing h1{
+    float: right;
+    font-size: 16pt;
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+
+.song_is_playing h2{
+    float: right;
+    font-size: 14pt;
+    position: absolute;
+    font-weight:inherit;
+    top: 55%;
+    left: 55%;
+}
+.song_is_playing i{
+    position: absolute;
+    top: 45%;
+    left: 90%;
+    font-size: 16pt;
+}
+
+.container{
+    background-color: white;
+    border: black 1px solid;
+    width: 50%;
+    height: 30%;
+    float: right;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    padding-right: 5%;
+    padding-left: 10%;
+}
+
+.player_level{
+    width: 80%;
+    -webkit-appearance: none;
+    outline: none;
+    border: none;
+    padding: 0%;
+    margin-right: 0%;
+}
+.player_level::-webkit-slider-runnable-track{
+    background-color: rgb(168, 167, 167);
+    height: 5px;
+    border-radius: 3px;
+}
+
+.player_level::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    border-radius: 100%;
+    background-color: white;
+    height: 18px;
+    width: 18px;
+    margin-top: -7px;
+}
+audio{
+    width: 60%;
+}
+
+
