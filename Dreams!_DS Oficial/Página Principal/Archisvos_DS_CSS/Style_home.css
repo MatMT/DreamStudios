@@ -149,8 +149,8 @@ body{
     height: 87%;
     position: absolute;
     left: 238px;
-    border-bottom-left-radius: 40px;
-    border-top-left-radius: 40px;
+    border-bottom-left-radius: 45px;
+    border-top-left-radius: 45px;
     display: block;
     z-index: 0;
 
@@ -178,7 +178,7 @@ body{
     font-size: 11pt;
     color: rgb(99, 99, 99);
     border-radius: 20px;
-    width: 30%;
+    width: 25%;
     height: 35px;
     border: none;
     padding: 5px 45px 5px 35px;
@@ -189,7 +189,7 @@ body{
     outline: none;
 }
 
-.searcher-container i{
+.searcher-container #nota{
     position: absolute;
     left: 78px;
     top: 37px;
@@ -199,6 +199,15 @@ body{
 
 
 
+}
+
+.searcher-container #menu{
+    position:absolute;
+    top: 18px;
+    left: 73%;
+
+    color: white;
+    font-size: 2.54rem;
 }
 
 
