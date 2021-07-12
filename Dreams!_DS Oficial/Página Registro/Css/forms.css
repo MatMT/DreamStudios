@@ -6,27 +6,64 @@
 }
 
 html {
-  font-size: 125%;
-  background: linear-gradient(#0b0f3e, #5d2aeb, #b436d5);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
-html::after {
+body{
+  width: 100%;
+  height: 100%;
+}
+
+html::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgb(0, 0, 0);
+  opacity: 0.7;
   z-index: -1;
 }
 
+.mega-div-container{
+  background: linear-gradient(37deg,#b436d5, #5d2aeb, #0b0f3e);
+  width: 100%;
+  height: 100%;
+  min-width: 1280px;
+  position: relative;
+  position: fixed;
+}
+
+.mega-div-container::before{
+  content: "";
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  min-width: 1280px;
+  background-color: black;
+  opacity: 0.7;
+  position: fixed;
+}
+
+
+#background-imge-dreams{
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+}
+.mein-container{
+  width: 40%;
+  height: 90%;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  border: black 1px solid;
+}
+
 #logo {
-  width: 10%;
+  width: 40%;
 }
 
 .Introduction,
@@ -35,9 +72,14 @@ html::after {
   color: #fff;
 }
 
+.Introduction{
+  margin-top: 30px;
+}
+
 .Logo {
   padding-bottom: 1%;
   padding-top: 1%;
+  margin-top: 50px;
 }
 
 form {
@@ -46,8 +88,9 @@ form {
   margin-top: 2em;
   margin-left: auto;
   margin-right: auto;
-  width: 35%;
+  width: 100%;
   height: 80%;
+  position: absolute;
 }
 
 label {
@@ -60,6 +103,9 @@ div .datos {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3%;
+}
+form input{
+  font-size: 12pt;
 }
 
 form .datos input {
