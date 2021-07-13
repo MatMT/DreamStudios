@@ -275,28 +275,33 @@ body{
 /* Barra Central y nombre de la canción y artista*/
 
 .center-song{
-    width: 40%;
+    width: 37%;
     height: 30%;
     min-width: 450px;
     
     position: absolute;
     top: 15%;
-    left: 30%;
+    left: 33.0%;
+
+    clear: right;
 
 }
 @media screen and (max-width: 900px) {
     .center-song{
-        left: 350px;
+        left: 340px;
+    }
+
+    .center-bar-time{
+        left: 340px;
     }
 }
 
 .center-song p{
     font-family: var(--our-font);
-    font-size: 1rem;
     color: white;
 
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #name-song{
@@ -312,7 +317,7 @@ body{
 #name-artist-2{
     float: right;
 
-    font-size: 1.1;
+    font-size: 1rem;
 
     margin-top: 1%;
 }
@@ -321,13 +326,87 @@ body{
 
 
 .center-bar-time{
-    width: 40%;
+    width: 37%;
     height: 30%;
     min-width: 450px;
-    border: white 1px solid;
     
     position: absolute;
     top: 50%;
-    left: 30%;
+    left: 33.0%;
 
+    color: white;
+    font-family: var(--our-font);
+    font-size: 0.8rem;
+
+    clear: right;
+
+}
+
+.bar-time{
+    background-color: #759EFC;
+    height: 3px;
+    width: 84%;
+    margin-top: 2%;
+    clear: right;
+    margin-right: 0%;
+    /*border: white 1px solid;*/
+
+    position: absolute;
+    top: 5px;
+    left: 38px;
+
+}
+
+.time-start{
+    float: left;
+    margin-top: 8px;
+    margin-left: 3px;
+
+}
+
+.time-end{
+    float: right;
+    margin-top: 8px;
+    margin-right: 3px;
+}
+
+
+/*Iconos de Play y Pausa*/
+
+.icons-play-pause{
+    color: white;
+    width: 20%;
+    height: 90%;
+    float: right;
+
+    position: absolute;
+    left: 77%;
+    top: 5%;
+    padding: 10px;
+}
+
+.icons-play-pause #before-song{
+    font-size: 2rem;
+    float: left;
+    position: absolute;
+    left: 30px;
+    top: 30%;
+}
+
+.icons-play-pause img{
+    width: 40px;
+    position: absolute;
+    left: 105px;
+    top: 25%;
+
+    
+}
+
+.icons-play-pause #next-song{
+    font-size: 2rem;
+    float: right;
+
+    position: absolute;
+    left: 175px;
+    top: 30%;
 }
