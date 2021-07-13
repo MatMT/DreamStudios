@@ -277,12 +277,17 @@ body{
 .center-song{
     width: 40%;
     height: 30%;
-    /*min-width: 450px;*/
+    min-width: 450px;
     
     position: absolute;
     top: 15%;
     left: 30%;
 
+}
+@media screen and (max-width: 900px) {
+    .center-song{
+        left: 350px;
+    }
 }
 
 .center-song p{
@@ -312,4 +317,17 @@ body{
     margin-top: 1%;
 }
 
+/*Barra de progresooo*/
+
+
+.center-bar-time{
+    width: 40%;
+    height: 30%;
+    min-width: 450px;
+    border: white 1px solid;
     
+    position: absolute;
+    top: 50%;
+    left: 30%;
+
+}
