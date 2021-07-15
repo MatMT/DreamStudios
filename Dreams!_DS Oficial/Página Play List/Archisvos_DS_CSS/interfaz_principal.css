@@ -1,0 +1,278 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+html {
+    height: 100%;
+    width: 100%;
+}
+body{
+    background: linear-gradient(50deg,#B436D5,#5f6ffd, #0B0F3E )
+}
+
+body::before{
+    content: "";
+    background-color: black;
+    opacity: 0.33;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.box_content, .list {
+     color: white;
+    font-weight: normal;
+    font-size: 1.10rem;
+}
+
+.box_content {
+    position: absolute;
+}
+.big_class{
+    position: relative;
+    width: 100%;
+    height: 910px;
+}
+
+/*Partes de la barra lateral ASIDE_LEFT*/
+.aside_left{
+    float: left;
+    width: 14%;
+    height: 910px;
+    background-color: #5F6FFD;
+    position: relative;
+}
+.logo{
+    width: 70%;
+    height: 150px;
+    font-family:Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    padding-top: 15%;
+    margin-bottom: 60%;
+    /*border: solid black 1px;*/
+
+}
+.logo img{
+    width: 58%;
+    margin-top: 10%;
+    margin-left:  21%;
+    margin-right: 21%;
+}
+
+.logo h1{
+   color:white;
+   text-align: center;
+   font-weight: bold;
+   font-size: 2rem; 
+   position: absolute;
+}
+
+/*Menu Options
+Aqui están las opciones del menú
+*/
+
+.menu_options div{
+    color: white;
+    margin: 1.75rem;
+    padding-left: 1.6rem;
+    font-weight: normal;
+    font-size: 1.10rem;
+    
+}
+
+.menu_options i{
+    font-size: 1.5rem;
+    position: absolute;
+    left: 10%;
+}
+
+#studios img{
+    width: 1.5rem;
+    position: absolute;
+    left: 10%;
+}
+
+
+
+/*Ecabezado de la interfaz*/
+#fondo_1{
+    width: 80%;
+    height: 200px;
+    float: right;
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#fondo_1 img{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/*BOX_PRINCIPAL cuerpo*/
+
+#fondo_2{
+    width: 78%;
+    height: 500px;
+    float: right;
+    position: relative;
+}
+
+#fondo_2 img{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+
+/*Diseño Resproductor*/
+.resproductor{
+    width: 100%;
+    height: 117px;
+    background: #79CEEC;
+    position: absolute;
+    top: 86%;
+    left: 0%;
+}
+
+/*play*/
+
+#play img{
+    width: 4%;
+    position: absolute;
+    top: 43%;
+    left: 48%;
+}
+
+#play img::before{
+    content: "";
+    background-color: red;
+    width: 4%;
+    height: 10px;
+    position: absolute;
+}
+#play:hover {
+    cursor: pointer;
+}
+
+
+#line_down{
+    background-color: #25A3C1;
+    width: 100%;
+    height: 14px;
+    position: absolute;
+    top: 98%;
+}
+
+/*  efecto hover  menu*/
+
+.menu_options div{
+    transition:all .5s ease-in-out;
+   padding-right: 20%;
+   width: 50%;
+  }
+  
+  
+  .menu_options div:hover{
+      background:white;
+      color: #0B0F3E;
+      border-radius: 3px;
+      padding-left: 20%;
+      cursor: pointer;
+      
+  }
+  
+/* Contenido de la caja */
+.Playlist_info {
+  display: inline-block;
+  vertical-align: top;
+ 
+}
+
+#playlist_image {
+    width: 20%
+}
+
+
+#playlist_description, #playlist_user {
+    opacity: 0.55;
+}
+
+#content {
+    position: relative;
+    margin-left: 20%;
+    padding-top: 2%;
+    z-index: 2;
+}
+
+/* Boton para escuchar */
+#button_play {
+
+border: none;
+color: white;
+padding: 9px 39px;
+background-color: coral;
+cursor: pointer;
+border-radius: 3px;
+font-weight: bold;
+font-size: 1.10rem;
+transition: all .2s ease-in-out;
+
+}
+
+#button_play:hover {
+transform: scale(1.1); 
+}
+/* parte del usuario que se encuentra en uso */
+
+#user {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 3%;
+    margin-right: 85%;
+    padding-left: 1.6rem;
+    width: 15%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+
+}
+#user i{
+    
+        font-size: 1.5rem;
+        position: absolute;
+        left:0%;
+        color: gray;
+    }
+
+/* Buscador de la parte superior */
+
+input[type=text] {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+/* Lista */
+#lista1 li {
+display:inline;
+padding-left:3px;
+padding-right:3px;
+}
+
+#list hr {
+    margin-top: 60%;
+}

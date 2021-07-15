@@ -44,10 +44,10 @@ body{
 
 
 .logo_box_aside img{
-    width: 50%;
-    min-width: 100px;
-    margin-left: 25%;
-    margin-right: 25%;
+    width: 120px;
+    min-width: 120px;
+    margin-left: 59px;
+    margin-right: 59px;
     margin-top: 18%;
 }
 
@@ -145,12 +145,11 @@ body{
 .super_mega_box .background-dreams{
     background-color: black;
     opacity: 0.45;
-    width: 81.75%;
+    width: 85%;
     height: 87%;
     position: absolute;
     left: 238px;
-    border-bottom-left-radius: 40px;
-    border-top-left-radius: 40px;
+    border-top-left-radius: 45px;
     display: block;
     z-index: 0;
 
@@ -158,12 +157,14 @@ body{
     position: fixed;
 }
 
+
+/*Encabezado*/
 /*Buscador*/
 .container_dreams{
     position: absolute;
     position: fixed;
     left: 238px;
-    width: 81.75%;
+    width: 100%;
     height: 87%;
 }
 
@@ -171,6 +172,8 @@ body{
     position: absolute;
     width: 100%;
     position: relative;
+    /*border: black solid 1px;*/
+    height: 100px;
 }
 .searcher-container input{
     font-family: var(--our-font);
@@ -178,7 +181,7 @@ body{
     font-size: 11pt;
     color: rgb(99, 99, 99);
     border-radius: 20px;
-    width: 30%;
+    width: 25%;
     height: 35px;
     border: none;
     padding: 5px 45px 5px 35px;
@@ -189,7 +192,7 @@ body{
     outline: none;
 }
 
-.searcher-container i{
+.searcher-container #nota{
     position: absolute;
     left: 78px;
     top: 37px;
@@ -198,6 +201,28 @@ body{
     font-size: 14pt;
 
 
+
+}
+
+.searcher-container #menu{
+    position:absolute;
+    top: 18px;
+    left: 73%;
+
+    color: white;
+    font-size: 2.54rem;
+}
+
+/*Linea gris*/
+
+.line-soft{
+    background-color: #D3D3D3;
+    width: 74%;
+    height: 1px;
+    
+    position: absolute;
+    left: 5%;
+    top: 100%;
 
 }
 
@@ -210,5 +235,178 @@ body{
     height: 13%;
     position: absolute;
     top: 87%;
-    border-top: white solid 0.5px;
+    border-top: rgba(255, 255, 255, 0.404) solid 0.1px;
+}
+.song-is-playing{
+    width: 280px;
+    height: 90%;
+    /*border: black solid 1px;*/
+
+    position: relative;
+}
+
+.song-is-playing img{
+    width: 28%;
+    max-width: 75px;
+    min-width: 70px;
+
+    position: absolute;
+    left: 50px;
+    top: 20%;
+}
+.song-is-playing p{
+    float: right;
+    color: white;
+    font-family:  var(--our-font);
+    font-size: 1.1rem;
+}
+.song-is-playing #enjoy-with{
+    position: absolute;
+    left: 140px;
+    top: 36%;
+}
+
+.song-is-playing #name-artist{
+    position: absolute;
+    left: 140px;
+    top: 55%;
+}
+
+/* Barra Central y nombre de la canción y artista*/
+
+.center-song{
+    width: 37%;
+    height: 30%;
+    min-width: 450px;
+    
+    position: absolute;
+    top: 15%;
+    left: 33.0%;
+
+    clear: right;
+
+}
+@media screen and (max-width: 900px) {
+    .center-song{
+        left: 340px;
+    }
+
+    .center-bar-time{
+        left: 340px;
+    }
+}
+
+.center-song p{
+    font-family: var(--our-font);
+    color: white;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#name-song{
+    float: left;
+
+    font-weight: bold;
+    font-size: 1.3rem;
+
+    margin-top: 0.5%;
+}
+
+
+#name-artist-2{
+    float: right;
+
+    font-size: 1rem;
+
+    margin-top: 1%;
+}
+
+/*Barra de progresooo*/
+
+
+.center-bar-time{
+    width: 37%;
+    height: 30%;
+    min-width: 450px;
+    
+    position: absolute;
+    top: 50%;
+    left: 33.0%;
+
+    color: white;
+    font-family: var(--our-font);
+    font-size: 0.8rem;
+
+    clear: right;
+
+}
+
+.bar-time{
+    background-color: #759EFC;
+    height: 3px;
+    width: 84%;
+    margin-top: 2%;
+    clear: right;
+    margin-right: 0%;
+    /*border: white 1px solid;*/
+
+    position: absolute;
+    top: 5px;
+    left: 38px;
+
+}
+
+.time-start{
+    float: left;
+    margin-top: 8px;
+    margin-left: 3px;
+
+}
+
+.time-end{
+    float: right;
+    margin-top: 8px;
+    margin-right: 3px;
+}
+
+
+/*Iconos de Play y Pausa*/
+
+.icons-play-pause{
+    color: white;
+    width: 20%;
+    height: 90%;
+    float: right;
+
+    position: absolute;
+    left: 77%;
+    top: 5%;
+    padding: 10px;
+}
+
+.icons-play-pause #before-song{
+    font-size: 2rem;
+    float: left;
+    position: absolute;
+    left: 30px;
+    top: 30%;
+}
+
+.icons-play-pause img{
+    width: 40px;
+    position: absolute;
+    left: 105px;
+    top: 25%;
+
+    
+}
+
+.icons-play-pause #next-song{
+    font-size: 2rem;
+    float: right;
+
+    position: absolute;
+    left: 175px;
+    top: 30%;
 }
