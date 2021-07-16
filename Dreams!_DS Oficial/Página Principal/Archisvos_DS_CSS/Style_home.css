@@ -22,14 +22,14 @@ body{
 .super_mega_box{
     background: linear-gradient(40deg,#551cf9 12.29%, #ff5e3b 90.78%);
     width: 100%;
-    height: 89%;
+    height: 90%;
     position: relative; 
 }
 
 /* Barra lateral, está el menú de navegación, y el logo de Dreams!*/
 .box_aside_left{
-    width: 18.25%;
-    min-width: 238px;
+    width: 18%;
+    min-width: 232px;
     height: 87%;
     position: absolute;
     top: 0%;
@@ -57,13 +57,13 @@ body{
     height: 25%;
     position: absolute;
     background-color: rgba(0, 0, 0, 0);
-    opacity: 0.4;
 }
 
 /*Menú de la barra lateral*/
 
+
 .main_menu_aside{
-    color: white;
+    color: rgb(199, 197, 197);
     width: 100%;
     min-width: 238px;
     height: 40%;
@@ -71,71 +71,102 @@ body{
     font-family: var(--our-font);
     padding-top: 30px;
     font-size: 13pt;
+
 }
 
 .main_menu_aside i{
     float: left;
-    margin-left: 20px;
+    margin-left: 15px;
     margin-right: 15px;
-    font-size: 14pt;
+    font-size: 18pt;
 }
 .main_menu_aside div{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+    width: 248px;
+    height: 48px;
+    line-height: 48px;
+
 }
 
-.main_menu_aside div::before{
-    margin-top: 20px;
-    margin-bottom: 20px;
+.option :hover{
+    color: white;
+    transition: 0.6s;
+
+    
 }
 
 
-.home_dreams{
+
+/*OPción activa*/
+.active-option{
     background-color: white;
     width: 248px;
-    height: 55px;
-    margin-left: 5px;
+    height: 48px;
+    margin-left: 1px;
     margin-top: 25px;
-    margin-bottom: 25px;
+    
     color: #4361ee;
     z-index: 100;
     box-shadow: -3px 3px 6px #000;
     -webkit-box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.733);
     filter: shadow(color=#000, direction=0, strength=3);
 
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
 }
 
-.home_dreams i{
-    line-height: 55px;
-    font-size: 18pt;
+.active-option i{
+    line-height: 50px;
+    font-size: 22pt;
     margin-right: 10px;
     margin-left: 10px;
 }
-.home_dreams p{
-    line-height: 55px;
+.active-option p{
+    line-height: 48px;
     font-weight: bold;
-    font-size: 15pt;
-}
-
-.play-list{
-    margin-top: 0px;
-    position: absolute;
-    width: 100%;
-    min-width: 238px;
-    color: white;
-    font-size: 13pt;
-    font-family: var(--our-font);
-}
-
-.create_play_list i{
-    float: left;
-    margin-left: 20px;
-    margin-right: 15px;
     font-size: 14pt;
 }
 
 
 
+/*Crear Play List*/
+
+.play-list{
+    color: rgb(214, 212, 212);
+    width: 100%;
+    min-width: 238px;
+    height: 40%;
+    min-height: 300px;
+    font-family: var(--our-font);
+    padding-top: 30px;
+    font-size: 13pt;
+
+}
+
+.create_play_list{
+    margin-bottom: 8px;
+    width: 238px;
+    height: 48px;
+    line-height: 48px;
+}
+
+.create_play_list i{
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 20pt;
+}
+
+.create_play_list p{
+    float: left;
+}
+
+.create_play_list:hover {
+    color: white;
+    transition: 0.6s;
+
+}
 
 
 
@@ -144,12 +175,12 @@ body{
 
 .super_mega_box .background-dreams{
     background-color: black;
-    opacity: 0.45;
-    width: 85%;
-    height: 89%;
+    opacity: 0.4;
+    width: 100%;
+    height: 90%;
     position: absolute;
-    left: 238px;
-    border-top-left-radius: 45px;
+    left: 232px; /*238*/
+    /*border-top-left-radius: 60px;*/
     display: block;
     z-index: 0;
 
@@ -163,17 +194,16 @@ body{
 .container_dreams{
     position: absolute;
     position: fixed;
-    left: 238px;
+    left: 232px;
     width: 100%;
-    height: 87%;
+    height: 90%;
 }
 
 .searcher-container{
     position: absolute;
     width: 100%;
     position: relative;
-    /*border: black solid 1px;*/
-    height: 100px;
+    height: 90px;
 }
 .searcher-container input{
     font-family: var(--our-font);
@@ -186,16 +216,16 @@ body{
     border: none;
     padding: 5px 45px 5px 35px;
     
-    margin-top: 30px;
-    margin-left: 70px;
+    margin-top: 25px;
+    margin-left: 65px;
 
     outline: none;
 }
 
 .searcher-container #nota{
     position: absolute;
-    left: 78px;
-    top: 37px;
+    left: 73px;
+    top: 32px;
 
     color: #878787;
     font-size: 14pt;
@@ -232,11 +262,25 @@ body{
 .player_audio_song{
     background-color: #050a20;
     width: 100%;
-    height: 11%;
+    height: 10%;
     position: absolute;
-    top: 89%;
+    top: 90%;
     border-top: rgba(255, 255, 255, 0.404) solid 0.1px;
 
+}
+
+@media screen and (max-height: 700px){
+    .player_audio_song{
+        height: 11%;
+        top: 89%;
+    }
+    .super_mega_box{
+        height: 89%;
+    }
+    .background-dreams{
+        height: 89%;
+    }
+    
 }
 .song-is-playing{
     width: 280px;
@@ -248,10 +292,7 @@ body{
 }
 
 .song-is-playing img{
-    width: 25%;
-    max-width: 70px;
-    min-width: 65px;
-
+    height: 90%;
 
     position: absolute;
     left: 50px;
@@ -268,6 +309,7 @@ body{
     display: block;
 
     width: 110px;
+    font-style: italic;
 
     margin: 25px 10px 7px 128px;
 }
@@ -286,8 +328,8 @@ body{
 .more-icons{
     width: 10%;
     height: 100%;
-    border: white 1px solid;
 
+    padding: 0px 5px;
 
     position: absolute;
     top: 0%;
@@ -296,7 +338,12 @@ body{
 
 .more-icons i{
     color: white;
-    margin-top: 30px;
+    float: right;
+    margin: 35px 7px;
+
+    font-size: 1.05rem;
+
+    cursor: pointer;
 }
 /* Barra Central 
 
@@ -312,6 +359,7 @@ Nombre de la canción y artista*/
     left: 33.0%;
 
     clear: right;
+    box-sizing: border-box;
 
 }
 
@@ -329,16 +377,21 @@ Nombre de la canción y artista*/
     font-family: var(--our-font);
     color: white;
 
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
+.center-song i{
+    color: white;
+    margin-left: 10px;
+    margin-top: 0.6%;
+
+    float: left;
+}
 #name-song{
     float: left;
 
     font-weight: 300;
     font-size: 1rem;
-
+    font-weight: bold;
     margin-top: 0.5%;
 }
 
