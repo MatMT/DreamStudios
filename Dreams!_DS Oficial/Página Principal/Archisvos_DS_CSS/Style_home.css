@@ -22,7 +22,7 @@ body{
 .super_mega_box{
     background: linear-gradient(40deg,#551cf9 12.29%, #ff5e3b 90.78%);
     width: 100%;
-    height: 87%;
+    height: 89%;
     position: relative; 
 }
 
@@ -146,7 +146,7 @@ body{
     background-color: black;
     opacity: 0.45;
     width: 85%;
-    height: 87%;
+    height: 89%;
     position: absolute;
     left: 238px;
     border-top-left-radius: 45px;
@@ -232,47 +232,75 @@ body{
 .player_audio_song{
     background-color: #050a20;
     width: 100%;
-    height: 13%;
+    height: 11%;
     position: absolute;
-    top: 87%;
+    top: 89%;
     border-top: rgba(255, 255, 255, 0.404) solid 0.1px;
+
 }
 .song-is-playing{
     width: 280px;
-    height: 90%;
-    /*border: black solid 1px;*/
-
+    height: 85%;
+    
     position: relative;
+
+    border: rgba(255, 255, 255, 0) 1px solid;
 }
 
 .song-is-playing img{
-    width: 28%;
-    max-width: 75px;
-    min-width: 70px;
+    width: 25%;
+    max-width: 70px;
+    min-width: 65px;
+
 
     position: absolute;
     left: 50px;
-    top: 20%;
+    top: 18%;
+
 }
 .song-is-playing p{
-    float: right;
     color: white;
     font-family:  var(--our-font);
-    font-size: 1.1rem;
+    font-size: 0.90rem;
+    
 }
 .song-is-playing #enjoy-with{
-    position: absolute;
-    left: 140px;
-    top: 36%;
+    display: block;
+
+    width: 110px;
+
+    margin: 25px 10px 7px 128px;
 }
 
 .song-is-playing #name-artist{
-    position: absolute;
-    left: 140px;
-    top: 55%;
+
+    display: block;
+    width: 150px;
+
+    margin: 7px 10px 20px 128px;
 }
 
-/* Barra Central y nombre de la canción y artista*/
+
+/*Más Iconos*/
+
+.more-icons{
+    width: 10%;
+    height: 100%;
+    border: white 1px solid;
+
+
+    position: absolute;
+    top: 0%;
+    left: 20%;
+}
+
+.more-icons i{
+    color: white;
+    margin-top: 30px;
+}
+/* Barra Central 
+
+Nombre de la canción y artista*/
 
 .center-song{
     width: 37%;
@@ -280,12 +308,13 @@ body{
     min-width: 450px;
     
     position: absolute;
-    top: 15%;
+    top: 16%;
     left: 33.0%;
 
     clear: right;
 
 }
+
 @media screen and (max-width: 900px) {
     .center-song{
         left: 340px;
@@ -307,8 +336,8 @@ body{
 #name-song{
     float: left;
 
-    font-weight: bold;
-    font-size: 1.3rem;
+    font-weight: 300;
+    font-size: 1rem;
 
     margin-top: 0.5%;
 }
@@ -317,7 +346,7 @@ body{
 #name-artist-2{
     float: right;
 
-    font-size: 1rem;
+    font-size: 0.95rem;
 
     margin-top: 1%;
 }
@@ -383,18 +412,20 @@ body{
     left: 77%;
     top: 5%;
     padding: 10px;
+
+    border: solid 1px black;
 }
 
 .icons-play-pause #before-song{
-    font-size: 2rem;
+    font-size: 1.5rem;
     float: left;
     position: absolute;
-    left: 30px;
-    top: 30%;
+    left: 40px;
+    top: 35%;
 }
 
 .icons-play-pause img{
-    width: 40px;
+    width: 30px;
     position: absolute;
     left: 105px;
     top: 25%;
@@ -403,10 +434,10 @@ body{
 }
 
 .icons-play-pause #next-song{
-    font-size: 2rem;
+    font-size: 1.5rem;
     float: right;
 
     position: absolute;
-    left: 175px;
-    top: 30%;
+    left: 165px;
+    top: 35%;
 }
