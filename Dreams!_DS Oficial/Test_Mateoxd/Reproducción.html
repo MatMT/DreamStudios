@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reproductor</title>
+        <script src="js/jquery.js"></script>
+        <link rel="icon" href="../../Recursos/Iconos/Ds_logo.ico">
+        <style type="text/css">
+        
+        </style>
+    </head>
+
+    <body>
+        <div class="bg_image">
+            <div class="backplayer">
+            <img src="img/poster1.jpg"></div>
+        </div>
+        <main>
+            <div id="image">
+            <img src="img/poster2"></div>
+        </main>
+        <div class="player">
+            <div id="songTitle">Demo</div>
+            <div id="buttons">
+                <button id="id"=pre><img src="img/button.png"></button>
+                <button id="id"=play><img src="img/button.png"></button>
+                <button id="id"=next><img src="img/button.png"></button>
+            </div>
+        </div>
+        <div id="seek-bar">
+            <div id="fill"></div>
+            <div id="handle"></div>
+        </div>
+    </body>
+</html>
+
+<script type="text/javascript">
+    var songs = ["musica/audio1.mp3", "musica/audi2.mp3"];
+    var imagen = ["img/poste1.jpg", "img/poster2.jpg"];
+    var sonTitle = document.getElementById("fill");
+
+    var song = new Audio ();
+    var currentSong = 0;
+    window.onload = playSong;
+
+    function playSong(){
+        song.src = songs [currentSong];
+        songTitle.textContent = songs[currentSong];
+        song.play()
+    }
+
+    function playOrPauseSong(){
+        if(song.paused){
+            song.play();
+            $('#play img').attr("src","img/Pause.png");
+        }else{
+            song.pause();
+            $('#play img').attr("src","img/play.png");
+        }
+    }
+
+    song.addEventListener('timeupdate', function(){
+        var position=song.currentTime /song.duration;
+        fillBar.style.width = position * 100 + '%';
+    });
+
+    function next(){
+        currentSong++;
+        if(currentSong>2){
+            currentSong=0;
+        }
+
+        playSong();
+        $('#play img').attr("src","img/Pause.png");
+        $('#image img').attr("src",poster[currentSong]);
+        $('#bg img').attr("src",poster[currentSong]);
+    }
+</script>
