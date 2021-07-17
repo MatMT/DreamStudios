@@ -1,0 +1,568 @@
+:root{
+    --our-font: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/*Este div abarco todo el contenido de la página web*/
+.super_mega_box{
+    background: linear-gradient(40deg, #ff5e3b 12.29%, #551cf9 90.78%);
+    width: 100%;
+    height: 90%;
+    position: relative; 
+}
+
+/* Barra lateral, está el menú de navegación, y el logo de Dreams!*/
+.box_aside_left{
+    width: 18%;
+    min-width: 232px;
+    height: 87%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+.logo_box_aside{
+    width: 100%;
+    min-width: 238px;
+    height: 25%;
+    min-height: 200px;
+}
+
+
+.logo_box_aside img{
+    width: 120px;
+    min-width: 120px;
+    margin-left: 59px;
+    margin-right: 59px;
+    margin-top: 18%;
+}
+
+.logo_box_aside::before{
+    content: "";
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/*Menú de la barra lateral*/
+
+
+.main_menu_aside{
+    color: rgb(199, 197, 197);
+    width: 100%;
+    min-width: 238px;
+    height: 40%;
+    min-height: 300px;
+    font-family: var(--our-font);
+    padding-top: 30px;
+    font-size: 13pt;
+
+}
+
+.main_menu_aside i{
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 18pt;
+}
+.main_menu_aside div{
+    margin-bottom: 8px;
+    width: 248px;
+    height: 48px;
+    line-height: 48px;
+
+}
+
+.option :hover{
+    color: white;
+    transition: 0.6s;
+
+    
+}
+
+
+
+/*OPción activa*/
+.active-option{
+    background-color: white;
+    width: 248px;
+    height: 48px;
+    margin-left: 1px;
+    margin-top: 25px;
+    
+    color: #4361ee;
+    z-index: 100;
+    box-shadow: -3px 3px 6px #000;
+    -webkit-box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.733);
+    filter: shadow(color=#000, direction=0, strength=3);
+
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.active-option i{
+    line-height: 50px;
+    font-size: 22pt;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.active-option p{
+    line-height: 48px;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+
+
+/*Crear Play List*/
+
+.play-list{
+    color: rgb(214, 212, 212);
+    width: 100%;
+    min-width: 238px;
+    height: 40%;
+    min-height: 300px;
+    font-family: var(--our-font);
+    padding-top: 30px;
+    font-size: 13pt;
+
+}
+
+.create_play_list{
+    margin-bottom: 8px;
+    width: 238px;
+    height: 48px;
+    line-height: 48px;
+}
+
+.create_play_list i{
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 20pt;
+}
+
+.create_play_list p{
+    float: left;
+}
+
+.create_play_list:hover {
+    color: white;
+    transition: 0.6s;
+
+}
+
+
+
+
+/* Contenedor principal*/
+
+.super_mega_box .background-dreams{
+    background-color: black;
+    opacity: 0.4;
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    left: 232px; /*238*/
+    /*border-top-left-radius: 60px;*/
+    display: block;
+    z-index: 0;
+
+    float: right;
+    position: fixed;
+}
+
+
+/*Encabezado*/
+/*Buscador*/
+.container_dreams{
+    position: absolute;
+    position: fixed;
+    left: 232px;
+    width: 100%;
+    height: 90%;
+}
+
+.searcher-container{
+    position: absolute;
+    width: 100%;
+    position: relative;
+    height: 90px;
+}
+.searcher-container input{
+    font-family: var(--our-font);
+    background-color: white;
+    font-size: 11pt;
+    color: rgb(99, 99, 99);
+    border-radius: 20px;
+    width: 25%;
+    height: 35px;
+    border: none;
+    padding: 5px 45px 5px 35px;
+    
+    margin-top: 25px;
+    margin-left: 65px;
+
+    outline: none;
+}
+
+.searcher-container #nota{
+    position: absolute;
+    left: 73px;
+    top: 32px;
+
+    color: #878787;
+    font-size: 14pt;
+
+
+
+}
+
+.searcher-container #menu{
+    position:absolute;
+    top: 18px;
+    left: 73%;
+
+    color: white;
+    font-size: 2.54rem;
+}
+
+/*Linea gris*/
+
+.line-soft{
+    background-color: #D3D3D3;
+    width: 74%;
+    height: 1px;
+    
+    position: absolute;
+    left: 5%;
+    top: 100%;
+
+}
+
+
+/*Resproductor*/
+
+.player_audio_song{
+    background-color: #050a20;
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 90%;
+    border-top: rgba(255, 255, 255, 0.404) solid 0.1px;
+
+}
+
+@media screen and (max-height: 700px){
+    .player_audio_song{
+        height: 11%;
+        top: 89%;
+    }
+    .super_mega_box{
+        height: 89%;
+    }
+    .background-dreams{
+        height: 89%;
+    }
+    
+}
+.song-is-playing{
+    width: 280px;
+    height: 85%;
+    
+    position: relative;
+
+    border: rgba(255, 255, 255, 0) 1px solid;
+}
+
+.song-is-playing img{
+    height: 90%;
+
+    position: absolute;
+    left: 50px;
+    top: 18%;
+
+}
+.song-is-playing p{
+    color: white;
+    font-family:  var(--our-font);
+    font-size: 0.90rem;
+    
+}
+.song-is-playing #enjoy-with{
+    display: block;
+
+    width: 110px;
+    font-style: italic;
+
+    margin: 25px 10px 7px 128px;
+}
+
+.song-is-playing #name-artist{
+
+    display: block;
+    width: 150px;
+
+    margin: 7px 10px 20px 128px;
+}
+
+
+/*Más Iconos*/
+
+.more-icons{
+    width: 10%;
+    height: 100%;
+
+    padding: 0px 5px;
+
+    position: absolute;
+    top: 0%;
+    left: 20%;
+}
+
+.more-icons i{
+    color: white;
+    float: right;
+    margin: 35px 7px;
+
+    font-size: 1.05rem;
+
+    cursor: pointer;
+}
+/* Barra Central 
+
+Nombre de la canción y artista*/
+
+.center-song{
+    width: 37%;
+    height: 30%;
+    min-width: 450px;
+    
+    position: absolute;
+    top: 16%;
+    left: 33.0%;
+
+    clear: right;
+    box-sizing: border-box;
+
+}
+
+@media screen and (max-width: 900px) {
+    .center-song{
+        left: 340px;
+    }
+
+    .center-bar-time{
+        left: 340px;
+    }
+}
+
+.center-song p{
+    font-family: var(--our-font);
+    color: white;
+
+}
+
+.center-song i{
+    color: white;
+    margin-left: 10px;
+    margin-top: 0.6%;
+
+    float: left;
+}
+#name-song{
+    float: left;
+
+    font-weight: 300;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0.5%;
+}
+
+
+#name-artist-2{
+    float: right;
+
+    font-size: 0.95rem;
+
+    margin-top: 1%;
+}
+
+/*Barra de progresooo*/
+
+
+.center-bar-time{
+    width: 37%;
+    height: 30%;
+    min-width: 450px;
+    
+    position: absolute;
+    top: 50%;
+    left: 33.0%;
+
+    color: white;
+    font-family: var(--our-font);
+    font-size: 0.8rem;
+
+    clear: right;
+
+}
+
+.bar-time{
+    background-color: #759EFC;
+    height: 3px;
+    width: 84%;
+    margin-top: 2%;
+    clear: right;
+    margin-right: 0%;
+    /*border: white 1px solid;*/
+
+    position: absolute;
+    top: 5px;
+    left: 38px;
+
+}
+
+.time-start{
+    float: left;
+    margin-top: 8px;
+    margin-left: 3px;
+
+}
+
+.time-end{
+    float: right;
+    margin-top: 8px;
+    margin-right: 3px;
+}
+
+
+/*Iconos de Play y Pausa*/
+
+.icons-play-pause{
+    color: white;
+    width: 20%;
+    height: 90%;
+    float: right;
+
+    position: absolute;
+    left: 77%;
+    top: 5%;
+    padding: 10px;
+
+    border: solid 1px black;
+}
+
+.icons-play-pause #before-song{
+    font-size: 1.5rem;
+    float: left;
+    position: absolute;
+    left: 40px;
+    top: 35%;
+}
+
+.icons-play-pause img{
+    width: 30px;
+    position: absolute;
+    left: 105px;
+    top: 25%;
+
+    
+}
+
+.icons-play-pause #next-song{
+    font-size: 1.5rem;
+    float: right;
+
+    position: absolute;
+    left: 165px;
+    top: 35%;
+}
+
+/* Boton para escuchar */
+#button_play {
+
+    border: none;
+    color: white;
+    padding: 12px 80px;
+    background-color: coral;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 1.20rem;
+    transition: transform 0.2s ease-in-out;
+    position: fixed; 
+}
+
+#button_play:hover {
+    transform: scale(1.09); 
+
+    }
+
+/* Contenido de la caja */
+.Playlist_info {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.4em ;
+    position: relative ;
+  }
+  
+  #playlist_image {
+      width: 250px;
+      box-shadow: 8px 10px 8px #0000009f;
+      margin-bottom: 1%;
+      display: block;
+      
+
+  }
+  
+  
+  #playlist_title, #playlist_user {
+      opacity: 0.55;
+      
+  
+  }
+
+  /* 
+  position: relative;
+  z-index: 2; 
+  */
+
+  
+  #content {
+      
+      margin-left: 10%;
+      padding-top: 2%;
+      
+      font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+      color: aliceblue;
+  }
+
+  /* Lista */
+  #lista1 li {
+      position: flex;
+    display:inline;
+    padding-left:3px;
+    padding-right: 0.5em; 
+    
+    }
+    
+    #list hr {
+        margin-top: 60%;
+    }
