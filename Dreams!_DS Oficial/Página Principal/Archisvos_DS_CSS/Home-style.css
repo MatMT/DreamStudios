@@ -37,7 +37,7 @@ body{
 
 .imit-aside{
     width: 232px;
-    height: 100%;
+    height: calc(100% - 100px);
 
     z-index: 0;
     
@@ -45,7 +45,7 @@ body{
 
 .main-contaier{
     width: calc(100% - 232px);
-    height: 100%;
+    height: calc(100% - 100px);
     background-color: rgba(0, 0, 0, 0.377);
 
     margin-top: 100px;
@@ -132,7 +132,7 @@ body{
 
 .active-option{
     background-color: rgb(255, 255, 255);
-    color: rgb(109, 107, 107);
+    color: #07175f;
     box-shadow: -3px 3px 6px #000;
     -webkit-box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.733);
     filter: shadow(color=#000, direction=0, strength=3);
@@ -192,6 +192,7 @@ body{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-weight: normal;
     
     width: 160px;
 
