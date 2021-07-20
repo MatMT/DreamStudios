@@ -37,7 +37,7 @@ body{
 
 .imit-aside{
     width: 232px;
-    height: 100%;
+    height: calc(100% - 100px);
 
     z-index: 0;
     
@@ -45,7 +45,7 @@ body{
 
 .main-contaier{
     width: calc(100% - 232px);
-    height: 100%;
+    height: calc(100% - 100px);
     background-color: rgba(0, 0, 0, 0.377);
 
     margin-top: 100px;
@@ -126,14 +126,13 @@ body{
 .option :hover{
     color: white;
     transition: 0.5s;
-    cursor: pointer;
 }
 
 /*Pestaña Activida "Inicio"*/
 
 .active-option{
     background-color: rgb(255, 255, 255);
-    color: rgb(109, 107, 107);
+    color: #07175f;
     box-shadow: -3px 3px 6px #000;
     -webkit-box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.733);
     filter: shadow(color=#000, direction=0, strength=3);
@@ -193,6 +192,7 @@ body{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-weight: normal;
     
     width: 160px;
 
@@ -380,6 +380,7 @@ footer{
 .line-time-song{
     width: 37%;
     height: 100%;
+    border: var(--border-cont);
 }
 
 /*Información del cantante  la canción*/
@@ -388,11 +389,12 @@ footer{
     height: 50%;
 
     padding-top: 23px;
+
+    border: var(--border-cont);
 }
 
 
 .center-song p{
-    font-family: var(--our-font);
     color: white;
 
 }
@@ -569,7 +571,7 @@ footer{
     }
 }
 
-@media screen and (max-width:750px) {
+@media screen and (max-width:800px) {
     .icons-play-pause{
         padding-top: 25px;
         padding-left: 25px;
@@ -584,7 +586,7 @@ footer{
         margin-top: 20px;
         font-size: 1rem;
     }
-    
+
 }
 
 @media screen and (max-height:750px){
@@ -611,14 +613,36 @@ footer{
     }*/
 
     .center-bar-time{
-        padding: 15px 0px;
+        padding: 7px 0px;
     }
     .center-song{
         padding-top: 18px;
     }
+    .center-song{
+        padding-top: 12px;
+    }
+    .center-bar-time{
+        padding-top: 5px;
+    }
+    .artist-enojoy{
+        padding-top: 20px;
+    }
+    .more-icons{
+        padding-top: 31px;
+    }
 
+    .picture-song-footer img{
+        margin-top: 10px;
+        height: 55px;
+    }
 
+    .icons-play-pause{
+        padding-top: 7px;
+    }
 
+    .sound-play{
+        padding-top: 31px;
+    }
 }
 
 /*-----------------padding: 12px 80px;----------------------------------------------------*/
@@ -657,14 +681,16 @@ footer{
 
 /* Contenido de la caja ---------------------------------*/
 
-.Playlist_info { font-size: 1.4vw; }
+.Playlist_info { 
+    font-size: 1.4vw; 
+    
+}
 
 .Playlist_info {
-    vertical-align: top;
     position: relative ;
     float: right;
     width: 500px;
-    border: black 1px solid;
+    
     margin-top: 5%;
     margin-right: 300px;
     font-size: 1.4vw; 
@@ -685,7 +711,7 @@ footer{
 
   
   .playlist_front {
-    border: black 1px solid;
+    
     width: 20vw ; /* si no 300 px */
     
     display: inline-block;
@@ -697,15 +723,17 @@ footer{
       margin-bottom: 1%;
       display: block;
     }
-
+/*
     .box_content {
         border: black 1px solid;
-        
-
+    
     }
-
-  #playlist_title, #playlist_user {
+*/
+  #playlist_title {
       opacity: 0.55;
+  }
+  #playlist_user:hover{
+      cursor: pointer;
   }
   #playlist_description {
       font-weight: bold;
@@ -723,7 +751,7 @@ footer{
       padding-top: 2%;
       font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
       color: aliceblue;
-      border: black 1px solid;
+      
       display: flex;
       
       
@@ -731,25 +759,39 @@ footer{
 
   /* Lista --------------------------------------------------------------------------------*/
 
-  .list {
-    border: black 1px solid;
-    margin-top: 2%;
-    font-size: 1.5vw;
-    margin-left: 5%;
+  .list { /* section de la lista */
     
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 95%;
+
+  }
+  .list_head {
+    font-size: 1.5vw;
   }
   
   .list li {
       
-      position: flex;
     display:inline;
     padding-left:3px;
     padding-right: 8vw;
     
     }
-
-    .list_data {
+/*
+   #info_musiclist #album   {
+        text-overflow: ellipsis;
         border: black 1px solid;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 50px; 
+        margin:0; padding:0
+    }
+*/
+
+    #info_musiclist:hover {
+        filter:brightness(200%);
+        text-shadow: 2px 2px 4px #ffffff5d;
+        cursor: pointer;
     }
 
     .list hr {
@@ -759,21 +801,28 @@ footer{
         
     }
 
-@media screen and (max-width:720px){
+    
 
-    #artist_section {
-        display: none;
-    }
+
+@media screen and (max-width:1010px){
+
 
     #album_section {
         display: none;
 
     }
-
-    #artist {
+    #album {
         display: none;
     }
-    #album {
+}
+
+@media screen and (max-width:770px){
+
+    #artist_section {
+        display: none;
+    }
+
+    #artist {
         display: none;
     }
 }
