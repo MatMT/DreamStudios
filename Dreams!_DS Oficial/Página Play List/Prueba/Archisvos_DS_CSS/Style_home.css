@@ -1,5 +1,6 @@
 :root{
     --our-font: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    --border-cont: 1px solid white;
 }
 *{
     margin: 0%;
@@ -16,51 +17,81 @@ body{
     height: 100%;
     width: 100%;
     position: relative;
+
+    background: rgb(84,28,249);
+    background: linear-gradient(25deg, rgba(255,94,60,1) 10%, rgba(84,28,249,1) 95%);
+    background-attachment: fixed;
+
+
+
 }
 
-/*Este div abarco todo el contenido de la página web*/
-.super_mega_box{
-    background: linear-gradient(40deg, #ff5e3b 12.29%, #551cf9 90.78%);
+.big-container{
     width: 100%;
-    height: 90%;
-    position: relative; 
+    height: 88.5%;
+    
+    display: flex;
+    position: relative;
+
 }
 
-/* Barra lateral, está el menú de navegación, y el logo de Dreams!*/
-.box_aside_left{
-    width: 18%;
-    min-width: 232px;
-    height: 87%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
+.imit-aside{
+    width: 232px;
+    height: 100%;
+
+    z-index: 0;
+    
 }
+
+.main-contaier{
+    width: calc(100% - 232px);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.377);
+
+    margin-top: 100px;
+
+    overflow-y: auto;
+}
+
+.main-contaier::-webkit-scrollbar{
+    width: 10px;
+
+}
+
+.main-contaier::-webkit-scrollbar-thumb{
+    background-color: #c4c4c4c9;
+
+    border-radius: 10px;
+}
+/*Formato para el aside------------------------------------------------------------------*/
+
+/*lOGO DE dREAMS!*/
+
 .logo_box_aside{
     width: 100%;
-    min-width: 238px;
+    min-width: 232px;
     height: 25%;
     min-height: 200px;
 }
 
-
 .logo_box_aside img{
     width: 120px;
     min-width: 120px;
-    margin-left: 59px;
-    margin-right: 59px;
+    margin-left: 58px;
+    margin-right: 58px;
     margin-top: 18%;
 }
 
 .logo_box_aside::before{
     content: "";
-    width: 100%;
+    width: 99%;
     height: 25%;
     position: absolute;
     background-color: rgba(0, 0, 0, 0);
 }
 
-/*Menú de la barra lateral*/
 
+/*Menú de Dreams!*/
 
 .main_menu_aside{
     color: rgb(199, 197, 197);
@@ -69,8 +100,12 @@ body{
     height: 40%;
     min-height: 300px;
     font-family: var(--our-font);
+
     padding-top: 30px;
-    font-size: 13pt;
+    font-size: 1rem;
+
+    font-weight: bold;
+
 
 }
 
@@ -78,35 +113,27 @@ body{
     float: left;
     margin-left: 15px;
     margin-right: 15px;
-    font-size: 18pt;
+    font-size: 1rem;
 }
 .main_menu_aside div{
-    margin-bottom: 8px;
+    margin-bottom: 1px;
     width: 248px;
-    height: 48px;
-    line-height: 48px;
+    height: 45px;
+    padding: 12px 0px;
 
 }
 
 .option :hover{
     color: white;
-    transition: 0.6s;
-
-    
+    transition: 0.5s;
+    cursor: pointer;
 }
 
+/*Pestaña Activida "Inicio"*/
 
-
-/*OPción activa*/
 .active-option{
-    background-color: white;
-    width: 248px;
-    height: 48px;
-    margin-left: 1px;
-    margin-top: 25px;
-    
-    color: #4361ee;
-    z-index: 100;
+    background-color: rgb(255, 255, 255);
+    color: rgb(109, 107, 107);
     box-shadow: -3px 3px 6px #000;
     -webkit-box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.733);
     filter: shadow(color=#000, direction=0, strength=3);
@@ -116,109 +143,96 @@ body{
 
 }
 
-.active-option i{
-    line-height: 50px;
-    font-size: 22pt;
-    margin-right: 10px;
-    margin-left: 10px;
-}
-.active-option p{
-    line-height: 48px;
-    font-weight: bold;
-    font-size: 14pt;
-}
-
-
 
 /*Crear Play List*/
 
 .play-list{
-    color: rgb(214, 212, 212);
-    width: 100%;
-    min-width: 238px;
-    height: 40%;
-    min-height: 300px;
+    width: 232px;
+    height: 280px;
     font-family: var(--our-font);
-    padding-top: 30px;
-    font-size: 13pt;
+    font-weight: bold;
 
+    color: rgb(199, 197, 197);
 }
 
+
 .create_play_list{
-    margin-bottom: 8px;
-    width: 238px;
-    height: 48px;
-    line-height: 48px;
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+
+    padding: 10px 60px 15px 10px;
 }
 
 .create_play_list i{
     float: left;
-    margin-left: 15px;
-    margin-right: 15px;
-    font-size: 20pt;
+    font-size: 1.5rem;
 }
 
+
 .create_play_list p{
-    float: left;
+    float: right;
+    margin-top: 5px;
 }
 
 .create_play_list:hover {
     color: white;
-    transition: 0.6s;
+    transition: 0.5s;
 
 }
 
 
+/*PLayList*/
 
-
-/* Contenedor principal*/
-
-.super_mega_box .background-dreams{
-    background-color: black;
-    opacity: 0.4;
-    width: 100%;
-    height: 90%;
-    position: absolute;
-    left: 232px; /*238*/
-    /*border-top-left-radius: 60px;*/
-    display: block;
-    z-index: 0;
-
-    float: right;
-    position: fixed;
+.my-play-list{
+    width: 232px;
+    padding: 15px 10px 10px 40px;
 }
 
+.my-play-list p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    width: 160px;
 
-/*Encabezado*/
-/*Buscador*/
-.container_dreams{
-    position: absolute;
-    position: fixed;
-    left: 232px;
-    width: 100%;
-    height: 90%;
 }
+
+.my-play-list:hover {
+    color: white;
+    transition: 0.2s;
+
+}
+
+/*Buscador y menu de opciones ----------------------------------------------------------*/
 
 .searcher-container{
+    width: calc(100% - 232px);
+    height: 100px;
+    
     position: absolute;
-    width: 100%;
-    position: relative;
-    height: 90px;
+    left: 232px;
+    top: 0px;
+
+    position: fixed;
+
+    padding: 25px 10px 41px 65px;
+
+    background-color: rgba(0, 0, 0, 0.377);
+    border-top-left-radius: 60px;
+
 }
+
 .searcher-container input{
     font-family: var(--our-font);
     background-color: white;
     font-size: 11pt;
     color: rgb(99, 99, 99);
     border-radius: 20px;
-    width: 25%;
+    width: 35%;
     height: 35px;
     border: none;
     padding: 5px 45px 5px 35px;
-    
-    margin-top: 25px;
-    margin-left: 65px;
-
     outline: none;
 }
 
@@ -229,149 +243,153 @@ body{
 
     color: #878787;
     font-size: 14pt;
-
-
-
 }
 
 .searcher-container #menu{
     position:absolute;
-    top: 18px;
-    left: 73%;
+    top: 20px;
+    left: 90%;
 
     color: white;
     font-size: 2.54rem;
 }
 
-/*Linea gris*/
-
 .line-soft{
     background-color: #D3D3D3;
-    width: 74%;
+    width: 90%;
     height: 1px;
     
     position: absolute;
-    left: 5%;
-    top: 100%;
-
-}
-
-
-/*Resproductor*/
-
-.player_audio_song{
-    background-color: #050a20;
-    width: 100%;
-    height: 10%;
-    position: absolute;
+    left: 6%;
     top: 90%;
-    border-top: rgba(255, 255, 255, 0.404) solid 0.1px;
 
 }
 
-@media screen and (max-height: 700px){
-    .player_audio_song{
-        height: 11%;
-        top: 89%;
-    }
-    .super_mega_box{
-        height: 89%;
-    }
-    .background-dreams{
-        height: 89%;
-    }
+/*-------------------------Container Principal----------------------------------------*/
+
+.main-contaier{
+    padding: 20px 20px 20px 50px;
+    color: white;
+    font-family: var(--our-font);
+}
+
+.title-name-user{
+    text-align: center;
+    width: 100%;
     
-}
-.song-is-playing{
-    width: 280px;
-    height: 85%;
-    
-    position: relative;
+    display: flex;
+    justify-content: center;
 
-    border: rgba(255, 255, 255, 0) 1px solid;
+    font-family: var(--our-font);
+}
+.title-name-user p{
+    text-align: left;
+    font-size: 2rem;
 }
 
-.song-is-playing img{
-    height: 90%;
+#weilcome{
+    color: white;
+    font-weight: bold;
+    margin-right: 14px;
+}
+#name-user-title{
+    float: right;
+    color: #C4C4C4;
+}
+
+
+
+
+/*-------------------------------------------------------------------------------------*/
+footer{
+    width: 100%;
+    min-height: 100px;
+    background-color: #050a20;
+    padding: 0px 20px 5px 20px;
+
+    border-top: rgba(255, 255, 255, 0.425) 0.5px solid;
 
     position: absolute;
-    left: 50px;
-    top: 18%;
+    top: 88.5%;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+
+    overflow: hidden;
 
 }
-.song-is-playing p{
+
+
+.picture-song-footer{
+    width: 100px;
+    height: 100px;
+
+    padding-left: 20px;
+
+
+}
+
+.picture-song-footer img{
+    height: 75%;
+    margin-top: 15px;
+}
+
+/*Inforamción adicional*/
+
+.artist-enojoy{
     color: white;
-    font-family:  var(--our-font);
-    font-size: 0.90rem;
-    
-}
-.song-is-playing #enjoy-with{
-    display: block;
 
-    width: 110px;
-    font-style: italic;
+    width: 11%;
+    height: 100%;
+    font-family: var(--our-font);
 
-    margin: 25px 10px 7px 128px;
-}
+    padding-top: 32px;
 
-.song-is-playing #name-artist{
+    padding-left: 5px;
 
-    display: block;
-    width: 150px;
 
-    margin: 7px 10px 20px 128px;
+
 }
 
+.artist-enojoy p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
-/*Más Iconos*/
+#enjoy-with{
+    font-size: 0.9rem;
+}
+
 
 .more-icons{
-    width: 10%;
+    color: white;
+    width: 12%;
     height: 100%;
+    padding: 44px 5px;
 
-    padding: 0px 5px;
-
-    position: absolute;
-    top: 0%;
-    left: 20%;
 }
 
 .more-icons i{
-    color: white;
-    float: right;
-    margin: 35px 7px;
-
-    font-size: 1.05rem;
-
-    cursor: pointer;
+    margin-left: 10px;
+    font-size: 1rem;
 }
-/* Barra Central 
 
-Nombre de la canción y artista*/
+/*Caja de la línea de tiempo e información de la canción ----------------------------------*/
 
-.center-song{
+.line-time-song{
     width: 37%;
-    height: 30%;
-    min-width: 450px;
-    
-    position: absolute;
-    top: 16%;
-    left: 33.0%;
-
-    clear: right;
-    box-sizing: border-box;
-
+    height: 100%;
 }
 
-@media screen and (max-width: 900px) {
-    .center-song{
-        left: 340px;
-    }
+/*Información del cantante  la canción*/
+.center-song{
+    width: 100%;
+    height: 50%;
 
-    .center-bar-time{
-        left: 340px;
-    }
+    padding-top: 23px;
 }
+
 
 .center-song p{
     font-family: var(--our-font);
@@ -404,137 +422,277 @@ Nombre de la canción y artista*/
     margin-top: 1%;
 }
 
-/*Barra de progresooo*/
-
+/*Linea de tiempo*/
 
 .center-bar-time{
-    width: 37%;
-    height: 30%;
-    min-width: 450px;
+    width: 100%;
+    height: 50%;
     
-    position: absolute;
-    top: 50%;
-    left: 33.0%;
-
     color: white;
     font-family: var(--our-font);
     font-size: 0.8rem;
 
-    clear: right;
+    padding: 20px 0px;
+    display: flex;
 
 }
+
 
 .bar-time{
     background-color: #759EFC;
     height: 3px;
-    width: 84%;
-    margin-top: 2%;
-    clear: right;
-    margin-right: 0%;
-    /*border: white 1px solid;*/
+    width: 82%;
 
-    position: absolute;
-    top: 5px;
-    left: 38px;
+    margin-top: 7px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/*MOnitor del Audio*/
+
+.sound-play{
+    color: white;
+    width: 13%;
+    height: 100%;
+
+    padding: 44px 0px;
+
+    padding-left: 30px;
+    padding-right: 5px;
+
+    display: flex;
 
 }
 
-.time-start{
-    float: left;
-    margin-top: 8px;
+.sound-play i{
+    margin-left: 20px;
+
+}
+
+.audio-line{
+    background-color: #759EFC;
+    height: 3px;
+    width: 60%;
+
+    margin-top: 7px;
     margin-left: 3px;
-
 }
 
-.time-end{
-    float: right;
-    margin-top: 8px;
-    margin-right: 3px;
+.audio-progres{
+    background-color: white;
+    height: 3px;
+    width: 60%;
 }
 
-
-/*Iconos de Play y Pausa*/
+/*Iconos de pausar y activar la canción ---------------------*/
 
 .icons-play-pause{
+   
     color: white;
-    width: 20%;
-    height: 90%;
-    float: right;
-
-    position: absolute;
-    left: 77%;
-    top: 5%;
-    padding: 10px;
-
-    border: solid 1px black;
-}
-
-.icons-play-pause #before-song{
     font-size: 1.5rem;
-    float: left;
-    position: absolute;
-    left: 40px;
-    top: 35%;
+    width: 16%;
+
+    display: flex;
+
+    padding: 16px 10px;
+    padding-left: 40px;
+    padding-top: 18px;
 }
 
-.icons-play-pause img{
-    width: 30px;
-    position: absolute;
-    left: 105px;
-    top: 25%;
+#pause{
+    display: none;
+}
 
+#play-start{
+    font-size: 3.5rem;
+}
+
+#before-song,
+#next-song{
+    margin-top: 20px;
+}
+
+
+/*Condiciones para el footer*/
+
+@media screen and (max-width: 1000px) {
+    .sound-play{
+        width: 7%;
+        padding-left: 5px;
+
+        font-size: 0.9rem;
+    }
+
+    .audio-line{
+        display: none;
+    }
+
+    .icons-play-pause{
+        padding-left: 30px;
+    }
+    .more-icons i{
+        font-size: 0.90rem;
+    }
+
+    footer{
+        padding-left: 5px;
+    }
+
+    .picture-song-footer{
+        padding-left: 10px;
+        width: 90px;
+    }
+
+    .picture-song-footer img{
+        height: 65%;
+        margin-top: 21px;
+    }
+
+}
+
+@media screen and (max-width: 950px){
+    .artist-enojoy{
+        padding-top: 36px;
+    }
+    
+    #enjoy-with{
+        font-size: 0.8rem;
+    }
+
+
+    #name-artist{
+        font-size: 0.9rem;
+    }
+
+    picture-song-footer{
+        width: 90px;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .icons-play-pause{
+        padding-top: 25px;
+        padding-left: 25px;
+    }
+
+    #play-start{
+        font-size: 3rem;
+    }
+    
+    #before-song,
+    #next-song{
+        margin-top: 20px;
+        font-size: 1rem;
+    }
     
 }
 
-.icons-play-pause #next-song{
-    font-size: 1.5rem;
-    float: right;
+@media screen and (max-height:750px){
+    footer{
+        height: 85px;
+    }
+    .picture-song-footer{
+        height: 85px;
+    }
+    /*.artist-enojoy{
+        height: 85px;
+    }
+    .more-icons{
+        height: 85px;
+    }
+    .line-time-song{
+        height: 85px;
+    }
+    .sound-play{
+        height: 85px;
+    }
+    .icons-play-pause{
+        width: 85px;
+    }*/
 
-    position: absolute;
-    left: 165px;
-    top: 35%;
+    .center-bar-time{
+        padding: 15px 0px;
+    }
+    .center-song{
+        padding-top: 18px;
+    }
+
+
+
 }
 
-/*---------------------------------------------------------------------*/
-/* Boton para escuchar */
+/*-----------------padding: 12px 80px;----------------------------------------------------*/
+
+
+
+/* Boton para escuchar-------------------------------------------------------------------- */
 #button_play {
 
     border: none;
     color: white;
-    padding: 12px 80px;
+    
     background-color: coral;
     cursor: pointer;
-    border-radius: 3px;
-    font-weight: bold;
-    font-size: 1.20rem;
+    border-radius: 8px;
+    font-weight: 50%;
     transition: transform 0.2s ease-in-out;
-    position: fixed; 
+    position: relative; 
 }
+
+/* viewport */
+#button_play { 
+    font-size: 1.8vw; 
+    padding: 0.5vw 5.3vw;
+
+}
+
 
 #button_play:hover {
     transform: scale(1.09); 
-
     }
 
-/* Contenido de la caja */
+
+
+
+
+/* Contenido de la caja ---------------------------------*/
+
+.Playlist_info { font-size: 1.4vw; }
+
 .Playlist_info {
     vertical-align: top;
-    font-size: 1.4em ;
     position: relative ;
     float: right;
-    width: 300px;
+    width: 500px;
     border: black 1px solid;
+    margin-top: 5%;
     margin-right: 300px;
+    font-size: 1.4vw; 
+    
   }
+/*font-size: 1.4em 
+
+@media screen and (max-width:750px) {
+      
+    .Playlist_info {
+        font-size: 0.9rem;
+    }
+}
+*/
+
+/* Propiedades de la playlist-------------------------------------------------------- */
+
+
   
   .playlist_front {
     border: black 1px solid;
-    width: 300px ;
+    width: 20vw ; /* si no 300 px */
+    
     display: inline-block;
   }
 
   #playlist_image {
-      width: 250px;
+      width: 90%;
       box-shadow: 8px 10px 8px #0000009f;
       margin-bottom: 1%;
       display: block;
@@ -542,14 +700,18 @@ Nombre de la canción y artista*/
 
     .box_content {
         border: black 1px solid;
+        
 
     }
 
   #playlist_title, #playlist_user {
       opacity: 0.55;
   }
+  #playlist_description {
+      font-weight: bold;
+  }
 
-  /* 
+  /* Antes se llevaba esto en el contenido 
   position: relative;
   z-index: 2; 
   */
@@ -557,22 +719,61 @@ Nombre de la canción y artista*/
   
   #content {
       
-      margin-left: 10%;
+      margin-left: 5%;
       padding-top: 2%;
       font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
       color: aliceblue;
       border: black 1px solid;
+      display: flex;
+      
+      
   }
 
-  /* Lista */
-  #lista1 li {
+  /* Lista --------------------------------------------------------------------------------*/
+
+  .list {
+    border: black 1px solid;
+    margin-top: 2%;
+    font-size: 1.5vw;
+    margin-left: 5%;
+    
+  }
+  
+  .list li {
+      
       position: flex;
     display:inline;
     padding-left:3px;
-    padding-right: 0.5em; 
+    padding-right: 8vw;
     
     }
-    
-    #list hr {
-        margin-top: 60%;
+
+    .list_data {
+        border: black 1px solid;
     }
+
+    .list hr {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        opacity: 0.55;
+        
+    }
+
+@media screen and (max-width:720px){
+
+    #artist_section {
+        display: none;
+    }
+
+    #album_section {
+        display: none;
+
+    }
+
+    #artist {
+        display: none;
+    }
+    #album {
+        display: none;
+    }
+}
