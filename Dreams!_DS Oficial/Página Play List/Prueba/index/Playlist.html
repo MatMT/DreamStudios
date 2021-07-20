@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dreams! Home</title>
-        <link rel="icon" href="../../Recursos/Iconos/Ds_logo.ico">
+        <link rel="icon" href="../../../Recursos/Iconos/Ds_logo.ico">
         <link rel="stylesheet" href="../Archisvos_DS_CSS/Style_home.css">
         <link rel="stylesheet" type="text/css" href="../../../Recursos/Iconos/Font-icons/css/icons-dreams-home.css">
         <link rel="stylesheet" type="text/css" href="../../../Recursos/Iconos/Font-icons/css/icons-dreams-home-embedded.css">
@@ -13,64 +13,16 @@
     
     </head>
     <body>
-        <div class="super_mega_box">
-
-            <div class="background-dreams">
-
+        <div class="big-container">
+            <div class="container-header">
+                
             </div>
             
-            <section class="container_dreams">
-                <header class="searcher-container">
-                    <input type="text" class="searcher-user" placeholder="Buscar canciones, artistas..." required>
-                    <i class="icon-note" id="nota"></i>
-
-                    <a href=""><i class="icon-menu" id="menu"></i></a>
-
-                    <div class="line-soft"></div>
-                </header>
-                <!--En esta seccion puedes colocar el contenido NUEVO-->
-
-            <section id="content">
-                <div class="box_content">
-                    <div class="playlist_front">
-                    <img id="playlist_image" src="../img/1x1-Artist/nioce.jpg">
-                    </div>
-                    <br>
-                    <!---Aqui iba el Boton anteriormente xD-->
-                
-                    <div class="Playlist_info">
-                    <h1 id="playlist_title"> Mi playlist </h1>
-                    <h2 id="playlist_description"> Todo lo que quiero escuchar </h2>
-                    <h3 id="playlist_user"> By:Oscar </h3>
-                </div>
-                    <button id="button_play" type="button"> Escuchar </button>
-                </div>
-            </section>
-                
-            <!------------------------------------------------------------------->
-<!--
-            <section class="list">
-                <hr>
-                <div class="list_data">
-                    <ul id="lista1">
-                    <li><p id="song_num">#</p></li>
-                    <li><p id="song">Canción</p></li>
-                    <li><p id="artist">Artista</p></li>
-                    <li><p id="album">Album</p></li>
-                </ul>
-                </div>
-            </section>
-            -->
-            <!------------------------------------------------------------------->
-            </section>
-
-            <aside class="box_aside_left">
+            <div class="imit-aside">
                 <div class="logo_box_aside">
-                    <img src="../../../Recursos/Imágenes/1x/Recurso 1.png">
-                    
+                    <img src="../../../Recursos/Imágenes/1x/Recurso 1.png"">
                 </div>
-
-                
+                <!---Menú de Dreams-->
                 <div class="main_menu_aside">
                     <div class="active-option">
                         <a><i class="icon-music-2"></i>
@@ -87,62 +39,140 @@
                     <div class="option">
                         <a><i class="icon-music-1"></i>
                         <p>DreaMaker</p></a>
-                    </div>
-                    
+                    </div>    
                 </div>
+    
                 <div class="play-list">
                     <div class="create_play_list option">
                         <a><i class="icon-plus-squared"></i>
                         <p>Crear Play List</p></a>
                     </div>
-
+    
+                    <div class="my-play-list">
+                        <p><i class="icon-right-open-mini"></i>My Music of Niall Horan my favorute</p>
+                    </div>
+    
                 </div>
-            </aside>
-           
-        </div>
-        <footer class="player_audio_song">
+            </div>
+
+            <section class="main-contaier">
+                <div>
+                    <!------intento de poner nuevo contenido --->
+                    <section id="content">
+                        <div class="box_content">
+                            <div class="playlist_front">
+                            <img id="playlist_image" src="../img/1x1-Artist/nioce.jpg">
+                            </div>
+                            <!---Aqui iba el Boton anteriormente xD-->
+        
+                            <div class="Playlist_info">
+                            <h1 id="playlist_title"> Mi playlist </h1>
+                            <h2 id="playlist_description"> Todo lo que quiero escuchar </h2>
+                            <h3 id="playlist_user"> Eduardo </h3>
+                        </div>
+                            <button id="button_play" type="button"> Escuchar </button>
+                        </div>
+                    </section>
+                </div>
+
+                 <!----------------------------->
+
+            <section class="list">
+                <div class="list_data">
+                    <ul id="lista1">
+                    <li >#</li>
+                    <li >CANCIÓN</li>
+                    <li id="artist_section">ARTISTA</li>
+                    <li id="album_section">ALBUM</li>
+                </ul>
+                <hr>
+                <ul id="info_musiclist">
+                        <li id="song_num">1</li>
+                        <li id="song">Nice to meet ya</li>
+                        <li id="artist">Naill Horan</li>
+                        <li id="album">Heartbreak Weather</li>
+                </ul>
+                <hr>
+                <ul id="info_musiclist">
+                    <li id="song_num">2</li>
+                    <li id="song">Nice to meet ya</li>
+                    <li id="artist">Naill Horan</li>
+                    <li id="album">Heartbreak Weather</li>
+            </ul>
+            <hr>
+            </div>
+            </section>
+            <!----------------------------->
+
+
+            </section>   
+            <header class="searcher-container">
+                <input type="text" class="searcher-user" placeholder="Buscar canciones, artistas..." required>
+                <i class="icon-note" id="nota"></i>
+
+                <a href=""><i class="icon-menu" id="menu"></i></a>
+
+                <div class="line-soft"></div>
+            </header>
             
-            <div class="song-is-playing">
-                <img src="../img/1x1-Artist/nioce.jpg" id="img-artist-1">
-                
+
+        </div>
+        
+        
+        <footer>
+            <div class="picture-song-footer">
+                <img src="../../Prueba/img/1x1-Artist/nioce.jpg" id="img-artist-1">
+            </div>
+            <div class="artist-enojoy">
                 <p id="enjoy-with">Disfruta con...</p>
-                <p id="name-artist">Niall</p>
+                <p id="name-artist">Harry Styles s</p>
                 
             </div>
-
+            
             <div class="more-icons">
-                <i class="icon-volume"></i>
                 <i class="icon-loop"></i>
-                <i class="icon-shuffle"></i>               
-                
+                <i class="icon-shuffle"></i>    
             </div>
 
-            <div class="center-song">
-                <p id="name-song">Nice to Meet Ya</p>
-                <i class="icon-heart-empty"></i>
-                <p id="name-artist-2">Niall Horan</p>
-            </div>
+            <div class="line-time-song">
 
-            <div class="center-bar-time">
-                                
-                <div class="time-start">0:00</div>
-                <div class="bar-time">
-                    <div id="progress"></div>
+                <div class="center-song">
+                    <p id="name-song">Nice to Meet Ya</p>
+                    <i class="icon-heart-empty"></i>
+                    <p id="name-artist-2">Niall Horan</p>
                 </div>
-                <div class="time-end">0:00</div>
+
+                <div class="center-bar-time">
+                                
+                    <div class="time-start">0:00</div>
+                    <div class="bar-time">
+                        <div id="progress"></div>
+                    </div>
+                    <div class="time-end">0:00</div>
+                </div>
+            </div>
+            <div class="sound-play">
+                <i class="icon-volume"></i>
+                <div class="audio-line">
+                    <div class="audio-progres"></div>
+                </div>
             </div>
 
             <div class="icons-play-pause">
                 
-                <i class="icon-to-start" id="before-song"></i>
-                
-                <img src="../../../Recursos/Iconos/otros iconos/SVG/Recurso 2.svg">
-                
-                <i class="icon-to-end" id="next-song"></i>
+                <i class="icon-to-start-1" id="before-song"></i>
+
+                <div class="play pause">
+                    <i class="icon-play-1" id="play-start"></i>
+                    <i class="icon-pause-1" id="pause"></i> 
+                </div>
+                              
+                <i class="icon-to-end-1" id="next-song"></i>
             </div>
-
-
         </footer>
-    
+
     </body>
 </html>
+
+<!-------------------------------------------------------------------------------->
+   
