@@ -380,6 +380,7 @@ footer{
 .line-time-song{
     width: 37%;
     height: 100%;
+    border: var(--border-cont);
 }
 
 /*Información del cantante  la canción*/
@@ -388,11 +389,12 @@ footer{
     height: 50%;
 
     padding-top: 23px;
+
+    border: var(--border-cont);
 }
 
 
 .center-song p{
-    font-family: var(--our-font);
     color: white;
 
 }
@@ -569,7 +571,7 @@ footer{
     }
 }
 
-@media screen and (max-width:750px) {
+@media screen and (max-width:800px) {
     .icons-play-pause{
         padding-top: 25px;
         padding-left: 25px;
@@ -584,7 +586,7 @@ footer{
         margin-top: 20px;
         font-size: 1rem;
     }
-    
+
 }
 
 @media screen and (max-height:750px){
@@ -611,12 +613,34 @@ footer{
     }*/
 
     .center-bar-time{
-        padding: 15px 0px;
+        padding: 7px 0px;
     }
     .center-song{
         padding-top: 18px;
     }
+    .center-song{
+        padding-top: 12px;
+    }
+    .center-bar-time{
+        padding-top: 5px;
+    }
+    .artist-enojoy{
+        padding-top: 20px;
+    }
+    .more-icons{
+        padding-top: 31px;
+    }
 
+    .picture-song-footer img{
+        margin-top: 10px;
+        height: 55px;
+    }
 
+    .icons-play-pause{
+        padding-top: 7px;
+    }
 
+    .sound-play{
+        padding-top: 31px;
+    }
 }
