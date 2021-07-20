@@ -682,7 +682,7 @@ footer{
 
 
 
-/* Contenido de la caja ---------------------------------*/
+/* Contenido de la caja de NOMBRE, INFO Y USUARIO DE LA LISTA ---------------------------------*/
 
 .Playlist_info { 
     font-size: 1.4vw; 
@@ -699,6 +699,7 @@ footer{
     font-size: 1.4vw; 
     
   }
+
 /*font-size: 1.4em 
 
 @media screen and (max-width:750px) {
@@ -708,10 +709,6 @@ footer{
     }
 }
 */
-
-/* Propiedades de la playlist-------------------------------------------------------- */
-
-
   
   .playlist_front {
     
@@ -735,8 +732,15 @@ footer{
   #playlist_title {
       opacity: 0.55;
   }
+
+  #playlist_user {
+      width: fit-content;
+      transition: filter, text-shadow 0.2s ease-in-out;
+  }
   #playlist_user:hover{
       cursor: pointer;
+      filter:brightness(200%);
+        text-shadow: 2px 2px 4px #ffffff5d;
   }
   #playlist_description {
       font-weight: bold;
@@ -790,6 +794,10 @@ footer{
         margin:0; padding:0
     }
 */
+
+#info_musiclist {
+    transition: filter, text-shadow 0.1s ease-in-out;
+}
 
     #info_musiclist:hover {
         filter:brightness(200%);
