@@ -346,6 +346,8 @@ footer{
 
     padding-left: 5px;
 
+    font-family: var(--our-font);
+
 }
 
 .artist-enojoy p{
@@ -377,7 +379,7 @@ footer{
 .line-time-song{
     width: 37%;
     height: 100%;
-    border: var(--border-cont);
+    font-family: var(--our-font);
 }
 
 /*Información del cantante  la canción*/
@@ -386,8 +388,6 @@ footer{
     height: 50%;
 
     padding-top: 23px;
-
-    border: var(--border-cont);
 }
 
 
