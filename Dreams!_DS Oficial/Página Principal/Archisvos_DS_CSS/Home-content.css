@@ -1,0 +1,72 @@
+:root{
+    --our-font: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    --border-cont: 1px solid white;
+}
+.container-carousel{
+    width: 95%;
+    height: 300px;
+
+    margin-top: 5%;
+}
+.header-carousel{
+    width: 100%;
+    height: 50px;
+    padding: 10px 5px;
+}
+h2{
+    float: left;
+    font-size: 1.4rem;
+}
+.header-carousel i{
+    float: right;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+/*Imágenes*/
+
+.slick-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 240px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vh;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
+
+}
+
+.slick{
+    position:relative;
+    width: 200px;
+    padding: 0px 10px;
+    margin: 0px 10px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+}
+
+.slick a img{
+    width: 200px;
+    border-radius: 190px;
+    box-shadow: -3px 3px 6px #000;
+    -webkit-box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.733);
+    transition: 0.5s ease-in-out;
+}
+
+.slick a img:hover{
+    opacity: 0.85;
+}
