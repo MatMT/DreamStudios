@@ -181,6 +181,7 @@ body{
 }
 
 
+
 /*PLayList*/
 
 .my-play-list{
@@ -199,8 +200,9 @@ body{
 }
 
 .my-play-list:hover {
-    color: white;
+    /* color: white; */
     transition: 0.2s;
+    cursor: pointer;
 
 }
 
@@ -661,9 +663,10 @@ footer{
     font-weight: 50%;
     transition: transform 0.2s ease-in-out;
     position: relative; 
+    margin-top: 1%;
 }
 
-/* viewport */
+
 #button_play { 
     font-size: 1.8vw; 
     padding: 0.5vw 5.3vw;
@@ -801,10 +804,13 @@ footer{
         
     }
 
-    
+    /* enlaces ---------------------------------------- */
+.option a {
+    text-decoration: none;
+    color: rgb(199, 197, 197);
+}
 
-
-@media screen and (max-width:1010px){
+@media screen and (max-width:1150px){
 
 
     #album_section {
