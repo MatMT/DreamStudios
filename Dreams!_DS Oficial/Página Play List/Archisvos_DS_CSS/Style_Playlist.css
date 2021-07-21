@@ -181,6 +181,7 @@ body{
 }
 
 
+
 /*PLayList*/
 
 .my-play-list{
@@ -199,8 +200,9 @@ body{
 }
 
 .my-play-list:hover {
-    color: white;
+    /* color: white; */
     transition: 0.2s;
+    cursor: pointer;
 
 }
 
@@ -661,9 +663,10 @@ footer{
     font-weight: 50%;
     transition: transform 0.2s ease-in-out;
     position: relative; 
+    margin-top: 1%;
 }
 
-/* viewport */
+
 #button_play { 
     font-size: 1.8vw; 
     padding: 0.5vw 5.3vw;
@@ -679,7 +682,7 @@ footer{
 
 
 
-/* Contenido de la caja ---------------------------------*/
+/* Contenido de la caja de NOMBRE, INFO Y USUARIO DE LA LISTA ---------------------------------*/
 
 .Playlist_info { 
     font-size: 1.4vw; 
@@ -696,6 +699,7 @@ footer{
     font-size: 1.4vw; 
     
   }
+
 /*font-size: 1.4em 
 
 @media screen and (max-width:750px) {
@@ -705,10 +709,6 @@ footer{
     }
 }
 */
-
-/* Propiedades de la playlist-------------------------------------------------------- */
-
-
   
   .playlist_front {
     
@@ -732,8 +732,15 @@ footer{
   #playlist_title {
       opacity: 0.55;
   }
+
+  #playlist_user {
+      width: fit-content;
+      transition: filter, text-shadow 0.2s ease-in-out;
+  }
   #playlist_user:hover{
       cursor: pointer;
+      filter:brightness(200%);
+        text-shadow: 2px 2px 4px #ffffff5d;
   }
   #playlist_description {
       font-weight: bold;
@@ -788,6 +795,10 @@ footer{
     }
 */
 
+#info_musiclist {
+    transition: filter, text-shadow 0.1s ease-in-out;
+}
+
     #info_musiclist:hover {
         filter:brightness(200%);
         text-shadow: 2px 2px 4px #ffffff5d;
@@ -801,10 +812,13 @@ footer{
         
     }
 
-    
+    /* enlaces ---------------------------------------- */
+.option a {
+    text-decoration: none;
+    color: rgb(199, 197, 197);
+}
 
-
-@media screen and (max-width:1010px){
+@media screen and (max-width:1150px){
 
 
     #album_section {
