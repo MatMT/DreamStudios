@@ -33,17 +33,18 @@ html{
 }
 
 
-.first_section:before {
+.first_section::before {
     content: "";
     width: 100%;
     min-height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
-    background-image: rgba(0, 0, 0, 0);
-    opacity: 0.5;
-    z-index: 100;
+    background-image: url(../../Recursos/Imágenes/Fondos_Estelar.png);
+    background-color: rgba(0, 0, 0, 0.966);
+    opacity: 0.3;
     
+
 }
 
 /* Seguna parte de la pagina */
@@ -56,12 +57,7 @@ html{
     
 }
 
-#fondoestelar {
-    width: 50%;
-    position: absolute;
-    z-index: -1;
-    opacity: 0.5;
-}
+
 #logo_dreams {
     width: 6%;
     margin: 2%;
@@ -86,6 +82,8 @@ html{
     text-align: right;
     padding-left: 3%;
     padding-right: 2%;
+    cursor: pointer;
+    position: relative;
 
 }
 a {
@@ -147,6 +145,11 @@ padding-left: 9%;
 
 /* --------------------BOTON------------------------------- */
 
+.boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 #button_dream {
 
@@ -160,7 +163,7 @@ padding-left: 9%;
 
     position: relative; 
     margin-top: 1%;
-    margin-left: 35%;
+    
 
     transition: transform 0.2s ease-in-out;
 
