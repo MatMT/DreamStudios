@@ -15,3 +15,4 @@ flechaDerecha.addEventListener("click", () => {
 flechaIzquierda.addEventListener("click", () => {
     fila.scrollLeft -= fila.offsetWidth;
 })
+
