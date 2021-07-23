@@ -220,7 +220,7 @@ body{
 
     position: fixed;
 
-    padding: 25px 10px 41px 65px;
+    padding: 20px 10px 30px 65px;
 
     background-color: rgba(0, 0, 0, 0.377);
     border-top-left-radius: 60px;
@@ -243,7 +243,7 @@ body{
 .searcher-container #nota{
     position: absolute;
     left: 73px;
-    top: 32px;
+    top: 28px;
 
     color: #878787;
     font-size: 14pt;
@@ -251,7 +251,7 @@ body{
 
 .searcher-container #menu{
     position:absolute;
-    top: 20px;
+    top: 18px;
     left: 90%;
 
     color: white;
@@ -265,14 +265,14 @@ body{
     
     position: absolute;
     left: 6%;
-    top: 90%;
+    top: 80%;
 
 }
 
 /*-------------------------Container Principal----------------------------------------*/
 
 .main-contaier{
-    padding: 15px 20px 15px 50px;
+    padding: 15px 20px 15px 40px;
     color: white;
     font-family: var(--our-font);
 }

@@ -2,89 +2,58 @@
     --our-font: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     --border-cont: 1px solid white;
 }
-.container-carousel{
-    width: 100%;
-    height: 300px;
 
-    margin-top: 5%;
+/* ----    ----    ---- CAROUSEL ----    ---- ----- */
+.contenedor-carrusel{
+    margin-top: 50px;
 }
-.header-carousel{
-    width: 100%;
-    height: 50px;
-    padding: 10px 5px;
-}
-h2{
+
+/* Titulo del carrucel: Artistas recomendados*/
+.descripcion-bottum h2{
     float: left;
-    font-size: 1.4rem;
+    font-size: 2.5vmin;
 }
-.header-carousel i{
+
+.icon-left-open-mini,
+.icon-right-open-mini{
     float: right;
-    cursor: pointer;
-    font-size: 1.6rem;
+    font-size: 3vmin;
 }
 
-/*Imágenes*/
-
-.slick-list{
-    position: relative;
-    display: flex;
-    align-items: center;
+/*------------------- Carousel ----------------------------------*/
+.contenedor-principal{
     width: 100%;
-    height: 240px;
-    padding: 10px 0px;
-    margin: 0px;
-    max-width: 110vw;
-
+    padding: 20px 0px;
     overflow: hidden;
-
-    margin-top: 15px;
-
-
+    scroll-behavior: smooth;
 }
 
-.slick-track{
-    position: relative;
-    top: 0;
-    left: 0px;
+.contenedor-principal .carousel{
     display: flex;
-    justify-content: center;
-    transition: 0.5s ease-in-out;
-
+    flex-wrap: nowrap;
 }
 
-.slick{
-    position:relative;
-    width: 220px;
-    padding: 0px 10px;
-    margin: 0px 10px;
-    
-    float: left;
-
-    box-sizing: border-box;
-    display: flex;
-    height: 100%;
+.carousel .artista{
+    min-width: 21%;
+    transition: 0.3s ease all;
+    margin: 0px 20px;
 }
 
-.slick a img{
-    width: 200px;
-    border-radius: 190px;
+.carousel .artista.hover{
+    transform: scale(1.2);
+    transform-origin: center;
+}
+.carousel .artista img{
+    width: 100%;
+    vertical-align: top;
+    border-radius: 15px;
     box-shadow: -3px 3px 6px #000;
     -webkit-box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.733);
-    transition: 0.5s ease-in-out;
 }
 
-.slick a h4{
-    text-decoration: none;
-    color: white;
+.carousel .artista h4{
+    margin-top: 10px;
     text-align: center;
     font-weight: normal;
 }
 
-a:link, a:visited, a:active {
-    text-decoration:none;
-}
-
-.slick a img:hover{
-    opacity: 0.85;
-
-}
