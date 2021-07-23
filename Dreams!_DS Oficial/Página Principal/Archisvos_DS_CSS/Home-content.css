@@ -18,6 +18,9 @@
 .icon-right-open-mini{
     float: right;
     font-size: 3vmin;
+
+    cursor: pointer;
+
 }
 
 /*------------------- Carousel ----------------------------------*/
@@ -34,21 +37,38 @@
 }
 
 .carousel .artista{
-    min-width: 21%;
+    min-width: 22%;
+    max-width: 274px;
     transition: 0.3s ease all;
-    margin: 0px 20px;
+    margin: 0px 15px;
+
+    padding: 10px;
+    position: relative;
 }
 
-.carousel .artista.hover{
-    transform: scale(1.2);
+.carousel .artista:hover{
+    transform: scale(1.05);
     transform-origin: center;
+    transition: 0.5s;
+
+    background-color: rgba(0, 0, 0, 0.452);
+    border-radius: 15px;
 }
+
+
 .carousel .artista img{
     width: 100%;
+    max-width: 264px;
     vertical-align: top;
     border-radius: 15px;
     box-shadow: -3px 3px 6px #000;
     -webkit-box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.733);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
 }
 
 .carousel .artista h4{
@@ -57,3 +77,24 @@
     font-weight: normal;
 }
 
+
+
+/*Hover circulo play*/
+
+.carousel .artista i{
+    font-size: 4vmin;
+    position: absolute;
+    left: 67%;
+    top: 60%;
+    text-shadow: -3px 3px 6px #000;
+
+    opacity: 0;
+
+}
+
+
+
+.carousel .artista:hover i{
+    transition: 0.5s;
+    opacity: 1;
+}
