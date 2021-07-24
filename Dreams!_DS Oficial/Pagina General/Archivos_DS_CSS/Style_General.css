@@ -40,12 +40,28 @@ html{
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(../../Recursos/Imágenes/Fondos_Estelar.png);
+    background-image: url(../../Recursos/Otros/Fondo-Registro.svg);
     background-color: rgba(0, 0, 0, 0.966);
+    background-position: center;
+    
     opacity: 0.3;
     
 
 }
+
+
+
+#logotitle {
+    border: black 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    position: relative; 
+    
+}
+
+
 
 /* Seguna parte de la pagina */
 .second_section {
