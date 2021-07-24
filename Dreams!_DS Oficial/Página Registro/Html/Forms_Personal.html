@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Formulario</title>
         <link rel="stylesheet" href="../Css/forms.css">
+        <link rel="stylesheet" href="../Css/botones.css">
     </head>
     <body>
     <div class="mega-div-container">
@@ -45,13 +46,17 @@
                 <br>         
                 <input type="number" name="AgeType" min="0" max="120" placeholder="0"  id="AgeType" required>
             </div>
-            <label for="GenderType">¿Cúal es tu género?</label>        
+            <label for="GenderType">¿Cúal es tu género?</label>   
             <div class="datos_button">
-                    aaaa
+
+                <input type="radio" name="GenderType" id="fem"> 
+                <label for="fem" class="gender">Femenino</label>
+                <br>
+                <input type="radio" name="GenderType" id="masc"> 
+                <label for="masc" class="gender">Masculino</label>
+                <br>
             </div>
-            
             <hr>
-            
             <div id="botones">
                 <input type="submit" value="Enviar" class="boton">
                 <input type="reset" value="Borrar" class="boton">
