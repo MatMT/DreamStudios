@@ -1,0 +1,48 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.botones {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  position: relative;
+  color: #5d2aeb;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  border: 2px solid #5d2aeb;
+  border-radius: 5px;
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+label:before {
+  content: "";
+  height: 30px;
+  width: 30px;
+  border: 3px solid #b436d5;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+input[type="radio"]:checked + label {
+  background-color: #b436d5;
+  color: white;
+}
+
+input[type="radio"]:checked + label:before {
+  height: 16px;
+  width: 16px;
+  border: 10px solid #0b0f3e;
+}
