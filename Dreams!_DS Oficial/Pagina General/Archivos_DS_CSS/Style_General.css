@@ -20,7 +20,7 @@ html{
 
 
     
-/* FONDO -------------------------------------------------------------------------- */
+/* ----------------------------SECTION 1------------------------------------------ */
 .first_section {
     width: 100%;
     height: 100vh;
@@ -47,71 +47,6 @@ html{
     opacity: 0.5;
     
 
-}
-
-
-/* Seguna parte de la pagina -------------------------------------------------------------------------------------------------------------------------------- */
-#second_section {
-    
-    width: 100%;
-    height: 100vh;
-    
-    background: rgb(255, 173, 244);
-    background-image: url(../../Recursos/Imágenes/active-woman-with-snow-white-smile-is-dancing-on-pink-wall-model-in-orange-blouse-listening-to-music.jpg);
-    background-size: cover;
-    background-position: center;
-    
-}
-
-#second_section::before {
-    content: "";
-    width: 100%;
-    min-height: 100vh;
-    position: absolute;
-    
-    background-color: rgba(0, 0, 0, 0.651);
-    opacity: 0.3;
-}
-
-#header-text2 { 
-    font-size: 1.2vw; 
-    text-align: right;
-    
-    
-    padding-left: 3%;
-    padding-right: 2%;
-
-    position: relative;
-   
-}
-
-#header-text2 a{
-    color: black;
-}
-
-#content2 {
-    top: 60%;
-    position: relative;
-    
-}
-@media screen and (max-width:900px){
-
-    #content2 img {
-        width: 100%;
-    }
-}
-
-
-/* ------------------ SECTION 3 ------------------------------------------------*/
-#third_section {
-width: 100%;
-height: 100vh;
-
-background: rgb(255,255,255);
-background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(215,255,255,1) 100%);
-
-background-size: cover;
-background-position: center;
 }
 
 /* CONTENIDO -------------------------------------------------------------------*/
@@ -165,7 +100,7 @@ background-position: center;
 a {
     text-decoration: none;
     color: aliceblue;
-    font-weight: bold;
+    
     
 }
 
@@ -301,3 +236,185 @@ footer a:hover {
 #button_dream:hover {
     transform: scale(1.09); 
     }
+
+
+/* Seguna parte de la pagina -------------------------------------------------------------------------------------------------------------------------------- */
+#second_section {
+    
+    width: 100%;
+    height: 100vh;
+    
+    background: rgb(255, 173, 244);
+    background-image: url(../../Recursos/Imágenes/active-woman-with-snow-white-smile-is-dancing-on-pink-wall-model-in-orange-blouse-listening-to-music.jpg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#second_section::before {
+    content: "";
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    
+    background-color: rgba(0, 0, 0, 0.651);
+    opacity: 0.3;
+}
+
+#header-text2 { 
+    font-size: 1.2vw; 
+    text-align: right;
+    
+    
+    padding-left: 3%;
+    padding-right: 2%;
+
+    position: relative;
+   
+}
+
+#header-text2 a{
+    color: black;
+}
+
+#content2 {
+
+    top: 60%;
+    position: relative;
+    
+}
+@media screen and (max-width:900px){
+
+    #content2 img {
+        width: 100%;
+    }
+}
+
+
+/* ------------------ SECTION 3 ------------------------------------------------*/
+#third_section {
+width: 100%;
+height: 100vh;
+
+background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(215,255,255,1) 100%);
+
+
+background-position: center;
+}
+
+
+
+.fade {
+    
+    position: relative;
+    
+}
+
+.texto-3 {
+    
+    position: relative;
+    left: 5%;
+    width: 570px;
+    top: 30%;
+    text-align: justify;
+}
+.texto-3 p:nth-child(1) {
+    font-size: 2vw; 
+    
+}
+
+.texto-3 p:nth-child(2) {
+    margin-top: 5%;
+    font-size: 1.5vw; 
+    
+
+}
+
+#muestra {
+    
+    float: right;
+    margin-top: 1%;
+    margin-right: 2% ;
+    margin-top: 8%;
+    width: 53%;
+    position: relative;
+    display: flex;
+}
+
+/* -----------------------------------------PIE DE PAGINA---------------------------------------------------------------------------- */
+
+#pie_pagina {
+    width: 100%;
+height: 20vh;
+background: rgb(71,4,190,1);
+background: linear-gradient(0deg, rgba(50,16,68,1) 0%, rgba(71,4,190,1) 100%);
+
+
+background-position: center;
+
+}
+
+#pie_pagina ul{
+    
+    padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+  
+}
+
+#pie_pagina li {
+    padding:0 10px;
+    display: inline;
+    
+  }
+
+#pie_pagina a {
+    opacity:0.8;
+}
+#pie_pagina .social {
+    text-align:center;
+    padding-bottom:25px;
+}
+
+#pie_pagina .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+
+  #pie_pagina .social > a:hover {
+    opacity:0.9;
+  }
+
+  #pie_pagina .list-inline a {
+    
+    cursor: pointer;
+    background: 
+        linear-gradient(currentColor 0 0) 
+        bottom /var(--d, 0) 3px 
+        no-repeat;
+    transition: background 0.3s;
+}
+
+#pie_pagina .list-inline a:hover {
+    --d: 100%;
+}
+
+  #footer-content {
+      
+      top: 30%;
+      position: relative;
+  }
+
