@@ -1,0 +1,203 @@
+
+body {
+    background: rgb(84,28,249);
+    background: linear-gradient(25deg, rgba(255,94,60,1) 10%, rgba(84,28,249,1) 95%) !important;
+    
+}
+
+.my-play-list:hover {
+    color: #07175f !important;
+}
+
+
+
+
+/* Boton para escuchar-------------------------------------------------------------------- */
+#button_play {
+
+    border: none;
+    color: white;
+    
+    background-color: coral;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 50%;
+    transition: transform 0.2s ease-in-out;
+    position: relative; 
+    margin-top: 1%;
+}
+
+
+#button_play { 
+    font-size: 1.8vw; 
+    padding: 0.5vw 5.3vw;
+
+}
+
+
+#button_play:hover {
+    transform: scale(1.09); 
+    }
+
+
+
+
+
+/* Contenido de la caja de NOMBRE, INFO Y USUARIO DE LA LISTA ---------------------------------*/
+
+.Playlist_info { 
+    font-size: 1.4vw; 
+    
+}
+
+.Playlist_info {
+    position: relative ;
+    float: right;
+    width: 500px;
+    
+    margin-top: 5%;
+    margin-right: 300px;
+    font-size: 1.4vw; 
+    
+  }
+
+/*font-size: 1.4em 
+
+@media screen and (max-width:750px) {
+      
+    .Playlist_info {
+        font-size: 0.9rem;
+    }
+}
+*/
+  
+  .playlist_front {
+    
+    width: 20vw ; /* si no 300 px */
+    
+    display: inline-block;
+  }
+
+  #playlist_image {
+      width: 90%;
+      box-shadow: 8px 10px 8px #0000009f;
+      margin-bottom: 1%;
+      display: block;
+    }
+/*
+    .box_content {
+        border: black 1px solid;
+    
+    }
+*/
+  #playlist_title {
+      opacity: 0.55;
+  }
+
+  #playlist_user {
+      width: fit-content;
+      transition: filter, text-shadow 0.2s ease-in-out;
+  }
+  #playlist_user:hover{
+      cursor: pointer;
+      filter:brightness(200%);
+        text-shadow: 2px 2px 4px #ffffff5d;
+  }
+  #playlist_description {
+      font-weight: bold;
+  }
+
+  /* Antes se llevaba esto en el contenido 
+  position: relative;
+  z-index: 2; 
+  */
+
+  
+  #content {
+      
+      margin-left: 5%;
+      padding-top: 2%;
+      font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+      color: aliceblue;
+      
+      display: flex;
+      
+      
+  }
+
+  /* Lista --------------------------------------------------------------------------------*/
+
+  .list { /* section de la lista */
+    
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 95%;
+
+  }
+  .list_head {
+    font-size: 1.5vw;
+  }
+  
+  .list li {
+      
+    display:inline;
+    padding-left:3px;
+    padding-right: 8vw;
+    
+    }
+/*
+   #info_musiclist #album   {
+        text-overflow: ellipsis;
+        border: black 1px solid;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 50px; 
+        margin:0; padding:0
+    }
+*/
+
+#info_musiclist {
+    transition: filter, text-shadow 0.1s ease-in-out;
+}
+
+    #info_musiclist:hover {
+        filter:brightness(200%);
+        text-shadow: 2px 2px 4px #ffffff5d;
+        cursor: pointer;
+    }
+
+    .list hr {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        opacity: 0.55;
+        
+    }
+
+    /* enlaces ---------------------------------------- */
+.option a {
+    text-decoration: none;
+    color: rgb(199, 197, 197);
+}
+
+@media screen and (max-width:1150px){
+
+
+    #album_section {
+        display: none;
+
+    }
+    #album {
+        display: none;
+    }
+}
+
+@media screen and (max-width:770px){
+
+    #artist_section {
+        display: none;
+    }
+
+    #artist {
+        display: none;
+    }
+}
