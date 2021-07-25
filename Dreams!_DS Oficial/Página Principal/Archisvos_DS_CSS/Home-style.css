@@ -67,6 +67,9 @@ body{
 
     border-radius: 10px;
 }
+
+
+
 /*Formato para el aside------------------------------------------------------------------*/
 
 /*lOGO DE dREAMS!*/
@@ -323,7 +326,7 @@ body{
 /*-------------------------------------------------------------------------------------*/
 footer{
     width: 100%;
-    min-height: 100px;
+    min-height: 10%;
     background-color: #050a20;
     padding: 0px 20px 5px 20px;
 
@@ -345,7 +348,6 @@ footer{
 .picture-song-footer{
     width: 100px;
     height: 100px;
-    margin-right: 15px;
 
     display: flex;
     align-items: center;
@@ -524,6 +526,14 @@ footer{
     display: none;
 }
 
+.icon-play-1{
+    font-size: 4.5vw;
+}
+
+.icon-to-start-1,
+.icon-to-end-1{
+    font-size: 2vw;
+}
 
 /*Condiciones para el footer*/
 
@@ -579,9 +589,6 @@ footer{
 
 
 @media screen and (max-height:750px){
-    footer{
-        height: 85px;
-    }
     .picture-song-footer{
         height: 85px;
     }

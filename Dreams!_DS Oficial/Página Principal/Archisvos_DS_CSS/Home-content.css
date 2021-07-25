@@ -11,22 +11,30 @@
 /* Titulo del carrucel: Artistas recomendados*/
 .descripcion-bottum h2{
     float: left;
-    font-size: 1.8vw;
+    font-size: 1.7vw;
 }
 
 .icon-left-open-mini,
 .icon-right-open-mini{
     float: right;
-    font-size: 3vmin;
+    font-size: 2.5vw;
 
     cursor: pointer;
 
 }
 
+.icon-left-open-mini.active{
+    color: rgb(175, 173, 173);
+    cursor:inherit;
+}
+
+
+
+
 /*------------------- Carousel ----------------------------------*/
 .contenedor-principal{
     width: 100%;
-    padding: 20px 0px;
+    padding: 15px 0px;
     overflow: hidden;
     scroll-behavior: smooth;
 }
@@ -43,6 +51,12 @@
 
     padding: 10px;
     position: relative;
+}
+
+@media screen and (min-width: 1910px) {
+    .carousel .artista{
+        min-width: 20%;
+    }
 }
 
 .carousel .artista:hover{
@@ -95,4 +109,21 @@
 .carousel .artista:hover i{
     transition: 0.5s;
     opacity: 1;
+}
+
+/*------     --------------  Segundo carousell --------- ------------*/
+
+.second-container{
+    border: var(--border-cont);
+    margin-top: 10px;
+    height: 500px;
+}
+
+.title-icon h2{
+    float: left;
+    font-size: 1.6vw;
+}
+
+.title-icon i{
+    font-size: 2.4vw;
 }
