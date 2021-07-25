@@ -45,12 +45,14 @@ body {
 
 .main-contaier {
   width: calc(100% - 232px);
-  height: calc(100% - 100px);
-  background-color: rgba(0, 0, 0, 0.377);
+  height: calc(100% - 87px);
+  background-color: rgba(0, 0, 0, 0.411);
 
   margin-top: 100px;
 
   overflow-y: auto;
+
+  scroll-behavior: smooth;
 }
 
 .main-contaier::-webkit-scrollbar {
@@ -62,6 +64,7 @@ body {
 
   border-radius: 10px;
 }
+
 /*Formato para el aside------------------------------------------------------------------*/
 
 /*lOGO DE dREAMS!*/
@@ -208,9 +211,7 @@ body {
 
   position: fixed;
 
-  padding: 20px 10px 30px 65px;
-
-  background-color: rgba(0, 0, 0, 0.377);
+  background-color: rgba(0, 0, 0, 0.411);
   border-top-left-radius: 60px;
 }
 
@@ -267,8 +268,17 @@ body {
 
 /*-------------------------Container Principal----------------------------------------*/
 
+.planet-backg img {
+  width: 30%;
+  position: absolute;
+  top: 74%;
+  left: 67%;
+
+  opacity: 0.4;
+}
+
 .main-contaier {
-  padding: 15px 20px 15px 40px;
+  padding: 15px 30px 15px 45px;
   color: white;
   font-family: var(--our-font);
 }
@@ -282,7 +292,7 @@ body {
 }
 .title-name-user p {
   text-align: left;
-  font-size: 2rem;
+  font-size: 2.5vw;
 }
 
 #weilcome {
@@ -298,11 +308,19 @@ body {
 /*-------------------------------------------------------------------------------------*/
 footer {
   width: 100%;
-  min-height: 100px;
+  height: 10%;
+  max-height: 95px;
   background-color: #050a20;
-  padding: 0px 20px 5px 20px;
 
   border-top: rgba(255, 255, 255, 0.425) 0.5px solid;
+
+  position: absolute;
+  top: 90%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 
   position: absolute;
   top: 88.5%;
@@ -319,6 +337,11 @@ footer {
   width: 100px;
   height: 100px;
   margin-right: 15px;
+}
+
+.picture-song-footer {
+  width: 100px;
+  height: 100%;
 
   display: flex;
   align-items: center;
@@ -326,7 +349,7 @@ footer {
 }
 
 .picture-song-footer img {
-  height: 75%;
+  height: 65%;
 }
 
 /*Inforamción adicional*/
@@ -353,7 +376,7 @@ footer {
 }
 
 #enjoy-with {
-  font-size: 0.9rem;
+  font-size: 1.5vh;
 }
 
 .more-icons {
@@ -386,7 +409,7 @@ footer {
   width: 100%;
   height: 50%;
 
-  padding-top: 23px;
+  padding-top: 10px;
 }
 
 .center-song p {
@@ -404,15 +427,19 @@ footer {
   float: left;
 
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.9vh;
   font-weight: bold;
   margin-top: 0.5%;
 }
 
 #name-artist-2 {
   float: right;
+}
 
-  font-size: 0.95rem;
+#name-artist-2 {
+  float: right;
+
+  font-size: 1.7vh;
 
   margin-top: 1%;
 }
@@ -423,9 +450,8 @@ footer {
   width: 100%;
   height: 50%;
 
-  color: white;
-  font-family: var(--our-font);
-  font-size: 0.8rem;
+  padding: 5px 0px;
+  display: flex;
 
   padding: 20px 0px;
   display: flex;
@@ -482,6 +508,15 @@ footer {
 
 #pause {
   display: none;
+}
+
+.icon-play-1 {
+  font-size: 4.5vw;
+}
+
+.icon-to-start-1,
+.icon-to-end-1 {
+  font-size: 2vw;
 }
 
 /*Condiciones para el footer*/
@@ -553,6 +588,16 @@ footer {
   .center-bar-time {
     padding-top: 5px;
   }
+  .picture-song-footer img {
+    height: 55px;
+  }
+}
+
+@media screen and (max-height: 750px) {
+  .picture-song-footer {
+    height: 85px;
+  }
+
   .picture-song-footer img {
     height: 55px;
   }
