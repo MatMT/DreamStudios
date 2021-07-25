@@ -49,12 +49,14 @@ body{
 
 .main-contaier{
     width: calc(100% - 232px);
-    height: calc(100% - 100px);
-    background-color: rgba(0, 0, 0, 0.377);
+    height: calc(100% - 87px);
+    background-color: rgba(0, 0, 0, 0.411);
 
     margin-top: 100px;
 
     overflow-y: auto;
+
+    scroll-behavior: smooth;
 }
 
 .main-contaier::-webkit-scrollbar{
@@ -230,9 +232,8 @@ body{
 
     padding: 20px 10px 30px 65px;
 
-    background-color: rgba(0, 0, 0, 0.377);
+    background-color: rgba(0, 0, 0, 0.411);
     border-top-left-radius: 60px;
-
 }
 
 .searcher-container input{
@@ -290,8 +291,18 @@ body{
 
 /*-------------------------Container Principal----------------------------------------*/
 
+.planet-backg img{
+    width: 30%;
+    position: absolute;
+    top: 74%;
+    left: 67%;
+    
+    opacity: 0.4;
+}
+
+
 .main-contaier{
-    padding: 15px 20px 15px 40px;
+    padding: 15px 30px 15px 45px;
     color: white;
     font-family: var(--our-font);
 }
@@ -307,7 +318,7 @@ body{
 }
 .title-name-user p{
     text-align: left;
-    font-size: 2rem;
+    font-size: 2.5vw;
 }
 
 #weilcome{
@@ -326,14 +337,14 @@ body{
 /*-------------------------------------------------------------------------------------*/
 footer{
     width: 100%;
-    min-height: 10%;
+    height: 10%;
+    max-height: 95px;
     background-color: #050a20;
-    padding: 0px 20px 5px 20px;
 
     border-top: rgba(255, 255, 255, 0.425) 0.5px solid;
 
     position: absolute;
-    top: 88.5%;
+    top: 90%;
     position: fixed;
     display: flex;
     align-items: center;
@@ -347,7 +358,7 @@ footer{
 
 .picture-song-footer{
     width: 100px;
-    height: 100px;
+    height: 100%;
 
     display: flex;
     align-items: center;
@@ -355,7 +366,7 @@ footer{
 }
 
 .picture-song-footer img{
-    height: 75%;
+    height: 65%;
 }
 
 /*Inforamción adicional*/
@@ -383,7 +394,7 @@ footer{
 }
 
 #enjoy-with{
-    font-size: 0.9rem;
+    font-size: 1.5vh;
 }
 
 
@@ -419,7 +430,7 @@ footer{
     width: 100%;
     height: 50%;
 
-    padding-top: 23px;
+    padding-top: 10px;
 }
 
 
@@ -439,7 +450,7 @@ footer{
     float: left;
 
     font-weight: 300;
-    font-size: 1rem;
+    font-size: 1.9vh;
     font-weight: bold;
     margin-top: 0.5%;
 }
@@ -448,7 +459,7 @@ footer{
 #name-artist-2{
     float: right;
 
-    font-size: 0.95rem;
+    font-size: 1.7vh;
 
     margin-top: 1%;
 }
@@ -463,7 +474,7 @@ footer{
     font-family: var(--our-font);
     font-size: 0.8rem;
 
-    padding: 20px 0px;
+    padding: 5px 0px;
     display: flex;
 
 }
@@ -593,19 +604,6 @@ footer{
         height: 85px;
     }
 
-
-    .center-bar-time{
-        padding: 7px 0px;
-    }
-    .center-song{
-        padding-top: 18px;
-    }
-    .center-song{
-        padding-top: 12px;
-    }
-    .center-bar-time{
-        padding-top: 5px;
-    }
     .picture-song-footer img{
         height: 55px;
     }
