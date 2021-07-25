@@ -50,19 +50,6 @@ html{
 }
 
 
-
-#logotitle {
-    border: black 1px solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10vw;
-    position: relative; 
-    
-}
-
-
-
 /* Seguna parte de la pagina */
 .second_section {
     width: 100%;
@@ -74,41 +61,86 @@ html{
 }
 
 
-#logo_dreams {
-    width: 6%;
-    margin: 2%;
-    float: left;
-    
-    border: black 1px solid;
-}
 /* CONTENIDO -------------------------------------------------------------------*/
 .head1 {
-    border: black 1px solid;
+    border: rgb(255, 0, 21) 1px solid;
     color: aliceblue;
     font-size: 1.8vw; 
-    text-align: right;
+    text-align: left;
     padding-left: 3%;
     padding-right: 2%;
     position: absolute;
+    
 }
 
+.head1 a {
+    border:black 1px solid;
+    margin-top: 2%;
+    position: absolute;
+    display: flex;
+    width: fit-content;
+    
+
+}
 #header-text {
     border: black 1px solid;
     font-size: 1.8vw; 
     text-align: right;
+    
     padding-left: 3%;
     padding-right: 2%;
-    cursor: pointer;
+
     position: relative;
 
+    margin: 2%;
+
 }
+
+#header-text a {
+    border: black 1px solid;
+    cursor: pointer;
+}
+
 a {
     text-decoration: none;
     color: aliceblue;
     padding-left: 3%; 
 }
 
+/* PARTE DE LOS LOGOS */
 
+#logo_dreams {
+    width: 6%;
+    margin: 1%;
+    float: left;
+    border: black 1px solid;
+    position: relative;
+    display: flex;
+}
+
+#logotitle {
+    border: black 1px solid;
+    /*
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    display:block;
+    margin:auto;
+    */
+    
+} 
+
+
+#logotitle img{ 
+    width: 10%;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+/* PARTE BAJA DE LA PAGINA SECCION 1 */
 
 .low-part1 {
 
@@ -176,9 +208,16 @@ padding-left: 9%;
     cursor: pointer;
     border-radius: 24px;
     font-weight: 50%;
-
+/*
     position: relative; 
+
+    */
+
     margin-top: 1%;
+    
+    left: 37%;
+    top: 70%;
+    position: absolute;
     
 
     transition: transform 0.2s ease-in-out;
