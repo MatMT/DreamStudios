@@ -50,16 +50,69 @@ html{
 }
 
 
-/* Seguna parte de la pagina */
-.second_section {
+/* Seguna parte de la pagina -------------------------------------------------------------------------------------------------------------------------------- */
+#second_section {
+    
     width: 100%;
     height: 100vh;
     
-
+    background: rgb(255, 173, 244);
     background-image: url(../../Recursos/Imágenes/active-woman-with-snow-white-smile-is-dancing-on-pink-wall-model-in-orange-blouse-listening-to-music.jpg);
+    background-size: cover;
+    background-position: center;
     
 }
 
+#second_section::before {
+    content: "";
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    
+    background-color: rgba(0, 0, 0, 0.651);
+    opacity: 0.3;
+}
+
+#header-text2 { 
+    font-size: 1.2vw; 
+    text-align: right;
+    
+    
+    padding-left: 3%;
+    padding-right: 2%;
+
+    position: relative;
+   
+}
+
+#header-text2 a{
+    color: black;
+}
+
+#content2 {
+    top: 60%;
+    position: relative;
+    
+}
+@media screen and (max-width:900px){
+
+    #content2 img {
+        width: 100%;
+    }
+}
+
+
+/* ------------------ SECTION 3 ------------------------------------------------*/
+#third_section {
+width: 100%;
+height: 100vh;
+
+background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(215,255,255,1) 100%);
+
+background-size: cover;
+background-position: center;
+}
 
 /* CONTENIDO -------------------------------------------------------------------*/
 .head1 {
