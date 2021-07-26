@@ -10,15 +10,12 @@
 .name-user-title {
   color: #c4c4c4;
   font-size: 2.5em;
-}
-
-.section-library {
-  background-color: red;
-  z-index: 30;
+  padding-bottom: 1.5rem;
 }
 
 .list_group {
-  padding-top: 30%;
+  display: flex;
+  justify-content: center;
 }
 
 .list_library {
@@ -30,11 +27,6 @@
   color: #d3d3d3e0;
 }
 
-.list_library:active {
-  text-transform: uppercase;
-  color: #fff;
-}
-
 .line-library {
   background-color: #d3d3d3e0;
   margin-top: 0.9em;
@@ -43,28 +35,45 @@
 }
 
 .line-library-select {
-  position: absolute;
   background-color: #fff;
-  width: 8%;
+  width: 13%;
   height: 4px;
   margin-top: -2px;
 }
 
 .flex-container {
-  padding-top: 1em;
+  margin-left: 1.5em;
+  width: 90%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .flex-item {
-  border: 0.5px solid;
+  margin-top: 20%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 1.2rem;
-  padding: 1rem;
+  padding: 12vh 12vh;
 }
 
-.flex-item:first-child {
-  background-image: url(../../Recursos/Imágenes/otros/imgprueba.jpg);
-  background-size: contain;
+.flex-item {
+  background-image: url(../../Recursos/Iconos/SVG/Recurso\ 2.svg),
+    url(../../Recursos/Imágenes/young-woman-posing-and-listening-to-music-through-her-pink-headphones.jpg);
+
+  background-size: 30%, cover;
+  background-repeat: no-repeat;
+  background-position: bottom right, center;
+}
+
+.name-list {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.flex-subcontainer {
+  text-align: center;
+}
+
+.descrip-list {
+  color: #fffa;
 }
