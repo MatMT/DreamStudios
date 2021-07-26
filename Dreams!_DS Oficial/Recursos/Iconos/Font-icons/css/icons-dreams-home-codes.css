@@ -14,6 +14,7 @@
 .icon-play-circled:before { content: '\e80c'; } /* '' */
 .icon-play-circled2:before { content: '\e80d'; } /* '' */
 .icon-heart-circled:before { content: '\e80e'; } /* '' */
+.icon-loop-1:before { content: '\e80f'; } /* '' */
 .icon-th-large-outline:before { content: '\e810'; } /* '' */
 .icon-th-large:before { content: '\e811'; } /* '' */
 .icon-to-end:before { content: '\e812'; } /* '' */
@@ -30,8 +31,12 @@
 .icon-volume-up-1:before { content: '\e81d'; } /* '' */
 .icon-volume-down-1:before { content: '\e81e'; } /* '' */
 .icon-volume-off-1:before { content: '\e81f'; } /* '' */
+.icon-shuffle-1:before { content: '\e820'; } /* '' */
+.icon-gmail:before { content: '\e821'; } /* '' */
+.icon-dot-3:before { content: '\e822'; } /* '' */
 .icon-pause-1:before { content: '\f00e'; } /* '' */
 .icon-play-1:before { content: '\f00f'; } /* '' */
 .icon-to-end-1:before { content: '\f010'; } /* '' */
 .icon-to-start-1:before { content: '\f011'; } /* '' */
 .icon-menu-1:before { content: '\f0c9'; } /* '' */
+.icon-instagram:before { content: '\f16d'; } /* '' */
