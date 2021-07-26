@@ -132,7 +132,6 @@ body {
   .list { /* section de la lista */
     
     margin-top: 2%;
-    margin-left: 5%;
     width: 95%;
 
   }
@@ -144,7 +143,6 @@ body {
       
     display:inline;
     padding-left:3px;
-    padding-right: 8vw;
     
     }
 /*
@@ -202,4 +200,73 @@ body {
     #artist {
         display: none;
     }
+}
+
+
+/* ---------- ----------- --------- lista de Reproducción -------- ------------- ---------*/
+
+.play-list-songs{
+    width: 100%;
+    margin-top: 5vh;
+
+    overflow-y: auto;
+}
+
+.data-song{
+    width: 90%;
+    height: 45px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: space-around;
+
+    border-bottom: #878787 solid 1px;
+
+}
+
+.data-song h4{
+    font-weight: normal;
+
+    width: 20%;
+    text-align: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song-description-playlist{
+    width: 90%;
+    height: 45px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: space-around;
+
+    border-bottom: #878787 solid 1px;
+
+    cursor: pointer;
+}
+
+.song-description-playlist:hover{
+    background-color: rgba(182, 182, 182, 0.671);
+    transition: 0.5s;
+}
+
+.song-description-playlist p{
+    font-weight: normal;
+    font-size: 1.7vh;
+
+    width: 20%;
+    text-align: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#number{
+    width: 10%;
 }
