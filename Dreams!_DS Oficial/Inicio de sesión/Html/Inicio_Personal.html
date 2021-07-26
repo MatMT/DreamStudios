@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Formulario</title>
         <link rel="stylesheet" href="../Css/forms.css">
+        <link rel="stylesheet" href="../Css/botones.css">
     </head>
     <body>
     <div class="mega-div-container">
@@ -26,49 +27,27 @@
             <div id="datos_form">
             </div>
             <div class="datos">
-                <label for="NameType">¿Como te llamaremos?</label>
+                <label for="NameType">Tu correo electrónio</label>
                 <br>
                 <input type="text" name="NameType"  placeholder="Tu nombre de Usuario" class="nombre" id="NameType" required>
             </div>
             <div class="datos">
-                <label for="EmailType">Tu correo eléctronico</label>
+                <label for="EmailType">Tu contraseña</label>
                 <br>
                 <input type="email" name="EmailType" placeholder="correo@example.com"  class="nombre" id="EmailType" required>
             </div>
-            <div class="datos">
-                <label for="PassType">Establece tu contraseña</label>
-                <br>
-                <input type="password" name="PassType" placeholder="Tu contraseña segura"  class="nombre" id="PassType" required>
-            </div>
-            <div class="datos">
-                <label for="AgeType">¿Cuantos años tienes?</label>           
-                <br>         
-                <input type="number" name="AgeType" min="0" max="120" placeholder="0"  id="AgeType" required>
-            </div>
-            
-            ¿Cúal es tu género?          
-            <div class="datos_button">
-                <br>         
-                <input type="radio" name="GenderType" value="Mujer" id="AgeType" placeholder="Mujer" required><label for="GenderType" >Mujer</label><br>
-                <input type="radio" name="GenderType" value="Hombre" id="AgeType" required><label for="GenderType">Hombre</label><br>
-            </div>
-            
+            <label for="GenderType">¿Olvidaste tu contraseña</label>   
             <hr>
-            
             <div id="botones">
-                <input type="submit" value="Enviar" class="boton">
-                <input type="reset" value="Borrar" class="boton">
-            
+                <input type="submit" value="Iniciar Sesión" class="boton">
+                <a href="#" class="login">Registraste</a><span>¿No tienes una cuenta?</span>
             </div>
-
+            <br><br><br>
         </form>
 
     </div>
-
-
     </body>
-
-    <script>
+<!--    <script>
         const form = document.getElementById("personal-data")
        
         form.addEventListener("submit", function(event){
@@ -91,5 +70,5 @@
         }
         )
     </script>
-
+-->
 </html>
