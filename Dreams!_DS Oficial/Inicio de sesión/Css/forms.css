@@ -121,13 +121,20 @@ form .datos input {
 
 form #botones input {
   font-weight: bolder;
-  font-size: 1.2rem;
-  padding: 0.5em;
+  font-size: 1.3rem;
+  padding: 0.5em 1.5em;
   border: none;
   margin-top: 3%;
   margin-right: 10px;
-  border-radius: 10px;
-  background-color: #e0e5ec;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #fb7c64;
+}
+
+#botones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 form #botones input:active {
@@ -143,7 +150,7 @@ form .datos_button {
 span,
 a.login {
   font-size: 1.1em;
-  padding-right: 2%;
+  text-decoration: underline;
   margin-top: 5%;
   float: right;
 }
@@ -167,4 +174,15 @@ a.login:visited {
 
 .GenderType {
   margin: 0 auto 0 auto;
+}
+
+.lost-pass {
+  color: #fffa;
+  padding-bottom: 1.5em;
+}
+
+.regist {
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
 }
