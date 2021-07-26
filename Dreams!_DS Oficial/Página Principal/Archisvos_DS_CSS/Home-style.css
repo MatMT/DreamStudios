@@ -66,7 +66,6 @@ body {
 }
 
 /*Formato para el aside------------------------------------------------------------------*/
-
 /*lOGO DE dREAMS!*/
 
 .logo_box_aside {
@@ -198,6 +197,25 @@ body {
   float: none;
   font-size: 1rem;
 }
+/*------------------------------------------------------------header contairne*/
+
+header{
+    width: calc(100% - 232px);
+    height: 100px;
+    position: absolute;
+    left: 232px;
+    top: 0px;
+
+    position: fixed;
+
+    padding: 20px 10px 30px 65px;
+
+    background-color: rgba(0, 0, 0, 0.411);
+    border-top-left-radius: 60px;
+
+    z-index: -1;
+}
+
 
 /*Buscador y menu de opciones ----------------------------------------------------------*/
 
@@ -211,6 +229,7 @@ body {
 
   position: fixed;
 
+<<<<<<< Updated upstream
   background-color: rgba(0, 0, 0, 0.411);
   border-top-left-radius: 60px;
 }
@@ -227,6 +246,25 @@ body {
   border: none;
   padding: 5px 45px 5px 35px;
   outline: none;
+=======
+    z-index: 500;
+
+}
+
+.searcher-container input{
+    font-family: var(--our-font);
+    background-color: white;
+    font-size: 11pt;
+    color: rgb(99, 99, 99);
+    border-radius: 20px;
+    width: 35%;
+    max-width: 440.55px;
+    height: 35px;
+    border: none;
+    padding: 5px 45px 5px 35px;
+    outline: none;
+
+>>>>>>> Stashed changes
 }
 
 .searcher-container #nota {

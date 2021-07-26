@@ -1,0 +1,26 @@
+:root{
+    --our-font: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    --border-cont: 1px solid white;
+}
+
+body{
+    background: rgb(84,28,249);
+    background: linear-gradient(324deg, rgba(84,28,249,1) 10%, rgba(255,94,60,1) 95%);
+}
+
+header{
+    height: 350px;
+}
+.main-contaier{
+    width: calc(100% - 232px);
+    height: calc(50% - 87px);
+
+    margin-top: 30%;
+
+}
+
+.searcher-container{
+    width: calc(100% - 232px);
+    height: 30%;
+    
+}
