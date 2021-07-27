@@ -46,7 +46,7 @@ body {
 .main-contaier {
   width: calc(100% - 232px);
   height: calc(100% - 87px);
-  background-color: rgba(0, 0, 0, 0.411);
+  background-color: rgba(0, 0, 0, 0.511);
 
   margin-top: 100px;
 
@@ -204,9 +204,20 @@ body {
   transition: 0.2s;
 }
 
+.play-list a:hover{
+  color: white;
+  transition: 0.2s;
+}
+
 #play-ic {
   float: none;
   font-size: 1rem;
+}
+
+
+.play-list a{
+  text-decoration: none;
+  color: rgb(199, 197, 197);
 }
 /*------------------------------------------------------------header contairne*/
 
@@ -249,7 +260,7 @@ header{
   font-size: 11pt;
   color: rgb(99, 99, 99);
   border-radius: 20px;
-  width: 35%;
+  width: 33%;
   max-width: 440.55px;
   
   height: 35px;
