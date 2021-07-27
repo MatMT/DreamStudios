@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dreams! Playlist</title>
         <link rel="icon" href="../../Recursos/Iconos/Ds_logo.ico">
-        <link rel="stylesheet" href="../Archisvos_DS_CSS/Style_Playlist_Div.css">
         <link rel="stylesheet" href="../../Página Principal/Archisvos_DS_CSS/Home-style.css">
+        <link rel="stylesheet" href="../Archisvos_DS_CSS/Style_Playlist_Div.css">
         <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/icons-dreams-home.css">
         <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/icons-dreams-home-embedded.css">
         <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/animation.css">
@@ -31,7 +31,7 @@
                         <p>Inicio</p></a>
                     </div>
                     
-                    <div class="option">
+                    <div class="active-option">
                         <a><i class="icon-th-large-outline"></i>
                         <p>Mi biblioteca</p></a>
                     </div>
@@ -50,72 +50,24 @@
                         <a><i class="icon-plus-squared"></i>
                         <p>Crear Play List</p></a>
                     </div>
-                    <div class="active-option">
                     <div class="my-play-list">
-                        <p><i class="icon-right-open-mini"></i>My Music of Niall Horan my favorute</p>
-                    </div>
+                        <p><i class="icon-right-open-mini"></i>My Music of Niall Horan my favorite</p>
                     </div>
     
                 </div>
             </div>
 
             <section class="main-contaier">
-                <div>
-                    <!------intento de poner nuevo contenido --->
-                    <section id="content">
-                        <div class="box_content">
-                            <div class="playlist_front">
-                            <img id="playlist_image" src="../img/1x1-Artist/nioce.jpg">
-                            </div>
-                            <!---Aqui iba el Boton anteriormente xD-->
-        
-                            <div class="Playlist_info">
-                            <h1 id="playlist_title"> Mi playlist </h1>
-                            <h2 id="playlist_description"> Todo lo que quiero escuchar </h2>
-                            <h3 id="playlist_user"><a> Eduardo </a></h3>
-                        </div>
-                            <button id="button_play" type="button"> Escuchar </button>
-                        </div>
-                    </section>
-                </div>
-
-                 <!----------------------------->
-
-            <section class="list">
                 <div class="planet-backg">
                     <img src="../../Recursos/Otros/planetas.svg" alt="img">
+                </div>       
+                <div class="controls-play-list">
+                    <button class="play-list-buttom">
+                        <i class="icon-play-circled2"></i>
+                        <p>Reproducir</p>
+                    </button>
+                    <i class="icon-dot-3"></i>
                 </div>
-
-                <!--
-                    <div class="list_data">
-
-                    <ul id="list_head">
-                        
-                        <li id="song_number">#</li>
-                        <li id="song_name">CANCIÓN</li>
-                        <li id="artist_section">ARTISTA</li>
-                        <li id="album_section">ALBUM</li>
-
-                    </ul>
-                    <hr>
-                    <ul id="info_musiclist">
-                        <li id="song_num">1</li>
-                        <li id="song">Nice to meet ya</li>
-                        <li id="artist">Naill Horan</li>
-                        <li id="album">Heartbreak Weather</li>
-                    </ul>
-                    <hr>
-                    <ul id="info_musiclist">
-                        <li id="song_num">2</li>
-                        <li id="song">Nice to meet ya</li>
-                        <li id="artist">Naill Horan</li>
-                        <li id="album">Heartbreak Weather</li>
-                    </ul>
-                    <hr>
-                </div>
-
-                -->
-
                 <div class="play-list-songs">
                     <div class="data-song">
                         <h4 id="number">#</h4>
@@ -136,14 +88,22 @@
                         <p>Heartbreak Weather</p>
                     </div>
                     
-                </div>
-
+                </div>         
                 
             </section>
             <!----------------------------->
 
             <header class="header-container">
-                <div class="line-soft"></div>
+
+                <div class="container-info-playlis">
+                    <img src="../../Recursos/Imágenes/playlist/headphones.jpg" alt="">
+                    <div class="content-playlist">
+                        <h2>MI play list</h2>
+                        <h1>De todo</h1>
+                        <h2>Lo quiero escuchar</h2>
+                        <h3>By Eduardo</h3>
+                    </div> 
+                </div>
             </header>
 
             <div class="searcher-container">
@@ -151,6 +111,8 @@
                 <i class="icon-note" id="nota"></i>
 
                 <a href=""><i class="icon-menu" id="menu"></i></a>
+
+                <div class="line-soft"></div>
             </div>
             
 
