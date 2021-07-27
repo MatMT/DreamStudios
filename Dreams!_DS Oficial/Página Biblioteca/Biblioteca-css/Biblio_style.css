@@ -51,6 +51,7 @@
 
 .flex-item {
   margin-top: 20%;
+  margin-right: 10px;
   display: flex;
   font-size: 1.2rem;
   padding: 12vh 12vh;

@@ -60,13 +60,17 @@ header{
 .container-info-playlis img{
     height: 100%;
     min-height: 189.75px;
+
+    -webkit-box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.733);
+    filter: shadow(color=#000, direction=0, strength=3);
 }
 
 .content-playlist{
     min-width: 180px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    
     padding: 10px 5px;
 }
 .content-playlist{
@@ -74,17 +78,17 @@ header{
 }
 .content-playlist h2{
     font-weight: normal;
-    font-size: 2.2vw;
+    font-size: 3vh;
 }
 .content-playlist h1{
-    font-size: 7vw;
+    font-size: 9vh;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .content-playlist h3{
-    font-size: 1.5vw;
+    font-size: 2vh;
 }
 
 /*------ ------- ------ BUtom */
@@ -112,6 +116,9 @@ header{
 
 }
 
+.controls-play-list button p{
+    font-size: 3vh;
+}
 
 .controls-play-list button i{
     display: none;
@@ -139,6 +146,8 @@ header{
     margin: 0px 1vh;
 
     cursor: pointer;
+
+    margin-left: 3vw;
 }
 
 
@@ -261,7 +270,7 @@ header{
     }
     .main-contaier{
         height: calc(100% - 500px);
-        margin-top: 100px;
+        margin-top: 500px;
     }
 
 }
