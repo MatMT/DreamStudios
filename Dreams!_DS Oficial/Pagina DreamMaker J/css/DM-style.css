@@ -1,0 +1,90 @@
+.title-dreameker{
+     width: 55%;
+     height: 200px;
+     margin-bottom: 30px;
+}
+
+.title-dreameker h1{
+    font-size: 4rem;
+}
+
+.title-dreameker h3{
+    font-size: 2.5rem;
+    color: #C1C0C0;
+}
+.title-dreameker p{
+  width: 400px;
+}
+
+.creación {
+    width: 100%;
+     height: 150px;
+ }
+
+.line-create {
+    display: block;
+    background-color: #D3D3D3;
+    height: 1px;
+    margin-top: 10px;
+    width: 98%;
+}
+
+.creación h3{
+  padding-left: 2%;
+  padding-right: 2%;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.7em;
+  color: #fff;
+}
+
+.line-comp {
+    background-color: #d3d3d3e0;
+    margin-top: 0.9em;
+    width: 90%;
+    height: 1px;
+}
+
+.linea-opt {
+    position: fixed;
+    background-color: #fff;
+    width: 7%;
+    height: 4px;
+    margin-top: -3px;
+}
+
+.cont-icon {
+    margin-left: 1.5em;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.icon-position{
+    text-align: center;
+}
+
+.cont-icon h4{
+    font-size: 1em;
+    text-align: center;}
+
+.cont-icon h3{
+    font-size: 2vmin;
+    text-align: center;
+    font-weight: normal;
+}
+
+.icon {
+  background-image: url(../../Recursos/Iconos/SVG/Recurso\ 2.svg),
+    url(../../Recursos/Imágenes/young-woman-posing-and-listening-to-music-through-her-pink-headphones.jpg);
+    background-size: 30%, cover;
+    background-repeat: no-repeat;
+    background-position: bottom right, center;
+    margin-top: 10%;
+    display: flex;
+    padding: 12vh 12vh;
+}
+
+
+
