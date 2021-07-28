@@ -94,16 +94,16 @@ header{
 }
 
 .icon {
-    margin-top: 20%;
+    margin-top: 10%;
     margin-right: 10px;
     display: flex;
-    padding: 14vh 13.5vh;
+    padding: 13vh 13vh;
 }
 
 .icon {
     background-image: url(../../Recursos/Iconos/SVG/Recurso\ 2.svg), 
     url(../../Recursos/Imágenes/active-woman-with-snow-white-smile-is-dancing-on-pink-wall-model-in-orange-blouse-listening-to-music.jpg);
-    background-size: 30%, cover;
+    background-size: 18%, cover;
     background-repeat: no-repeat;
     background-position:  bottom left, center center;
 }
