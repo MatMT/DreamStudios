@@ -55,7 +55,7 @@
 
 .cont-icon {
     margin-left: 1.5em;
-    width: 90%;
+    width: 20%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -78,12 +78,13 @@
 .icon {
   background-image: url(../../Recursos/Iconos/SVG/Recurso\ 2.svg),
     url(../../Recursos/Imágenes/young-woman-posing-and-listening-to-music-through-her-pink-headphones.jpg);
-    background-size: 30%, cover;
+    padding: 15vh 13.5vh;
+    background-size: 18%, cover;
     background-repeat: no-repeat;
-    background-position: bottom right, center;
+    background-position: bottom left, center center;
     margin-top: 10%;
     display: flex;
-    padding: 12vh 12vh;
+    
 }
 
 
