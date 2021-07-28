@@ -64,12 +64,12 @@ header{
 }
 
 .linea-opt {
-    position: absolute;
     background-color: #fff;
     width: 7%;
     height: 4px;
     margin-top: -2px;
-}
+    }
+
 
 .cont-icon {
     margin-left: 1.5em;
@@ -77,10 +77,6 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-
-.icon-position{
-    text-align: center;
 }
 
 .cont-icon h4{
@@ -93,26 +89,25 @@ header{
     font-weight: normal;
 }
 
-.icon {
-  background-image: url(../../Recursos/Iconos/SVG/Recurso\ 2.svg),
-    url(../../Recursos/Imágenes/active-woman-with-snow-white-smile-is-dancing-on-pink-wall-model-in-orange-blouse-listening-to-music.jpg);
-    padding: 12vh 13.5vh;
-    background-size: 18%, cover;
-    background-repeat: no-repeat;
-    background-position: bottom left, center center;
-    margin-top: 10%;
-    display: flex;
+.icon-position {
+    text-align: center;
 }
 
 .icon {
-  background-image: url(../../Recursos/Iconos/SVG/Recurso\ ),
-    padding: 12vh 13.5vh;
-    background-size: 18%, cover;
-    background-repeat: no-repeat;
-    background-position: bottom left, center center;
-    margin-top: 10%;
+    margin-top: 20%;
+    margin-right: 10px;
     display: flex;
+    padding: 14vh 13.5vh;
 }
+
+.icon {
+    background-image: url(../../Recursos/Iconos/SVG/Recurso\ 2.svg), 
+    url(../../Recursos/Imágenes/active-woman-with-snow-white-smile-is-dancing-on-pink-wall-model-in-orange-blouse-listening-to-music.jpg);
+    background-size: 30%, cover;
+    background-repeat: no-repeat;
+    background-position:  bottom left, center center;
+}
+
 
 
 
