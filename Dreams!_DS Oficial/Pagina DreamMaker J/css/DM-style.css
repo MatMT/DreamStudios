@@ -64,11 +64,11 @@ header{
 }
 
 .linea-opt {
-    position: fixed;
+    position: absolute;
     background-color: #fff;
     width: 7%;
     height: 4px;
-    margin-top: -3px;
+    margin-top: -2px;
 }
 
 .cont-icon {
@@ -96,7 +96,7 @@ header{
 .icon {
   background-image: url(../../Recursos/Iconos/SVG/Recurso\ 2.svg),
     url(../../Recursos/Imágenes/young-woman-posing-and-listening-to-music-through-her-pink-headphones.jpg);
-    padding: 15vh 13.5vh;
+    padding: 12vh 13.5vh;
     background-size: 18%, cover;
     background-repeat: no-repeat;
     background-position: bottom left, center center;
