@@ -76,7 +76,8 @@
 }
 
 .icon {
-    background-image: url(https://image.flaticon.com/icons/png/512/2225/2225147.png);
+  background-image: url(../../Recursos/Iconos/SVG/Recurso\ 2.svg),
+    url(../../Recursos/Imágenes/young-woman-posing-and-listening-to-music-through-her-pink-headphones.jpg);
     background-size: 30%, cover;
     background-repeat: no-repeat;
     background-position: bottom right, center;

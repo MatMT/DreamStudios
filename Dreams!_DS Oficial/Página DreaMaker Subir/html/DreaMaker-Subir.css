@@ -1,0 +1,234 @@
+.form{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    max-width: 400px;
+    overflow: hidden;
+}
+.form input{
+    width: 100%;
+    height: 100%;
+    background: none;
+    color:#fff;
+    padding-top: 20px;
+    border: none;
+    outline: 0px;
+}
+.form .lbl-art{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+.form .lbl-art:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #2ecece;
+    transform: translate(-100%);
+    transition: all 0.3s ease;
+}
+.text-art{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+.form input:focus + .lbl-art .text-art,
+.form input:valid + .lbl-art .text-art{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #2ecece; 
+}
+.form input:focus + .lbl-art:after,
+.font input:valid + .lbl-art:after{
+    transform: translateX(0%);
+}
+.form2{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    max-width: 400px;
+    overflow: hidden;
+}
+.form2 input{
+    width: 100%;
+    height: 100%;
+    background: none;
+    color:#fff;
+    padding-top: 20px;
+    border: none;
+    outline: 0px;
+}
+.form2 .lbl-autor{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+.form2 .lbl-autor:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #2ecece;
+    transform: translate(-100%);
+    transition: all 0.3s ease;
+}
+.text-autor{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+.form2 input:focus + .lbl-autor .text-autor,
+.form2 input:valid + .lbl-autor .text-autor{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #2ecece; 
+}
+.form2 input:focus + .lbl-autor:after,
+.font2 input:valid + .lbl-autor:after{
+    transform: translateX(0%);
+}
+.form3{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    max-width: 400px;
+    overflow: hidden;
+}
+.form3 input{
+    width: 100%;
+    height: 100%;
+    background: none;
+    color:#fff;
+    padding-top: 20px;
+    border: none;
+    outline: 0px;
+}
+.form3 .lbl-descrip{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+.form3 .lbl-descrip:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #2ecece;
+    transform: translate(-100%);
+    transition: all 0.3s ease;
+}
+.text-descrip{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+.form3 input:focus + .lbl-descrip .text-descrip,
+.form3 input:valid + .lbl-descrip .text-descrip{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #2ecece; 
+}
+.form3 input:focus + .lbl-descrip:after,
+.font3 input:valid + .lbl-descrip:after{
+    transform: translateX(0%);
+}
+.container-top{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    background-color:none;
+}
+.container-centro{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    background-color:none;
+}
+.btn{
+    display: inline-block;
+    border-radius: 7px;
+    padding: 20px 15px;
+    text-decoration: none;
+}
+.btn-orange{
+    width: 100%;
+    height: 20%;
+    align-self: flex-end;
+    color:white;
+    background-color:coral; 
+}
+.btn-blue{
+    color:white;
+    background-color:blue;
+    width: 75%;
+    height: 10%;
+    min-width: 115px;
+}
+.btn-no{
+    width: 75%;
+    height: 10%;
+    color: white;
+    background-color: transparent;  
+}
+.btns{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.btn btn-no{
+    display: flex;
+    flex-direction: column;
+    width: 87%;
+    height: 50%;   
+}
+.text-dream h1{
+    font-size:70px;
+    font-family:Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+.text-dream h2{
+    font-size:30px;
+    font-family:Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+.img-subir{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    background-color:lightgray;  
+}
+.btn-tres{
+    align-self:flex-end;
+}
