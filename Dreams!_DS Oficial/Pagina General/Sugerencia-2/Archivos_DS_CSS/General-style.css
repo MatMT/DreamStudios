@@ -18,6 +18,8 @@ body{
     min-height: 1200px;
 
     overflow-x: hidden;
+
+    scroll-behavior: smooth;
 }
 
 header{

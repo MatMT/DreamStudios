@@ -1,3 +1,19 @@
+body{
+    background: rgb(84,28,249);
+    background: linear-gradient(351deg, rgba(84,28,249,1) 10%, rgba(255,94,60,1) 95%);
+}
+header{
+    background-color: rgba(255, 255, 255, 0.322);
+
+}
+.main-contaier{
+    background-color: rgba(255, 255, 255, 0.322);
+}
+
+.main-contaier{
+    padding: 15px 30px 15px 60px;
+}
+
 .title-dreameker{
      width: 55%;
      height: 200px;
@@ -5,7 +21,7 @@
 }
 
 .title-dreameker h1{
-    font-size: 4rem;
+    font-size: 6vw;
 }
 
 .title-dreameker h3{
@@ -13,12 +29,14 @@
     color: #C1C0C0;
 }
 .title-dreameker p{
-  width: 400px;
+  width: 50vw;
+  font-size: 1.2rem;
 }
 
 .creación {
     width: 100%;
-     height: 150px;
+    height: 150px;
+    margin-top: 8vh;
  }
 
 .line-create {
