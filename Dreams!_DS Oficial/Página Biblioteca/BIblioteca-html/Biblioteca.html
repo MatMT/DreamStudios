@@ -26,11 +26,11 @@
                 </div>
                 <!---Menú de Dreams-->
                 <div class="main_menu_aside">
-                    <div class="active-option">
-                        <a><i class="icon-music-2"></i>
+                    <div class="option">
+                        <a href="../../Página Principal/index/HomePage2.html"><i class="icon-music-2"></i>
                         <p>Inicio</p></a>
                     </div>
-                    <div class="option">
+                    <div class="active-option">
                         <a><i class="icon-th-large-outline"></i>
                         <p>Mi biblioteca</p></a>
                     </div>
@@ -51,7 +51,9 @@
                     </div>
     
                     <div class="my-play-list">
-                        <p><i class="icon-right-open-mini"></i>My Music of Niall Horan my favorute</p>
+                        <a href="../../Página Play List/html/Playlist.html">
+                            <p><i class="icon-right-open-mini"></i>My Music of Niall Horan my favorite</p>
+                        </a>
                     </div>
     
                 </div>
@@ -60,38 +62,40 @@
             <!--Importanteeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-->
 
             <section class="main-contaier">
+                <div class="planet-backg">
+                    <img src="../../Recursos/Otros/planetas.svg" alt="img">
+                </div>
                 <div class="title_library">
                     <h1 class="yourLibrary">Tu biblioteca</h1>
-                    <h2 class="name-user-title">Eduardo Carbajal</h2>
+                    <h2 class="name-user-title">Mateo Elías</h2>
                     <div class="list-group">
                         <br>
-                    <a href="#" class="list_library">Tus Play List</a>
-                    <a href="#" class="list_library">Tus favoritos</a>
-                    <a href="#" class="list_library">DreamStudios</a>
+                        <a href="#" class="list_library">Tus Play List</a>
+                        <a href="#" class="list_library">Tus favoritos</a>
+                        <a href="#" class="list_library">DreamStudios</a>
                     </div>
                     <div class="line-library"></div>
                     <div class="line-library-select"></div>
                 </div>
                 <div class="flex-container">
                     <div class="flex-subcontainer">
-                        <div class="flex-item"></div>
+                        <a href="../../Página Play List/html/Playlist.html" class="flex-item"></a>
                         <h3 class="name-list">De todo</h3>
                         <span class="descrip-list">Lo que quieres escuchar</span>
                     </div>
 
                     <div class="flex-subcontainer">
-                        <div class="flex-item"></div>
+                        <a href="#" class="flex-item"></a>
                         <h3 class="name-list"></h3>
                     </div>
                     <div class="flex-subcontainer">
-                        <div class="flex-item"></div>
+                        <a href="#" class="flex-item"></a>
                         <h3 class="name-list"></h3>
                     </div>
                     <div class="flex-subcontainer">
-                        <div class="flex-item"></div>
+                        <a href="#" class="flex-item"></a>
                         <h3 class="name-list"></h3>
                     </div>
-                </div>
 
                 <!--solo trabajaran en la etiqueta section-->
                 
@@ -99,14 +103,16 @@
 
 
 
-            <header class="searcher-container">
+            <header class="header-container">
+                <div class="line-soft"></div>
+            </header>
+
+            <div class="searcher-container">
                 <input type="text" class="searcher-user" placeholder="Buscar canciones, artistas..." required>
                 <i class="icon-note" id="nota"></i>
 
                 <a href=""><i class="icon-menu" id="menu"></i></a>
-
-                <div class="line-soft"></div>
-            </header>
+            </div>
             
 
         </div>
@@ -114,7 +120,7 @@
         
         <footer>
             <div class="picture-song-footer">
-                <img src="../img/1x1-Artist/nioce.jpg" id="img-artist-1">
+                <img src="../../Página Principal/img/1x1-Artist/nioce.jpg" id="img-artist-1">
             </div>
             <div class="artist-enojoy">
                 <p id="enjoy-with">Disfruta con...</p>

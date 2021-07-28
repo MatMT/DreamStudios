@@ -1,4 +1,8 @@
+:root{
+    --our-font: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    --border-cont: 1px solid white;
 
+}
 body {
     background: rgb(84,28,249);
     background: linear-gradient(25deg, rgba(255,94,60,1) 10%, rgba(84,28,249,1) 95%) !important;
@@ -10,174 +14,146 @@ body {
 }
 
 
+header{
+    height: 45vh;
+    min-height: 375px;
+    background-color: rgba(0, 0, 0, 0.507);
+    
+    color: white;
+
+    font-family: var(--our-font);
+}
+
+
+.searcher-container{
+    width: calc(100% - 232px);
+    
+}
+
+.main-contaier{
+    width: calc(100% - 232px);
+    height: calc(100% - 45vh);
+    margin-top: 45vh;
+
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.507);
+
+
+
+
+}
+
+
+
+
+/* ---- ---- --- ---- ----- ----- Header play list ----- ----- ----- ---- ---- ---- */
+
+.container-info-playlis{
+    width: 100%;
+    height: 65%;
+
+    margin-top: 15vh;
+
+    display: flex;
+}
+
+.container-info-playlis img{
+    height: 100%;
+    min-height: 189.75px;
+
+    -webkit-box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.733);
+    filter: shadow(color=#000, direction=0, strength=3);
+}
+
+.content-playlist{
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    padding: 10px 5px;
+}
+.content-playlist{
+    margin-left: 3vw;
+}
+.content-playlist h2{
+    font-weight: normal;
+    font-size: 3vh;
+}
+.content-playlist h1{
+    font-size: 9vh;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content-playlist h3{
+    font-size: 2vh;
+}
+
+/*------ ------- ------ BUtom */
+.controls-play-list{
+    width: 100%;
+    height: 18%;
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+
+}
+
+.controls-play-list button{
+    width: 25%;
+    height: 100%;
+    background-color: #FF7B62;
+    border: none;
+    border-radius: 5px;
+    font-size: var(--our-font);
+    color: white;
+    cursor: pointer;
+
+    min-width: 173.25px;
+    min-height: 36.16px;
+
+}
+
+.controls-play-list button p{
+    font-size: 3vh;
+}
+
+.controls-play-list button i{
+    display: none;
+    opacity: 0;
+}
+.controls-play-list button:hover{
+
+    transform: scale(1.05);
+    transform-origin: center;
+    transition: 0.5s;
+}
+
+.controls-play-list button:hover i{
+    opacity: 1;
+    display: block;
+    transition: 0.5s;
+}
+.controls-play-list button:hover p{
+    display: none;
+    transition: 0.5s;
+}
+
+.controls-play-list i{
+    font-size: 3vh;
+    margin: 0px 1vh;
+
+    cursor: pointer;
+
+    margin-left: 3vw;
+}
+
 
 
 /* Boton para escuchar-------------------------------------------------------------------- */
-#button_play {
 
-    border: none;
-    color: white;
-    
-    background-color: coral;
-    cursor: pointer;
-    border-radius: 8px;
-    font-weight: 50%;
-    transition: transform 0.2s ease-in-out;
-    position: relative; 
-    margin-top: 1%;
-}
-
-
-#button_play { 
-    font-size: 1.8vw; 
-    padding: 0.5vw 5.3vw;
-
-}
-
-
-#button_play:hover {
-    transform: scale(1.09); 
-    }
-
-
-
-
-
-/* Contenido de la caja de NOMBRE, INFO Y USUARIO DE LA LISTA ---------------------------------*/
-
-.Playlist_info { 
-    font-size: 1.4vw; 
-    
-}
-
-.Playlist_info {
-    position: relative ;
-    float: right;
-    width: 500px;
-    
-    margin-top: 5%;
-    margin-right: 300px;
-    font-size: 1.4vw; 
-    
-  }
-
-/*font-size: 1.4em 
-
-@media screen and (max-width:750px) {
-      
-    .Playlist_info {
-        font-size: 0.9rem;
-    }
-}
-*/
-  
-  .playlist_front {
-    
-    width: 20vw ; /* si no 300 px */
-    
-    display: inline-block;
-  }
-
-  #playlist_image {
-      width: 90%;
-      box-shadow: 8px 10px 8px #0000009f;
-      margin-bottom: 1%;
-      display: block;
-    }
-/*
-    .box_content {
-        border: black 1px solid;
-    
-    }
-*/
-  #playlist_title {
-      opacity: 0.55;
-  }
-
-  #playlist_user {
-      width: fit-content;
-      transition: filter, text-shadow 0.2s ease-in-out;
-  }
-  #playlist_user:hover{
-      cursor: pointer;
-      filter:brightness(200%);
-        text-shadow: 2px 2px 4px #ffffff5d;
-  }
-  #playlist_description {
-      font-weight: bold;
-  }
-
-  /* Antes se llevaba esto en el contenido 
-  position: relative;
-  z-index: 2; 
-  */
-
-  
-  #content {
-      
-      margin-left: 5%;
-      padding-top: 2%;
-      font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-      color: aliceblue;
-      
-      display: flex;
-      
-      
-  }
-
-  /* Lista --------------------------------------------------------------------------------*/
-
-  .list { /* section de la lista */
-    
-    margin-top: 2%;
-    margin-left: 5%;
-    width: 95%;
-
-  }
-  .list_head {
-    font-size: 1.5vw;
-  }
-  
-  .list li {
-      
-    display:inline;
-    padding-left:3px;
-    padding-right: 8vw;
-    
-    }
-/*
-   #info_musiclist #album   {
-        text-overflow: ellipsis;
-        border: black 1px solid;
-        white-space: nowrap;
-        overflow: hidden;
-        width: 50px; 
-        margin:0; padding:0
-    }
-*/
-
-#info_musiclist {
-    transition: filter, text-shadow 0.1s ease-in-out;
-}
-
-    #info_musiclist:hover {
-        filter:brightness(200%);
-        text-shadow: 2px 2px 4px #ffffff5d;
-        cursor: pointer;
-    }
-
-    .list hr {
-        margin-top: 2%;
-        margin-bottom: 2%;
-        opacity: 0.55;
-        
-    }
-
-    /* enlaces ---------------------------------------- */
-.option a {
-    text-decoration: none;
-    color: rgb(199, 197, 197);
-}
 
 @media screen and (max-width:1150px){
 
@@ -200,4 +176,101 @@ body {
     #artist {
         display: none;
     }
+}
+
+
+/* ---------- ----------- --------- lista de Reproducción -------- ------------- ---------*/
+
+.play-list-songs{
+    width: 100%;
+    margin-top: 5vh;
+
+    overflow-y: auto;
+}
+
+.data-song{
+    width: 90%;
+    height: 45px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: space-around;
+
+    border-bottom: #878787 solid 1px;
+
+}
+
+.data-song h4{
+    font-weight: normal;
+
+    width: 20%;
+    text-align: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song-description-playlist{
+    width: 90%;
+    height: 45px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: space-around;
+
+    border-bottom: #878787 solid 1px;
+
+    cursor: pointer;
+}
+
+.song-description-playlist:hover{
+    background-color: rgba(182, 182, 182, 0.671);
+    transition: 0.5s;
+}
+
+.song-description-playlist p{
+    font-weight: normal;
+    font-size: 1.7vh;
+
+    width: 20%;
+    text-align: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#number{
+    width: 10%;
+}
+
+/*----- ------ ------ ----- NUEVAS mEDIA Q ----- ------ -------  ------*/
+
+@media screen and (max-height: 836px) {
+    .main-contaier{
+        height: calc(100% - 375px);
+        margin-top: 375px;
+    }
+
+
+    
+    .container-info-playlis{
+        margin-top: 110px;
+    }
+
+}
+@media screen and (min-width: 1919px) {
+    
+    
+    header{
+        height: 500px;
+    }
+    .main-contaier{
+        height: calc(100% - 500px);
+        margin-top: 500px;
+    }
+
 }

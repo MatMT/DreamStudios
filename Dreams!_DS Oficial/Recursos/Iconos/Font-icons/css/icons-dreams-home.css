@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icons-dreams-home';
-  src: url('../font/icons-dreams-home.eot?81796377');
-  src: url('../font/icons-dreams-home.eot?81796377#iefix') format('embedded-opentype'),
-       url('../font/icons-dreams-home.woff2?81796377') format('woff2'),
-       url('../font/icons-dreams-home.woff?81796377') format('woff'),
-       url('../font/icons-dreams-home.ttf?81796377') format('truetype'),
-       url('../font/icons-dreams-home.svg?81796377#icons-dreams-home') format('svg');
+  src: url('../font/icons-dreams-home.eot?91053447');
+  src: url('../font/icons-dreams-home.eot?91053447#iefix') format('embedded-opentype'),
+       url('../font/icons-dreams-home.woff2?91053447') format('woff2'),
+       url('../font/icons-dreams-home.woff?91053447') format('woff'),
+       url('../font/icons-dreams-home.ttf?91053447') format('truetype'),
+       url('../font/icons-dreams-home.svg?91053447#icons-dreams-home') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'icons-dreams-home';
-    src: url('../font/icons-dreams-home.svg?81796377#icons-dreams-home') format('svg');
+    src: url('../font/icons-dreams-home.svg?91053447#icons-dreams-home') format('svg');
   }
 }
 */
@@ -69,6 +69,7 @@
 .icon-play-circled:before { content: '\e80c'; } /* '' */
 .icon-play-circled2:before { content: '\e80d'; } /* '' */
 .icon-heart-circled:before { content: '\e80e'; } /* '' */
+.icon-loop-1:before { content: '\e80f'; } /* '' */
 .icon-th-large-outline:before { content: '\e810'; } /* '' */
 .icon-th-large:before { content: '\e811'; } /* '' */
 .icon-to-end:before { content: '\e812'; } /* '' */
@@ -85,8 +86,12 @@
 .icon-volume-up-1:before { content: '\e81d'; } /* '' */
 .icon-volume-down-1:before { content: '\e81e'; } /* '' */
 .icon-volume-off-1:before { content: '\e81f'; } /* '' */
+.icon-shuffle-1:before { content: '\e820'; } /* '' */
+.icon-gmail:before { content: '\e821'; } /* '' */
+.icon-dot-3:before { content: '\e822'; } /* '' */
 .icon-pause-1:before { content: '\f00e'; } /* '' */
 .icon-play-1:before { content: '\f00f'; } /* '' */
 .icon-to-end-1:before { content: '\f010'; } /* '' */
 .icon-to-start-1:before { content: '\f011'; } /* '' */
 .icon-menu-1:before { content: '\f0c9'; } /* '' */
+.icon-instagram:before { content: '\f16d'; } /* '' */
