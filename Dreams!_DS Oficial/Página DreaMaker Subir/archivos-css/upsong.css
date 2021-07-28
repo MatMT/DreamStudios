@@ -1,0 +1,28 @@
+body{
+    background: rgb(84,28,249);
+    background: linear-gradient(351deg, rgba(84,28,249,1) 10%, rgba(255,94,60,1) 95%);
+}
+header{
+    background-color: rgba(255, 255, 255, 0.322);
+
+}
+.main-contaier{
+    background-color: rgba(255, 255, 255, 0.322);
+}
+
+.main-contaier{
+    padding: 15px 30px 15px 60px;
+}
+
+/* ------ ENCABEZADO --------*/
+
+.container-top{
+    border: 1px solid black;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+    
+}
