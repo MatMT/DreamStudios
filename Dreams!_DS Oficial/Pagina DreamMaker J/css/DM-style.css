@@ -26,13 +26,16 @@ header{
 
 .title-dreameker h3{
     font-size: 2.5rem;
-    color: #C1C0C0;
+    color: #EAEAF9;
+    opacity: 0.75;
 }
 .title-dreameker p{
   width: 50vw;
   font-size: 1.2rem;
 }
 
+
+/*
 .creación {
     width: 100%;
     height: 150px;
@@ -106,9 +109,39 @@ header{
     background-size: 18%, cover;
     background-repeat: no-repeat;
     background-position:  bottom left, center center;
+}*/
+
+
+.linea-albums{
+    width: 100%;
+    position: relative;
+    margin-top: 9vh;
+}
+
+.tus-creaciones{
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+
+}
+
+.linia-grande{
+    background-color: #D3D3D3;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 1px;
+    z-index: -1;
 }
 
 
+.tus-creaciones h1{
+    padding: 6px 0px;
+}
+
+.you-albums{
+    border-bottom: white 4px solid;
+}
 
 
 
