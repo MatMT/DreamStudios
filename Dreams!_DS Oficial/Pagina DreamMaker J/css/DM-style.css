@@ -1,3 +1,6 @@
+:root{
+    --bordervar: black 1px solid;
+}
 body{
     background: rgb(84,28,249);
     background: linear-gradient(351deg, rgba(84,28,249,1) 10%, rgba(255,94,60,1) 95%);
@@ -142,6 +145,39 @@ header{
 .you-albums{
     border-bottom: white 4px solid;
 }
+
+/*--- --- --- aREA DE LOS ALBUMNES ---- --- --- --- --- */
+
+.contenedor-albums-autor{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 10px;
+}
+
+.creacion{
+    width: 25%;
+    margin: 10px;
+    text-align: center;
+}
+
+.creacion a img{
+    width: 100%;
+}
+
+.creacion a{
+    color: white;
+    text-decoration: none;
+}
+
+.creacion a h4{
+    font-weight: normal;
+}
+
+
+
 
 
 
