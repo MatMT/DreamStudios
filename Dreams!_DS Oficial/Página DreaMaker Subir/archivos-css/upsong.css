@@ -3,11 +3,11 @@ body{
     background: linear-gradient(351deg, rgba(84,28,249,1) 10%, rgba(255,94,60,1) 95%);
 }
 header{
-    background-color: rgba(255, 255, 255, 0.322);
+    background-color: rgba(255, 255, 255, 0.26);
 
 }
 .main-contaier{
-    background-color: rgba(255, 255, 255, 0.322);
+    background-color: rgba(255, 255, 255, 0.267);
 }
 
 .main-contaier{
@@ -17,12 +17,267 @@ header{
 /* ------ ENCABEZADO --------*/
 
 .container-top{
-    border: 1px solid black;
-    height: 300px;
 
     display: flex;
     align-items: center;
     justify-content:space-between;
 
+    padding: 20px 0px;
+}
+
+.text-dream h1{
+    font-size: 7vw;
+}
+
+.text-dream h2{
+    color: #EAEAF9;
+    opacity: 0.75;
+    font-size: 3vw;
+}
+/*Botones*/
+
+.btns-subir{
+    display: flex;
+    flex-direction: column;
+}
+
+.btns-subir button{
+    width: 22vw;
+    height: 5vh;
+    border-radius: 60px;
+
+    margin: 5px 10px;
+
+    font-size: 1.5vw;
+
+    cursor: pointer;
     
+}
+
+.btn-blue{
+    background-color: #6B2EED;
+    border: none;
+    color: white;
+}
+
+.btn-no{
+    background-color: transparent;
+    border: 2px #6B2EED solid;
+    color: #6B2EED;
+}
+
+/*FDomrulario*/
+.caja-del-formualario{
+    width: 100%;
+    display: flex;
+    padding: 5vh 5vw;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.subir-mp3{
+
+    text-align: center;
+}
+
+.img-subir{
+    width: 20.5vw;
+    height: 27vh;
+    min-width: 250px;
+    min-height: 270px;
+    background-image: url(../../Recursos/Iconos/icono-d.svg);
+    background-color: rgba(255, 255, 255, 0.336);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150px;
+
+    border-radius: 15px;
+}
+
+
+.formulario-subir-cancion{
+    margin-right: 5vw;
+    padding: 20px 5px;
+    margin-left: 20px;
+    width: 45%;
+    font-size: 1.2rem;
+}
+
+.subir-mp3 button{
+    width: 18.5vw;
+    height: 5vh;
+    margin-top: 15px;
+    border-radius: 10px;
+    background-color: #FF7B62;
+    color: white;
+    border: none;
+
+    font-size: 1.5vw;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/*-------*/
+
+
+
+.form{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    max-width: 400px;
+    overflow: hidden;
+}
+.form input{
+    width: 100%;
+    height: 100%;
+    background: none;
+    color:#fff;
+    padding-top: 20px;
+    border: none;
+    outline: 0px;
+}
+.form .lbl-art{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+.form .lbl-art:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #6B2EED;
+    transform: translate(-100%);
+    transition: all 0.3s ease;
+}
+.text-art{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+.form input:focus + .lbl-art .text-art,
+.form input:valid + .lbl-art .text-art{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #6B2EED; 
+}
+.form input:focus + .lbl-art:after,
+.font input:valid + .lbl-art:after{
+    transform: translateX(0%);
+}
+.form2{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    max-width: 400px;
+    overflow: hidden;
+}
+.form2 input{
+    width: 100%;
+    height: 100%;
+    background: none;
+    color:#fff;
+    padding-top: 20px;
+    border: none;
+    outline: 0px;
+}
+.form2 .lbl-autor{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+.form2 .lbl-autor:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #6B2EED;
+    transform: translate(-100%);
+    transition: all 0.3s ease;
+}
+.text-autor{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+.form2 input:focus + .lbl-autor .text-autor,
+.form2 input:valid + .lbl-autor .text-autor{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #6B2EED; 
+}
+.form2 input:focus + .lbl-autor:after,
+.font2 input:valid + .lbl-autor:after{
+    transform: translateX(0%);
+}
+.form3{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    max-width: 400px;
+    overflow: hidden;
+}
+.form3 input{
+    width: 100%;
+    height: 100%;
+    background: none;
+    color:#fff;
+    padding-top: 20px;
+    border: none;
+    outline: 0px;
+}
+.form3 .lbl-descrip{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+.form3 .lbl-descrip:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #6B2EED;
+    transform: translate(-100%);
+    transition: all 0.3s ease;
+}
+.text-descrip{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+.form3 input:focus + .lbl-descrip .text-descrip,
+.form3 input:valid + .lbl-descrip .text-descrip{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #6B2EED; 
+}
+.form3 input:focus + .lbl-descrip:after,
+.font3 input:valid + .lbl-descrip:after{
+    transform: translateX(0%);
 }

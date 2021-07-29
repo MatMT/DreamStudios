@@ -46,7 +46,7 @@ body {
 .main-contaier {
   width: calc(100% - 232px);
   height: calc(100% - 87px);
-  background-color: rgba(0, 0, 0, 0.511);
+  background-color: rgba(0, 0, 0, 0.397);
 
   margin-top: 100px;
 
@@ -233,7 +233,7 @@ header{
 
   padding: 20px 10px 30px 65px;
 
-  background-color: rgba(0, 0, 0, 0.511);
+  background-color: rgba(0, 0, 0, 0.391);
   border-top-left-radius: 60px;
 
   z-index: -1;

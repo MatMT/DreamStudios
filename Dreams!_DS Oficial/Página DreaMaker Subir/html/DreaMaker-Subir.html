@@ -8,8 +8,9 @@
         <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
         <link rel="icon" href="../../Recursos/Iconos/Ds_logo.ico"> 
         <link rel="stylesheet" href="../../Página Principal/Archisvos_DS_CSS/Home-style.css"><!--Plantilla del reproductor-->
+        
+        <link rel="stylesheet" type="text/css" href="DreaMaker-Subir.cs"><!--Aqui insertaran la dirección del nuevo archivo CSS-->  
         <link rel="stylesheet" href="../archivos-css/upsong.css">
-        <link rel="stylesheet" type="text/css" href="DreaMaker-Subir.css"><!--Aqui insertaran la dirección del nuevo archivo CSS-->  
         <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/icons-dreams-home.css">
         <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/icons-dreams-home-embedded.css">
         <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/animation.css">
@@ -64,48 +65,54 @@
                 <div class="container-top">
                     <div class="text-dream">
                         <h1>DreaMaker</h1>
-                        <h2>Make your dream</h2>
+                        <h2>make your dream</h2>
                     </div>
-                    <div class="btns">
+                    <div class="btns-subir">
                         <button class="btn btn-blue">Subir al Albúm</button>
                         <button class="btn btn-no">Terminar</button>
                     </div>
                 </div>
                     
 
+                <div class="caja-del-formualario">
 
-                <div class="container-centro">
-                <div class="btn-tres">
-                    <button class="btn btn-orange">Subir Archivo MP3</button>
-                    <form class="form">
-                        <input type="text" required>
-                        <label class="lbl-art"><span class="text-art">Nombre del artista</span></label>
-                    </form>
-                    <br>
-                    <form class="form2">
-                        <input type="text" required>
-                        <label class="lbl-autor"><span class="text-autor">Autor</span></label>
-                    </form>
-                    <br>
-                    <form class="form3">
-                    <input type="text" required>
-                        <label class="lbl-descrip"><span class="text-descrip">Descripción</span></label>    
-                    </form>
-                    <br>
-                    <label for="lbl-generos">Géneros</label>
-                    <select name="Géneros">
-                        <option disabled="">Seleciona un género o más</option>
-                        <option value="Rock">Rock</option>
-                        <option value="Pop">Pop</option>
-                        <option value="Rap">Rap</option>
-                        <option value="Trap">Trap</option>
-                        <option value="Reggaetón">Reggaetón</option>
-                        <option value="Baladas">Baladas</option>
-                    </select>
+                    <div class="subir-mp3">
+                        <div class="img-subir"></div>
+                        <button class="btn btn-orange">Subir Archivo MP3</button>
                     </div>
+                    
 
+                    <div class="formulario-subir-cancion">
+                        <form class="form">
+                            <input type="text" required>
+                            <label class="lbl-art"><span class="text-art">Nombre del artista</span></label>
+                        </form>
+                        <br>
+                        <form class="form2">
+                            <input type="text" required>
+                            <label class="lbl-autor"><span class="text-autor">Autor</span></label>
+                        </form>
+                        <br>
+                        <form class="form3">
+                        <input type="text" required>
+                            <label class="lbl-descrip"><span class="text-descrip">Descripción</span></label>    
+                        </form>
+                        <br>
+                        <label for="lbl-generos">Géneros</label>
+                        <select name="Géneros">
+                            <option disabled="">Seleciona un género o más</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Pop">Pop</option>
+                            <option value="Rap">Rap</option>
+                            <option value="Trap">Trap</option>
+                            <option value="Reggaetón">Reggaetón</option>
+                            <option value="Baladas">Baladas</option>
+                        </select>
+                        
+                    </div>
+                    
+                </div>
 
-                    <div class="img-subir"><img src="../../Recursos/Iconos/icono-d.sg" alt="img"></div>
                 <!--Aqui colocaran el nuevo contenido, pueden borar mi nombre xddd-->
 
                 <!--solo trabajaran en la etiqueta section-->
