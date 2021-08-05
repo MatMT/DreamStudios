@@ -98,13 +98,13 @@
     text-shadow: -3px 3px 6px #000;
 
     opacity: 0;
+    transition: 0.5s;
 
 }
 
 
 
 .carousel .artista:hover i{
-    transition: 0.5s;
     opacity: 1;
 }
 

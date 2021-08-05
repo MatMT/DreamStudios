@@ -112,6 +112,7 @@ body {
 .main_menu_aside a{
   text-decoration: none;
   color: rgb(199, 197, 197);
+  transition: 0.5s;
 }
 
 .main_menu_aside i {
@@ -125,6 +126,7 @@ body {
   width: 248px;
   height: 45px;
   padding: 12px 0px;
+  
 }
 
 .option :hover {
@@ -161,12 +163,17 @@ body {
   color: rgb(199, 197, 197);
 }
 
-.create_play_list {
+.create_play_list{
   width: 100%;
   height: 50px;
   font-size: 1rem;
 
   padding: 10px 60px 15px 10px;
+  
+}
+
+.create_play_list a{
+  transition: 0.5s;
 }
 
 .create_play_list i {
@@ -179,9 +186,8 @@ body {
   margin-top: 5px;
 }
 
-.create_play_list:hover {
+.create_play_list a:hover {
   color: white;
-  transition: 0.5s;
 }
 
 /*PLayList*/
@@ -189,6 +195,7 @@ body {
 .my-play-list {
   width: 232px;
   padding: 15px 10px 10px 40px;
+  transition: 0.5s;
 }
 
 .my-play-list p {
@@ -207,7 +214,6 @@ body {
 
 .play-list a:hover{
   color: white;
-  transition: 0.2s;
 }
 
 #play-ic {
@@ -219,6 +225,7 @@ body {
 .play-list a{
   text-decoration: none;
   color: rgb(199, 197, 197);
+  transition: 0.5s;
 }
 /*------------------------------------------------------------header contairne*/
 
@@ -324,11 +331,12 @@ header{
 
 .planet-backg img {
   width: 30%;
+  z-index: -1;
   position: absolute;
   top: 74%;
   left: 67%;
 
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 .main-contaier {
@@ -678,7 +686,7 @@ footer {
 .navegation li a{
   color: white;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 2vh;
   width: 100%;
   height: 100%;
   display: block;

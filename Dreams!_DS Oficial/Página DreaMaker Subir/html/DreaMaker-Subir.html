@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dreams!- Reproductor de Música</title>
+        <title>Dreams!- make your dream</title>
         <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
         <link rel="icon" href="../../Recursos/Iconos/Ds_logo.ico"> 
         <link rel="stylesheet" href="../../Página Principal/Archisvos_DS_CSS/Home-style.css"><!--Plantilla del reproductor-->
@@ -29,19 +29,19 @@
                 <!---Menú de Dreams-->
                 <div class="main_menu_aside">
                     <div class="option">
-                        <a><i class="icon-music-2"></i>
+                        <a href="../../Página Principal/index/HomePage2.html"><i class="icon-music-2"></i>
                         <p>Inicio</p></a>
                     </div>
                     <div class="option">
-                        <a><i class="icon-th-large-outline"></i>
+                        <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.html"><i class="icon-th-large-outline"></i>
                         <p>Mi biblioteca</p></a>
                     </div>
                     <div class="option">
-                        <a><i class="icon-heart-empty"></i>
+                        <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.html"><i class="icon-heart-empty"></i>
                         <p>Mis favoritos</p></a>
                     </div>
                     <div class="active-option">
-                        <a><i class="icon-music-1"></i>
+                        <a href="../../Pagina DreamMaker J/html/DreaMaker.html"><i class="icon-music-1"></i>
                         <p>DreaMaker</p></a>
                     </div>    
                 </div>
@@ -62,6 +62,9 @@
             <!--Importanteeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-->
 
             <section class="main-contaier">
+                <div class="planet-backg">
+                    <img src="../../Recursos/Otros/planetas.svg" alt="img">
+                </div>
                 <div class="container-top">
                     <div class="text-dream">
                         <h1>DreaMaker</h1>
@@ -121,14 +124,33 @@
 
 
 
-            <header class="searcher-container">
+            <header class="header-container">
+                <div class="line-soft"></div>
+            </header>
+
+            <div class="searcher-container">
                 <input type="text" class="searcher-user" placeholder="Buscar canciones, artistas..." required>
                 <i class="icon-note" id="nota"></i>
 
-                <a href=""><i class="icon-menu" id="menu"></i></a>
+                <div class="contariner-menu">
+                    <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
+                    <label for="abrir-cerrar" class="toggle-button">
+                        <span class="open"></span>
+                        <span class="close"></span>
+                    </label>
+                    <div class="menu-dreams-usuario" id="menu-dreams">
+                    
+                        <ul class="navegation">
+                            <li><a href=""><span>My Account</span></a></li>
+                            <li><a href=""><span>Billing Information</span></a></li>
+                            <li><a href=""><span>Log out</span></a></li>
+                        </ul>
+                    </div>
+                    
+            
+                </div>
+            </div>
 
-                <div class="line-soft"></div>
-            </header>
             
 
         </div>

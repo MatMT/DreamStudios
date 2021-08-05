@@ -107,14 +107,15 @@ header{
     min-height: 30px;
     height: 70%;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: var(--our-font);
     color: white;
-    font-size: 2.5vh;
+    font-size: 2.2vh;
 
     margin-right: 2vh;
 
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .player-artist-playlist button i{
@@ -123,9 +124,9 @@ header{
 }
 
 .player-artist-playlist button:hover{
-    transform: scale(1.05);
+    transform: scale(1.03);
     transform-origin: center;
-    transition: 0.5s;
+    
 }
 
 .player-artist-playlist button:hover i{
@@ -194,19 +195,20 @@ header{
     align-items: center;
     justify-content: space-around;
 
-    border-bottom: #878787 solid 1px;
+    border-bottom: #c5c5c5 solid 1px;
 
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .song-description:hover{
-    background-color: rgba(182, 182, 182, 0.671);
-    transition: 0.5s;
+    background-color: rgba(182, 182, 182, 0.514);
+    
 }
 
 .song-description p{
     font-weight: normal;
-    font-size: 1.7vh;
+    font-size: 1.6vh;
 
     width: 20%;
     text-align: center;
