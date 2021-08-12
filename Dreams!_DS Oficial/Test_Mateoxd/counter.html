@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="counter_style.css">
+    <title>Counter</title>
+</head>
+<body>
+    <div class="container">
+        <p class="heading">Counter</p>
+        <p class="counter" id="counter">0</p>
+        <button class="incr">+<i class="fas fa-plus"></i></button>
+        <button class="decr">-<i class="fas fa-minus"></i></button>
+    </div>
+    <script>
+        const counter = document.getElementById('counter');
+        const incr = document.querySelector('.incr');
+        const decr = document.querySelector('.decr');
+
+        let count = 0;
+        incr.addEventListener('click', ()=>{
+            count++;
+            counter.innerHTML = count;
+        })
+
+        decr.addEventListener('click', ()=>{
+            count--;
+            counter.innerHTML = count;
+        })
+    </script>
+</body>
+</html>
