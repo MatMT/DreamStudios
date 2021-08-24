@@ -8,9 +8,19 @@
         <link rel="stylesheet" href="../Css/botones.css">
     </head>
     <body>
+      <div id="google_translate_element" class="google"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+	new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'ca,eu,gl,en,fr,it,pt,de', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true}, 'google_translate_element');
+        }
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
     <div class="mega-div-container">
         <img src="../../Recursos/Otros/Fondo-Registro.svg" id="background-imge-dreams">
-       
+
     </div>
 
     <div class="mein-container">
@@ -42,18 +52,18 @@
                 <input type="password" name="PassType" placeholder="Tu contraseña segura"  class="nombre" id="PassType" required>
             </div>
             <div class="datos">
-                <label for="AgeType">¿Cuantos años tienes?</label>           
-                <br>         
+                <label for="AgeType">¿Cuantos años tienes?</label>
+                <br>
                 <input type="number" name="AgeType" min="0" max="120" placeholder="0"  id="AgeType" required>
             </div>
-            
-            <label for="GenderType">¿Cúal es tu género?</label>   
+
+            <label for="GenderType">¿Cúal es tu género?</label>
             <div class="datos_button">
 
-                <input type="radio" name="GenderType" id="fem"> 
+                <input type="radio" name="GenderType" id="fem">
                 <label for="fem" class="gender">Femenino</label>
                 <br>
-                <input type="radio" name="GenderType" id="masc"> 
+                <input type="radio" name="GenderType" id="masc">
                 <label for="masc" class="gender">Masculino</label>
                 <br>
             </div>
@@ -66,7 +76,7 @@
             <div class="registrarse">
                 <a href="..//..//Inicio de sesión/Html/Inicio_Personal.html" class="login">Registrate</a>
             </div>
-            
+
         </form>
 
     </div>
@@ -76,7 +86,7 @@
     </body>
 <!--    <script>
         const form = document.getElementById("personal-data")
-       
+
         form.addEventListener("submit", function(event){
             event.preventDefault();
             let FormPersonalData = new FormData(form);
@@ -89,11 +99,11 @@
             let Work = FormPersonalData.get("WorkType");
 
             document.getElementById("NameType_R").innerHTML = Nombre;
-            document.getElementById("AgeType_R").innerHTML = Edad; 
-            document.getElementById("CountryType_R").innerHTML = Pais; 
-            document.getElementById("TelType_R").innerHTML = Telefono; 
-            document.getElementById("EmailType_R").innerHTML = Email;  
-            document.getElementById("WorkType_R").innerHTML = Work;  
+            document.getElementById("AgeType_R").innerHTML = Edad;
+            document.getElementById("CountryType_R").innerHTML = Pais;
+            document.getElementById("TelType_R").innerHTML = Telefono;
+            document.getElementById("EmailType_R").innerHTML = Email;
+            document.getElementById("WorkType_R").innerHTML = Work;
         }
         )
     </script>
