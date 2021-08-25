@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
+  font-family: "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif !important; 
   box-sizing: border-box;
 }
 
@@ -206,7 +206,7 @@ footer{
   height: 500px;
 }
 
-
+/*--------traductor---------------*/
 .google{
   position: absolute;
   left: 0%;
@@ -215,3 +215,16 @@ footer{
   font-size: 0px;
   border-radius: 36px;
 }
+
+.translated-ltr{margin-top:-40px;}
+.translated-ltr{margin-top:-40px;}
+.goog-te-banner-frame {display: none;margin-top:-20px;}
+
+.goog-logo-link {
+   display:none !important;
+} 
+
+.goog-te-gadget{
+   color: transparent !important;
+}
+
