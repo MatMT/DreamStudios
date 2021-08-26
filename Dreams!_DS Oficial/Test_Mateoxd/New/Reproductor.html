@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dreams!- Reproductor de Música</title>
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+        <link rel="icon" href="../../Recursos/Iconos/Ds_logo.ico"> 
+        <link rel="stylesheet" type="text/css" href="Reproductor_style.css"><!--Aqui insertaran la dirección del nuevo archivo CSS--> 
+        <link rel="stylesheet" href="../../Página Principal/Archisvos_DS_CSS/Home-style.css"><!--Plantilla del reproductor-->
+        <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/icons-dreams-home.css">
+        <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/icons-dreams-home-embedded.css">
+        <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/animation.css">
+    
+    </head>
+    <body>
+        <div class="big-container">
+            <div class="container-header">
+                
+            </div>
+            
+            <div class="imit-aside">
+                <div class="logo_box_aside">
+                    <img src="../../Recursos/Imágenes/1x/Recurso 1.png">
+                </div>
+                <!---Menú de Dreams-->
+                <div class="main_menu_aside">
+                    <div class="option">
+                        <a href="../../Página Principal/index/HomePage2.html"><i class="icon-music-2"></i>
+                        <p>Inicio</p></a>
+                    </div>
+                    <div class="active-option">
+                        <a><i class="icon-th-large-outline"></i>
+                        <p>Mi biblioteca</p></a>
+                    </div>
+                    <div class="option">
+                        <a><i class="icon-heart-empty"></i>
+                        <p>Mis favoritos</p></a>
+                    </div>
+                    <div class="option">
+                        <a href="../../Pagina DreamMaker J/html/DreaMaker.html"><i class="icon-music-1"></i>
+                        <p>DreaMaker</p></a>
+                    </div>    
+                </div>
+    
+                <div class="play-list">
+                    <div class="create_play_list option">
+                        <a><i class="icon-plus-squared"></i>
+                        <p>Crear Play List</p></a>
+                    </div>
+    
+                    <div class="my-play-list">
+                        <a href="../../Página Play List/html/Playlist.html">
+                            <p><i class="icon-right-open-mini"></i>My Music of Niall Horan my favorite</p>
+                        </a>
+                    </div>
+    
+                </div>
+            </div>
+
+            <!--Importanteeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-->
+
+            <section class="main-contaier">
+                <div class="planet-backg">
+                    <img src="../../Recursos/Otros/planetas.svg" alt="img">
+                </div>
+                <div class="title_library">
+                    <h1 class="yourSong">Reproduciendo...</h1>
+                    <h2 class="name-user-title"></h2>
+                    <div class="line-library"></div>
+                    <div class="line-library-select"></div>
+                </div>
+                <div class="flex-container">
+                    <img src="../../Music/Cuco/Songs4u.jpg" class="Portada">
+                    <div class="flex-subcontainer">
+                        <h3 class="name-song">Stay For a Bit</h3>
+                        <span class="descrip-song">Cuco - Songs4u</span>
+                        <audio controls preload="metadata">
+                            <source src="https://drive.google.com/uc?export=download&id=1ftBNX9CEfYpQgYGVv9tSohAdNJF3A9Vd" type="audio/ogg"class="flex-item">
+                        </audio>
+                    </div>
+                </div>
+                <!--solo trabajaran en la etiqueta section-->
+                
+            </section>   
+
+
+
+            <header class="header-container">
+                <div class="line-soft"></div>
+            </header>
+
+            <div class="searcher-container">
+                <input type="text" class="searcher-user" placeholder="Buscar canciones, artistas..." required>
+                <i class="icon-note" id="nota"></i>
+
+                <div class="contariner-menu">
+                    <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
+                    <label for="abrir-cerrar" class="toggle-button">
+                        <span class="open"></span>
+                        <span class="close"></span>
+                    </label>
+                    <div class="menu-dreams-usuario" id="menu-dreams">
+                    
+                        <ul class="navegation">
+                            <li><a href=""><span>My Account</span></a></li>
+                            <li><a href=""><span>Billing Information</span></a></li>
+                            <li><a href=""><span>Log out</span></a></li>
+                        </ul>
+                    </div>
+                    
+            
+                </div>
+            </div>
+            
+
+        </div>
+        
+        
+        <footer>
+            <div class="picture-song-footer">
+                <img src="../../Página Principal/img/1x1-Artist/nioce.jpg" id="img-artist-1">
+            </div>
+            <div class="artist-enojoy">
+                <p id="enjoy-with">Disfruta con...</p>
+                <p id="name-artist">Harry Styles s</p>
+                
+            </div>
+            
+            <div class="more-icons">
+                <i class="icon-loop"></i>
+                <i class="icon-shuffle"></i>    
+            </div>
+
+            <div class="line-time-song">
+
+                <div class="center-song">
+                    <p id="name-song">Nice to Meet Ya</p>
+                    <i class="icon-heart-empty"></i>
+                    <p id="name-artist-2">Niall Horan</p>
+                </div>
+
+                <div class="center-bar-time">
+                                
+                    <div class="time-start">0:00</div>
+                    <div class="bar-time">
+                        <div id="progress"></div>
+                    </div>
+                    <div class="time-end">0:00</div>
+                </div>
+            </div>
+            <div class="sound-play">
+                <i class="icon-volume"></i>
+                <div class="audio-line">
+                    <div class="audio-progres"></div>
+                </div>
+            </div>
+
+            <div class="icons-play-pause">
+                
+                <i class="icon-to-start-1" id="before-song"></i>
+
+                <div class="play pause">
+                    <i class="icon-play-1" id="play-start"></i>
+                    <i class="icon-pause-1" id="pause"></i> 
+                </div>
+                              
+                <i class="icon-to-end-1" id="next-song"></i>
+            </div>
+        </footer>
+
+    </body>
+</html>

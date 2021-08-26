@@ -1,0 +1,102 @@
+.title_library {
+  padding-left: 4.5%;
+}
+
+.yourSong {
+  font-size: 5em;
+  margin-right: 14px;
+}
+
+.name-user-title {
+  color: #c4c4c4;
+  font-size: 2.5em;
+  padding-bottom: 1.5rem;
+}
+
+.line-library {
+  background-color: #d3d3d3e0;
+  margin-top: 0.9em;
+  width: 90%;
+  height: 1px;
+}
+
+.line-library-select {
+  background-color: #fff;
+  width: 13%;
+  height: 4px;
+  margin-top: -2px;
+}
+
+.flex-container {
+  padding-left: 20%;
+  width: 60%;
+  position: absolute;
+  top: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  margin-top: 20%;
+  margin-right: 10px;
+  display: flex;
+  font-size: 1.2rem;
+  padding: 12vh 12vh;
+}
+
+.flex-item {
+  background-size: 30%, cover;
+  background-repeat: no-repeat;
+  background-position: bottom right, center;
+}
+
+.flex-subcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.name-song {
+  font-size: 2.5em;
+  text-align: center;
+  padding-bottom: 4%;
+}
+
+.descrip-song {
+  font-size: 1.5em;
+  padding-bottom: 12%;
+  color: #fffa;
+}
+
+audio {
+  background-color: #f4f4f4;
+}
+
+.Portada {
+  width: 32vh;
+}
+
+/*Centrando contenido en modo vertical*/
+
+@media screen and (max-width: 960px) {
+  .yourSong {
+    font-size: 4em;
+  }
+
+  .name-song {
+    font-size: 2.5em;
+    text-align: center;
+    padding-top: 4%;
+  }
+
+  .descrip-song {
+    padding-bottom: 10%;
+  }
+
+  .flex-container {
+    padding-left: 10%;
+    top: 36%;
+  }
+}
