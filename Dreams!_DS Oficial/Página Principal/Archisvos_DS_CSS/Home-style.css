@@ -1,5 +1,5 @@
 :root {
-  --our-font: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  --our-font: Century Gothic, CenturyGothic, AppleGothic, sans-serif; 
   --border-cont: 1px solid white;
 }
 * {
@@ -762,4 +762,38 @@ input:checked + .toggle-button .close{
 input:checked ~ .menu-dreams-usuario{
   opacity: 1;
   width: 100%;
+}
+
+/*--------traductor---------------*/
+.google{
+  position: absolute;
+  z-index: 500;
+  font-size: 0px;
+  border-radius: 36px;
+  
+}
+
+.translated-ltr{margin-top:-40px;}
+.translated-ltr{margin-top:-40px;}
+.goog-te-banner-frame {display: none;margin-top:-20px;}
+
+
+.goog-logo-link {
+   display:none !important;
+} 
+
+.goog-te-gadget{
+   color: transparent !important;
+   
+}
+
+.goog-te-combo, .goog-te-ftab , .goog-te-menu , .goog-te-menu2 , .goog-te-balloon  {
+background-color: transparent !important;
+    color: white;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif !important; 
+    font-size: 1.5em !important;
+}
+
+#google_translate_element_id option {
+color: black;
 }

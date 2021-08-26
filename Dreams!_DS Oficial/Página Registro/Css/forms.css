@@ -214,6 +214,7 @@ footer{
   z-index: 500;
   font-size: 0px;
   border-radius: 36px;
+  
 }
 
 .translated-ltr{margin-top:-40px;}
@@ -232,6 +233,8 @@ footer{
 .goog-te-combo, .goog-te-ftab , .goog-te-menu , .goog-te-menu2 , .goog-te-balloon  {
 background-color: transparent !important;
     color: white;
+    font-size: 1.8em !important;
+    
 }
 
 #google_translate_element_id option {
