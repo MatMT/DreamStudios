@@ -209,8 +209,8 @@ footer{
 /*--------traductor---------------*/
 .google{
   position: absolute;
-  left: 0%;
-  top: 0%;
+  left: 1%;
+  top: 1%;
   z-index: 500;
   font-size: 0px;
   border-radius: 36px;
@@ -226,5 +226,14 @@ footer{
 
 .goog-te-gadget{
    color: transparent !important;
+   
 }
 
+.goog-te-combo, .goog-te-ftab , .goog-te-menu , .goog-te-menu2 , .goog-te-balloon  {
+background-color: transparent !important;
+    color: white;
+}
+
+#google_translate_element_id option {
+color: black;
+}
