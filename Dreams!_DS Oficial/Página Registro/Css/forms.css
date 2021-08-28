@@ -178,6 +178,7 @@ a.login:visited {
   justify-content: center;
 
   margin-top: 4vh;
+  color: #845feb;
 }
 
 .registrarse a{
@@ -191,6 +192,7 @@ a.login:visited {
   justify-content: center;
 
   border: #845feb 3px solid;
+
 }
 
 .registrarse a:hover{
