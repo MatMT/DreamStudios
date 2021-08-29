@@ -5,16 +5,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Registrate Ds!</title>
         <link rel="icon" href="../../Recursos/Iconos/Ds_logo.ico">
+        <link rel="stylesheet" href="../Css/header.css">
         <link rel="stylesheet" href="../Css/forms.css">
         <link rel="stylesheet" href="../Css/botones.css">
         <link rel="stylesheet" href="../Css/footer.css">
     </head>
     <body>
 
-         <!--traduccion-------------------------->
-         <div id="google_translate_element_id" class="google"></div>
-                                
-         <script type="text/javascript" src="../../Recursos/Otros/js/traductor.js"></script>
+         <!--header-------------------------->
+         <header>
+            <div class="back">
+                <nav class="">
+                    <img src="../../Pagina General/Página-general-oficial/imagenes/white-logo.svg" alt="img" id="white-mod">
+                    <img src="../../Pagina General/Página-general-oficial/imagenes/black-logo.svg" alt="img" id="black-mod">
+                    <ul class="navigation" data-animation="left-rigth">
+                        <li>
+                            <!--traduccion-------------------------->
+                            <div id="google_translate_element_id" class="google"></div>
+                               
+                            <script type="text/javascript" src="../../Recursos/Otros/js/traductor.js"></script>
+                       
+                            <!------------------------------------->
+                           </li>
+                           <li><a href="../../Inicio de sesión/Html/Inicio_Personal.html">Iniciar Sesion</a></li>
+                        <li><a href="">Sobre Nosotros</a></li>
+                    </ul>
+                </nav>
+            </div>
+         </header>
          
          <!------------------------------------->
 
@@ -98,4 +116,20 @@
         </div>
     </footer>
     </body>
+    <script>
+        window.addEventListener("scroll", function(){
+            const header = document.querySelector("nav");
+
+            const logo_white = document.getElementById("white-mod");
+
+            const logo_black = document.getElementById("black-mod")
+
+            header.classList.toggle("sticky", window.scrollY > 0);
+
+            logo_white.classList.add("remove", window.scrollY > 0);
+            logo_black.classList.toggle("active", window.scrollY > 0);
+
+
+        });
+    </script>
 </html>
