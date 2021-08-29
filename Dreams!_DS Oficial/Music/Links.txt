@@ -1,0 +1,3 @@
+Crear links de descarga : 
+
+https://drive.google.com/uc?export=download&id=Id_Archivo
