@@ -3,16 +3,36 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formulario</title>
+        <title>Loge in Ds!</title>
+        <link rel="icon" href="../../Recursos/Iconos/Ds_logo.ico">
+        <link rel="stylesheet" href="../Css/header.css">
         <link rel="stylesheet" href="../Css/forms.css">
         <link rel="stylesheet" href="../Css/botones.css">
         <link rel="stylesheet" href="../Css/footer.css">
     </head>
     <body>
-          <!--traduccion-------------------------->
-          <div id="google_translate_element_id" class="google"></div>
-                                
-          <script type="text/javascript" src="../../Recursos/Otros/js/traductor.js"></script>
+          <!--header-------------------------->
+          <header>
+            <div class="back">
+                <nav class="">
+                    <img src="../../Pagina General/Página-general-oficial/imagenes/white-logo.svg" alt="img" id="white-mod">
+                    <img src="../../Pagina General/Página-general-oficial/imagenes/black-logo.svg" alt="img" id="black-mod">
+                    <ul class="navigation" data-animation="left-rigth">
+                        <li>
+                            <!--traduccion-------------------------->
+                            <div id="google_translate_element_id" class="google"></div>
+                               
+                            <script type="text/javascript" src="../../Recursos/Otros/js/traductor.js"></script>
+                       
+                            <!------------------------------------->
+                           </li>
+                        <li><a href="../../Inicio de sesión/Html/Inicio_Personal.html">Iniciar Sesion</a></li>
+                        <li><a href="../../Página Registro/Html/Forms_Personal.html">Registrarse</a></li>
+                        <li><a href="">Sobre Nosotros</a></li>
+                        
+                     
+                    </ul>
+                </nav>
           
           <!------------------------------------->
     <div class="mega-div-container">
@@ -53,7 +73,6 @@
     </div>
     <!-- Agregado del footer 0--> -->
     <footer>
-        <img src="../../Pagina General/Página-general-Oficial/imagenes/white-logo.svg" alt="img" id="white-mod">
 
         <div class="box-footer">
             <div class="dreamStudios" bord="yes">
@@ -67,34 +86,27 @@
             </div>
             <div class="follow">
                 <h3>Siguenos</h3>
-                <i class="icon-"></i>
+                <br>
+                <img src="../../Pagina General/Página-general-Oficial/imagenes/white-logo.svg" alt="img" id="white-mod">
             </div>
 
         </div>
     </footer>
     </body>
-<!--    <script>
-        const form = document.getElementById("personal-data")
-       
-        form.addEventListener("submit", function(event){
-            event.preventDefault();
-            let FormPersonalData = new FormData(form);
+    <script>
+        window.addEventListener("scroll", function(){
+            const header = document.querySelector("nav");
 
-            let Nombre = FormPersonalData.get("NameType");
-            let Edad = FormPersonalData.get("AgeType");
-            let Pais = FormPersonalData.get("CountryType");
-            let Telefono = FormPersonalData.get("TelType");
-            let Email = FormPersonalData.get("EmailType");
-            let Work = FormPersonalData.get("WorkType");
+            const logo_white = document.getElementById("white-mod");
 
-            document.getElementById("NameType_R").innerHTML = Nombre;
-            document.getElementById("AgeType_R").innerHTML = Edad; 
-            document.getElementById("CountryType_R").innerHTML = Pais; 
-            document.getElementById("TelType_R").innerHTML = Telefono; 
-            document.getElementById("EmailType_R").innerHTML = Email;  
-            document.getElementById("WorkType_R").innerHTML = Work;  
-        }
-        )
+            const logo_black = document.getElementById("black-mod")
+
+            header.classList.toggle("sticky", window.scrollY > 0);
+
+            logo_white.classList.add("remove", window.scrollY > 0);
+            logo_black.classList.toggle("active", window.scrollY > 0);
+
+
+        });
     </script>
--->
 </html>
