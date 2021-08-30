@@ -1,5 +1,5 @@
 :root {
-  --our-font: Century Gothic, CenturyGothic, AppleGothic, sans-serif; 
+  --our-font: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
   --border-cont: 1px solid white;
 }
 * {
@@ -105,11 +105,9 @@ body {
   font-size: 1rem;
 
   font-weight: bold;
-
-  
 }
 
-.main_menu_aside a{
+.main_menu_aside a {
   text-decoration: none;
   color: rgb(199, 197, 197);
   transition: 0.5s;
@@ -126,7 +124,6 @@ body {
   width: 248px;
   height: 45px;
   padding: 12px 0px;
-  
 }
 
 .option :hover {
@@ -139,7 +136,7 @@ body {
 .active-option {
   background-color: rgb(255, 255, 255);
   box-shadow: -3px 3px 6px #000;
-  
+
   -webkit-box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.733);
   filter: shadow(color=#000, direction=0, strength=3);
 
@@ -147,10 +144,9 @@ body {
   border-top-right-radius: 10px;
 }
 
-.active-option a{
+.active-option a {
   color: #07175f;
 }
-
 
 /*Crear Play List*/
 
@@ -163,16 +159,15 @@ body {
   color: rgb(199, 197, 197);
 }
 
-.create_play_list{
+.create_play_list {
   width: 100%;
   height: 50px;
   font-size: 1rem;
 
   padding: 10px 60px 15px 10px;
-  
 }
 
-.create_play_list a{
+.create_play_list a {
   transition: 0.5s;
 }
 
@@ -212,7 +207,7 @@ body {
   transition: 0.2s;
 }
 
-.play-list a:hover{
+.play-list a:hover {
   color: white;
 }
 
@@ -221,15 +216,14 @@ body {
   font-size: 1rem;
 }
 
-
-.play-list a{
+.play-list a {
   text-decoration: none;
   color: rgb(199, 197, 197);
   transition: 0.5s;
 }
 /*------------------------------------------------------------header contairne*/
 
-header{
+header {
   width: calc(100% - 232px);
   height: 100px;
   position: absolute;
@@ -246,7 +240,6 @@ header{
   z-index: -1;
 }
 
-
 /*Buscador y menu de opciones ----------------------------------------------------------*/
 
 .searcher-container {
@@ -262,7 +255,7 @@ header{
   z-index: 500;
 }
 
-.searcher-container input{
+.searcher-container input {
   font-family: var(--our-font);
   background-color: white;
   font-size: 11pt;
@@ -270,19 +263,18 @@ header{
   border-radius: 20px;
   width: 33%;
   max-width: 440.55px;
-  
+
   height: 35px;
-  
+
   border: none;
-  
+
   padding: 5px 45px 5px 35px;
-  
+
   outline: none;
 
   position: absolute;
   left: 70px;
   top: 22px;
-
 }
 
 .searcher-container #nota {
@@ -303,7 +295,7 @@ header{
   font-size: 2.54rem;
 }
 
-#menu:hover{
+#menu:hover {
   transition: 0.5s;
   opacity: 0.7;
 }
@@ -385,9 +377,7 @@ footer {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
 }
-
 
 .picture-song-footer {
   width: 100px;
@@ -461,7 +451,6 @@ footer {
   height: 50%;
 
   padding-top: 2vh;
-
 }
 
 .center-song p {
@@ -636,10 +625,8 @@ footer {
   }
 }
 
-
-
 /*Contenedor menu*/
-.contariner-menu{
+.contariner-menu {
   position: relative;
   width: 300px;
   position: absolute;
@@ -650,7 +637,7 @@ footer {
 
 /*Barra toggle*/
 
-.menu-dreams-usuario{
+.menu-dreams-usuario {
   width: 0%;
   height: 90vh;
   position: absolute;
@@ -661,21 +648,21 @@ footer {
   transition: all 0.5s;
 }
 
-.navegation{
+.navegation {
   width: 100%;
   height: 600px;
   margin-top: 100px;
   padding: 8vh 3vw;
 }
 
-#menu-dreams{
+#menu-dreams {
   background-color: rgba(0, 0, 0, 0.219);
   -webkit-backdrop-filter: blur(8px);
   -moz-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
-.navegation li{
+.navegation li {
   list-style: none;
   height: 10vh;
 
@@ -683,7 +670,7 @@ footer {
   line-height: 10vh;
 }
 
-.navegation li a{
+.navegation li a {
   color: white;
   text-decoration: none;
   font-size: 2vh;
@@ -698,14 +685,13 @@ footer {
   transform: translate(15px);
 }
 
-
 /*---- Boton--------*/
 
-.contariner-menu input{ 
+.contariner-menu input {
   display: none;
 }
 
-.toggle-button{
+.toggle-button {
   width: 50px;
   height: 50px;
   cursor: pointer;
@@ -718,82 +704,86 @@ footer {
   padding: 12.5px 12.5px;
 
   z-index: 500;
-
 }
 
-.toggle-button span{
+.toggle-button span {
   width: 100%;
   display: block;
   transition: all 0.2s ease-out;
 }
 
-.open{
+.open {
   height: 12.5px;
-  border-top:1px solid white;
-  border-bottom:1px solid white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
   background-color: transparent;
 }
 
-
-.close{
+.close {
   height: 1px;
   background-color: white;
   margin-top: 10px;
 }
 
-
-input:checked + .toggle-button .open, input#abrir-cerrar:checked + .toggle-button .close {
+input:checked + .toggle-button .open,
+input#abrir-cerrar:checked + .toggle-button .close {
   height: 1px;
-  border-bottom:0;
+  border-bottom: 0;
 }
-
-
 
 input:checked + .toggle-button .open {
   margin-top: 10px;
-  transform: rotate(45deg); 
+  transform: rotate(45deg);
 }
 
-input:checked + .toggle-button .close{
+input:checked + .toggle-button .close {
   transform: rotate(-45deg);
   margin-top: 0px;
 }
 
-input:checked ~ .menu-dreams-usuario{
+input:checked ~ .menu-dreams-usuario {
   opacity: 1;
   width: 100%;
 }
 
 /*--------traductor---------------*/
-.google{
+.google {
   position: absolute;
   z-index: 500;
   font-size: 0px;
   border-radius: 36px;
-  
 }
 
-.translated-ltr{margin-top:-40px;}
-.translated-ltr{margin-top:-40px;}
-.goog-te-banner-frame {display: none;margin-top:-20px;}
-
+.translated-ltr {
+  margin-top: -40px;
+}
+.translated-ltr {
+  margin-top: -40px;
+}
+.goog-te-banner-frame {
+  display: none;
+  margin-top: -20px;
+}
 
 .goog-logo-link {
-   display:none !important;
-} 
-
-.goog-te-gadget{
-   color: transparent !important;
-   
+  display: none !important;
 }
 
-.goog-te-combo, .goog-te-ftab , .goog-te-menu , .goog-te-menu2 , .goog-te-balloon  {
-background-color: transparent !important;
-    color: white;
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif !important; 
-    font-size: 1.5em !important;
+.goog-te-gadget {
+  color: transparent !important;
+}
+
+.goog-te-combo,
+.goog-te-ftab,
+.goog-te-menu,
+.goog-te-menu2,
+.goog-te-balloon {
+  background-color: transparent !important;
+  color: white;
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif !important;
+  font-size: 1.5em !important;
 }
 
 #google_translate_element_id option {
-color: black;
+  color: black;
 }
