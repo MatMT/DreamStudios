@@ -4,7 +4,7 @@
     require("../../conexion_mysql/conection-basedatos.php");
 
     if(!empty($_POST['EmailType']) && !empty($_POST['password'])){
-        $records = $conexion->prepare("SELECT id, e_mail, pasware FROM usuarios WHERE  e_mail=:email");
+        $records = $conexion->prepare("SELECT id_users, e_mail, pasware FROM usuarios_dreams WHERE  e_mail=:email");
         $records->bindParam(":email", $_POST["EmailType"]);
         $records->execute();
 
@@ -15,11 +15,14 @@
 
         if(is_array($results)){
             if(count($results) > 0 && password_verify($_POST['password'], $results["pasware"])){
-                $_SESSION["id_user"] = $results["id"];
+               
+                $_SESSION["id_user"] = $results["id_users"];
                 $message = "Iniciaste sesión en Dreams!";
                 header('Location: ./../../Página Principal/index/HomePage2.php');
+                
             }else{
-                $message = "Lo sentimos, usuario o contraseñas incorrectos";
+
+                $message = "Lo sentimos, usuario o contraseñas incorrectos ".$_POST['password'];
             }
         }else{
             $message = "El usuario es incorrecto";
@@ -46,8 +49,11 @@
           <header>
             <div class="back">
                 <nav class="">
-                    <img src="../../Pagina General/Página-general-oficial/imagenes/white-logo.svg" alt="img" id="white-mod">
-                    <img src="../../Pagina General/Página-general-oficial/imagenes/black-logo.svg" alt="img" id="black-mod">
+                    <a href="../../Pagina General/Página-general-Oficial/Paginageneral.html">
+                        <img src="../../Pagina General/Página-general-oficial/imagenes/white-logo.svg" alt="img" id="white-mod">
+                        <img src="../../Pagina General/Página-general-oficial/imagenes/black-logo.svg" alt="img" id="black-mod">
+                    </a>
+                    
                     <ul class="navigation" data-animation="left-rigth">
                         <li>
                             <!--traduccion-------------------------->
@@ -57,7 +63,7 @@
                        
                             <!------------------------------------->
                            </li>
-                        <li><a href="../../Página Registro/Html/Forms_Personal.html">Registrarse</a></li>
+                        <li><a href="../../Página Registro/Html/Forms_Personal.php">Registrarse</a></li>
                         <li><a href="../../About us/Html/Nosotros.html">Sobre Nosotros</a></li>
                     </ul>
                 </nav>
@@ -92,7 +98,7 @@
             <div class="datos">
                 <label for="NameType">Tu correo electrónio</label>
                 <br>
-                <input type="text" name="EmailType"  placeholder="Tu nombre de Usuario" class="nombre" id="NameType" required>
+                <input type="email" name="EmailType"  placeholder="Tu nombre correo" class="nombre" id="NameType" required>
             </div>
             <div class="datos">
                 <label for="EmailType">Tu contraseña</label>
@@ -100,7 +106,7 @@
                 <input type="password" name="password" placeholder="Tu contraseña"  class="nombre" id="EmailType" required>
             </div>
             <div id="botones">
-                <a href="../../Página Registro/Html/Forms_Personal.html" class="lost-pass">¿No tienes una cuenta?</a>
+                <a href="../../Página Registro/Html/Forms_Personal.php" class="lost-pass">¿No tienes una cuenta?</a>
             <!--Falta la funcionalidad del boton-->
                 <input type="submit" value="Iniciar Sesión" class="boton">
             </div>

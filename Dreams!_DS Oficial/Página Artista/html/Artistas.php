@@ -1,10 +1,64 @@
+<?php
+    session_start();
+
+    
+    require("../../conexion_mysql/conection-basedatos.php");
+
+
+    if(isset($_SESSION['reference_artist'])){
+        
+        // Obtener datos de la tabal artistas para luego ser colocados
+
+        $artistasref = $conexion->prepare("SELECT * FROM artistas_dreams WHERE id_art= :id_art");
+        $artistasref->bindParam(":id_art", ($_SESSION['reference_artist']));
+        $artistasref->execute();
+
+        $results = $artistasref->fetch(PDO::FETCH_ASSOC);
+
+        // Obtener la playlost de Introduccion del Artista
+
+
+        $preparePlay = $conexion->prepare("SELECT * FROM playlist_".$_SESSION['reference_artist']."");
+        $preparePlay->execute();
+
+
+        //------- Obtener Albums-------
+
+        $albumsprepare = $conexion->prepare("SELECT * FROM dreamaker_".$_SESSION['reference_artist']."");
+        $albumsprepare->execute();
+
+        if (isset($_GET["w2"])){
+            echo "<script type='text/javascript'>alert('se obtuvo variable');</script>";
+            $album_js = $_GET["w2"];
+            $_SESSION["reference_album_art"] = $album_js;
+    
+    
+            if(!empty($_SESSION["reference_album_art"])){
+    
+                header('Location: ../../Página Artista/html/Artistas.php');
+    
+            }else{
+                echo "<script type='text/javascript'>alert('No se logró');</script>"; 
+            }
+    
+        }s
+
+
+    }else{
+        echo "<script type='text/javascript'>alert('Lo sentimos, este sitio aún está en construcción');</script>";
+    }
+
+
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dreams!- Niall Horan</title>
+        <?php
+            echo "<title>Dreams!- ".$results["name_artist"]."</title>"
+        ?>
         <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
         <link rel="icon" href="../../Recursos/Iconos/Ds_logo.ico"> 
         <link rel="stylesheet" href="../../Página Principal/Archisvos_DS_CSS/Home-style.css"><!--Plantilla del reproductor-->
@@ -70,7 +124,9 @@
                     </button>
                     <i class="icon-heart-empty"></i>
                     <i class="icon-dot-3"></i>
-                    <p id="descrip">Niall es un cantante y compositor irlandés. Fue miembro de One Direction y ahora se ha dado a conocer como solista.</p>
+                    <?php
+                        echo "<p id='descrip'>".$results["description_art"]."</p>";
+                    ?>
                 </div>
                 
                 <div class="play-list-songs-artist">
@@ -80,66 +136,56 @@
                         <h4>ARTISTA</h4>
                         <H4>ALBUM</H4>
                     </div>
-                    <div class="song-description">
-                        <p id="number">1</p>
-                        <p>Black and White</p>
-                        <p>Niall Horan</p>
-                        <p>Heartbreak Weather</p>
-                    </div>
-                    <div class="song-description">
-                        <p id="number">2</p>
-                        <p>No Judgement</p>
-                        <p>Niall Horan</p>
-                        <p>Heartbreak Weather</p>
-                    </div>
-                    <div class="song-description">
-                        <p id="number">3</p>
-                        <p>Put A Little Love On Me</p>
-                        <p>Niall Horan</p>
-                        <p>Put A Little Love On Me</p>
-                    </div>
-                    <div class="song-description">
-                        <p id="number">4</p>
-                        <p>Nice to meet Ya</p>
-                        <p>Niall Horan</p>
-                        <p>Nice to meet Ya</p>
-                    </div>
-                    <div class="song-description">
-                        <p id="number">5</p>
-                        <p>This town</p>
-                        <p>Niall Horan</p>
-                        <p>Flicker (Deluxe)</p>
-                    </div>
-                    <div class="song-description">
-                        <p id="number">6</p>
-                        <p>Slow Hands</p>
-                        <p>Niall Horan</p>
-                        <p>Flicker (Deluxe)</p>
-                    </div>                    
+                     <?php
+
+                        while($PlayList = $preparePlay->fetch(PDO::FETCH_ASSOC)){
+                                echo "
+                                <div class='song-description' id='".$PlayList["id_song"]."'>
+                                    <p id='number'>".$PlayList["id_song"]."</p>
+                                    <p>".$PlayList["name_song"]."</p>
+                                    <p>".$PlayList["name_artista"]."</p>
+                                    <p>".$PlayList["song_album"]."</p>
+                                    <audio class='song-artist' controls preload='metadata'>
+                                        <source src='".$PlayList["direction_song"]."' type='audio/ogg' class='flex-item'>
+                                    </audio>
+                                </div>
+                                ";
+                        }
+                        /*
+                        if(!empty($mensaje)){
+                            
+                        }else{
+                            echo "<h2>".$mensaje."</h2>";
+                        }  */                  
+                    ?>
                 </div>
 
                 
                 <div class="container-albums">
-                    <h1>Albums de Niall Horan</h1>
-                    <div class="albums-artista">                    
-                        <div class="album">
-                            <a href="../../Página_Albums/html/albums.html"><img src="../../Recursos/albums/heartbreak_weather.jpg" alt="img"></a>
-                            <h4>Heartbreak Weather</h4>
-                            <h5>13 March 2020</h5>
-                            <i class="icon-play-circled"></i>
-                        </div>
-                        <div class="album">
-                            <a href=""><img src="../../Recursos/albums/heartbreak_weather.jpg" alt="img"></a>
-                            <h4>Heartbreak Weather</h4>
-                            <h5>13 March 2020</h5>
-                            <i class="icon-play-circled"></i>
-                        </div>
-                        <div class="album">
-                            <a href=""><img src="../../Recursos/albums/heartbreak_weather.jpg" alt="img"></a>
-                            <h4>Heartbreak Weather</h4>
-                            <h5>13 March 2020</h5>
-                            <i class="icon-play-circled"></i>
-                        </div>
+                    <?php 
+                        echo "<h1>".$listAlbum["nameArtist"]."</h1>"
+                    ?>
+                    
+                    <div class="albums-artista">
+                        <?php
+                            while($listAlbum = $albumsprepare->fetch(PDO::FETCH_ASSOC)){
+                                echo "
+                                <div class='album'>
+                                    <img src='".$listAlbum["direction_song"]."' alt="img">
+                                    <h4>".$listAlbum["nameAlbum"]."</h4>
+                                    <h5>13 March 2020</h5>
+                                    <i class='icon-play-circled'></i>
+                                </div>
+                                <script>
+                                    var artistSelect = document.getElementById('".$listAlbum["id_album"]."');
+
+                                    artistSelect.addEventListener('click', function(){
+                                        var reference = ".$resultados['id_album'].";
+                                        window.location.href = window.location.href + '?w2=' + reference;
+                                    });
+                                </script>";
+                            }
+                        ?>
                     </div>
                 </div>
                
@@ -153,12 +199,16 @@
             
             <header class="header-container">
                 <div class="background">
-                    <img src="../../Recursos/fondo-artistas/NIALL-HORAN_5.jpg" alt="img">
+                    <?php 
+                        echo "<img src='".$results["bg_img_artist"]."' alt='img'>"
+                    ?>
                 </div>
                 
                 <div class="name-artist">
-                    <h2>We present</h2>
-                    <h1>Niall Horan</h1>
+                    <h2>We present the play List</h2>
+                    <?php
+                        echo "<h1>".$results["name_artist"]."</h1>"
+                    ?>
                 </div>
                 <div class="img">
                     <img src="../../Recursos/Iconos/icono-d.svg" alt="img">
@@ -215,25 +265,27 @@
             </div>
             
             <div class="more-icons">
-                <i class="icon-loop"></i>
-                <i class="icon-shuffle"></i>    
+                <i class="icon-loop-1" id="repetir"></i>
+                <i class="icon-shuffle-1"></i>    
             </div>
 
             <div class="line-time-song">
 
                 <div class="center-song">
                     <p id="name-song">Nice to Meet Ya</p>
-                    <i class="icon-heart-empty"></i>
+                    <i class="icon-heart-empty" id="megusta"></i>
                     <p id="name-artist-2">Niall Horan</p>
                 </div>
 
                 <div class="center-bar-time">
                                 
-                    <div class="time-start">0:00</div>
-                    <div class="bar-time">
-                        <div id="progress"></div>
-                    </div>
-                    <div class="time-end">0:00</div>
+                    <div class="time-start" id="prog">0:00</div>
+                    
+                        <div class="bar-time" id="barra">
+                            <div class="progress" id="progress"></div>
+                        </div>
+
+                    <div class="time-end" id="dur"><p>0:00</p></div>
                 </div>
             </div>
             <div class="sound-play">
@@ -247,14 +299,12 @@
                 
                 <i class="icon-to-start-1" id="before-song"></i>
 
-                <div class="play pause">
-                    <i class="icon-play-1" id="play-start"></i>
-                    <i class="icon-pause-1" id="pause"></i> 
+                <div class="play-pause">
+                    <i class="icon-play-1 play" id="play-start"></i>
                 </div>
                               
                 <i class="icon-to-end-1" id="next-song"></i>
             </div>
         </footer>
-
     </body>
 </html>

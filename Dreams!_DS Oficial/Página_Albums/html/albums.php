@@ -1,10 +1,39 @@
+<?php
+    session_start();
+    require("../../conexion_mysql/conection-basedatos.php");
+
+    if(isset($_SESSION["reference_album_art"]) && isset($_SESSION["reference_artist"])){
+
+        // Obtener datos de Dreamaker
+
+        $get_data = $conexion->prepare("SELECT * FROM dreamaker_".$_SESSION['reference_artist']." WHERE id_album =:id_alb");
+        $get_data->bindParam(":id_alb", ($_SESSION['reference_album_art']));
+        $get_data->execute();
+
+        $resultsData = $get_data->fetch(PDO::FETCH_ASSOC);
+        
+        
+        
+        //Obtener datos de la tabla con las cacniones del ambuml seleccionado
+
+        $get_album = $conexion->prepare("SELECT * FROM album_".$_SESSION["reference_artist"]."_".$_SESSION["reference_album_art"]."");
+        $get_album->execute();
+
+        
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dreams! - Heartbreak Weather </title>
+        <?php 
+            echo "<title>Dreams! - ".$resultsData["nameAlbum"]."</title>";
+        ?>
         <link rel="icon" href="../../Recursos/Iconos/Ds_logo.ico">
         <link rel="stylesheet" href="../../Página Principal/Archisvos_DS_CSS/Home-style.css">
         <link rel="stylesheet" href="../Archisvos_DS_CSS/Style_Album_Div.css">
@@ -27,7 +56,7 @@
                 <div class="main_menu_aside">
                     
                     <div class="option">
-                        <a href="../../Página Principal/index/HomePage2.html"><i class="icon-music-2"></i>
+                        <a href="../../Página Principal/index/HomePage2.php"><i class="icon-music-2"></i>
                         <p>Inicio</p></a>
                     </div>
                     
@@ -67,6 +96,13 @@
                         <p>Reproducir</p>
                     </button>
                     <i class="icon-dot-3"></i>
+                    <a href="../../Página Artista/html/Artistas.php" style="text-decoration: none;">
+                        <?php 
+                            echo "<p>Escuha más de ".$resultsData["nameArtist"]."</p>";
+                        ?>
+                    </a>
+                    <i class="icon-note" id="nota"></i>
+                   
                 </div>
                 <div class="play-list-songs">
                     <div class="data-song">
@@ -75,12 +111,28 @@
                         <h4>ARTISTA</h4>
                         <H4>ALBUM</H4>
                     </div>
-                    <div class="song-description-playlist">
-                        <p id="number">1</p>
-                        <p>Black and White</p>
-                        <p>Niall Horan</p>
-                        <p>Heartbreak Weather</p>
-                    </div>
+                    
+                    <?php
+
+                    while($resultados_album = $get_album->fetch(PDO::FETCH_ASSOC)){
+                        echo "
+                        <div class='song-description-playlist'>
+                            <p id='number'>".$resultados_album["id_song_a"]."</p>
+                            <p>".$resultados_album["name_song"]."</p>
+                            <p>".$resultados_album["name_artist"]."</p>
+                            <p>".$resultados_album["name_album"]."</p>
+                            <audio class='song-artist' controls preload='metadata' id=''>
+                                <source src='".$resultados_album["direction_song"]."' type='audio/ogg' class='flex-item'>
+                            </audio>
+                        </div>                  
+
+                        ";
+                    }
+                       
+
+                    ?>
+
+                   
                     <div class="song-description-playlist">
                         <p id="number">2</p>
                         <p>No Judgement</p>
@@ -100,7 +152,7 @@
                     <div class="content-playlist">
                         <h2>ÁLBUM</h2>
                         <h1>Heartbreak Weather</h1>
-                        <h2>Niall Horan</h2>
+                        <a href="../../Página Artista/html/Artistas.php"><h2>Niall Horan</h2></a>
                     </div> 
                 </div>
             </header>
@@ -142,7 +194,7 @@
         
         <footer>
             <div class="picture-song-footer">
-                <img src="../img/1x1-Artist/nioce.jpg" id="img-artist-1">
+                <img src="../../Página Principal/img/1x1-Artist/nioce.jpg" id="img-artist-1">
             </div>
             <div class="artist-enojoy">
                 <p id="enjoy-with">Disfruta con...</p>
@@ -151,25 +203,27 @@
             </div>
             
             <div class="more-icons">
-                <i class="icon-loop"></i>
-                <i class="icon-shuffle"></i>    
+                <i class="icon-loop-1" id="repetir"></i>
+                <i class="icon-shuffle-1"></i>    
             </div>
 
             <div class="line-time-song">
 
                 <div class="center-song">
                     <p id="name-song">Nice to Meet Ya</p>
-                    <i class="icon-heart-empty"></i>
+                    <i class="icon-heart-empty" id="megusta"></i>
                     <p id="name-artist-2">Niall Horan</p>
                 </div>
 
                 <div class="center-bar-time">
                                 
-                    <div class="time-start">0:00</div>
-                    <div class="bar-time">
-                        <div id="progress"></div>
-                    </div>
-                    <div class="time-end">0:00</div>
+                    <div class="time-start" id="prog">0:00</div>
+                    
+                        <div class="bar-time" id="barra">
+                            <div class="progress" id="progress"></div>
+                        </div>
+
+                    <div class="time-end" id="dur"><p>0:00</p></div>
                 </div>
             </div>
             <div class="sound-play">
@@ -183,9 +237,11 @@
                 
                 <i class="icon-to-start-1" id="before-song"></i>
 
-                <div class="play pause">
-                    <i class="icon-play-1" id="play-start"></i>
-                    <i class="icon-pause-1" id="pause"></i> 
+                <div class="play-pause">
+                    <i class="icon-play-1 play" id="play-start"></i>
+                    <!--
+                        <i class="icon-pause-1 pause" id="play-start"></i> 
+                    -->  
                 </div>
                               
                 <i class="icon-to-end-1" id="next-song"></i>

@@ -75,9 +75,15 @@ header{
 .content-playlist{
     margin-left: 3vw;
 }
-.content-playlist h2{
+.content-playlist a{
+    text-decoration: none;
+}
+
+.content-playlist a h2{
     font-weight: normal;
     font-size: 3vh;
+    color: white;
+    
 }
 .content-playlist h1{
     font-size: 5vw;
@@ -99,6 +105,19 @@ header{
     align-items: center;
 
 }
+
+
+.content-playlist a{
+    color: white;
+    text-decoration: none;
+}
+
+.controls-play-list a p{
+    margin: 0px 3px 0px 20px;
+    color: white;
+    text-decoration: none;
+}
+
 
 .controls-play-list button{
     width: 25%;
@@ -148,7 +167,6 @@ header{
     cursor: pointer;
     margin-left: 3vw;
 }
-
 
 
 /* Boton para escuchar-------------------------------------------------------------------- */

@@ -4,7 +4,7 @@
     require("../../conexion_mysql/conection-basedatos.php");
 
     if(isset($_SESSION["id_user"])){
-        $usuario = $conexion->prepare("SELECT id, nombre, e_mail FROM usuarios WHERE id= :id");
+        $usuario = $conexion->prepare("SELECT id_users, name_user, e_mail FROM usuarios_dreams WHERE id_users= :id");
         $usuario->bindParam(":id", $_SESSION["id_user"]);
         $usuario->execute();
 
@@ -15,6 +15,26 @@
         if(count($inicio) > 0){
             $user = $inicio;
         }
+    }
+
+    $artistas = $conexion->prepare("SELECT id_art, name_artist, img_artist FROM artistas_dreams ORDER BY id_art");
+    $artistas->execute();
+
+
+    if (isset($_GET["w1"])){
+        echo "<script type='text/javascript'>alert('se obtuvo variable');</script>";
+        $artista_js = $_GET["w1"];
+        $_SESSION["reference_artist"] = $artista_js;
+
+
+        if(!empty($_SESSION["reference_artist"])){
+
+            header('Location: ../../Página Artista/html/Artistas.php');
+
+        }else{
+            echo "<script type='text/javascript'>alert('No se logró');</script>"; 
+        }
+
     }
 
 ?>
@@ -108,66 +128,25 @@
 
                     <div class="contenedor-principal">
                         <div class="carousel">
-                            <div class="artista">
-                                <a href=""><img src="../img/carrucel/taylor-swift.jpg" alt="img"></a>
-                                <h4>Taylor Switf</h4>
-                                <i class="icon-play-circled"></i>
-                            </div>
-                            <div class="artista">
-                                <a href="../../Página Artista/html/Artistas.html"><img src="../img/carrucel/Niall-Horan.jpg" alt="img"></a>
-                                <h4>Niall Horan</h4>
-                                <i class="icon-play-circled"></i>
-                            </div>
-                            <div class="artista">
-                                <a href=""><img src="../img/carrucel/shawn-mendes.jpg" alt="img"></a>
-                                <h4>Shawn Mendes</h4>
-                                <i class="icon-play-circled"></i>
-                            </div>
-                            <div class="artista">
-                                <a href=""><img src="../img/carrucel/maroon5.jpg" alt="img"></a>
-                                <h4>Marron 5</h4>
-                                <i class="icon-play-circled"></i>
-                            </div>
-                            <div class="artista">
-                                <a href=""><img src="../img/carrucel/mateo-xd.jpeg" alt="img"></a>
-                                <h4>Mateo Elias</h4>
-                                <i class="icon-play-circled"></i>
-                            </div>
-                            <div class="artista">
-                                <a href=""><img src="../img/carrucel/taylor-swift.jpg" alt="img"></a>
-                                <h4>Taylor Switf</h4>
-                                <i class="icon-play-circled"></i>
-                            </div>
-                            <div class="artista">
-                                <a href="../../Página Artista/html/Artistas.html"><img src="../img/carrucel/Niall-Horan.jpg" alt="img"></a>
-                                <h4>Niall Horan</h4>
-                                <i class="icon-play-circled"></i>
-                            </div>
-                            <div class="artista">
-                                <a href=""><img src="../img/carrucel/shawn-mendes.jpg" alt="img"></a>
-                                <h4>Shawn Mendes</h4>
-                                <i class="icon-play-circled"></i>
-                            </div>
-                            <div class="artista">
-                                <a href=""><img src="../img/carrucel/maroon5.jpg" alt="img"></a>
-                                <h4>Marron 5</h4>
-                                <i class="icon-play-circled"></i>
-                            </div>
-                            <div class="artista">
-                                <a href=""><img src="../img/carrucel/mateo-xd.jpeg" alt="img"></a>
-                                <h4>Mateo Elias</h4>
-                                <i class="icon-play-circled"></i>
-                            </div>
-                            <div class="artista">
-                                <a href=""><img src="../img/carrucel/taylor-swift.jpg" alt="img"></a>
-                                <h4>Taylor Switf</h4>
-                                <i class="icon-play-circled"></i>
-                            </div>
-                            <div class="artista">
-                                <a href="../../Página Artista/html/Artistas.html"><img src="../img/carrucel/Niall-Horan.jpg" alt="img"></a>
-                                <h4>Niall Horan</h4>
-                                <i class="icon-play-circled"></i>
-                            </div>
+                        <?php 
+                            while($resultados = $artistas->fetch(PDO::FETCH_ASSOC)){
+                            echo "
+                            <div class='artista' id='".$resultados["id_art"]."'>
+                                <a href='#'><img src='". $resultados["img_artist"] . "' alt='img'></a>
+                                <h4>".$resultados["name_artist"]."</h4>
+                                <i class='icon-play-circled'></i>
+                            </div>                           
+                            <script>
+                                var artistSelect = document.getElementById('".$resultados["id_art"]."');
+
+                                artistSelect.addEventListener('click', function(){
+                                    var reference = ".$resultados['id_art'].";
+                                    window.location.href = window.location.href + '?w1=' + reference;
+                                });
+                            </script>"                   
+                            ;
+                            }
+                        ?>
                         </div>
                     </div>                    
                 </div>
