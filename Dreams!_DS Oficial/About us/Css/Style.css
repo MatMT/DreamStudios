@@ -21,13 +21,15 @@ body {
     rgba(84, 28, 249, 1) 10%,
     rgba(255, 94, 60, 1) 95%
   );
+  background-attachment: fixed;
 }
 
 /*Order post*/
 
 .flex-container {
   margin-left: 1.5em;
-  margin: 0 auto;
+  margin: 10px auto;
+  max-height: 400px;
   width: 80%;
   display: flex;
   flex-wrap: wrap;

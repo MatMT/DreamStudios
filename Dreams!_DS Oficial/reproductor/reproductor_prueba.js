@@ -1,6 +1,5 @@
 // Obterner id de los usuarios 
 
-
 var maximo;
 var barra;
 var progreso;

@@ -108,7 +108,7 @@
                 </div>
 
                 <div class="title-name-user">
-                    <p id="weilcome">Buenas noches</p>
+                    <p id="weilcome">Buenas Tardes</p>
                     <?php if(!empty($user)):?>
 
                     <p id="name-user-title"><?= $user["name_user"]?>!</p>
