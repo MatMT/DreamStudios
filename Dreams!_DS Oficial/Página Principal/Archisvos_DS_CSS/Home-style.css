@@ -365,7 +365,7 @@ footer {
   width: 100%;
   height: 10%;
   max-height: 95px;
-  background-color: #050a20;
+  background-color: #1C202D;
 
   border-top: rgba(255, 255, 255, 0.425) 0.5px solid;
 
@@ -377,6 +377,8 @@ footer {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.527);
 }
 
 .picture-song-footer {
@@ -433,8 +435,9 @@ footer {
 }
 
 .more-icons i {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 /*Caja de la línea de tiempo e información de la canción ----------------------------------*/
@@ -461,6 +464,7 @@ footer {
   color: white;
   margin-left: 10px;
   margin-top: 0.6%;
+  cursor: pointer;
 
   float: left;
 }
@@ -500,13 +504,19 @@ footer {
 }
 
 .bar-time {
-  background-color: #759efc;
+  background-color: #707784;
   height: 3px;
   width: 82%;
 
   margin-top: 7px;
   margin-left: 15px;
   margin-right: 15px;
+}
+
+.progress{
+  background-color: white;
+  height: 3px;
+  width: 0%;
 }
 
 /*MOnitor del Audio*/
@@ -524,7 +534,7 @@ footer {
 }
 
 .audio-line {
-  background-color: #759efc;
+  background-color: #707784;
   height: 3px;
   width: 60%;
   margin-left: 3px;
@@ -548,17 +558,30 @@ footer {
   align-items: center;
 }
 
-#pause {
+.pause{
   display: none;
 }
 
+.play-off{
+  display: none;
+}
+
+.icon-pause-1,
 .icon-play-1 {
-  font-size: 4.5vw;
+  font-size: 3.9vw;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 .icon-to-start-1,
 .icon-to-end-1 {
   font-size: 2vw;
+}
+
+/*Desaparecer los controles de la etiqueta audio*/
+
+audio{
+  display: none;
 }
 
 /*Condiciones para el footer*/
