@@ -58,7 +58,7 @@
                             <!------------------------------------->
                            </li>
                         <li><a href="../../Página Registro/Html/Forms_Personal.html">Registrarse</a></li>
-                        <li><a href="">Sobre Nosotros</a></li>
+                        <li><a href="../../About us/Html/Nosotros.html">Sobre Nosotros</a></li>
                     </ul>
                 </nav>
             </div>
