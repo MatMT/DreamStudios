@@ -233,3 +233,17 @@ a.login:visited {
 #google_translate_element_id option {
   color: black;
 }
+
+
+/*---- ---- ----- ----- ----- --- ----- Respuestas ----- ----- --- ---- ---- */
+
+.respuesta{
+  width: 80%;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: 25px auto 0px auto;
+  background-color: rgba(255, 255, 255, 0.493);
+  border-radius: 15px;
+
+}

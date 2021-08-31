@@ -1,0 +1,275 @@
+:root{
+    --our-font: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    --border-cont: 1px solid white;
+
+}
+body {
+    background: rgb(84,28,249);
+    background: linear-gradient(25deg, rgba(255,94,60,1) 10%, rgba(84,28,249,1) 95%) !important;
+    
+}
+
+.my-play-list:hover {
+    color: #07175f !important;
+}
+
+
+header{
+    height: 45vh;
+    min-height: 375px;
+    background-color: rgba(0, 0, 0, 0.507);
+    
+    color: white;
+
+    font-family: var(--our-font);
+}
+
+
+.searcher-container{
+    width: calc(100% - 232px);
+    
+}
+
+.main-contaier{
+    width: calc(100% - 232px);
+    height: calc(100% - 45vh);
+    margin-top: 45vh;
+
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.507);
+
+
+
+
+}
+
+
+
+/* ---- ---- --- ---- ----- ----- Header play list ----- ----- ----- ---- ---- ---- */
+
+.container-info-playlis{
+    width: 100%;
+    height: 65%;
+
+    margin-top: 15vh;
+
+    display: flex;
+}
+
+.container-info-playlis img{
+    height: 100%;
+    min-height: 189.75px;
+
+    -webkit-box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.733);
+    filter: shadow(color=#000, direction=0, strength=3);
+}
+
+.content-playlist{
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    padding: 25px 5px;
+}
+.content-playlist{
+    margin-left: 3vw;
+}
+.content-playlist h2{
+    font-weight: normal;
+    font-size: 3vh;
+}
+.content-playlist h1{
+    font-size: 5vw;
+    /*white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;*/
+}
+
+.content-playlist h3{
+    font-size: 2vh;
+}
+
+/*------ ------- ------ BUtom */
+.controls-play-list{
+    width: 100%;
+    height: 18%;
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+
+}
+
+.controls-play-list button{
+    width: 25%;
+    height: 100%;
+    background-color: #FF7B62;
+    border: none;
+    border-radius: 5px;
+    font-size: var(--our-font);
+    color: white;
+    cursor: pointer;
+
+    min-width: 173.25px;
+    min-height: 36.16px;
+
+    transition: 0.5s;
+
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.342);
+
+}
+
+.controls-play-list button p{
+    font-size: 2.5vh;
+}
+
+.controls-play-list button i{
+    display: none;
+    text-align: center;
+    transition: all 0.5s;
+    font-size: 3.2vh;
+}
+.controls-play-list button:hover{
+
+    transform: scale(1.03);
+    transform-origin: center;
+
+}
+
+.controls-play-list button:hover i{
+    display: block;
+}
+.controls-play-list button:hover p{
+    display: none;
+}
+
+.controls-play-list .icon-dot-3{
+    font-size: 3vh;
+    cursor: pointer;
+    margin-left: 3vw;
+}
+
+
+
+/* Boton para escuchar-------------------------------------------------------------------- */
+
+
+@media screen and (max-width:1150px){
+
+
+    #album_section {
+        display: none;
+
+    }
+    #album {
+        display: none;
+    }
+}
+
+@media screen and (max-width:770px){
+
+    #artist_section {
+        display: none;
+    }
+
+    #artist {
+        display: none;
+    }
+}
+
+
+/* ---------- ----------- --------- lista de Reproducción -------- ------------- ---------*/
+
+.play-list-songs{
+    width: 100%;
+    margin-top: 5vh;
+
+    overflow-y: auto;
+}
+
+.data-song{
+    width: 90%;
+    height: 45px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: space-around;
+
+    border-bottom: #878787 solid 1px;
+
+}
+
+.data-song h4{
+    font-weight: normal;
+
+    width: 20%;
+    text-align: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song-description-playlist{
+    width: 90%;
+    height: 45px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: space-around;
+
+    border-bottom: #c5c5c5 solid 1px;
+
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.song-description-playlist:hover{
+    background-color: rgba(182, 182, 182, 0.514);
+}
+
+.song-description-playlist p{
+    font-weight: normal;
+    font-size: 1.7vh;
+
+    width: 20%;
+    text-align: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#number{
+    width: 10%;
+}
+
+/*----- ------ ------ ----- NUEVAS mEDIA Q ----- ------ -------  ------*/
+
+@media screen and (max-height: 836px) {
+    .main-contaier{
+        height: calc(100% - 375px);
+        margin-top: 375px;
+    }
+
+
+    
+    .container-info-playlis{
+        margin-top: 110px;
+    }
+
+}
+@media screen and (min-width: 1919px) {
+    
+    
+    header{
+        height: 500px;
+    }
+    .main-contaier{
+        height: calc(100% - 500px);
+        margin-top: 500px;
+    }
+
+}

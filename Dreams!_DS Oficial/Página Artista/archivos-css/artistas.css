@@ -221,3 +221,65 @@ header{
 #number{
     width: 10%;
 }
+
+
+/*------  ---- ---- --lISTA DE ALBUMS ---- ---- ---- ---- --- --- ---*/
+.container-albums{
+    margin-top: 50px;
+    padding: 15px;
+}
+
+.albums-artista{
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+
+.album{
+    width: 220px;
+    transition: 0.3s ease all;
+    margin: 0px 15px;
+    padding: 15px;
+}
+
+.album:hover{
+    transform: scale(1.05);
+    transform-origin: center;
+    transition: 0.5s;
+
+    background-color: rgba(0, 0, 0, 0.452);
+    border-radius: 15px;
+}
+
+.album img{
+    width: 100%;
+}
+
+.album h4{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.album h5{
+    font-weight: normal;
+    text-align: center;
+}
+
+.album i{
+    font-size: 4vmin;
+    position: absolute;
+    left: 67%;
+    top: 60%;
+    text-shadow: -3px 3px 6px #000;
+
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.album:hover i{
+    opacity: 1;
+}
