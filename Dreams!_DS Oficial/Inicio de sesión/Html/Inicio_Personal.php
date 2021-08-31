@@ -4,6 +4,7 @@
     require("../../conexion_mysql/conection-basedatos.php");
 
     if(!empty($_POST['EmailType']) && !empty($_POST['password'])){
+        
         $records = $conexion->prepare("SELECT id_users, e_mail, pasware FROM usuarios_dreams WHERE  e_mail=:email");
         $records->bindParam(":email", $_POST["EmailType"]);
         $records->execute();
@@ -14,9 +15,10 @@
         
 
         if(is_array($results)){
-            if(count($results) > 0 && password_verify($_POST['password'], $results["pasware"])){
+            if(count($results) > 0 && ($_POST['password'] = $results["pasware"])){
                
                 $_SESSION["id_user"] = $results["id_users"];
+
                 $message = "Iniciaste sesión en Dreams!";
                 header('Location: ./../../Página Principal/index/HomePage2.php');
                 
@@ -148,5 +150,7 @@
             logo_white.classList.add("remove", window.scrollY > 0);
             logo_black.classList.toggle("active", window.scrollY > 0);
         });
+        
     </script>
 </html>
+

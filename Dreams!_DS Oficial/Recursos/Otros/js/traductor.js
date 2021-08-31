@@ -1,6 +1,6 @@
 
  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'es,ca,eu,gl,en,fr,it,pt,de' }, 'google_translate_element_id');
+    new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'es,en' }, 'google_translate_element_id');
         }
 
 (function(){var gtConstEvalStartTime = new Date();/*

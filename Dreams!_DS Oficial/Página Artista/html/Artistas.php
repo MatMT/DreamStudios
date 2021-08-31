@@ -18,13 +18,13 @@
         // Obtener la playlost de Introduccion del Artista
 
 
-        $preparePlay = $conexion->prepare("SELECT * FROM playlist_".$_SESSION['reference_artist']."");
+        $preparePlay = $conexion->prepare("SELECT * FROM playlist_artist_".$_SESSION['reference_artist']."");
         $preparePlay->execute();
 
 
         //------- Obtener Albums-------
 
-        $albumsprepare = $conexion->prepare("SELECT * FROM dreamaker_".$_SESSION['reference_artist']."");
+        $albumsprepare = $conexion->prepare("SELECT * FROM dreamaker_artist_".$_SESSION['reference_artist']."");
         $albumsprepare->execute();
 
         if (isset($_GET["w2"])){
@@ -41,7 +41,7 @@
                 echo "<script type='text/javascript'>alert('No se logró');</script>"; 
             }
     
-        }s
+        }
 
 
     }else{
@@ -171,7 +171,7 @@
                             while($listAlbum = $albumsprepare->fetch(PDO::FETCH_ASSOC)){
                                 echo "
                                 <div class='album'>
-                                    <img src='".$listAlbum["direction_song"]."' alt="img">
+                                    <img src='".$listAlbum["direction_song"]."' alt='img'>
                                     <h4>".$listAlbum["nameAlbum"]."</h4>
                                     <h5>13 March 2020</h5>
                                     <i class='icon-play-circled'></i>

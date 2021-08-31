@@ -70,7 +70,7 @@
                 <!---Menú de Dreams-->
                 <div class="main_menu_aside">
                     <div class="active-option">
-                        <a href="HomePage2.html"><i class="icon-music-2"></i>
+                        <a href="HomePage2.php"><i class="icon-music-2"></i>
                         <p>Inicio</p></a>
                     </div>
                     <div class="option">
@@ -110,7 +110,9 @@
                 <div class="title-name-user">
                     <p id="weilcome">Buenas noches</p>
                     <?php if(!empty($user)):?>
-                    <p id="name-user-title"><?= $user["nombre"]?>!</p>
+
+                    <p id="name-user-title"><?= $user["name_user"]?>!</p>
+                    
                     <?php endif; ?>
                 </div>
 
@@ -132,13 +134,12 @@
                             while($resultados = $artistas->fetch(PDO::FETCH_ASSOC)){
                             echo "
                             <div class='artista' id='".$resultados["id_art"]."'>
-                                <a href='#'><img src='". $resultados["img_artist"] . "' alt='img'></a>
+                                <a href='#'><img src='". $resultados["img_artist"] ."' alt='img'></a>
                                 <h4>".$resultados["name_artist"]."</h4>
                                 <i class='icon-play-circled'></i>
                             </div>                           
                             <script>
                                 var artistSelect = document.getElementById('".$resultados["id_art"]."');
-
                                 artistSelect.addEventListener('click', function(){
                                     var reference = ".$resultados['id_art'].";
                                     window.location.href = window.location.href + '?w1=' + reference;
