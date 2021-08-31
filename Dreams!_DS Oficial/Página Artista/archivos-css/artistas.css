@@ -90,6 +90,21 @@ header{
 
 }
 
+@media screen and (max-width: 657px){
+    .background img{
+        width: 350px;
+    }
+
+    header{
+        width: 350px;
+    }
+
+    .main-contaier{
+        height:  calc(100%-350px);
+        margin-top: 350px;
+    }
+}
+
 /*------ ------------- ----------- Contenedor ------------- ---------------- -------*/
 .player-artist-playlist{
     width: 100%;

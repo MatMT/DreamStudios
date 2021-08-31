@@ -151,12 +151,6 @@
                                 </div>
                                 ";
                         }
-                        /*
-                        if(!empty($mensaje)){
-                            
-                        }else{
-                            echo "<h2>".$mensaje."</h2>";
-                        }  */                  
                     ?>
                 </div>
 
@@ -167,7 +161,11 @@
                     ?>
                     
                     <div class="albums-artista">
+
                         <?php
+
+                            
+
                             while($listAlbum = $albumsprepare->fetch(PDO::FETCH_ASSOC)){
                                 echo "
                                 <div class='album'>
@@ -306,5 +304,6 @@
                 <i class="icon-to-end-1" id="next-song"></i>
             </div>
         </footer>
+        <script src="../../reproductor/reproductor_prueba.js"></script>
     </body>
 </html>
