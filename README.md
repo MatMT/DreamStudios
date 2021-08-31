@@ -1,2 +1,2 @@
 # DreamStudios
-El nuevo Spotify!... Para pobres :v
+Descubre tu nueva web app de streaming de música, disfruta de Dreams!
