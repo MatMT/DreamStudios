@@ -63,7 +63,7 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
             <br>
             <p>¿Hay música en el espacio exterior?</p>
         </div>
-        <form id="personal-data" action="regist_user.php">
+        <form method="post" id="personal-data" action="email.php">
 
             <div id="datos_form">
             </div>
@@ -105,14 +105,11 @@ if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google
                 <span>¿Ya tienes una cuenta?</span>
             </div>
             <div class="registrarse" id="registrarse_boton">
-                <a class="login">Registrate</a>
+                <input type="submit" name="enviar" value="Registrate" class="login" >
             </div>
 
         </form>
 
     </div>
-        <footer>
-            <h5>DreamStudios</h5>
-        </footer>
     </body>
 </html>
