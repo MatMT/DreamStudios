@@ -115,7 +115,7 @@
             <br><br><br>
         </form>
     </div>
-    <!-- Agregado del footer 0--> -->
+    <!-- Agregado del footer 0-->
     <footer>
 
         <div class="box-footer">

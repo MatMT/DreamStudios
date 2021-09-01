@@ -184,11 +184,12 @@
                     <br>
                 </div>
                 <hr>
-    
-                <a href="../../Inicio de sesión/Html/Inicio_Personal.php">¿Ya tienes una cuenta?</a>
+
+            <div id="botones">                
+                <a href="../../Inicio de sesión/Html/Inicio_Personal.php" class="lost-pass">¿Ya tienes una cuenta?</a>
                 <br>
-                <input type="submit" value="Registrarse" class="botonenviar" name="enviar">
-    
+                <input type="submit" value="Registrarse" class="boton" name="enviar">
+            </div>
     
             </form>
     

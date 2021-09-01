@@ -161,7 +161,7 @@
                     <div class="contenedor-principal-2">
                         <div class="carousel-2">
                             <div class="cancion">
-                                <a href="#"><img src="../img/1x1-Artist/nioce.jpg" alt="img"></a>
+                                <a href="../../Test_Mateoxd/New/Reproductor2.html"><img src="../img/1x1-Artist/nioce.jpg" alt="img"></a>
                                 <h4>Nice to meet ya</h4>
                                 <h5>Niall Horan</h5>
                                 <i class="icon-play-circled"></i>
@@ -169,7 +169,7 @@
 
                             <!--Modificación Preliminar-->
                             <div class="cancion">
-                                <a href="../../Test_Mateoxd/New/Reproductor.html"><img src="../../Recursos/Song-Photo/Cuco/Songs4u.jpg" alt="img"></a>
+                                <a href="../../Test_Mateoxd/New/Reproductor1.html"><img src="../../Recursos/Song-Photo/Cuco/Songs4u.jpg" alt="img"></a>
                                 <h4>Stay For a Bit</h4>
                                 <h5>Cuco</h5>
                                 <i class="icon-play-circled"></i>

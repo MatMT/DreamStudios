@@ -20,3 +20,20 @@ input[type="radio"]:checked + label.gender {
   border-color: #845feb;
   color: #845feb;
 }
+
+form#personal-data #botones input.boton {
+  font-weight: bolder;
+  font-size: 1.3rem;
+  padding: 0.5em 1.5em;
+  border: none;
+  margin-top: 3%;
+  margin-right: 10px;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #fb7c64;
+}
+
+.lost-pass {
+  color: #fffa;
+  padding-bottom: 1.5em;
+}
