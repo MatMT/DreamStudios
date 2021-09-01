@@ -174,10 +174,10 @@
                 <label for="GenderType">¿Cúal es tu género?</label>
                 
                 <div class="datos_button">
-                    <input type="radio" name="GenderType" id="fem" value="femenino">
+                    <input type="radio" name="GenderType" id="fem" value="femenino" onchange="this.form.submit()">
                     <label for="fem" class="gender">Femenino</label>
                     <br>
-                    <input type="radio" name="GenderType" id="masc" value="masculino">
+                    <input type="radio" name="GenderType" id="masc" value="masculino" onchange="this.form.submit()">
                     <label for="masc" class="gender">Masculino</label>
                     <br>
                 </div>
