@@ -22,6 +22,7 @@ input[type="radio"]:checked + label.gender {
 }
 
 form#personal-data #botones input.boton {
+  margin: 0 auto;
   font-weight: bolder;
   font-size: 1.3rem;
   padding: 0.5em 1.5em;
