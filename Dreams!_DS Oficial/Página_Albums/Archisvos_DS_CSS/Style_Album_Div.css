@@ -60,7 +60,7 @@ header{
     height: 100%;
     min-height: 189.75px;
 
-    -webkit-box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.733);
+    -webkit-box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.644);
     filter: shadow(color=#000, direction=0, strength=3);
 }
 

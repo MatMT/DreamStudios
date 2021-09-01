@@ -5,5 +5,5 @@
 
     session_destroy();
 
-    header("Location: ../Pagina General/Página-general-Oficial/Paginageneral.html")
+    header("Location: ../Inicio de sesión/Html/Inicio_Personal.php")
 ?>

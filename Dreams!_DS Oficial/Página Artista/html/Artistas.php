@@ -26,29 +26,23 @@
 
         $albumsprepare = $conexion->prepare("SELECT * FROM dreamaker_artist_".$_SESSION['reference_artist']."");
         $albumsprepare->execute();
-
-        if (isset($_GET["w2"])){
-            echo "<script type='text/javascript'>alert('se obtuvo variable');</script>";
-            $album_js = $_GET["w2"];
-            $_SESSION["reference_album_art"] = $album_js;
-    
-    
-            if(!empty($_SESSION["reference_album_art"])){
-    
-                header('Location: ../../Página Artista/html/Artistas.php');
-    
-            }else{
-                echo "<script type='text/javascript'>alert('No se logró');</script>"; 
-            }
-    
-        }
-
-
-    }else{
-        echo "<script type='text/javascript'>alert('Lo sentimos, este sitio aún está en construcción');</script>";
     }
 
+    if (isset($_GET["w1"])){
+        echo "<script type='text/javascript'>alert('se obtuvo variable');</script>";
+        $album_js = $_GET["w1"];
+        $_SESSION["reference_album_art"] = $album_js;
 
+
+        if(!empty($_SESSION["reference_album_art"])){
+
+            header('Location: ../../Página_Albums/html/albums.php');
+
+        }else{
+            echo "<script type='text/javascript'>alert('No se logró');</script>"; 
+        }
+
+    }
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -118,7 +112,7 @@
                     <img src="../../Recursos/Otros/planetas.svg" alt="img">
                 </div>
                 <div class="player-artist-playlist">
-                    <button class="play-song-buttom">
+                    <button class="play-song-buttom" id="reproducir">
                         <i class="icon-play-circled2"></i>
                         <p>Reproducir</p>
                     </button>
@@ -129,7 +123,7 @@
                     ?>
                 </div>
                 
-                <div class="play-list-songs-artist">
+                <div class="play-list-songs-artist" id="playlist">
                     <div class="data-song">
                         <h4 id="number">#</h4>
                         <h4>CANCIÓN</h4>
@@ -138,16 +132,20 @@
                     </div>
                      <?php
 
+                        echo "
+                        <audio class='song-artist' controls preload='metadata' id='audio'>
+                            <source src='../../Recursos/enigma/enigma.ogg' type='audio/ogg' class='flex-item'>
+                        </audio>
+                        ";
+
                         while($PlayList = $preparePlay->fetch(PDO::FETCH_ASSOC)){
                                 echo "
-                                <div class='song-description' id='".$PlayList["id_song"]."'>
+                                <div class='song-description'>
                                     <p id='number'>".$PlayList["id_song"]."</p>
                                     <p>".$PlayList["name_song"]."</p>
                                     <p>".$PlayList["name_artista"]."</p>
                                     <p>".$PlayList["song_album"]."</p>
-                                    <audio class='song-artist' controls preload='metadata'>
-                                        <source src='".$PlayList["direction_song"]."' type='audio/ogg' class='flex-item'>
-                                    </audio>
+                                    <a href='".$PlayList["direction_song"]."'><a>
                                 </div>
                                 ";
                         }
@@ -156,30 +154,28 @@
 
                 
                 <div class="container-albums">
-                    <?php 
-                        echo "<h1>".$listAlbum["nameArtist"]."</h1>"
+                    <?php
+                        echo "<h1>Albums de ".$results["name_artist"]."</h1>";
                     ?>
                     
                     <div class="albums-artista">
 
                         <?php
 
-                            
-
                             while($listAlbum = $albumsprepare->fetch(PDO::FETCH_ASSOC)){
                                 echo "
-                                <div class='album'>
-                                    <img src='".$listAlbum["direction_song"]."' alt='img'>
+                                <div class='album' id='".$listAlbum["id_album"]."'>
+                                    <img src='".$listAlbum["imgAlbum"]."' alt='img'>
                                     <h4>".$listAlbum["nameAlbum"]."</h4>
                                     <h5>13 March 2020</h5>
                                     <i class='icon-play-circled'></i>
                                 </div>
                                 <script>
-                                    var artistSelect = document.getElementById('".$listAlbum["id_album"]."');
+                                    var albumSelect = document.getElementById('".$listAlbum["id_album"]."');
 
-                                    artistSelect.addEventListener('click', function(){
-                                        var reference = ".$resultados['id_album'].";
-                                        window.location.href = window.location.href + '?w2=' + reference;
+                                    albumSelect.addEventListener('click', function(){
+                                        var reference = ".$listAlbum['id_album'].";
+                                        window.location.href = window.location.href + '?w1=' + reference;
                                     });
                                 </script>";
                             }

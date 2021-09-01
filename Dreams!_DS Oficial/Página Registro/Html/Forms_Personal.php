@@ -32,43 +32,46 @@
 
 
             if($_POST["PassType"] = $_POST['repitPasware']){
-                // if($stmt->execute()){
-                    $mensaje = "En hora buena, se ha creado tu usuario Dreamer";
-                    header('Location: ./../../Inicio de sesión/Html/Inicio_Personal.php');
-                // }else{
+                
+                if($stmt->execute()){
+                    
+                    $mensaje = "En hora buena, se ha creado tu usuario Dreamer"
+
+                    if (isset($_POST['enviar'])){
+                        $name = $_POST['NameType'];
+                        $email = $_POST['EmailType'];
+                        $age = $_POST['AgeType'];
+                        $gender = $_POST['GenderType'];
+                        $pass = $_POST['PassType'];
+                
+                        $contenido = "";
+                
+                        $contenido .= "¡Es un gusto que estes aquí " . $name . "!" . "\n\n" . "Para DreamStudios significas mucho más que un simple usuario extra" . "\n\n";
+                        $contenido .= "Nombre: " . $name . "\n" . "Edad: " . $age . "\n" . "Correo: " . $email . "\n" . "Contraseña: " . $pass . "\n\n";
+                
+                        // . "Genero: " . $gender . "\n" .
+                
+                        $contenido .= "Disfruta de este nuevo espacio para nuevos artistas y tus canciones favoritas, mantente a la espera de futuras funciones..." . "\n\n";
+                    
+                        mail($email,"Te registraste en Dreams!",$contenido, "Bienvenid@ a Dreams 🎶");
+                        header("Location:../../Inicio de sesión/Html/Inicio_Personal.php");
+                    
+                        }
+                }else{
                     $mensaje = "Parace que existe un error";
                 }
-            // }else{
+            }else{
                 $mensaje = "Las contraseñas deben de coincidir";
             }
-        }
+    }
 
         // AVISO : Viejo las lineas que comente, fue por que en su momento me daban error y no me dejaban 
         // ejecutar el PHP, lo hice para corroborar que funcionara el envio de correos
         // https://www.youtube.com/watch?v=1uWV13gHwQc&t=29s <--- Link de la configuración de XAMPP
 
-    // }
+    }
 
-    if (isset($_POST['enviar'])){
-        $name = $_POST['NameType'];
-        $email = $_POST['EmailType'];
-        $age = $_POST['AgeType'];
-        $gender = $_POST['GenderType'];
-        $pass = $_POST['PassType'];
-
-        $contenido = "";
-
-        $contenido .= "¡Es un gusto que estes aquí " . $name . "!" . "\n\n" . "Para DreamStudios significas mucho más que un simple usuario extra" . "\n\n";
-        $contenido .= "Nombre: " . $name . "\n" . "Edad: " . $age . "\n" . "Correo: " . $email . "\n" . "Contraseña: " . $pass . "\n\n";
-
-        // . "Genero: " . $gender . "\n" .
-
-        $contenido .= "Disfruta de este nuevo espacio para nuevos artistas y tus canciones favoritas, mantente a la espera de futuras funciones..." . "\n\n";
     
-        mail($email,"Te registraste en Dreams!",$contenido, "Bienvenid@ a Dreams 🎶");
-        header("Location:../../Inicio de sesión/Html/Inicio_Personal.php");
-    
-        }
  
 ?>
 
@@ -169,12 +172,12 @@
                 </div>
     
                 <label for="GenderType">¿Cúal es tu género?</label>
+                
                 <div class="datos_button">
-    
-                    <input type="radio" name="GenderType" id="fem" value="mujer">
+                    <input type="radio" name="GenderType" id="fem" value="femenino" onchange="this.form.submit()">
                     <label for="fem" class="gender">Femenino</label>
                     <br>
-                    <input type="radio" name="GenderType" id="masc" value="hombre">
+                    <input type="radio" name="GenderType" id="masc" value="masculino" onchange="this.form.submit()">
                     <label for="masc" class="gender">Masculino</label>
                     <br>
                 </div>
