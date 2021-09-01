@@ -46,10 +46,7 @@ function elementos() {
 
     dcion();
     
-    if(pista.played=true){
-        tmer = setInterval(time, 1000);
-        alert("si funciona");
-    }
+    
 }
 
 function reproduccion() {
@@ -62,6 +59,10 @@ function reproduccion() {
         icono.className = "icon-pause-1";
 
         load = setInterval(rep, 1);
+    }
+
+    if((pista.paused == false)){
+        tmer = setInterval(time, 1000);
     }
 
     if(pista.ended == true){
@@ -149,17 +150,19 @@ function dcion() {
 function time(){
     seg = pista.currentTime;
 
-    if((pista.ended==false) || (pista.pause==false)){
+    if(pista.paused == false){
+        if((pista.ended == false) || (pista.paused == false)){
         
-        if(segundos < 60){
-            segundos ++;
-        } 
-
-        if(segundos == 60 && minutos < 60){
-            minutos ++;
-            segundos = 0;
-
-
+            if(segundos < 60){
+                segundos ++;
+            } 
+    
+            if(segundos == 60 && minutos < 60){
+                minutos ++;
+                segundos = 0;
+    
+            }
+    
             if(segundos < 10){
                 tiempo.innerHTML = minutos.toString() + ":0" + segundos.toString();
                 
@@ -168,6 +171,7 @@ function time(){
             }
         }
     }
+   
 
     if(seg >= pista.duration){
         segundos = 0;
@@ -183,6 +187,10 @@ function time(){
             icono.className = "icon-pause-1";
         }
     }
+}
+
+function played(){
+    
 }
 
 
