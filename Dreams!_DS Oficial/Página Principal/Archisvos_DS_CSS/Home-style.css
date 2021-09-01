@@ -56,13 +56,12 @@ body {
 }
 
 .main-contaier::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
 }
 
 .main-contaier::-webkit-scrollbar-thumb {
-  background-color: #c4c4c4c9;
+  background-color: #ffffffc9;
 
-  border-radius: 10px;
 }
 
 /*Formato para el aside------------------------------------------------------------------*/
@@ -319,7 +318,7 @@ header {
   }
 }
 
-/*-------------------------Container Principal----------------------------------------*/
+/*------------------------- Container Principal----------------------------------------*/
 
 .planet-backg img {
   width: 30%;
@@ -442,7 +441,7 @@ footer {
 
 /*Caja de la línea de tiempo e información de la canción ----------------------------------*/
 
-.line-time-song {
+.line-time-song{
   width: 37%;
   height: 100%;
   font-family: var(--our-font);
@@ -544,6 +543,12 @@ footer {
   background-color: white;
   height: 3px;
   width: 60%;
+}
+
+
+input[type="range"]{
+  width: 60%;
+  height: 3px;
 }
 
 /*Iconos de pausar y activar la canción ---------------------*/

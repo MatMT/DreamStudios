@@ -6,7 +6,7 @@
 
         // Obtener datos de Dreamaker
 
-        $get_data = $conexion->prepare("SELECT * FROM dreamaker_".$_SESSION['reference_artist']." WHERE id_album =:id_alb");
+        $get_data = $conexion->prepare("SELECT * FROM dreamaker_artist_".$_SESSION['reference_artist']." WHERE id_album =:id_alb");
         $get_data->bindParam(":id_alb", ($_SESSION['reference_album_art']));
         $get_data->execute();
 
@@ -132,13 +132,7 @@
 
                     ?>
 
-                   
-                    <div class="song-description-playlist">
-                        <p id="number">2</p>
-                        <p>No Judgement</p>
-                        <p>Niall Horan</p>
-                        <p>Heartbreak Weather</p>
-                    </div>
+                
                     
                 </div>         
                 
@@ -148,11 +142,22 @@
             <header class="header-container">
 
                 <div class="container-info-playlis">
-                    <img src="../../Recursos/albums/heartbreak_weather.jpg" alt="">
+                    <?php
+                        echo "
+                            <img src='".$resultsData["imgAlbum"]."' alt=''>
+                        ";
+                    ?>
+                    
                     <div class="content-playlist">
-                        <h2>ÁLBUM</h2>
-                        <h1>Heartbreak Weather</h1>
-                        <a href="../../Página Artista/html/Artistas.php"><h2>Niall Horan</h2></a>
+                        <?php 
+                        
+                        echo "
+                            <h2>ÁLBUM</h2>
+                            <h1>".$resultsData["nameAlbum"]."</h1>
+                            <h2>".$resultsData["nameArtist"]."</h2>
+                        ";
+                        ?>
+                        
                     </div> 
                 </div>
             </header>

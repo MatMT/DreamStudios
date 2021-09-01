@@ -134,7 +134,7 @@
                             while($resultados = $artistas->fetch(PDO::FETCH_ASSOC)){
                             echo "
                             <div class='artista' id='".$resultados["id_art"]."'>
-                                <a href='#'><img src='". $resultados["img_artist"] ."' alt='img'></a>
+                                <img src='". $resultados["img_artist"] ."' alt='img'>
                                 <h4>".$resultados["name_artist"]."</h4>
                                 <i class='icon-play-circled'></i>
                             </div>                           

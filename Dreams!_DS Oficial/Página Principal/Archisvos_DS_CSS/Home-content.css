@@ -49,6 +49,7 @@
 
     padding: 10px;
     position: relative;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 1910px) {
