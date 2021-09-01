@@ -248,3 +248,12 @@ footer img {
   transition: 0.5s;
   cursor: pointer;
 }
+
+
+.respuesta{
+  width: 80%;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.596);
+  text-align: center;
+  padding: 10px 0px;
+}

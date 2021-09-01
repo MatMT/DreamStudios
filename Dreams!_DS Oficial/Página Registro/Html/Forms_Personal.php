@@ -35,7 +35,7 @@
                 
                 if($stmt->execute()){
                     
-                    $mensaje = "En hora buena, se ha creado tu usuario Dreamer"
+                    $mensaje = "En hora buena, se ha creado tu usuario Dreamer";
 
                     if (isset($_POST['enviar'])){
                         $name = $_POST['NameType'];
@@ -54,9 +54,11 @@
                         $contenido .= "Disfruta de este nuevo espacio para nuevos artistas y tus canciones favoritas, mantente a la espera de futuras funciones..." . "\n\n";
                     
                         mail($email,"Te registraste en Dreams!",$contenido, "Bienvenid@ a Dreams 🎶");
-                        header("Location:../../Inicio de sesión/Html/Inicio_Personal.php");
+                        header("Location: ../../Inicio de sesión/Html/Inicio_Personal.php");
                     
-                        }
+                    }
+
+                    
                 }else{
                     $mensaje = "Parace que existe un error";
                 }
@@ -107,7 +109,7 @@
                        
                             <!------------------------------------->
                            </li>
-                           <li><a href="../../Inicio de sesión/Html/Inicio_Personal.html">Iniciar Sesion</a></li>
+                           <li><a href="../../Inicio de sesión/Html/Inicio_Personal.php">Iniciar Sesion</a></li>
                         <li><a href="../../About us/Html/Nosotros.html">Sobre Nosotros</a></li>
                     </ul>
                 </nav>
@@ -174,10 +176,10 @@
                 <label for="GenderType">¿Cúal es tu género?</label>
                 
                 <div class="datos_button">
-                    <input type="radio" name="GenderType" id="fem" value="femenino" onchange="this.form.submit()">
+                    <input type="radio" name="GenderType" id="fem" value="Femenino">
                     <label for="fem" class="gender">Femenino</label>
                     <br>
-                    <input type="radio" name="GenderType" id="masc" value="masculino" onchange="this.form.submit()">
+                    <input type="radio" name="GenderType" id="masc" value="Masculino">
                     <label for="masc" class="gender">Masculino</label>
                     <br>
                 </div>

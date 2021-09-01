@@ -28,9 +28,9 @@
         $albumsprepare->execute();
     }
 
-    if (isset($_GET["w1"])){
+    if (isset($_GET["w2"])){
         echo "<script type='text/javascript'>alert('se obtuvo variable');</script>";
-        $album_js = $_GET["w1"];
+        $album_js = $_GET["w2"];
         $_SESSION["reference_album_art"] = $album_js;
 
 
@@ -132,22 +132,22 @@
                     </div>
                      <?php
 
-                        echo "
-                        <audio class='song-artist' controls preload='metadata' id='audio'>
-                            <source src='../../Recursos/enigma/enigma.ogg' type='audio/ogg' class='flex-item'>
-                        </audio>
-                        ";
 
                         while($PlayList = $preparePlay->fetch(PDO::FETCH_ASSOC)){
+                                
+                                $id = $PlayList["id_song"];
                                 echo "
-                                <div class='song-description'>
+                                <div class='song-description' id='music_".$id."'>
                                     <p id='number'>".$PlayList["id_song"]."</p>
                                     <p>".$PlayList["name_song"]."</p>
                                     <p>".$PlayList["name_artista"]."</p>
                                     <p>".$PlayList["song_album"]."</p>
-                                    <a href='".$PlayList["direction_song"]."'><a>
+                                    <audio class='song-artist' controls preload='metadata' id='audio'>
+                                        <source src='".$PlayList["direction_song"]."' type='audio/ogg' class='flex-item'>
+                                    </audio>
                                 </div>
                                 ";
+
                         }
                     ?>
                 </div>
@@ -164,18 +164,18 @@
 
                             while($listAlbum = $albumsprepare->fetch(PDO::FETCH_ASSOC)){
                                 echo "
-                                <div class='album' id='".$listAlbum["id_album"]."'>
+                                <div class='album' id='album_".$listAlbum["id_album"]."'>
                                     <img src='".$listAlbum["imgAlbum"]."' alt='img'>
                                     <h4>".$listAlbum["nameAlbum"]."</h4>
                                     <h5>13 March 2020</h5>
                                     <i class='icon-play-circled'></i>
                                 </div>
                                 <script>
-                                    var albumSelect = document.getElementById('".$listAlbum["id_album"]."');
+                                    var albumSelect = document.getElementById('album_".$listAlbum["id_album"]."');
 
                                     albumSelect.addEventListener('click', function(){
                                         var reference = ".$listAlbum['id_album'].";
-                                        window.location.href = window.location.href + '?w1=' + reference;
+                                        window.location.href = window.location.href + '?w2=' + reference;
                                     });
                                 </script>";
                             }
@@ -284,9 +284,7 @@
             </div>
             <div class="sound-play">
                 <i class="icon-volume"></i>
-                <div class="audio-line">
-                    <div class="audio-progres"></div>
-                </div>
+                <input type="range" min="0" max="1" step="0.1" id="volumen" style="width: 60%; height: 3px;">
             </div>
 
             <div class="icons-play-pause">
