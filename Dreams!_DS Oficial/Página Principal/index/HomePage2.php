@@ -161,7 +161,7 @@
                     <div class="contenedor-principal-2">
                         <div class="carousel-2">
                             <div class="cancion">
-                                <a href="#"><img src="../img/1x1-Artist/nioce.jpg" alt="img"></a>
+                                <a href="../../Test_Mateoxd/New/Reproductor2.html"><img src="../img/1x1-Artist/nioce.jpg" alt="img"></a>
                                 <h4>Nice to meet ya</h4>
                                 <h5>Niall Horan</h5>
                                 <i class="icon-play-circled"></i>
