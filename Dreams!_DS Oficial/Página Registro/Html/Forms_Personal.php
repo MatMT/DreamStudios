@@ -172,12 +172,12 @@
                 </div>
     
                 <label for="GenderType">¿Cúal es tu género?</label>
+                
                 <div class="datos_button">
-    
-                    <input type="radio" name="GenderType" id="fem" value="mujer">
+                    <input type="radio" name="GenderType" id="fem" value="femenino">
                     <label for="fem" class="gender">Femenino</label>
                     <br>
-                    <input type="radio" name="GenderType" id="masc" value="hombre">
+                    <input type="radio" name="GenderType" id="masc" value="masculino">
                     <label for="masc" class="gender">Masculino</label>
                     <br>
                 </div>
