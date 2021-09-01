@@ -17,12 +17,12 @@ body {
   position: relative;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   width: 7px;
   background-color: transparent;
 }
 
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
   background-color: #5d2aeb;
   border-radius: 15px;
 }
@@ -114,6 +114,7 @@ div .datos {
   margin-right: auto;
   margin-bottom: 3%;
 }
+
 form input {
   font-size: 12pt;
 }
