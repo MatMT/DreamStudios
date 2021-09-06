@@ -19,7 +19,7 @@ body {
 
   background: rgb(84, 28, 249);
   background: linear-gradient(
-    135deg,
+    180deg,
     rgba(84, 28, 249, 1) 10%,
     rgba(255, 94, 60, 1) 95%
   );
@@ -239,6 +239,10 @@ header {
   z-index: -1;
 }
 
+
+header.sticky{
+  border-top-left-radius: 0px;
+}
 /*Buscador y menu de opciones ----------------------------------------------------------*/
 
 .searcher-container {

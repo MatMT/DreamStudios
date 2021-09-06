@@ -3,17 +3,16 @@
 
     // Código para registro
     $mensaje = '';
-    require("../../conexion_mysql/conection-basedatos.php");
 
     
     if(!empty($_POST["NameType"]) && !empty($_POST["EmailType"]) && !empty($_POST["PassType"]) && !empty($_POST["AgeType"]) && !empty($_POST["GenderType"])){
 
         $repitname = $conexion->prepare("SELECT id_users, e_mail FROM usuarios_dreams WHERE  e_mail=:email");
         $repitname->bindParam(":email", $_POST["EmailType"]);
-        // $repitname->execute();
-        $results = $repitname->fetch(PDO::FETCH_ASSOC);
+        $repitname->execute();
+        $results1 = $repitname->fetch(PDO::FETCH_ASSOC);
         
-        if(is_array($results)){
+        if(is_array($results1)){
             
             $mensaje = "Ya existe un usuario con ese correo electronico";
 
@@ -53,7 +52,7 @@
                 
                         $contenido .= "Disfruta de este nuevo espacio para nuevos artistas y tus canciones favoritas, mantente a la espera de futuras funciones..." . "\n\n";
                     
-                        mail($email,"Te registraste en Dreams!",$contenido, "Bienvenid@ a Dreams 🎶");
+                        mail($email,"Te has registrado en Dreams!",$contenido, "Bienvenid@ a Dreams 🎶");
                         header("Location: ../../Inicio de sesión/Html/Inicio_Personal.php");
                     
                     }

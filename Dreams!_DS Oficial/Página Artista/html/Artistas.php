@@ -29,6 +29,7 @@
     }
 
     if (isset($_GET["w2"])){
+
         echo "<script type='text/javascript'>alert('se obtuvo variable');</script>";
         $album_js = $_GET["w2"];
         $_SESSION["reference_album_art"] = $album_js;
@@ -130,26 +131,30 @@
                         <h4>ARTISTA</h4>
                         <H4>ALBUM</H4>
                     </div>
-                     <?php
+                    <audio id="audio" preload="auto" tabindex="0" controls="">
+                        <source src="https://drive.google.com/uc?export=view&id=1BLZzFjJNw254O957rnbzTHMKdI7TSd0i">
+                    </audio>
+                    <div id="play-list-song">
+                         <?php
 
 
-                        while($PlayList = $preparePlay->fetch(PDO::FETCH_ASSOC)){
+                            while($PlayList = $preparePlay->fetch(PDO::FETCH_ASSOC)){
                                 
                                 $id = $PlayList["id_song"];
                                 echo "
-                                <div class='song-description' id='music_".$id."'>
-                                    <p id='number'>".$PlayList["id_song"]."</p>
-                                    <p>".$PlayList["name_song"]."</p>
-                                    <p>".$PlayList["name_artista"]."</p>
-                                    <p>".$PlayList["song_album"]."</p>
-                                    <audio class='song-artist' controls preload='metadata' id='audio'>
-                                        <source src='".$PlayList["direction_song"]."' type='audio/ogg' class='flex-item'>
-                                    </audio>
-                                </div>
-                                ";
+                                    <div class='song-description' href='".$PlayList["direction_song"]."'>
+                                        <p id='number'>".$PlayList["id_song"]."</p>
+                                        <p>".$PlayList["name_song"]."</p>
+                                        <p>".$PlayList["name_artista"]."</p>
+                                        <p>".$PlayList["song_album"]."</p>
 
-                        }
-                    ?>
+                                    </div>
+                                ";
+                                //".$PlayList["direction_song"]."
+                            }
+                        ?>  
+                    </div>
+                    
                 </div>
 
                 
@@ -170,7 +175,7 @@
                                     <h5>13 March 2020</h5>
                                     <i class='icon-play-circled'></i>
                                 </div>
-                                <script>
+                                <script>    
                                     var albumSelect = document.getElementById('album_".$listAlbum["id_album"]."');
 
                                     albumSelect.addEventListener('click', function(){
@@ -183,7 +188,7 @@
                     </div>
                 </div>
                
-
+                
 
                 <!--Aqui colocaran el nuevo contenido, pueden borar mi nombre xddd-->
 
@@ -298,6 +303,6 @@
                 <i class="icon-to-end-1" id="next-song"></i>
             </div>
         </footer>
-        <script src="../../reproductor/reproductor_prueba.js"></script>
+        <script src="../../reproductor/play_list.js"></script>
     </body>
 </html>

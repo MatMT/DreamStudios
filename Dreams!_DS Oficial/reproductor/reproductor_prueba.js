@@ -1,8 +1,5 @@
-
-
-
-
 //---- ----- ----- ---- Configuracion dela barra de reproducción ---- ----- ----- ----- ------ 
+var pista;
 var maximo;
 var barra;
 var progreso;
@@ -25,12 +22,14 @@ var maximo = 388;
 var r = false;
 var f = false;
 var seg;
-var pista;
+
 
 function elementos() {
+   
+
     barra = document.getElementById("barra");
     progreso =  document.getElementById("progress");
-    estado = document.getElementById("play-start")
+    estado = document.getElementById("play-start");
     icono = document.getElementById("play-start");
     pausa = document.getElementById("pause");
     dur = document.getElementById("dur");
@@ -204,9 +203,7 @@ function time(){
     }
 }
 
-function played(){
-    
-}
+
 
 
 window.addEventListener("load", elementos, false);

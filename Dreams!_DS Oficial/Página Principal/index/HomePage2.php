@@ -28,7 +28,6 @@
 
 
         if(!empty($_SESSION["reference_artist"])){
-
             header('Location: ../../Página Artista/html/Artistas.php');
 
         }else{
@@ -55,6 +54,7 @@
         <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/animation.css">
     
         <script defer src="../archivos-js/settings.js"></script>
+        <script src="../archivos-js/header.js"></script>
         
     </head>
     <body>
@@ -102,7 +102,7 @@
                 </div>
             </div>
 
-            <section class="main-contaier">
+            <section class="main-contaier" id="section-scroll">
                 <div class="planet-backg">
                     <img src="../../Recursos/Otros/planetas.svg" alt="img">
                 </div>
@@ -137,7 +137,9 @@
                                 <img src='". $resultados["img_artist"] ."' alt='img'>
                                 <h4>".$resultados["name_artist"]."</h4>
                                 <i class='icon-play-circled'></i>
-                            </div>                           
+                            </div>
+                            
+                            
                             <script>
                                 var artistSelect = document.getElementById('".$resultados["id_art"]."');
                                 artistSelect.addEventListener('click', function(){
@@ -213,8 +215,8 @@
             </section> 
             
             
-            <header class="header-container">
-                <div class="line-soft"></div>
+            <header class="header-container" >
+                
             </header>
 
             <div class="searcher-container">

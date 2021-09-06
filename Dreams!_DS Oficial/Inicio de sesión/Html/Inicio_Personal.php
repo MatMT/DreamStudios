@@ -15,7 +15,7 @@
         
 
         if(is_array($results)){
-            if(count($results) > 0 && ($_POST['password'] = $results["pasware"])){
+            if(count($results) > 0 && password_verify($_POST['password'], $results["pasware"])){
                
                 $_SESSION["id_user"] = $results["id_users"];
 
@@ -24,7 +24,7 @@
                 
             }else{
 
-                $message = "Lo sentimos, usuario o contraseñas incorrectos ".$_POST['password'];
+                $message = "Lo sentimos, usuario o contraseñas incorrectos ".$results["pasware"];
             }
         }else{
             $message = "El usuario es incorrecto";
