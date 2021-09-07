@@ -146,9 +146,10 @@ function tim(posicion) {
 }
 
 function dcion() {
+    
     duracion2 = pista.duration;
 
-
+    alert(duracion2)
     horas2 = parseInt(duracion2 /3600);
     minutos2 = parseInt(duracion2 /60) - horas2 * 60;
 
@@ -206,4 +207,3 @@ function time(){
 
 
 
-window.addEventListener("load", elementos, false);

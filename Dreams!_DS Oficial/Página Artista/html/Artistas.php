@@ -113,7 +113,7 @@
                     <img src="../../Recursos/Otros/planetas.svg" alt="img">
                 </div>
                 <div class="player-artist-playlist">
-                    <button class="play-song-buttom" id="reproducir">
+                    <button class="play-song-buttom" id="player">
                         <i class="icon-play-circled2"></i>
                         <p>Reproducir</p>
                     </button>
@@ -142,9 +142,9 @@
                                 
                                 $id = $PlayList["id_song"];
                                 echo "
-                                    <div class='song-description' href='".$PlayList["direction_song"]."'>
+                                    <div class='song-description' href='".$PlayList["direction_song"]."' id='".$PlayList["id_song"]."'>
                                         <p id='number'>".$PlayList["id_song"]."</p>
-                                        <p>".$PlayList["name_song"]."</p>
+                                        <p id='n_song'>".$PlayList["name_song"]."</p>
                                         <p>".$PlayList["name_artista"]."</p>
                                         <p>".$PlayList["song_album"]."</p>
 
