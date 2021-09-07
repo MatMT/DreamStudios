@@ -146,7 +146,7 @@ function tim(posicion) {
 }
 
 function dcion() {
-    
+    alert(pista);
     duracion2 = pista.duration;
 
     alert(duracion2)
@@ -206,4 +206,4 @@ function time(){
 
 
 
-
+window.addEventListener("load", elementos, false);

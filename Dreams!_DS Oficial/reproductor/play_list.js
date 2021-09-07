@@ -16,7 +16,7 @@ var horas2;
 var minutos2;
 var segundos2;
 var duracion2;
-var maximo = 359;
+var maximo = 391;
 var r = false;
 var f = false;
 var seg;
@@ -39,12 +39,12 @@ function Init(){
     button.addEventListener("click", function(e){
         var start = document.getElementById("1");
         var song_1 = start.getAttribute("href");
-        var name_place = document.getElementById("name-song");
+        //var name_place = document.getElementById("name-song");
 
         alert(song_1);
         pista.src = song_1;
         pista.load();
-
+        
 
         if((pista.paused==false) && (pista.ended==false)){
             pista.pause();
@@ -53,7 +53,8 @@ function Init(){
         }else{
             pista.play();
             playicon.className = "icon-pause-1";
-            elementos();
+            
+            elementos(pista);
             load = setInterval(rep, 1);
         }
         
@@ -74,6 +75,8 @@ function Init(){
         link.addEventListener("dblclick", function(e){
             e.preventDefault();
             var song = this.getAttribute("href");
+            var timesongs = pista.duration;
+            alert("Hola soy:"+ timesongs);
             
             run(song, pista, this)
         });
@@ -120,12 +123,12 @@ function run(song, pista, link){
     pista.src = song;
     pista.load();
     pista.play();
-    elementos();
+    elementos(pista);
 }
 
 
 
-function elementos() {
+function elementos(pista) {
     
     barra = document.getElementById("barra");
     progreso =  document.getElementById("progress");
@@ -251,9 +254,10 @@ function tim(posicion) {
 
 
 function dcion() {
-    
+
     duracion2 = pista.duration;
 
+    alert(duracion2)
     horas2 = parseInt(duracion2 /3600);
     minutos2 = parseInt(duracion2 /60) - horas2 * 60;
 
@@ -309,6 +313,3 @@ function time(){
         }
     }
 }
-
-
-

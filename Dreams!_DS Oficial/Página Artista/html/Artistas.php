@@ -203,7 +203,7 @@
                     ?>
                 </div>
                 
-                <div class="name-artist">
+                <div class="name-artist" translate="no">
                     <h2>We present the play List</h2>
                     <?php
                         echo "<h1>".$results["name_artist"]."</h1>"
