@@ -134,7 +134,7 @@
                     <audio id="audio" preload="auto" tabindex="0" controls="">
                         <source src="https://drive.google.com/uc?export=view&id=1BLZzFjJNw254O957rnbzTHMKdI7TSd0i">
                     </audio>
-                    <div id="play-list-song">
+                    <div id="play-list-song" translate="no">
                          <?php
 
 
@@ -171,7 +171,7 @@
                                 echo "
                                 <div class='album' id='album_".$listAlbum["id_album"]."'>
                                     <img src='".$listAlbum["imgAlbum"]."' alt='img'>
-                                    <h4>".$listAlbum["nameAlbum"]."</h4>
+                                    <h4 translate='no'>".$listAlbum["nameAlbum"]."</h4>
                                     <h5>13 March 2020</h5>
                                     <i class='icon-play-circled'></i>
                                 </div>
@@ -203,11 +203,13 @@
                     ?>
                 </div>
                 
-                <div class="name-artist" translate="no">
+                <div class="name-artist" >
                     <h2>We present the play List</h2>
+                    <div translate="no">
                     <?php
                         echo "<h1>".$results["name_artist"]."</h1>"
                     ?>
+                    </div>
                 </div>
                 <div class="img">
                     <img src="../../Recursos/Iconos/icono-d.svg" alt="img">
@@ -258,9 +260,10 @@
                 <img src="../../Página Principal/img/1x1-Artist/nioce.jpg" id="img-artist-1">
             </div>
             <div class="artist-enojoy">
+
                 <p id="enjoy-with">Disfruta con...</p>
-                <p id="name-artist">Harry Styles s</p>
-                
+                <p id="name-artist" translate="no">Harry Styles s</p>
+
             </div>
             
             <div class="more-icons">
@@ -270,7 +273,7 @@
 
             <div class="line-time-song">
 
-                <div class="center-song">
+                <div class="center-song" translate="no">
                     <p id="name-song">Nice to Meet Ya</p>
                     <i class="icon-heart-empty" id="megusta"></i>
                     <p id="name-artist-2">Niall Horan</p>

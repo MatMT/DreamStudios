@@ -150,8 +150,10 @@ function elementos(pista) {
     repetir.addEventListener("click", bucle, false);
     barra.addEventListener("click", posicion, false);
     barra.addEventListener("click", tim, false);
-
+    
     dcion();
+
+    alert(pista.duration);
 
     if((pista.paused == false)){
         tmer = setInterval(time, 1000);
@@ -257,7 +259,6 @@ function dcion() {
 
     duracion2 = pista.duration;
 
-    alert(duracion2)
     horas2 = parseInt(duracion2 /3600);
     minutos2 = parseInt(duracion2 /60) - horas2 * 60;
 

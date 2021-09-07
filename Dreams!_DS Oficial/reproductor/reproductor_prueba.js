@@ -49,7 +49,6 @@ function elementos() {
     barra.addEventListener("click", tim, false);
 
     dcion();
-
     //Etiqueta de audio
 
     var volum = document.getElementById("volumen");
@@ -146,7 +145,7 @@ function tim(posicion) {
 }
 
 function dcion() {
-    alert(pista);
+    
     duracion2 = pista.duration;
 
     alert(duracion2)
