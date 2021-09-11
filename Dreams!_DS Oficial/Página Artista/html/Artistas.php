@@ -144,10 +144,9 @@
                                 echo "
                                     <div class='song-description' href='".$PlayList["direction_song"]."' id='".$PlayList["id_song"]."'>
                                         <p id='number'>".$PlayList["id_song"]."</p>
-                                        <p id='n_song'>".$PlayList["name_song"]."</p>
-                                        <p>".$PlayList["name_artista"]."</p>
+                                        <p id='n_song_".$id."'>".$PlayList["name_song"]."</p>
+                                        <p id='n_artist_".$id."'>".$PlayList["name_artista"]."</p>
                                         <p>".$PlayList["song_album"]."</p>
-
                                     </div>
                                 ";
                                 //".$PlayList["direction_song"]."
@@ -262,8 +261,9 @@
             <div class="artist-enojoy">
 
                 <p id="enjoy-with">Disfruta con...</p>
-                <p id="name-artist" translate="no">Harry Styles s</p>
-
+                <?php
+                    echo "<p id='name-artist' translate='no'>".$results["name_artist"]."</p>"
+                ?>
             </div>
             
             <div class="more-icons">
@@ -274,9 +274,11 @@
             <div class="line-time-song">
 
                 <div class="center-song" translate="no">
-                    <p id="name-song">Nice to Meet Ya</p>
+                    <p id="name-song">Esperando canción...</p>
                     <i class="icon-heart-empty" id="megusta"></i>
-                    <p id="name-artist-2">Niall Horan</p>
+                    <?php
+                        echo "<p id='name-artist-2' translate='no'>".$results["name_artist"]."</p>"
+                    ?>
                 </div>
 
                 <div class="center-bar-time">
@@ -292,7 +294,7 @@
             </div>
             <div class="sound-play">
                 <i class="icon-volume"></i>
-                <input type="range" min="0" max="1" step="0.1" id="volumen" style="width: 60%; height: 3px;">
+                <input type="range" min="0" max="1" step="0.01" id="volumen" style="width: 60%; height: 3px;">
             </div>
 
             <div class="icons-play-pause">

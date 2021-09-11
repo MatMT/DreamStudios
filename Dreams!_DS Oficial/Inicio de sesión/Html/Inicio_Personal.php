@@ -24,7 +24,7 @@
                 
             }else{
 
-                $message = "Lo sentimos, usuario o contraseñas incorrectos ".$results["pasware"];
+                $message = "Lo sentimos, usuario o contraseñas incorrectos ";
             }
         }else{
             $message = "El usuario es incorrecto";
