@@ -696,16 +696,16 @@ audio{
 
 .navegation li {
   list-style: none;
-  height: 10vh;
+  height: 85px;
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.644);
-  line-height: 10vh;
+  line-height: 85px;
 }
 
 .navegation li a {
   color: white;
   text-decoration: none;
-  font-size: 2vh;
+  font-size: 1.5vw;
   width: 100%;
   height: 100%;
   display: block;

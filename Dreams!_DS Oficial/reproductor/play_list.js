@@ -16,12 +16,15 @@ var horas2;
 var minutos2;
 var segundos2;
 var duracion2;
-var maximo = 391;
+var maximo = 359;
 var r = false;
 var f = false;
 var seg;
 var pista;
 var songtime;
+
+var icon_next;
+var icon_before;
 
 
 Init()
@@ -34,14 +37,35 @@ function Init(){
     var button = document.getElementById("player");
     var playicon = document.getElementById("play-start");
 
+    repetir = document.getElementById("repetir")
+    repetir.addEventListener("click", bucle, false);
+
+    icon_next = document.getElementById("next-song");
+    icon_before = document.getElementById("before-song")
+
+    // lugar donde se sustiruirá la información de la canción
+
+    var place_name = document.getElementById("name-song");
+    var place_artist = document.getElementById("name-artist-2");
+
     // al precionar el boton de reproducir
 
     button.addEventListener("click", function(e){
         var start = document.getElementById("1");
         var song_1 = start.getAttribute("href");
-        //var name_place = document.getElementById("name-song");
+
+        //sustituir nombre de la canción
+        var namesong = document.getElementById("n_song_1");
+        var contenido_1 = namesong.innerHTML;
+
+        //sustituir nombre del artista
+
+        var nameartist = document.getElementById("n_artist_1");
+        var contenido_2 = nameartist.innerHTML;
 
         alert(song_1);
+        place_name.innerHTML = contenido_1;
+        place_artist.innerHTML = contenido_2;
         pista.src = song_1;
         pista.load();
         
@@ -67,7 +91,7 @@ function Init(){
         
         //var cajas = boxes[box];
         //la misma cantidad de "div" es la cantidad de las etqiyetas "a"
-        var link = tracks[track];        
+        var link = tracks[track];
 
         if(typeof link === "function" || typeof link === "number") continue;
         
@@ -75,8 +99,22 @@ function Init(){
         link.addEventListener("dblclick", function(e){
             e.preventDefault();
             var song = this.getAttribute("href");
+            var name = this.getAttribute("id");
+
+            //sustituir nombre de la canción
+            var namesong = document.getElementById("n_song_" + name);
+            var contenido_1 = namesong.innerHTML;
+
+            //sustituir nombre del artista
+
+            var nameartist = document.getElementById("n_artist_" + name);
+            var contenido_2 = nameartist.innerHTML;
+
+            place_name.innerHTML = contenido_1;
+            place_artist.innerHTML = contenido_2;
+
+
             var timesongs = pista.duration;
-            alert("Hola soy:"+ timesongs);
             
             run(song, pista, this)
         });
@@ -85,21 +123,111 @@ function Init(){
     //Reproducir la siguiente canción
     // en caso que las canciones haya termiando, reproducir la primera
     pista.addEventListener("ended", function(e){
-       for(var track in tracks){
-        var link = tracks[track];
-        var nextsong = parseInt(track) + 1;
 
-        if(typeof link === "function" || typeof link === "number") continue;
-        if(!this.src) this.src = tracks[0];
-        if(track == (tracks.length - 1)) nextsong = 0;
-            console.log(nextsong);
-            if(link.getAttribute("href") === this.src){
-                var nextlink = tracks[nextsong];
-                run(nextlink.getAttribute("href"), pista, nextlink);
+        if(r==false){
+            for(var track in tracks){
+                var link = tracks[track];
+                var nextsong = parseInt(track) + 1;
+    
+                if(typeof link === "function" || typeof link === "number") continue;
+            
+                if(!this.src) this.src = tracks[0];
+            
+                if(track == (tracks.length - 1)) nextsong = 0;
+                
+                
+                    console.log(nextsong);
+                
+                    if(link.getAttribute("href") === this.src){
+                        var nextlink = tracks[nextsong];
+    
+                        //sustituir nombre de la canción 
+                        var namesong = document.getElementById("n_song_" + (nextsong + 1));
+                        var contenido_1 = namesong.innerHTML;
+    
+                        //sustituir nombre del artista
+    
+                        var nameartist = document.getElementById("n_artist_" + (nextsong + 1));
+                        var contenido_2 = nameartist.innerHTML;
+    
+                        place_name.innerHTML = contenido_1;
+                        place_artist.innerHTML = contenido_2;
+    
+                        run(nextlink.getAttribute("href"), pista, nextlink);
+                        break;
+                    }
+           }
+        }
+       
+    })
+
+    icon_next.addEventListener("click", function(e){
+        for(var track in tracks){
+            
+            var link = tracks[track];
+
+            var nextsong = parseInt(track) + 1;
+
+            if(typeof link === "function" || typeof link === "number") continue;
+            
+            if(!pista.src) pista.src = tracks[0];
+        
+            if(track == (tracks.length - 1)) nextsong = 0;
+            
+            
+                if(link.getAttribute("href") === pista.src){
+                    var nextlink = tracks[nextsong];
+
+                    //sustituir nombre de la canción 
+                    var namesong = document.getElementById("n_song_" + (nextsong + 1));
+                    var contenido_1 = namesong.innerHTML;
+
+                    //sustituir nombre del artista
+
+                    var nameartist = document.getElementById("n_artist_" + (nextsong + 1));
+                    var contenido_2 = nameartist.innerHTML;
+
+                    place_name.innerHTML = contenido_1;
+                    place_artist.innerHTML = contenido_2;
+
+                    run(nextlink.getAttribute("href"), pista, nextlink);
                 break;
             }
-       }
-    }) 
+        }
+    })
+    
+    icon_before.addEventListener("click", function(e){
+        for(var track in tracks){
+            var link = tracks[track];
+            var nextsong = parseInt(track) - 1;
+
+            if(typeof link === "function" || typeof link === "number") continue;
+            
+            if(!pista.src) pista.src = tracks[0];
+        
+            if(track == 0) nextsong = tracks.length - 1;           
+            
+            
+                if(link.getAttribute("href") === pista.src){
+                    var nextlink = tracks[nextsong];
+                    
+                    //sustituir nombre de la canción 
+                    var namesong = document.getElementById("n_song_" + (nextsong + 1));
+                    var contenido_1 = namesong.innerHTML;
+
+                    //sustituir nombre del artista
+
+                    var nameartist = document.getElementById("n_artist_" + (nextsong + 1));
+                    var contenido_2 = nameartist.innerHTML;
+
+                    place_name.innerHTML = contenido_1;
+                    place_artist.innerHTML = contenido_2;
+
+                    run(nextlink.getAttribute("href"), pista, nextlink);
+                break;
+            }
+        }
+    })
 }
 
 
@@ -137,8 +265,7 @@ function elementos(pista) {
     pausa = document.getElementById("pause");
     dur = document.getElementById("dur");
     tiempo = document.getElementById("prog");
-    repetir = document.getElementById("repetir")
-    
+
     fav = document.getElementById("megusta");
 
     
@@ -147,13 +274,13 @@ function elementos(pista) {
     
     estado.addEventListener("click", reproduccion, false);
     fav.addEventListener("click", agregar, false);
-    repetir.addEventListener("click", bucle, false);
+    
     barra.addEventListener("click", posicion, false);
     barra.addEventListener("click", tim, false);
     
     dcion();
 
-    alert(pista.duration);
+    //alert(pista.duration);
 
     if((pista.paused == false)){
         tmer = setInterval(time, 1000);
@@ -257,6 +384,7 @@ function tim(posicion) {
 
 function dcion() {
 
+    alert("hola:" + pista.src)
     duracion2 = pista.duration;
 
     horas2 = parseInt(duracion2 /3600);
@@ -299,7 +427,8 @@ function time(){
     }
 
 
-    if(seg >= pista.duration){
+    if((seg + 1) >= pista.duration){
+        alert("Tendría que")
         segundos = 0;
         minutos = 0;
         duracion = 0;
@@ -309,6 +438,7 @@ function time(){
         icono.className = "icon-play-1";
 
         if(r == true){
+            alert("se repite, pero asaber")
             pista.play();
             icono.className = "icon-pause-1";
         }
