@@ -34,7 +34,15 @@
             echo "<script type='text/javascript'>alert('No se logró');</script>"; 
         }
 
-    }
+    }        
+
+      
+    // Bastaría con agregar estas lineas y el redireccionamiento al inicio 
+    // para asegurar que el usuario debe estar logiado si o si para visaulziar el contenido xd 
+
+    // if (!isset($_SESSION["id_user"])){
+    //     header('location: ../../Pagina General/Página-general-Oficial/Paginageneral.html');
+    // }
 
 ?>
 

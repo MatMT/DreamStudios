@@ -7,7 +7,7 @@
 
     if(isset($_SESSION['reference_artist'])){
         
-        // Obtener datos de la tabal artistas para luego ser colocados
+        // Obtener datos de la tabla artistas para luego ser colocados
 
         $artistasref = $conexion->prepare("SELECT * FROM artistas_dreams WHERE id_art= :id_art");
         $artistasref->bindParam(":id_art", ($_SESSION['reference_artist']));
@@ -15,7 +15,7 @@
 
         $results = $artistasref->fetch(PDO::FETCH_ASSOC);
 
-        // Obtener la playlost de Introduccion del Artista
+        // Obtener la playlist de Introduccion del Artista
 
 
         $preparePlay = $conexion->prepare("SELECT * FROM playlist_artist_".$_SESSION['reference_artist']."");
