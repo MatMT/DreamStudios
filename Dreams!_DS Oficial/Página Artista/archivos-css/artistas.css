@@ -197,21 +197,22 @@ header {
 
 .song-description {
   width: 90%;
-  height: 45px;
+  height: 50px;
   display: flex;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
   justify-content: space-around;
+  color: rgb(201, 200, 200);
 
-  border-bottom: #c5c5c5 solid 1px;
+  /*border-bottom: #c5c5c5 solid 1px;*/
 
-  cursor: pointer;
-  transition: 0.5s;
+  transition: 0.3s;
+  border-radius: 4px;
 }
 
 .song-description:hover {
-  background-color: rgba(182, 182, 182, 0.514);
+  background-color: rgba(255, 255, 255, 0.425);
 }
 
 .song-description p {
@@ -230,6 +231,12 @@ header {
   width: 10%;
 }
 
+.active {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.212);
+  width: 90%;
+  height: 50px;
+}
 /*------  ---- ---- --lISTA DE ALBUMS ---- ---- ---- ---- --- --- ---*/
 .container-albums {
   margin-top: 50px;

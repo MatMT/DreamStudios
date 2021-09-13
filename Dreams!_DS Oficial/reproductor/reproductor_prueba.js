@@ -75,7 +75,8 @@ function reproduccion() {
     }
 
     if((pista.paused == false)){
-        tmer = setInterval(time, 1000);
+        const veces = 1000;
+        tmer = setInterval(time, veces);
     }
 
     if(pista.ended == true){
@@ -148,7 +149,6 @@ function dcion() {
     
     duracion2 = pista.duration;
 
-    alert(duracion2)
     horas2 = parseInt(duracion2 /3600);
     minutos2 = parseInt(duracion2 /60) - horas2 * 60;
 
@@ -199,6 +199,7 @@ function time(){
         if(r == true){
             pista.play();
             icono.className = "icon-pause-1";
+            alert(segundos + minutos)
         }
     }
 }

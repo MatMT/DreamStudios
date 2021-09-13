@@ -131,7 +131,7 @@
                         <h4>ARTISTA</h4>
                         <H4>ALBUM</H4>
                     </div>
-                    <audio id="audio" preload="auto" tabindex="0" controls="">
+                    <audio id="audio" preload="metadata" tabindex="0" controls="">
                         <source src="https://drive.google.com/uc?export=view&id=1BLZzFjJNw254O957rnbzTHMKdI7TSd0i">
                     </audio>
                     <div id="play-list-song" translate="no">
@@ -142,9 +142,9 @@
                                 
                                 $id = $PlayList["id_song"];
                                 echo "
-                                    <div class='song-description' href='".$PlayList["direction_song"]."' id='".$PlayList["id_song"]."'>
+                                    <div class='song-description active' href='".$PlayList["direction_song"]."' id='".$PlayList["id_song"]."'>
                                         <p id='number'>".$PlayList["id_song"]."</p>
-                                        <p id='n_song_".$id."'>".$PlayList["name_song"]."</p>
+                                        <p id='n_song_".$id."' class='nombre-song'>".$PlayList["name_song"]."</p>
                                         <p id='n_artist_".$id."'>".$PlayList["name_artista"]."</p>
                                         <p>".$PlayList["song_album"]."</p>
                                     </div>
