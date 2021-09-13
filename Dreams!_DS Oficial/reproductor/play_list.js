@@ -16,7 +16,7 @@ var horas2;
 var minutos2;
 var segundos2;
 var duracion2;
-var maximo = 359;
+var maximo = 388;
 var r = false;
 var f = false;
 var seg;
@@ -26,8 +26,12 @@ var songtime;
 var icon_next;
 var icon_before;
 
+var segundos_3;
+var minutos_3;
+var horas_3;
 
-Init()
+
+Init();
 
 function Init(){
     //inicialización de vairables
@@ -63,7 +67,7 @@ function Init(){
         var nameartist = document.getElementById("n_artist_1");
         var contenido_2 = nameartist.innerHTML;
 
-        alert(song_1);
+        //alert(song_1);
         place_name.innerHTML = contenido_1;
         place_artist.innerHTML = contenido_2;
         pista.src = song_1;
@@ -77,7 +81,7 @@ function Init(){
         }else{
             pista.play();
             playicon.className = "icon-pause-1";
-            
+            alert(pista.duration)
             elementos(pista);
             load = setInterval(rep, 1);
         }
@@ -250,8 +254,10 @@ function run(song, pista, link){
     // Cargar la canción
     pista.src = song;
     pista.load();
-    pista.play();
-    elementos(pista);
+    pista.addEventListener("loadeddata", function(){
+        pista.play();
+        elementos(pista);
+    }) 
 }
 
 
@@ -280,15 +286,12 @@ function elementos(pista) {
     
     dcion();
 
-    //alert(pista.duration);
-
-    if((pista.paused == false)){
-        tmer = setInterval(time, 1000);
-    }
+    const veces = 1000;
 
     if((pista.paused == false)){
         icono.className = "icon-pause-1";
         load = setInterval(rep, 1);
+        tmer = setInterval(time, veces);
     }
     //Etiqueta de audio
 
@@ -305,6 +308,7 @@ function elementos(pista) {
 
 function reproduccion() {
     if((pista.paused==false) && (pista.ended==false)){
+        pista.volume = 0.5;
         pista.pause();
         icono.className = "icon-play-1";
 
@@ -384,7 +388,7 @@ function tim(posicion) {
 
 function dcion() {
 
-    alert("hola:" + pista.src)
+    //alert("Hola");
     duracion2 = pista.duration;
 
     horas2 = parseInt(duracion2 /3600);
@@ -404,9 +408,10 @@ function dcion() {
 function time(){
     seg = pista.currentTime;
 
-    if(pista.paused == false){
+
+    if(seg > 0){
         if((pista.ended == false) || (pista.paused == false)){
-        
+            
             if(segundos < 60){
                 segundos ++;
             } 
@@ -424,11 +429,19 @@ function time(){
                 tiempo.innerHTML = minutos.toString() + ":" + segundos.toString();
             }
         }
+    }else{
+        segundos = 0;
+        minutos = 0;
+        duracion = 0;
+
+        tiempo.innerHTML = minutos.toString() + ":0" + segundos.toString();
     }
+
+    
 
 
     if((seg + 1) >= pista.duration){
-        alert("Tendría que")
+        //alert("Tendría que")
         segundos = 0;
         minutos = 0;
         duracion = 0;
@@ -438,9 +451,10 @@ function time(){
         icono.className = "icon-play-1";
 
         if(r == true){
-            alert("se repite, pero asaber")
+            //alert("se repite, pero asaber")
             pista.play();
             icono.className = "icon-pause-1";
+            
         }
     }
 }
