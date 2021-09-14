@@ -23,6 +23,10 @@ var r = false;
 var f = false;
 var seg;
 
+var hour;
+var minute;
+var second;
+
 
 function elementos() {
    
@@ -57,10 +61,13 @@ function elementos() {
 
     volum.addEventListener("change",function(ev){	
         pista.volume = ev.currentTarget.value;	
-      },true);
-    
-    
+    },true);
+
+
+
 }
+
+    
 
 function reproduccion() {
     if((pista.paused==false) && (pista.ended==false)){
@@ -76,7 +83,10 @@ function reproduccion() {
 
     if((pista.paused == false)){
         const veces = 1000;
-        tmer = setInterval(time, veces);
+        timer = setInterval(hola, 1000)
+                
+        
+        //tmer = setInterval(time, veces);
     }
 
     if(pista.ended == true){
@@ -161,7 +171,7 @@ function dcion() {
     }
 }
 
-function time(){
+/*function time(){
     seg = pista.currentTime;
 
     if(pista.paused == false){
@@ -199,11 +209,36 @@ function time(){
         if(r == true){
             pista.play();
             icono.className = "icon-pause-1";
-            alert(segundos + minutos)
         }
     }
+}*/
+
+function hola(){
+    //seg = pista.currentTime;
+    
+    if (pista.currentTime > 0){
+        var actualSegundos = pista.currentTime.toFixed(0);
+        var actual = secondsToString(actualSegundos);
+        
+        var duracion = actual;
+        tiempo.innerHTML = duracion;
+    }
+
+
 }
 
-
+function secondsToString(seconds) {
+    var hour="";
+    if (seconds>3600){
+        hour = Math.floor(seconds / 3600);
+        hour = (hour < 10)? '0' + hour : hour;
+        hour+=":"
+    }
+    var minute = Math.floor((seconds / 60) % 60);
+    minute = (minute < 10)? + minute : minute;
+    var second = seconds % 60;
+    second = (second < 10)? '0' + second : second;
+    return hour  + minute + ':' + second;
+}
 
 window.addEventListener("load", elementos, false);

@@ -20,6 +20,9 @@
     $artistas = $conexion->prepare("SELECT id_art, name_artist, img_artist FROM artistas_dreams ORDER BY id_art");
     $artistas->execute();
 
+    $biblioteca = $conexion->prepare("SELECT * FROM biblioteca_dreams ORDER BY id_play ");
+    $biblioteca->execute();
+
 
     if (isset($_GET["w1"])){
         echo "<script type='text/javascript'>alert('se obtuvo variable');</script>";
@@ -44,6 +47,17 @@
     //     header('location: ../../Pagina General/Página-general-Oficial/Paginageneral.html');
     // }
 
+    if(isset($_GET["w2"])){
+        echo "<script type='text/javascript'>alert('se obtuvo variable');</script>";
+        $_SESSION["reference_list_bi"] = $_GET["w2"];
+
+        if(!empty($_SESSION["reference_list_bi"])){
+            header('Location: ../../Página Play List/html/PLaylist.php');
+        }else{
+            echo "<script type='text/javascript'>alert('No se logró');</script>"; 
+        }
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +67,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dreams!- Reproductor de Música</title>
-        <link rel="icon" href="../../Recursos/Iconos/Ds_logo.ico">
+        <link rel="icon" href="../../Recursos/Iconos/icono_dark.ico">
         <link rel="stylesheet" href="../Archisvos_DS_CSS/Home-style.css"> <!-- Estilo General -->
         <!--Iconos-->
         <link rel="stylesheet" href="../Archisvos_DS_CSS/Home-content.css">
@@ -83,15 +97,15 @@
                     </div>
                     <div class="option">
                         <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.html"><i class="icon-th-large-outline"></i>
-                        <p>Mi biblioteca</p></a>
+                        <p>Mi biblioteca prox.</p></a>
                     </div>
                     <div class="option">
                         <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.html"><i class="icon-heart-empty"></i>
-                        <p>Mis favoritos</p></a>
+                        <p>Mis favoritos prox.</p></a>
                     </div>
                     <div class="option">
                         <a href="../../Pagina DreamMaker J/html/DreaMaker.html"><i class="icon-music-1"></i>
-                        <p>DreaMaker</p></a>
+                        <p>DreaMaker prox.</p></a>
                     </div>    
                 </div>
     
@@ -164,61 +178,117 @@
 
                 <div class="second-container">
                     <div class="title-icon">
-                        <h2>Alguna Sugerencias para ti</h2>
+                        <h2>Disfruta de los pequeños tiempos</h2>
                         <i class="icon-right-open-mini" id="flechaDe-2"></i>
                         <i class="icon-left-open-mini" id="flechaIz-2"></i>
                     </div>
+
+                    <audio id="audio-home" preload="metadata" tabindex="0" controls="">
+                        <source src="https://drive.google.com/uc?export=view&id=1BLZzFjJNw254O957rnbzTHMKdI7TSd0i">
+                    </audio>
+                    
                     <div class="contenedor-principal-2">
-                        <div class="carousel-2">
-                            <div class="cancion">
-                                <a href="../../Test_Mateoxd/New/Reproductor2.html"><img src="../img/1x1-Artist/nioce.jpg" alt="img"></a>
-                                <h4>Nice to meet ya</h4>
-                                <h5>Niall Horan</h5>
-                                <i class="icon-play-circled"></i>
+                        <div class="carousel-2" id="canciones-carrusales">
+
+                            <div class="cancion" id="1" href="https://drive.google.com/uc?export=download&id=1RP8gf9cY8J5PV6V4JRhpZdChWhKSLH4N">
+                                <img src="../img/1x1-Artist/nioce.jpg" alt="img" id="img_c_song_1">
+                                <h4 id="n_song_1">Nice to meet ya</h4>
+                                <h5 id="n_artist_1">Niall Horan</h5>
+                                <span class="circulo-i">
+                                    <i class="icon-play-1"></i>
+                                </span>
                             </div>
 
                             <!--Modificación Preliminar-->
-                            <div class="cancion">
-                                <a href="../../Test_Mateoxd/New/Reproductor1.html"><img src="../../Recursos/Song-Photo/Cuco/Songs4u.jpg" alt="img"></a>
-                                <h4>Stay For a Bit</h4>
-                                <h5>Cuco</h5>
-                                <i class="icon-play-circled"></i>
+                            <div class="cancion" id="2" href="https://drive.google.com/uc?export=download&id=1ftBNX9CEfYpQgYGVv9tSohAdNJF3A9Vd">
+                                <img src="../../Recursos/Song-Photo/Cuco/Songs4u.jpg" alt="img" id="img_c_song_2">
+                                <h4 id="n_song_2">Stay For a Bit</h4>
+                                <h5 id="n_artist_2">Cuco</h5>
+                                <span class="circulo-i">
+                                    <i class="icon-play-1"></i>
+                                </span>                                
                             </div>
                             <!---->
 
-                            <div class="cancion">
-                                       <a href="#"><img src="../img/1x1-Artist/bad-habits.jpg" alt="img"></a>
-                                <h4>Bad Habits</h4>
-                                <h5>Ed Sheeran</h5>
-                                <i class="icon-play-circled"></i>
+                            <div class="cancion" id="3" href="https://drive.google.com/uc?export=view&id=1scRgrARuzFoyjRCl6uCyzKOXsiP1OEs8">
+                                <img src="../img/1x1-Artist/bad-habits.jpg" alt="img" id="img_c_song_3">
+                                <h4 id="n_song_3">Bad Habits</h4>
+                                <h5 id="n_artist_3">Ed Sheeran</h5>
+                                <span class="circulo-i">
+                                    <i class="icon-play-1"></i>
+                                </span>
                             </div>
-                            <div class="cancion">
-                                <a href="#"><img src="../img/1x1-Artist/artworks-000534318996-nfls38-t500x500.jpg" alt="img"></a>
-                                <h4>Rewrite the stars</h4>
-                                <h5>Annie Marie ft.James Arthur</h5>
-                                <i class="icon-play-circled"></i>
+                            <div class="cancion" id="4" href="https://drive.google.com/uc?export=view&id=1IZW7wpTDAYL4yLPK42qpSdgmJuEHTA6l">
+                                <img src="../img/1x1-Artist/artworks-000534318996-nfls38-t500x500.jpg" alt="img" id="img_c_song_4">
+                                <h4 id="n_song_4">Rewrite the stars</h4>
+                                <h5 id="n_artist_4">Annie Marie ft.James Arthur</h5>
+                                <span class="circulo-i">
+                                    <i class="icon-play-1"></i>
+                                </span>
                             </div>
-                            <div class="cancion">
-                                <a href="#"><img src="../img/1x1-Artist/71nIIQmyG5L._SS500_.jpg" alt="img"></a>
-                                <h4>Memories</h4>
-                                <h5>Maroon 5</h5>
-                                <i class="icon-play-circled"></i>
+                            <div class="cancion" id="5" href="https://drive.google.com/uc?export=view&id=1RUpeRVGVKh3Dr1Hqz8iskegRywi5gYJ3">
+                                <img src="../img/1x1-Artist/71nIIQmyG5L._SS500_.jpg" alt="img" id="img_c_song_5">
+                                <h4 id="n_song_5">Memories</h4>
+                                <h5 id="n_artist_5">Maroon 5</h5>
+                                <span class="circulo-i">
+                                    <i class="icon-play-1"></i>
+                                </span>
                             </div>
-                            <div class="cancion">
-                                <a href="#"><img src="../img/1x1-Artist/artworks-66IEziyOwKbmhAx4-77Xpfg-t500x500.jpg" alt="img"></a>
-                                <h4>Leave the Door Open</h4>
-                                <h5>Bruno Mars, Anderson .Paak, Silk Sonic</h5>
-                                <i class="icon-play-circled"></i>
+                            <div class="cancion" id="6" href="https://drive.google.com/uc?export=view&id=11SNrdxUrEdb0o_GIXxxiAhAzmGBMASbX">
+                                <img src="../img/1x1-Artist/artworks-66IEziyOwKbmhAx4-77Xpfg-t500x500.jpg" alt="img" id="img_c_song_6">
+                                <h4 id="n_song_6">Leave the Door Open</h4>
+                                <h5 id="n_artist_6">Bruno Mars, Anderson .Paak, Silk Sonic</h5>
+                                <span class="circulo-i">
+                                    <i class="icon-play-1"></i>
+                                </span>
                             </div>
 
-                            <div class="cancion">
-                                <a href="#"><img src="../img/1x1-Artist/aa1f027e5730d62263934e4b938d8040.750x750x1.jpg" alt="img"></a>
-                                <h4>Blinding Lights</h4>
-                                <h5>The Weeknd</h5>
-                                <i class="icon-play-circled"></i>
+                            <div class="cancion" id="7" href="https://drive.google.com/uc?export=view&id=1oXNdCPcRBBP7Gs7_ZhmXiPagRlaKN9Q-">
+                                <img src="../img/1x1-Artist/aa1f027e5730d62263934e4b938d8040.750x750x1.jpg" alt="img" id="img_c_song_7">
+                                <h4 id="n_song_7">Blinding Lights</h4>
+                                <h5 id="n_artist_7">The Weeknd</h5>
+                                <span class="circulo-i">
+                                    <i class="icon-play-1"></i>
+                                </span>
                             </div>
                         </div>
                     </div>
+               </div>
+               <div class="tercer-contenedor">
+                    
+                    <div class="title-icon">
+                        <h2>Una canción para cada Situación</h2>
+                        <i class="icon-right-open-mini" id="flechaDe-3"></i>
+                        <i class="icon-left-open-mini" id="flechaIz-3"></i>
+                    </div>
+                    <div class="contenedor-principal-3">
+                        <div class="carousel-3">
+
+                            <?php
+                                while($playlist = $biblioteca->fetch(PDO::FETCH_ASSOC)){
+                                    echo "
+                                    <div class='cancion' id='num_".$playlist["id_play"]."'>
+                                        <img src='". $playlist["img_plalist"] ."' alt='img'>
+                                        <h4>".$playlist["name_play"]."</h4>
+                                        <h5>".$playlist["creator_play"]."</h5>
+                                        <span class='circulo-i-3'>
+                                            <i class='icon-play-1'></i>
+                                        </span>
+                                    </div>
+
+                                    <script>
+                                var artistSelect = document.getElementById('num_".$playlist["id_play"]."');
+                                artistSelect.addEventListener('click', function(){
+                                    var reference2 = ".$playlist["id_play"].";
+                                    window.location.href = window.location.href + '?w2=' + reference2;
+                                });
+                                </script>";
+                                }
+                            ?>
+
+                        </div>
+                    </div>
+
                </div>
             </section> 
             
@@ -250,7 +320,7 @@
                                 <script type="text/javascript" src="../../Recursos/Otros/js/traductor.js"></script>
                                 
                                 <!------------------------------------->
-                                </li>
+                            </li>
                         </ul>
                     </div>
                     
@@ -263,41 +333,39 @@
         
         <footer>
             <div class="picture-song-footer">
-                <img src="../img/1x1-Artist/nioce.jpg" id="img-artist-1">
+                <img src="../../Recursos/Logo Oficial/transparent.png" id="img-artist-1">
             </div>
             <div class="artist-enojoy">
                 <p id="enjoy-with">Disfruta con...</p>
-                <p id="name-artist">Harry Styles s</p>
-                
+                <p id='name-artist' translate='no'>Dreams!</p>
             </div>
             
             <div class="more-icons">
-                <i class="icon-loop-1"></i>
-                <i class="icon-shuffle-1"></i>    
+                <i class="icon-loop-1" id="repetir"></i>  
             </div>
 
             <div class="line-time-song">
 
-                <div class="center-song">
-                    <p id="name-song">Nice to Meet Ya</p>
-                    <i class="icon-heart-empty"></i>
-                    <p id="name-artist-2">Niall Horan</p>
+                <div class="center-song" translate="no">
+                    <p id="name-song">Esperando canción...</p>
+                    <i class="icon-heart-empty" id="megusta"></i>
+                    <p id='name-artist-2' translate='no'>Puedes soñar en grande</p>
                 </div>
 
                 <div class="center-bar-time">
                                 
                     <div class="time-start" id="prog">0:00</div>
-                    <div class="bar-time" id="barra">
-                        <div id="progress" id="progress"></div>
-                    </div>
-                    <div class="time-end" id="dur">0:00</div>
+                    
+                        <div class="bar-time" id="barra">
+                            <div class="progress" id="progress"></div>
+                        </div>
+
+                    <div class="time-end" id="dur"><p>0:00</p></div>
                 </div>
             </div>
             <div class="sound-play">
                 <i class="icon-volume"></i>
-                <div class="audio-line">
-                    <div class="audio-progres"></div>
-                </div>
+                <input type="range" min="0" max="1" step="0.01" id="volumen" style="width: 60%; height: 3px;">
             </div>
 
             <div class="icons-play-pause">
@@ -311,6 +379,6 @@
                 <i class="icon-to-end-1" id="next-song"></i>
             </div>
         </footer>
-        <script src="../../reproductor/reproductor_prueba.js"></script>
+        <script src="../../reproductor/player_home.js"></script>
     </body>
 </html>

@@ -142,7 +142,7 @@
                                 
                                 $id = $PlayList["id_song"];
                                 echo "
-                                    <div class='song-description active' href='".$PlayList["direction_song"]."' id='".$PlayList["id_song"]."'>
+                                    <div class='song-description' href='".$PlayList["direction_song"]."' id='".$PlayList["id_song"]."'>
                                         <p id='number'>".$PlayList["id_song"]."</p>
                                         <p id='n_song_".$id."' class='nombre-song'>".$PlayList["name_song"]."</p>
                                         <p id='n_artist_".$id."'>".$PlayList["name_artista"]."</p>

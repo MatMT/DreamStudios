@@ -73,7 +73,7 @@
     vertical-align: top;
     border-radius: 50%;
     box-shadow: -3px 3px 6px #000;
-    -webkit-box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.733);
+    -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.733);
 
     display: flex;
     flex-direction: column;
@@ -96,7 +96,7 @@
     position: absolute;
     left: 67%;
     top: 60%;
-    text-shadow: -3px 3px 6px #000;
+    text-shadow: -3px 4px 10px #000;
 
     opacity: 0;
     transition: 0.5s;
@@ -165,7 +165,7 @@
     vertical-align: top;
     border-radius: 10px;
     box-shadow: -3px 3px 6px #000;
-    -webkit-box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.733);
+    -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.733);
 
     display: flex;
     flex-direction: column;
@@ -185,19 +185,108 @@
     color: rgb(179, 179, 179);
 }
 
-.carousel-2 .cancion i{
-    font-size: 5vmin;
+.circulo-i{
+    width: 5vmin;
+    height: 5vmin;
     position: absolute;
 	top: 25%;
 	left: 35%;
-    text-shadow: -3px 3px 6px #000;
-
     opacity: 0;
+    border-radius: 5vmin;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3px;
+
+    box-shadow: 0px 3px 6px #000;
+    -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.733);
+    
+    transition: 0.6s;
 }
 
-.carousel-2 .cancion:hover i{
-    transition: 0.5s;
+.circulo-i i{
+    color: black;
+    font-size: 1.5rem;
+
+}
+
+.cancion:hover .circulo-i{
     opacity: 1;
+}
+
+
+/*Contenedor 3*/
+
+.tercer-contenedor{
+    width: 100%;
+    margin: 10px;
+}
+
+.contenedor-principal-3{
+    width: 100%;
+    margin-top: 30px;
+    padding: 20px 0px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+
+.carousel-3{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.carousel-3 .cancion{
+    min-width: 22%;
+    transition: 0.3s ease all;
+    margin: 0px 15px;
+
+    padding: 10px;
+    position: relative;
+}
+
+.carousel-3 .cancion img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-3 .cancion:hover{
+    transform: scale(1.05);
+    transform-origin: center;
+    transition: 0.5s;
+
+    background-color: rgba(0, 0, 0, 0.452);
+    border-radius: 15px;
+}
+
+
+.circulo-i-3{
+    width: 5vmin;
+    height: 5vmin;
+    position: absolute;
+	top: 35%;
+	left: 40%;
+    opacity: 0;
+    border-radius: 5vmin;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3px;
+
+    box-shadow: 0px 3px 6px #000;
+    -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.733);
+    
+    transition: 0.6s;
+}
+
+.circulo-i-3 i{
+    color: black;
+    font-size: 1.5rem;
 
 }
 
+.cancion:hover .circulo-i-3{
+    opacity: 1;
+}
