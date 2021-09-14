@@ -9,7 +9,8 @@
         $contenido .= "¡Es un gusto que estes aquí " . $name . "!" . "\n\n" . "Para DreamStudios significas mucho más que un simple usuario extra" . "\n\n";
         $contenido .= "Nombre: " . $name . "\n" . "Edad: " . $age . "\n" . "Correo: " . $email . "\n" . "Contraseña: " . $pass . "\n\n";
         $contenido .= "";
-        $contenido = "<html>
+        $contenido = "
+        <html>
         <head>
         <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
             <title></title>
@@ -76,7 +77,7 @@
         <body>
             <header><img src='https://drive.google.com/uc?export=view&id=1qptBF8ulCIwmjk0r-rFpCfBtJ7MBN66o' alt='logotipo'></header>
             <div id='email-wrap' >
-            <h1>Bienvenido a dreams!</h1><br>
+            <h1> $name Bienvenido a dreams!</h1><br>
             <p>Disfruta de este nuevo espacio para nuevos artistas y tus canciones favoritas, mantente a la espera de futuras funciones...</p>
 
             </div>
