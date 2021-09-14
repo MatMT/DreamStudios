@@ -34,14 +34,14 @@
             header('Location: ../../Página Artista/html/Artistas.php');
 
         }else{
-            echo "<script type='text/javascript'>alert('No se logró');</script>"; 
+            echo "<script type='text/javascript'>alert('No se logró');</script>";
         }
 
-    }        
+    }
 
-      
-    // Bastaría con agregar estas lineas y el redireccionamiento al inicio 
-    // para asegurar que el usuario debe estar logiado si o si para visaulziar el contenido xd 
+
+    // Bastaría con agregar estas lineas y el redireccionamiento al inicio
+    // para asegurar que el usuario debe estar logiado si o si para visaulziar el contenido xd
 
     // if (!isset($_SESSION["id_user"])){
     //     header('location: ../../Pagina General/Página-general-Oficial/Paginageneral.html');
@@ -54,7 +54,7 @@
         if(!empty($_SESSION["reference_list_bi"])){
             header('Location: ../../Página Play List/html/PLaylist.php');
         }else{
-            echo "<script type='text/javascript'>alert('No se logró');</script>"; 
+            echo "<script type='text/javascript'>alert('No se logró');</script>";
         }
     }
 
@@ -74,17 +74,17 @@
         <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/icons-dreams-home.css">
         <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/icons-dreams-home-embedded.css">
         <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/animation.css">
-    
+
         <script defer src="../archivos-js/settings.js"></script>
         <script src="../archivos-js/header.js"></script>
-        
+
     </head>
     <body>
         <div class="big-container">
             <div class="container-header">  <!--Elemento Interactivo-->
-                
+
             </div>
-            
+
             <div class="imit-aside">
                 <div class="logo_box_aside">
                     <img src="../../Recursos/Imágenes/1x/Recurso 1.png">
@@ -105,22 +105,22 @@
                     </div>
                     <div class="option">
                         <a href="../../Pagina DreamMaker J/html/DreaMaker.html"><i class="icon-music-1"></i>
-                        <p>DreaMaker prox.</p></a>
-                    </div>    
+                        <p translate="no">DreaMaker prox.</p></a>
+                    </div>
                 </div>
-    
+
                 <div class="play-list">
                     <div class="create_play_list option">
                         <a href=""><i class="icon-plus-squared"></i>
                         <p>Crear Play List</p></a>
                     </div>
-    
+
                     <div class="my-play-list">
                         <a href="../../Página Play List/html/Playlist.html">
                             <p><i class="icon-right-open-mini"></i>My Music of Niall Horan my favorite</p>
                         </a>
                     </div>
-    
+
                 </div>
             </div>
 
@@ -133,8 +133,8 @@
                     <p id="weilcome">Buenas Tardes</p>
                     <?php if(!empty($user)):?>
 
-                    <p id="name-user-title"><?= $user["name_user"]?>!</p>
-                    
+                    <p id="name-user-title" translate="no"><?= $user["name_user"]?>!</p>
+
                     <?php endif; ?>
                 </div>
 
@@ -147,12 +147,12 @@
                         <h2>Veamos que tenemos para ti...</h2>
                         <i class="icon-right-open-mini" id="flechaDe"></i>
                         <i class="icon-left-open-mini" id="flechaIz"></i>
-                        
+
                     </div>
 
                     <div class="contenedor-principal">
-                        <div class="carousel">
-                        <?php 
+                        <div class="carousel" translate="no">
+                        <?php
                             while($resultados = $artistas->fetch(PDO::FETCH_ASSOC)){
                             echo "
                             <div class='artista' id='".$resultados["id_art"]."'>
@@ -160,23 +160,23 @@
                                 <h4>".$resultados["name_artist"]."</h4>
                                 <i class='icon-play-circled'></i>
                             </div>
-                            
-                            
+
+
                             <script>
                                 var artistSelect = document.getElementById('".$resultados["id_art"]."');
                                 artistSelect.addEventListener('click', function(){
                                     var reference = ".$resultados['id_art'].";
                                     window.location.href = window.location.href + '?w1=' + reference;
                                 });
-                            </script>"                   
+                            </script>"
                             ;
                             }
                         ?>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
 
-                <div class="second-container">
+                <div class="second-container" translate="no">
                     <div class="title-icon">
                         <h2>Disfruta de los pequeños tiempos</h2>
                         <i class="icon-right-open-mini" id="flechaDe-2"></i>
@@ -186,7 +186,7 @@
                     <audio id="audio-home" preload="metadata" tabindex="0" controls="">
                         <source src="https://drive.google.com/uc?export=view&id=1BLZzFjJNw254O957rnbzTHMKdI7TSd0i">
                     </audio>
-                    
+
                     <div class="contenedor-principal-2">
                         <div class="carousel-2" id="canciones-carrusales">
 
@@ -206,7 +206,7 @@
                                 <h5 id="n_artist_2">Cuco</h5>
                                 <span class="circulo-i">
                                     <i class="icon-play-1"></i>
-                                </span>                                
+                                </span>
                             </div>
                             <!---->
 
@@ -255,14 +255,14 @@
                     </div>
                </div>
                <div class="tercer-contenedor">
-                    
+
                     <div class="title-icon">
                         <h2>Una canción para cada Situación</h2>
                         <i class="icon-right-open-mini" id="flechaDe-3"></i>
                         <i class="icon-left-open-mini" id="flechaIz-3"></i>
                     </div>
                     <div class="contenedor-principal-3">
-                        <div class="carousel-3">
+                        <div class="carousel-3" translate="no">
 
                             <?php
                                 while($playlist = $biblioteca->fetch(PDO::FETCH_ASSOC)){
@@ -290,11 +290,11 @@
                     </div>
 
                </div>
-            </section> 
-            
-            
+            </section>
+
+
             <header class="header-container" >
-                
+
             </header>
 
             <div class="searcher-container">
@@ -308,7 +308,7 @@
                         <span class="close"></span>
                     </label>
                     <div class="menu-dreams-usuario" id="menu-dreams">
-                    
+
                         <ul class="navegation">
                             <li><a href=""><span>My Account</span></a></li>
                             <li><a href=""><span>Billing Information</span></a></li>
@@ -316,21 +316,21 @@
                             <li>
                                 <!--traduccion-------------------------->
                                 <div id="google_translate_element_id" class="google"></div>
-                                
+
                                 <script type="text/javascript" src="../../Recursos/Otros/js/traductor.js"></script>
-                                
+
                                 <!------------------------------------->
                             </li>
                         </ul>
                     </div>
-                    
-            
+
+
                 </div>
             </div>
 
         </div>
-        
-        
+
+
         <footer>
             <div class="picture-song-footer">
                 <img src="../../Recursos/Logo Oficial/transparent.png" id="img-artist-1">
@@ -339,9 +339,9 @@
                 <p id="enjoy-with">Disfruta con...</p>
                 <p id='name-artist' translate='no'>Dreams!</p>
             </div>
-            
+
             <div class="more-icons">
-                <i class="icon-loop-1" id="repetir"></i>  
+                <i class="icon-loop-1" id="repetir"></i>
             </div>
 
             <div class="line-time-song">
@@ -353,9 +353,9 @@
                 </div>
 
                 <div class="center-bar-time">
-                                
+
                     <div class="time-start" id="prog">0:00</div>
-                    
+
                         <div class="bar-time" id="barra">
                             <div class="progress" id="progress"></div>
                         </div>
@@ -369,13 +369,13 @@
             </div>
 
             <div class="icons-play-pause">
-                
+
                 <i class="icon-to-start-1" id="before-song"></i>
 
                 <div class="play-pause">
                     <i class="icon-play-1 play" id="play-start"></i>
                 </div>
-                              
+
                 <i class="icon-to-end-1" id="next-song"></i>
             </div>
         </footer>

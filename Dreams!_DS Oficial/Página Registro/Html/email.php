@@ -14,7 +14,7 @@
         <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
             <title></title>
             <style type='text/css'>
-            * { 
+            * {
                 padding: 0;
                 margin: 0;
                 font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif ;
@@ -28,7 +28,7 @@
                 font-size: 30px;
                 z-index: 50;
 }
-            body {    
+            body {
                 width: 100%;
                 height: 100vh;
                 background: rgb(84, 28, 249);
@@ -69,7 +69,7 @@
                 background-repeat: no-repeat;
                 opacity: 0.5;
             }
-            
+
             </style>
 
         </head>
@@ -78,21 +78,21 @@
             <div id='email-wrap' >
             <h1>Bienvenido a dreams!</h1><br>
             <p>Disfruta de este nuevo espacio para nuevos artistas y tus canciones favoritas, mantente a la espera de futuras funciones...</p>
-            
+
             </div>
         </body>
         </html>";
 
-       
+
 
         // . "Genero: " . $gender . "\n" .
 
         // To send HTML mail, the Content-type header must be set
         $headers  = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-    
+
         mail($email,"Te registraste en Dreams!",$contenido, "Bienvenid@ a Dreams 🎶");
         header("Location:../../Inicio de sesión/Html/Inicio_Personal.php");
-    
+
         }
 ?>

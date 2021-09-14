@@ -5,7 +5,7 @@
 
     if(isset($_SESSION["reference_list_bi"])){
         $id_play = $_SESSION["reference_list_bi"];
-        
+
 
         //obtengo los datos de la plAylist
 
@@ -15,7 +15,7 @@
 
         $detalles_biblioteca = $get_data_bi->fetch(PDO::FETCH_ASSOC);
 
-        
+
         //obtengo el listado de canciones
         $get_playlist = $conexion->prepare("SELECT * FROM biblio_playlist_".$id_play." ORDER BY id_song");
         $get_playlist->execute();
@@ -32,33 +32,33 @@
         <?php
             echo "<title>Dreams! ".$detalles_biblioteca["name_play"]."</title>";
         ?>
-        
+
         <link rel="icon" href="../../Recursos/Iconos/Ds_logo.ico">
         <link rel="stylesheet" href="../../Página Principal/Archisvos_DS_CSS/Home-style.css">
         <link rel="stylesheet" href="../Archisvos_DS_CSS/Style_Playlist_Div.css">
         <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/icons-dreams-home.css">
         <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/icons-dreams-home-embedded.css">
         <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/animation.css">
-    
+
     </head>
     <body>
         <div class="big-container">
             <div class="container-header">
-                
+
             </div>
-            
+
             <div class="imit-aside">
                 <div class="logo_box_aside">
                     <img src="../../Recursos/Imágenes/1x/Recurso 1.png">
                 </div>
                 <!---Menú de Dreams-->
                 <div class="main_menu_aside">
-                    
+
                     <div class="option">
                         <a href="../../Página Principal/index/HomePage2.php"><i class="icon-music-2"></i>
                         <p>Inicio</p></a>
                     </div>
-                    
+
                     <div class="active-option">
                         <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.html"><i class="icon-th-large-outline"></i>
                         <p>Mi biblioteca</p></a>
@@ -70,9 +70,9 @@
                     <div class="option">
                         <a href="../../Pagina DreamMaker J/html/DreaMaker.html"><i class="icon-music-1"></i>
                         <p>DreaMaker prox.</p></a>
-                    </div>    
+                    </div>
                 </div>
-    
+
                 <div class="play-list">
                     <div class="create_play_list option">
                         <a><i class="icon-plus-squared"></i>
@@ -81,14 +81,14 @@
                     <div class="my-play-list">
                         <a href="../../Página Play List/html/Playlist.html"><p><i class="icon-right-open-mini"></i>My Music of Niall Horan my favorite</p></a>
                     </div>
-    
+
                 </div>
             </div>
 
             <section class="main-contaier">
                 <div class="planet-backg">
                     <img src="../../Recursos/Otros/planetas.svg" alt="img">
-                </div>       
+                </div>
                 <div class="controls-play-list">
                     <button class="play-list-buttom" id="player">
                         <i class="icon-play-circled2"></i>
@@ -109,10 +109,10 @@
                     </audio>
 
                     <div class="play-list-song" id="play-list-song" translate="no">
-                    
+
                         <?php
                         while($resultados_playlist = $get_playlist->fetch(PDO::FETCH_ASSOC)){
-                        
+
                         $id_list = $resultados_playlist["id_song"];
                         echo "
                         <div class='song-description-playlist' href='".$resultados_playlist["direction_song"]."' id='".$id_list."'>
@@ -120,16 +120,16 @@
                             <p id='n_song_".$id_list."'>".$resultados_playlist["name_song"]."</p>
                             <p id='n_artist_".$id_list."'>".$resultados_playlist["name_artista"]."</p>
                             <p>".$resultados_playlist["song_album"]."</p>
-                        </div>                  
+                        </div>
 
                         ";
                         }
                         ?>
 
-                    </div> 
-                    
-                </div>         
-                
+                    </div>
+
+                </div>
+
             </section>
             <!----------------------------->
 
@@ -139,17 +139,17 @@
                     <?php
                         echo "<img src='".$detalles_biblioteca["img_plalist"]."' alt='img'>";
                     ?>
-                    
+
                     <div class="content-playlist">
                         <h2>Tu play list</h2>
                         <?php
-                            echo "<h1>".$detalles_biblioteca["name_play"]."</h1>
-                                <h2>".$detalles_biblioteca["description_playlist"]."</h2>
-                                <h3>By ".$detalles_biblioteca["creator_play"]."</h3>
+                            echo "<h1 translate='no'>".$detalles_biblioteca["name_play"]."</h1>
+                                <h2 translate='no'>".$detalles_biblioteca["description_playlist"]."</h2>
+                                <h3 translate='no'>By ".$detalles_biblioteca["creator_play"]."</h3>
                             ";
                         ?>
 
-                    </div> 
+                    </div>
                 </div>
             </header>
 
@@ -164,7 +164,7 @@
                         <span class="close"></span>
                     </label>
                     <div class="menu-dreams-usuario" id="menu-dreams">
-                    
+
                         <ul class="navegation">
                             <li><a href=""><span>My Account</span></a></li>
                             <li><a href=""><span>Billing Information</span></a></li>
@@ -172,9 +172,9 @@
                             <li>
                                 <!--traduccion-------------------------->
                                 <div id="google_translate_element_id" class="google"></div>
-                                
+
                                 <script type="text/javascript" src="../../Recursos/Otros/js/traductor.js"></script>
-                                
+
                                 <!------------------------------------->
                                 </li>
                         </ul>
@@ -183,11 +183,11 @@
 
                 <div class="line-soft"></div>
             </div>
-            
+
 
         </div>
-        
-        
+
+
         <footer>
             <div class="picture-song-footer">
                 <?php
@@ -202,10 +202,10 @@
                     echo "<p id='name-artist' translate='no'>".$detalles_biblioteca["name_play"]."</p>"
                 ?>
             </div>
-            
+
             <div class="more-icons">
                 <i class="icon-loop-1" id="repetir"></i>
-                <i class="icon-shuffle-1"></i>    
+                <i class="icon-shuffle-1"></i>
             </div>
 
             <div class="line-time-song">
@@ -219,9 +219,9 @@
                 </div>
 
                 <div class="center-bar-time">
-                                
+
                     <div class="time-start" id="prog">0:00</div>
-                    
+
                         <div class="bar-time" id="barra">
                             <div class="progress" id="progress"></div>
                         </div>
@@ -235,13 +235,13 @@
             </div>
 
             <div class="icons-play-pause">
-                
+
                 <i class="icon-to-start-1" id="before-song"></i>
 
                 <div class="play-pause">
                     <i class="icon-play-1 play" id="play-start"></i>
                 </div>
-                              
+
                 <i class="icon-to-end-1" id="next-song"></i>
             </div>
         </footer>
@@ -252,4 +252,3 @@
 </html>
 
 <!-------------------------------------------------------------------------------->
-   
