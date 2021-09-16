@@ -5,11 +5,12 @@
         $age = $_POST['AgeType'];
         $gender = $_POST['GenderType'];
         $pass = $_POST['PassType'];
+        $contenido = "";
 
         $contenido .= "¡Es un gusto que estes aquí " . $name . "!" . "\n\n" . "Para DreamStudios significas mucho más que un simple usuario extra" . "\n\n";
         $contenido .= "Nombre: " . $name . "\n" . "Edad: " . $age . "\n" . "Correo: " . $email . "\n" . "Contraseña: " . $pass . "\n\n";
         $contenido .= "";
-        $contenido = "
+        $contenido .= "
         <html>
         <head>
         <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
@@ -57,7 +58,6 @@
             }
 
             body::before {
-                content: "";
                 width: 100%;
                 min-height: 100vh;
                 position: absolute;
@@ -84,16 +84,12 @@
         </body>
         </html>";
 
-
-
-        // . "Genero: " . $gender . "\n" .
-
         // To send HTML mail, the Content-type header must be set
         $headers  = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
         mail($email,"Te registraste en Dreams!",$contenido, "Bienvenid@ a Dreams 🎶");
-        header("Location:../../Inicio de sesión/Html/Inicio_Personal.php");
+        // header("Location:../../Inicio de sesión/Html/Inicio_Personal.php");
 
         }
 ?>
