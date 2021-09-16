@@ -821,7 +821,7 @@ input:checked ~ .menu-dreams-usuario {
   background-color: transparent !important;
   color: white;
   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif !important;
-  font-size: 1.5em !important;
+  font-size: 1.3rem !important;
 }
 
 #google_translate_element_id option {
