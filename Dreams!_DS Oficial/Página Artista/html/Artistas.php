@@ -189,7 +189,7 @@
                         <div class="artista">
                         <h2>This Is</h2>
                         <?php
-                            echo "<h1>".$results["name_artist"]."</h1>"
+                            echo "<h1 translate='no'>".$results["name_artist"]."</h1>"
                         ?>
                         <div class="img">
                             <img src="../../Recursos/Iconos/icono-d.svg" alt="img">
