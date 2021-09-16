@@ -92,39 +92,34 @@
                         <p>DreaMaker</p></a>
                     </div>
                 </div>
-
-                <div class="play-list">
-                    <div class="create_play_list option">
-                        <a href=""><i class="icon-plus-squared"></i>
-                        <p>Crear Play List</p></a>
-                    </div>
-
-                    <div class="my-play-list">
-                        <a href="../../Página Play List/html/Playlist.html"><p><i class="icon-right-open-mini"></i>My Music of Niall Horan my favorite</p></a>
-                    </div>
-
-                </div>
             </div>
 
             <!--Importanteeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-->
 
             <section class="main-contaier">
+                            
                 <div class="planet-backg">
                     <img src="../../Recursos/Otros/planetas.svg" alt="img">
                 </div>
                 <div class="player-artist-playlist">
-                    <button class="play-song-buttom" id="player">
-                        <i class="icon-play-circled2"></i>
-                        <p>Reproducir</p>
-                    </button>
-                    <i class="icon-heart-empty"></i>
-                    <i class="icon-dot-3"></i>
+
+
+                    <div class="buton-play" id="player">
+                        <i class='icon-play-1' id="buton-pua"></i>
+                    </div>
+
+                    <a href="#alb-arti"><div class="ir-albums">
+                        <p>Ir a Albums</p>
+                    </div></a>
+
+
                     <?php
                         echo "<p id='descrip'>".$results["description_art"]."</p>";
                     ?>
                 </div>
 
                 <div class="play-list-songs-artist" id="playlist">
+                    <h1>Populares</h1>
                     <div class="data-song">
                         <h4 id="number">#</h4>
                         <h4>CANCIÓN</h4>
@@ -157,7 +152,7 @@
                 </div>
 
 
-                <div class="container-albums">
+                <div class="container-albums" id="alb-arti">
                     <?php
                         echo "<h1>Albums de ".$results["name_artist"]."</h1>";
                     ?>
@@ -186,40 +181,32 @@
                         ?>
                     </div>
                 </div>
-
-
-
-                <!--Aqui colocaran el nuevo contenido, pueden borar mi nombre xddd-->
-
-                <!--solo trabajaran en la etiqueta section-->
-
+                <div class="header-container">
+                    <div class="post-autor">
+                        <?php
+                            echo "<img src='".$results["bg_img_artist"]."' alt='img'>"
+                        ?>
+                        <div class="artista">
+                        <h2>This Is</h2>
+                        <?php
+                            echo "<h1>".$results["name_artist"]."</h1>"
+                        ?>
+                        <div class="img">
+                            <img src="../../Recursos/Iconos/icono-d.svg" alt="img">
+                            <p>Artista Verificado</p>
+                        </div>
+                    </div> 
+                </div>
             </section>
-
-            <header class="header-container">
-                <div class="background">
-                    <?php
-                        echo "<img src='".$results["bg_img_artist"]."' alt='img'>"
-                    ?>
-                </div>
-
-                <div class="name-artist" >
-                    <h2>Te presentamos la playlist de</h2>
-                    <div translate="no">
-                    <?php
-                        echo "<h1>".$results["name_artist"]."</h1>"
-                    ?>
-                    </div>
-                </div>
-                <div class="img">
-                    <img src="../../Recursos/Iconos/icono-d.svg" alt="img">
-                </div>
-
-                <div class="line-soft"></div>
-            </header>
 
             <div class="searcher-container">
                 <input type="text" class="searcher-user" placeholder="Buscar canciones, artistas..." required>
                 <i class="icon-note" id="nota"></i>
+                <div class="grupo">
+                    <?php
+                        echo "<h1 translate='no'>".$results["name_artist"]."</h1>"
+                    ?>
+                </div>
 
                 <div class="contariner-menu">
                     <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
@@ -234,12 +221,11 @@
                             <li><a href=""><span>Billing Information</span></a></li>
                             <li><a href="../../conexion_mysql/logout.php"><span>Log out</span></a></li>
                             <li>
-                                <!--traduccion-------------------------->
                                 <div id="google_translate_element_id" class="google"></div>
 
                                 <script type="text/javascript" src="../../Recursos/Otros/js/traductor.js"></script>
 
-                                <!------------------------------------->
+
 
                             </li>
                         </ul>
@@ -256,7 +242,7 @@
 
         <footer>
             <div class="picture-song-footer">
-                <img src="../../Página Principal/img/1x1-Artist/nioce.jpg" id="img-artist-1">
+                <img src="../../Recursos/Logo Oficial/transparent.png" id="img-artist-1">
             </div>
             <div class="artist-enojoy">
 
@@ -268,7 +254,6 @@
 
             <div class="more-icons">
                 <i class="icon-loop-1" id="repetir"></i>
-                <i class="icon-shuffle-1"></i>
             </div>
 
             <div class="line-time-song">

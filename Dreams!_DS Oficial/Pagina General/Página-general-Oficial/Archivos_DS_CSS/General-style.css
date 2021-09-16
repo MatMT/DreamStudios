@@ -120,7 +120,7 @@ header {
 
 /*---  -----  ---- ---- Header---- ----- ------ --- ----- */
 
-.back nav {
+nav {
   position: fixed;
   left: 0%;
   top: 0%;
@@ -135,13 +135,13 @@ header {
   padding: 25px 40px;
 }
 
-.back nav.sticky {
+nav.sticky {
   background-color: rgb(255, 255, 255);
   padding: 15px 35px;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.555);
 }
 
-.back nav img {
+nav img {
   max-width: 200px;
   width: 12%;
   min-width: 130px;

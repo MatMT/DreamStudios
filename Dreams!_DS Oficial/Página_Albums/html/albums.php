@@ -54,36 +54,22 @@
                 </div>
                 <!---Menú de Dreams-->
                 <div class="main_menu_aside">
-                    
                     <div class="option">
                         <a href="../../Página Principal/index/HomePage2.php"><i class="icon-music-2"></i>
                         <p>Inicio</p></a>
                     </div>
-                    
-                    <div class="option">
+                    <div class="active-option">
                         <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.html"><i class="icon-th-large-outline"></i>
-                        <p>Mi biblioteca</p></a>
+                        <p>Biblioteca DS</p></a>
                     </div>
-                    <div class="option">
-                        <a><i class="icon-heart-empty"></i>
-                        <p>Mis favoritos</p></a>
-                    </div>
+
                     <div class="option">
                         <a href="../../Pagina DreamMaker J/html/DreaMaker.html"><i class="icon-music-1"></i>
-                        <p>DreaMaker</p></a>
-                    </div>    
+                        <p translate="no">Buscar</p></a>
+                    </div>
                 </div>
     
-                <div class="play-list">
-                    <div class="create_play_list option">
-                        <a><i class="icon-plus-squared"></i>
-                        <p>Crear Play List</p></a>
-                    </div>
-                    <div class="my-play-list">
-                        <a href="../../Página Play List/html/Playlist.html"><p><i class="icon-right-open-mini"></i>My Music of Niall Horan my favorite</p></a>
-                    </div>
-    
-                </div>
+
             </div>
 
             <section class="main-contaier">
@@ -91,11 +77,14 @@
                     <img src="../../Recursos/Otros/planetas.svg" alt="img">
                 </div>       
                 <div class="controls-play-list">
-                    <button class="play-list-buttom" id="player">
-                        <i class="icon-play-circled2"></i>
-                        <p>Reproducir</p>
-                    </button>
-                    <i class="icon-dot-3"></i>
+                    <div class="buton-play" id="player">
+                        <i class='icon-play-1' id="buton-pua"></i>
+                    </div>
+
+                    <a href="#alb-arti"><div class="ir-albums">
+                        <p>Ir a Albums</p>
+                    </div></a>
+
                     <a href="../../Página Artista/html/Artistas.php" style="text-decoration: none;">
                         <?php 
                             echo "<p>Escuha más de ".$resultsData["nameArtist"]."</p>";

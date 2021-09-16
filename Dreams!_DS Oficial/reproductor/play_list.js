@@ -39,6 +39,9 @@ function Init(){
     var playlist = document.getElementById("play-list-song");
     var tracks = playlist.getElementsByTagName("div");
     var button = document.getElementById("player");
+
+    var startplay = document.getElementById("buton-pua");
+
     var playicon = document.getElementById("play-start");
 
     repetir = document.getElementById("repetir")
@@ -83,6 +86,7 @@ function Init(){
         }else{
             pista.addEventListener("loadeddata", function(){
                 pista.play();
+                startplay.className = "icon-pause-1";
                 playicon.className = "icon-pause-1";
                 elementos(pista);
                 load = setInterval(rep, 1);

@@ -92,36 +92,20 @@
                 <!---Menú de Dreams-->
                 <div class="main_menu_aside">
                     <div class="active-option">
-                        <a href="HomePage2.php"><i class="icon-music-2"></i>
+                        <a href="../../Página Principal/index/HomePage2.php"><i class="icon-music-2"></i>
                         <p>Inicio</p></a>
                     </div>
                     <div class="option">
                         <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.html"><i class="icon-th-large-outline"></i>
-                        <p>Mi biblioteca prox.</p></a>
+                        <p>Biblioteca DS</p></a>
                     </div>
-                    <div class="option">
-                        <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.html"><i class="icon-heart-empty"></i>
-                        <p>Mis favoritos prox.</p></a>
-                    </div>
+
                     <div class="option">
                         <a href="../../Pagina DreamMaker J/html/DreaMaker.html"><i class="icon-music-1"></i>
-                        <p translate="no">DreaMaker prox.</p></a>
+                        <p translate="no">Buscar</p></a>
                     </div>
                 </div>
 
-                <div class="play-list">
-                    <div class="create_play_list option">
-                        <a href=""><i class="icon-plus-squared"></i>
-                        <p>Crear Play List</p></a>
-                    </div>
-
-                    <div class="my-play-list">
-                        <a href="../../Página Play List/html/Playlist.html">
-                            <p><i class="icon-right-open-mini"></i>My Music of Niall Horan my favorite</p>
-                        </a>
-                    </div>
-
-                </div>
             </div>
 
             <section class="main-contaier" id="section-scroll">

@@ -5,18 +5,10 @@
 
 /*----------------  ---- ---- Configuración para la nueva página webb*/
 body {
-  background: rgb(84, 28, 249);
-  background: linear-gradient(
-    360deg,
-    rgba(84, 28, 249, 1) 10%,
-    rgba(255, 94, 60, 1) 95%
-  );
+  background: linear-gradient(180deg, rgba(255,40,113,1) 0%, rgba(51,7,57,1) 100%);
 }
 
-header {
-  height: 390px;
-  background-color: rgba(0, 0, 0, 0.562);
-}
+
 
 .searcher-container {
   width: calc(100% - 232px);
@@ -24,138 +16,209 @@ header {
 
 .main-contaier {
   width: calc(100% - 232px);
-  height: calc(100% - 390px);
-  margin-top: 390px;
-
-  border-top: white 5px solid;
+  height: 100%;
+  margin-top: 0%;
+  padding: 0px;
 
   overflow-y: auto;
+  position: relative;
 }
 
 .line-soft {
   display: none;
 }
 
-@media screen and (min-width: 1919px) {
-  header {
-    height: 500px;
-  }
-  .main-contaier {
-    height: calc(100% - 500px);
-    margin-top: 500px;
-  }
-}
 
-/*---- ----- ----- Imgen de fondo ---- ---  ---- ---*/
-
-.background img {
-  position: absolute;
-  left: 0%;
-  top: 0%;
-
-  opacity: 0.65;
-  border-top-left-radius: 60px;
+/*----------- -------------------- Header ---------------------- -----------------------*/
+.header-container{
   width: 100%;
-  height: 390px;
-  object-fit: cover;
+  position: absolute;
+  top: 80px;
+  left: 0px;
 }
-
-.name-artist {
+.post-autor{
   color: white;
-  font-family: var(--our-font);
-  position: absolute;
-  right: 5%;
-  top: 60%;
+  height: 500px;
+  position: relative;
+  
 }
 
-.name-artist h1 {
-  font-size: 9vh;
-}
-
-.name-artist h2 {
-  text-align: right;
+.post-autor img{
   width: 100%;
-  font-size: 4vh;
-}
-
-.img img {
-  width: 60px;
-  position: 1;
+  object-fit: cover;
+  height: 500px;
   position: absolute;
-  top: 80%;
-  left: 2%;
+  right: 0px;
+  top: 0%;
 }
 
-@media screen and (max-width: 700px) {
-  .background img {
-    width: 350px;
-  }
+.post-autor::after{
+  content: "";
+  width: 100%;
+  height: 501px;
+  background: rgb(229,241,249);
+  /*background: linear-gradient(180deg, rgba(229, 241, 249, 0.119) 0%, rgb(69 11 40) 95%);*/
+  background-color: rgba(0, 0, 0, 0.445);
+  position: absolute;
+  top: 0%;
+  left: 0px;
+  z-index: 0;
+}
+/*Caja con la información del Artista*/
 
-  header {
-    width: 350px;
-  }
-
-  .main-contaier {
-    height: calc(100%-350px);
-    margin-top: 350px;
-  }
+.artista{
+  width: 100%;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  text-align: right;
+  padding: 30px 30px 40px 20px;
+  z-index: 1;
+}
+.artista h1{
+  font-size: 6rem;
 }
 
+.artista h2{
+  font-size: 4rem;
+}
+.img{
+  width: 250px;
+  height: 60px;
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  justify-content: space-around;
+  font-weight: bold;
+}
+.img img{
+  width: 70px;
+  height: 70px;
+  position: relative;
+}
+
+
+/*SeHER */
+
+.searcher-container{
+  width: calc(100% - 232px);
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.219);
+  -webkit-backdrop-filter: blur(8px);
+  -moz-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.searcher-container input {
+  
+  left: 60px;
+  top: 20px;
+}
+
+.searcher-container #nota {
+  position: absolute;
+  left: 68px;
+  top: 27px;
+
+}
+
+.toggle-button {
+  top: 20px;
+
+}
+
+/*Titlulo*/
+
+.grupo{
+  position: absolute;
+  top: 22px;
+  right: 200px;
+  font-family: var(--our-font);
+  color: rgba(255, 255, 255, 0.671);
+  font-size: 0.8rem;
+}
 /*------ ------------- ----------- Contenedor ------------- ---------------- -------*/
 .player-artist-playlist {
   width: 100%;
-  height: 15%;
+  height: 18%;
 
   display: flex;
   align-items: center;
-  padding: 0px 40px;
-  margin-top: 40px;
+  justify-content: space-around;
+  padding: 0px 100px;
+  margin-top: 600px;
 }
 
-.player-artist-playlist button {
-  background-color: #ff7b62;
-  width: 25%;
-  min-width: 50px;
-  min-height: 30px;
-  height: 70%;
-  border: none;
-  border-radius: 10px;
-  font-size: var(--our-font);
+/*Resolución de 1890px --- cambio de la imagen del header y el margin top de la playlist*/
+@media screen and (min-width: 1820px) {
+  .post-autor,
+  .post-autor img{
+    height: 600px;
+  }
+  .post-autor::after{
+    height: 600px;
+  }
+
+  .img img{
+    width: 70px;
+    height: 70px;
+    position: relative;
+  }
+
+  .player-artist-playlist{
+    margin-top: 700px;
+  }
+}
+.buton-play{
+  width: 75px;
+  height: 75px;
+  background-color: rgba(255,40,113,1);
   color: white;
-  font-size: 2.2vh;
+  border-radius: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.555);
 
-  margin-right: 2vh;
-
-  cursor: pointer;
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
 }
 
-.player-artist-playlist button i {
-  display: none;
-  opacity: 0;
+.buton-play i{
+  margin-left: 6px;
+  font-size: 2.2rem;
 }
 
-.player-artist-playlist button:hover {
+.buton-play:hover{
   transform: scale(1.03);
-  transform-origin: center;
 }
 
-.player-artist-playlist button:hover i {
-  opacity: 1;
-  display: block;
-  transition: 0.5s;
+/*Ir a Albums*/
+
+.ir-albums{
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.664);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(255, 255, 255, 0.664);
+  transition: 0.4s ease-in-out;
 }
-.player-artist-playlist button:hover p {
-  display: none;
-  transition: 0.5s;
+.player-artist-playlist a{
+  text-decoration: none;
 }
 
-.player-artist-playlist i {
-  font-size: 3vh;
-  margin: 0px 1vh;
-
-  cursor: pointer;
+.ir-albums:hover{
+  color: white;
+  border: white 1px solid;
 }
+
 #descrip {
   padding-left: 15%;
   width: 60%;
@@ -167,9 +230,14 @@ header {
 
 .play-list-songs-artist {
   width: 100%;
-  margin-top: 5vh;
+  padding: 25px;
 
   overflow-y: auto;
+}
+.play-list-songs-artist h1{
+  margin-left: 50px;
+  margin-bottom: 50px;
+  font-size: 1.6rem;
 }
 
 .data-song {
@@ -237,10 +305,11 @@ header {
   width: 90%;
   height: 50px;
 }
-/*------  ---- ---- --lISTA DE ALBUMS ---- ---- ---- ---- --- --- ---*/
+/*------  ---- ---- --CARRUCEL DE LA lISTA DE ALBUMS ---- ---- ---- ---- --- --- ---*/
+
 .container-albums {
   margin-top: 50px;
-  padding: 15px;
+  padding: 15px 90px;
 }
 
 .albums-artista {
