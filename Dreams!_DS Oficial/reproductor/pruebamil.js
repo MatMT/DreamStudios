@@ -227,21 +227,27 @@ function run(song, pista, link){
 
 //Funcion para actualizar la barra de progreso del reprodutor
 const updateProgress = () =>{
-	if (player.currentTime >0){
-		const barra = document.getElementById('progress')
-		barra.value = (player.currentTime / player.duration) * 100
+	if (pista.currentTime >0){
 		
-		var duracionSegundos= player.duration.toFixed(0);
-		dura=secondsToString(duracionSegundos);
 		var actualSegundos = player.currentTime.toFixed(0)
-		actual=secondsToString(actualSegundos);
+		var actual = secondsToString(actualSegundos);
 		
-		duracion= actual +' / '+ dura
-		document.getElementById('timer').innerText=duracion 
+		var duracion= actual;
+		tiempo.innerText=duracion;
 	}
-	if (player.ended){
-		nextMusic();//Reproducir la siguiente pista
-	} 
 }
 
+function secondsToString(seconds) {
+	var hour="";
+	if (seconds>3600){
+		hour = Math.floor(seconds / 3600);
+		hour = (hour < 10)? '0' + hour : hour;
+		hour+=":"
+	}
+    var minute = Math.floor((seconds / 60) % 60);
+    minute = (minute < 10)? '0' + minute : minute;
+    var second = seconds % 60;
+    second = (second < 10)? '0' + second : second;
+    return hour  + minute + ':' + second;
+}
 
