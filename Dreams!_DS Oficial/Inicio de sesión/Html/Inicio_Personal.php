@@ -39,7 +39,7 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Loge in Ds!</title>
+        <title>Log in Ds!</title>
         <link rel="icon" href="../../Recursos/Iconos/Ds_logo.ico">
         <link rel="stylesheet" href="../Css/header.css">
         <link rel="stylesheet" href="../Css/forms.css">
@@ -98,7 +98,7 @@
             <div id="datos_form">
             </div>
             <div class="datos">
-                <label for="NameType">Tu correo electrónio</label>
+                <label for="NameType">Tu correo electrónico</label>
                 <br>
                 <input type="email" name="EmailType"  placeholder="Tu nombre correo" class="nombre" id="NameType" required>
             </div>

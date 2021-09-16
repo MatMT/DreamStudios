@@ -160,7 +160,7 @@
                     </div>
                 </div>
 
-                <div class="second-container" translate="no">
+                <div class="second-container" >
                     <div class="title-icon">
                         <h2>Disfruta pequeños Momentos</h2>
                         <i class="icon-right-open-mini" id="flechaDe-2"></i>
@@ -171,7 +171,7 @@
                         <source src="https://drive.google.com/uc?export=view&id=1BLZzFjJNw254O957rnbzTHMKdI7TSd0i">
                     </audio>
 
-                    <div class="contenedor-principal-2">
+                    <div class="contenedor-principal-2" translate="no">
                         <div class="carousel-2" id="canciones-carrusales">
 
                             <div class="cancion" id="1" href="https://drive.google.com/uc?export=download&id=1RP8gf9cY8J5PV6V4JRhpZdChWhKSLH4N">
@@ -294,9 +294,8 @@
                     <div class="menu-dreams-usuario" id="menu-dreams">
 
                         <ul class="navegation">
-                            <li><a href=""><span>My Account</span></a></li>
-                            <li><a href=""><span>Billing Information</span></a></li>
-                            <li><a href="../../conexion_mysql/logout.php"><span>Log out</span></a></li>
+                            <li><a href=""><span>Mi cuenta</span></a></li>
+                            <li><a href="../../conexion_mysql/logout.php"><span>Cerrar Sesion</span></a></li>
                             <li>
                                 <!--traduccion-------------------------->
                                 <div id="google_translate_element_id" class="google"></div>
