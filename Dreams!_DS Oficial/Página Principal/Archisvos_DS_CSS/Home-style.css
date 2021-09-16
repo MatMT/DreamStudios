@@ -24,7 +24,11 @@ body {
     rgba(255, 94, 60, 1) 95%
   );
 
-  background: linear-gradient(180deg, rgba(255,40,113,1) 0%, rgba(51,7,57,1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 40, 113, 1) 0%,
+    rgba(51, 7, 57, 1) 100%
+  );
 
   background-attachment: fixed;
 
@@ -64,7 +68,6 @@ body {
 
 .main-contaier::-webkit-scrollbar-thumb {
   background-color: #ffffffc9;
-
 }
 
 /*Formato para el aside------------------------------------------------------------------*/
@@ -129,7 +132,8 @@ body {
 }
 
 .option :hover {
-  color: white;
+  /* color: white; */
+  color: rgba(104, 104, 104, 0.295);
   transition: 0.5s;
 }
 
@@ -241,7 +245,7 @@ header {
   z-index: -1;
 }
 
-header.sticky{
+header.sticky {
   border-top-left-radius: 0px;
 }
 /*Buscador y menu de opciones ----------------------------------------------------------*/
@@ -303,7 +307,6 @@ header.sticky{
   transition: 0.5s;
   opacity: 0.7;
 }
-
 
 /*Adaptación a mi pantalla*/
 @media screen and (max-width: 1281px) {
@@ -438,7 +441,7 @@ footer {
 
 /*Caja de la línea de tiempo e información de la canción ----------------------------------*/
 
-.line-time-song{
+.line-time-song {
   width: 37%;
   height: 100%;
   font-family: var(--our-font);
@@ -473,7 +476,6 @@ footer {
   margin-top: 0.5%;
 }
 
-
 #name-artist-2 {
   float: right;
 
@@ -483,12 +485,12 @@ footer {
 }
 
 @media screen and (min-width: 1615px) {
-  #name-song{
+  #name-song {
     font-size: 1.1vw;
   }
-  #name-artist-2{
+  #name-artist-2 {
     font-size: 1vw;
-  } 
+  }
 }
 
 /*Linea de tiempo*/
@@ -516,15 +518,15 @@ footer {
   border-radius: 5px;
 }
 
-.progress{
+.progress {
   background-color: white;
   height: 5px;
   width: 0%;
   border-radius: 5px;
 }
 
-.progress:hover{
-  background-color: #7664F9;
+.progress:hover {
+  background-color: #7664f9;
 }
 
 /*MOnitor del Audio*/
@@ -556,8 +558,7 @@ footer {
   border-radius: 5px;
 }
 
-
-input[type="range"]{
+input[type="range"] {
   width: 60%;
   height: 3px;
 }
@@ -574,11 +575,11 @@ input[type="range"]{
   align-items: center;
 }
 
-.pause{
+.pause {
   display: none;
 }
 
-.play-off{
+.play-off {
   display: none;
 }
 
@@ -596,7 +597,7 @@ input[type="range"]{
 
 /*Desaparecer los controles de la etiqueta audio*/
 
-audio{
+audio {
   display: none;
 }
 
@@ -826,5 +827,3 @@ input:checked ~ .menu-dreams-usuario {
 #google_translate_element_id option {
   color: black;
 }
-
-
