@@ -5,7 +5,7 @@
 }
 body {
     background: rgb(84,28,249);
-    background: linear-gradient(25deg, rgba(255,94,60,1) 10%, rgba(84,28,249,1) 95%) !important;
+    background: linear-gradient(180deg, rgba(255,40,113,1) 0%, rgba(51,7,57,1) 100%);
     
 }
 
@@ -60,8 +60,9 @@ header{
 .container-info-playlis img{
     height: 100%;
     min-height: 189.75px;
+    border-radius: 15px;
 
-    -webkit-box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.733);
+    -webkit-box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.644);
     filter: shadow(color=#000, direction=0, strength=3);
 }
 
@@ -101,45 +102,63 @@ header{
 
 }
 
-.controls-play-list button{
-    width: 25%;
-    height: 100%;
-    background-color: #FF7B62;
-    border: none;
-    border-radius: 5px;
-    font-size: var(--our-font);
+
+.buton-play{
+    width: 75px;
+    height: 75px;
+    background-color: rgba(255,40,113,1);
     color: white;
-    cursor: pointer;
-
-    min-width: 173.25px;
-    min-height: 36.16px;
-
-    transition: 0.5s;
-
-}
-
-.controls-play-list button p{
-    font-size: 2.5vh;
-}
-
-.controls-play-list button i{
-    display: none;
-    text-align: center;
-    transition: all 0.5s;
-    font-size: 3.2vh;
-}
-.controls-play-list button:hover{
-
+    border-radius: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.555);
+  
+    transition: 0.5s ease-in-out;
+    margin-left: 20px;
+  }
+  
+.buton-play i{
+    margin-left: 6px;
+    font-size: 2.2rem;
+  }
+  
+.buton-play:hover{
     transform: scale(1.03);
-    transform-origin: center;
+}
+  
+  /*Ir a Albums*/
+  
+.ir-albums{
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.664);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    color: rgba(255, 255, 255, 0.664);
+    transition: 0.4s ease-in-out;
 
+    margin: 0px 30px;
+  }
+  .controls-play-list a{
+    text-decoration: none;
+    margin: 0px;
+  }
+  
+.ir-albums:hover{
+    color: white;
+    border: white 1px solid;
 }
 
-.controls-play-list button:hover i{
-    display: block;
-}
-.controls-play-list button:hover p{
-    display: none;
+
+.controls-play-list .icon-dot-3{
+    font-size: 3vh;
+    cursor: pointer;
+    margin-left: 3vw;
 }
 
 .controls-play-list .icon-dot-3{

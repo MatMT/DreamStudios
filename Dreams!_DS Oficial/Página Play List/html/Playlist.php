@@ -35,7 +35,7 @@
 
         <link rel="icon" href="../../Recursos/Iconos/Ds_logo.ico">
         <link rel="stylesheet" href="../../Página Principal/Archisvos_DS_CSS/Home-style.css">
-        <link rel="stylesheet" href="../Archisvos_DS_CSS/Style_Playlist_Div.css">
+        <link rel="stylesheet" href="../Archisvos_DS_CSS/Style_Playlist_new.css">
         <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/icons-dreams-home.css">
         <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/icons-dreams-home-embedded.css">
         <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/animation.css">
@@ -52,36 +52,20 @@
                     <img src="../../Recursos/Imágenes/1x/Recurso 1.png">
                 </div>
                 <!---Menú de Dreams-->
-                <div class="main_menu_aside">
-
+                <<div class="main_menu_aside">
                     <div class="option">
                         <a href="../../Página Principal/index/HomePage2.php"><i class="icon-music-2"></i>
                         <p>Inicio</p></a>
                     </div>
-
                     <div class="active-option">
                         <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.html"><i class="icon-th-large-outline"></i>
-                        <p>Mi biblioteca</p></a>
+                        <p>Biblioteca DS</p></a>
                     </div>
-                    <div class="option">
-                        <a><i class="icon-heart-empty"></i>
-                        <p>Mis favoritos prox.</p></a>
-                    </div>
+
                     <div class="option">
                         <a href="../../Pagina DreamMaker J/html/DreaMaker.html"><i class="icon-music-1"></i>
-                        <p>DreaMaker prox.</p></a>
+                        <p translate="no">Buscar</p></a>
                     </div>
-                </div>
-
-                <div class="play-list">
-                    <div class="create_play_list option">
-                        <a><i class="icon-plus-squared"></i>
-                        <p>Crear Play List prox.</p></a>
-                    </div>
-                    <div class="my-play-list">
-                        <a href="../../Página Play List/html/Playlist.html"><p><i class="icon-right-open-mini"></i>My Music of Niall Horan my favorite</p></a>
-                    </div>
-
                 </div>
             </div>
 
@@ -90,10 +74,11 @@
                     <img src="../../Recursos/Otros/planetas.svg" alt="img">
                 </div>
                 <div class="controls-play-list">
-                    <button class="play-list-buttom" id="player">
-                        <i class="icon-play-circled2"></i>
-                        <p>Reproducir</p>
-                    </button>
+
+                    <div class="buton-play" id="player">
+                        <i class='icon-play-1' id="buton-pua"></i>
+                    </div>
+
                     <i class="icon-dot-3"></i>
                 </div>
                 <div class="play-list-songs">

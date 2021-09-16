@@ -75,7 +75,8 @@
             <section class="main-contaier">
                 <div class="planet-backg">
                     <img src="../../Recursos/Otros/planetas.svg" alt="img">
-                </div>       
+                </div>
+
                 <div class="controls-play-list">
                     <div class="buton-play" id="player">
                         <i class='icon-play-1' id="buton-pua"></i>
@@ -93,6 +94,7 @@
                     <i class="icon-note" id="nota"></i>
                    
                 </div>
+                
                 <div class="play-album-artist">
                     <div class="data-song">
                         <h4 id="number">#</h4>
