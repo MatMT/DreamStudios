@@ -56,6 +56,8 @@ function Init(){
 
     button.addEventListener("click", function(e){
         var start = document.getElementById("1");
+        start.classList.add("active");
+        
         var song_1 = start.getAttribute("href");
 
         //sustituir nombre de la canción
@@ -79,11 +81,14 @@ function Init(){
             playicon.className = "icon-play-1";
     
         }else{
-            pista.play();
-            playicon.className = "icon-pause-1";
-            alert(pista.duration)
-            elementos(pista);
-            load = setInterval(rep, 1);
+            pista.addEventListener("loadeddata", function(){
+                pista.play();
+                playicon.className = "icon-pause-1";
+                elementos(pista);
+                load = setInterval(rep, 1);
+            }) 
+            
+            
         }
         
     })    
@@ -161,6 +166,10 @@ function Init(){
                         break;
                     }
            }
+        }else{
+            pista.play();
+            icono.className = "icon-pause-1";
+            r = false;
         }
        
     })
@@ -291,7 +300,7 @@ function elementos(pista) {
     if((pista.paused == false)){
         icono.className = "icon-pause-1";
         load = setInterval(rep, 1);
-        tmer = setInterval(time, veces);
+        tmer = setInterval(hola, veces);
     }
     //Etiqueta de audio
 
@@ -404,8 +413,7 @@ function dcion() {
 }
 
 
-
-function time(){
+/*function time(){
     seg = pista.currentTime;
 
 
@@ -437,9 +445,6 @@ function time(){
         tiempo.innerHTML = minutos.toString() + ":0" + segundos.toString();
     }
 
-    
-
-
     if((seg + 1) >= pista.duration){
         //alert("Tendría que")
         segundos = 0;
@@ -454,7 +459,35 @@ function time(){
             //alert("se repite, pero asaber")
             pista.play();
             icono.className = "icon-pause-1";
-            
+            alert(segundos + minutos)
         }
     }
+}*/
+
+function hola(){
+    //seg = pista.currentTime;
+    
+    if (pista.currentTime > 0){
+        var actualSegundos = pista.currentTime.toFixed(0);
+        var actual = secondsToString(actualSegundos);
+        
+        var duracion = actual;
+        tiempo.innerHTML = duracion;
+    }
+
+
+}
+
+function secondsToString(seconds) {
+    var hour="";
+    if (seconds>3600){
+        hour = Math.floor(seconds / 3600);
+        hour = (hour < 10)? '0' + hour : hour;
+        hour+=":"
+    }
+    var minute = Math.floor((seconds / 60) % 60);
+    minute = (minute < 10)? + minute : minute;
+    var second = seconds % 60;
+    second = (second < 10)? '0' + second : second;
+    return hour  + minute + ':' + second;
 }

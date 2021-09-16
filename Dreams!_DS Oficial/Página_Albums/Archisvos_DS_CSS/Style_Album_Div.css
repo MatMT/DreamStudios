@@ -59,6 +59,7 @@ header{
 .container-info-playlis img{
     height: 100%;
     min-height: 189.75px;
+    border-radius: 15px;
 
     -webkit-box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.644);
     filter: shadow(color=#000, direction=0, strength=3);
@@ -198,9 +199,11 @@ header{
 
 /* ---------- ----------- --------- lista de Reproducción -------- ------------- ---------*/
 
-.play-list-songs{
-    width: 100%;
+.play-album-artist{
     margin-top: 5vh;
+}
+.play-list-song{
+    width: 100%;
 
     overflow-y: auto;
 }
@@ -262,6 +265,10 @@ header{
 
 #number{
     width: 10%;
+}
+
+.active{
+    color: white;
 }
 
 /*----- ------ ------ ----- NUEVAS mEDIA Q ----- ------ -------  ------*/

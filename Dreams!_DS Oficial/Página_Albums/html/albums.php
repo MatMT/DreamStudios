@@ -91,7 +91,7 @@
                     <img src="../../Recursos/Otros/planetas.svg" alt="img">
                 </div>       
                 <div class="controls-play-list">
-                    <button class="play-list-buttom">
+                    <button class="play-list-buttom" id="player">
                         <i class="icon-play-circled2"></i>
                         <p>Reproducir</p>
                     </button>
@@ -104,37 +104,39 @@
                     <i class="icon-note" id="nota"></i>
                    
                 </div>
-                <div class="play-list-songs">
+                <div class="play-album-artist">
                     <div class="data-song">
                         <h4 id="number">#</h4>
                         <h4>CANCIÓN</h4>
                         <h4>ARTISTA</h4>
                         <H4>ALBUM</H4>
                     </div>
-                    
-                    <?php
 
-                    while($resultados_album = $get_album->fetch(PDO::FETCH_ASSOC)){
+                    <audio id="audio" preload="metadata" tabindex="0" controls="">
+                        <source src="https://drive.google.com/uc?export=view&id=1BLZzFjJNw254O957rnbzTHMKdI7TSd0i">
+                    </audio>
+
+                    <div class="play-list-song" id="play-list-song" translate="no">
+                    
+                        <?php
+                        while($resultados_album = $get_album->fetch(PDO::FETCH_ASSOC)){
+                        
+                        $id_album = $resultados_album["id_song_a"];
                         echo "
-                        <div class='song-description-playlist'>
+                        <div class='song-description-playlist' href='".$resultados_album["direction_song"]."' id='".$id_album."'>
                             <p id='number'>".$resultados_album["id_song_a"]."</p>
-                            <p>".$resultados_album["name_song"]."</p>
-                            <p>".$resultados_album["name_artist"]."</p>
+                            <p id='n_song_".$id_album."'>".$resultados_album["name_song"]."</p>
+                            <p id='n_artist_".$id_album."'>".$resultados_album["name_artist"]."</p>
                             <p>".$resultados_album["name_album"]."</p>
-                            <audio class='song-artist' controls preload='metadata' id=''>
-                                <source src='".$resultados_album["direction_song"]."' type='audio/ogg' class='flex-item'>
-                            </audio>
                         </div>                  
 
                         ";
-                    }
-                       
+                        }
+                        ?>
 
-                    ?>
-
+                    </div>         
+                </div>
                 
-                    
-                </div>         
                 
             </section>
             <!----------------------------->
@@ -163,8 +165,11 @@
             </header>
 
             <div class="searcher-container">
-                <input type="text" class="searcher-user" placeholder="Buscar canciones, artistas..." required>
-                <i class="icon-note" id="nota"></i>
+                <form action="albums.php" method="post">
+                    <input type="text" class="searcher-user" placeholder="Buscar canciones, artistas..." required>
+                    <i class="icon-note" id="nota"></i>
+                </form>
+                
 
                 <div class="contariner-menu">
                     <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
@@ -199,12 +204,17 @@
         
         <footer>
             <div class="picture-song-footer">
-                <img src="../../Página Principal/img/1x1-Artist/nioce.jpg" id="img-artist-1">
+                <?php
+                        echo "<img src='".$resultsData["imgAlbum"]."' id='img-artist-1'>";
+                ?>
+
             </div>
             <div class="artist-enojoy">
+
                 <p id="enjoy-with">Disfruta con...</p>
-                <p id="name-artist">Harry Styles s</p>
-                
+                <?php
+                    echo "<p id='name-artist' translate='no'>".$resultsData["nameArtist"]."</p>"
+                ?>
             </div>
             
             <div class="more-icons">
@@ -214,10 +224,12 @@
 
             <div class="line-time-song">
 
-                <div class="center-song">
-                    <p id="name-song">Nice to Meet Ya</p>
+                <div class="center-song" translate="no">
+                    <p id="name-song">Esperando canción...</p>
                     <i class="icon-heart-empty" id="megusta"></i>
-                    <p id="name-artist-2">Niall Horan</p>
+                    <?php
+                        echo "<p id='name-artist-2' translate='no'>".$resultsData["nameArtist"]."</p>"
+                    ?>
                 </div>
 
                 <div class="center-bar-time">
@@ -233,9 +245,7 @@
             </div>
             <div class="sound-play">
                 <i class="icon-volume"></i>
-                <div class="audio-line">
-                    <div class="audio-progres"></div>
-                </div>
+                <input type="range" min="0" max="1" step="0.01" id="volumen" style="width: 60%; height: 3px;">
             </div>
 
             <div class="icons-play-pause">
@@ -244,14 +254,13 @@
 
                 <div class="play-pause">
                     <i class="icon-play-1 play" id="play-start"></i>
-                    <!--
-                        <i class="icon-pause-1 pause" id="play-start"></i> 
-                    -->  
                 </div>
                               
                 <i class="icon-to-end-1" id="next-song"></i>
             </div>
         </footer>
+
+        <script src="../../reproductor/play_list.js"></script>
 
     </body>
 </html>
