@@ -23,6 +23,9 @@ body {
     rgba(84, 28, 249, 1) 10%,
     rgba(255, 94, 60, 1) 95%
   );
+
+  background: linear-gradient(180deg, rgba(255,40,113,1) 0%, rgba(51,7,57,1) 100%);
+
   background-attachment: fixed;
 
   overflow-y: hidden;
@@ -134,9 +137,8 @@ body {
 
 .active-option {
   background-color: rgb(255, 255, 255);
-  box-shadow: -3px 3px 6px #000;
-
-  -webkit-box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.733);
+  /*box-shadow: -3px 3px 6px #000;
+  -webkit-box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.733);*/
   filter: shadow(color=#000, direction=0, strength=3);
 
   border-bottom-right-radius: 10px;
@@ -239,7 +241,6 @@ header {
   z-index: -1;
 }
 
-
 header.sticky{
   border-top-left-radius: 0px;
 }
@@ -277,13 +278,13 @@ header.sticky{
 
   position: absolute;
   left: 70px;
-  top: 22px;
+  top: 38px;
 }
 
 .searcher-container #nota {
   position: absolute;
   left: 78px;
-  top: 28px;
+  top: 45px;
 
   color: #878787;
   font-size: 14pt;
@@ -303,15 +304,7 @@ header.sticky{
   opacity: 0.7;
 }
 
-.line-soft {
-  background-color: #d3d3d3;
-  width: 95%;
-  height: 1px;
 
-  position: absolute;
-  left: 6%;
-  top: 80%;
-}
 /*Adaptación a mi pantalla*/
 @media screen and (max-width: 1281px) {
   .line-soft {
@@ -367,7 +360,7 @@ header.sticky{
 footer {
   width: 100%;
   height: 10%;
-  max-height: 95px;
+  min-height: 90px;
   background-color: #111110ee;
 
   border-top: rgba(255, 255, 255, 0.425) 0.5px solid;
@@ -475,21 +468,27 @@ footer {
   float: left;
 
   font-weight: 300;
-  font-size: 1.9vh;
+  font-size: 1.3vw;
   font-weight: bold;
   margin-top: 0.5%;
 }
 
-#name-artist-2 {
-  float: right;
-}
 
 #name-artist-2 {
   float: right;
 
-  font-size: 1.7vh;
+  font-size: 1.2vw;
 
   margin-top: 1%;
+}
+
+@media screen and (min-width: 1615px) {
+  #name-song{
+    font-size: 1.1vw;
+  }
+  #name-artist-2{
+    font-size: 1vw;
+  } 
 }
 
 /*Linea de tiempo*/
@@ -713,7 +712,7 @@ audio{
 .navegation li a {
   color: white;
   text-decoration: none;
-  font-size: 1.5vw;
+  font-size: 1.3rem;
   width: 100%;
   height: 100%;
   display: block;
@@ -739,7 +738,7 @@ audio{
 
   position: absolute;
   right: 30px;
-  top: 20px;
+  top: 28px;
 
   padding: 12.5px 12.5px;
 

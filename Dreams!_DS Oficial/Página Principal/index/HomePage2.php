@@ -178,7 +178,7 @@
 
                 <div class="second-container" translate="no">
                     <div class="title-icon">
-                        <h2>Disfruta de los pequeños tiempos</h2>
+                        <h2>Disfruta pequeños Momentos</h2>
                         <i class="icon-right-open-mini" id="flechaDe-2"></i>
                         <i class="icon-left-open-mini" id="flechaIz-2"></i>
                     </div>
@@ -257,7 +257,7 @@
                <div class="tercer-contenedor">
 
                     <div class="title-icon">
-                        <h2>Una canción para cada Situación</h2>
+                        <h2>Una Canción para cada Ocación</h2>
                         <i class="icon-right-open-mini" id="flechaDe-3"></i>
                         <i class="icon-left-open-mini" id="flechaIz-3"></i>
                     </div>

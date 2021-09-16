@@ -52,11 +52,7 @@
     cursor: pointer;
 }
 
-@media screen and (min-width: 1910px) {
-    .carousel .artista{
-        min-width: 20%;
-    }
-}
+
 
 .carousel .artista:hover{
     transform: scale(1.05);
@@ -72,8 +68,8 @@
     width: 100%;
     vertical-align: top;
     border-radius: 50%;
-    box-shadow: -3px 3px 6px #000;
-    -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.733);
+    /*box-shadow: -3px 3px 6px #000;
+    -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.733);*/
 
     display: flex;
     flex-direction: column;
@@ -163,9 +159,9 @@
 .carousel-2 .cancion img{
     width: 100%;
     vertical-align: top;
-    border-radius: 10px;
-    box-shadow: -3px 3px 6px #000;
-    -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.733);
+    border-radius: 5px;
+    /*box-shadow: -3px 3px 6px #000;
+    -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.733);*/
 
     display: flex;
     flex-direction: column;
@@ -238,7 +234,7 @@
 }
 
 .carousel-3 .cancion{
-    min-width: 22%;
+    width: 22%;
     transition: 0.3s ease all;
     margin: 0px 15px;
 
@@ -248,7 +244,7 @@
 
 .carousel-3 .cancion img{
     width: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .carousel-3 .cancion:hover{
@@ -289,4 +285,20 @@
 
 .cancion:hover .circulo-i-3{
     opacity: 1;
+}
+
+
+/*---------------- ---------------- cONDICIONES ---------------------*/
+@media screen and (min-width: 1910px) {
+    .carousel .artista{
+        min-width: 15%;
+    }
+
+    .carousel-2 .cancion{
+        min-width: 13%;
+    }
+
+    .carousel-3 .cancion{
+        width: 15%;
+    }
 }
