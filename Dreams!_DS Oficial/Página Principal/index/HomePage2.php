@@ -176,7 +176,7 @@
                     </div>
                 </div>
 
-                <div class="second-container" translate="no">
+                <div class="second-container" >
                     <div class="title-icon">
                         <h2>Disfruta pequeños Momentos</h2>
                         <i class="icon-right-open-mini" id="flechaDe-2"></i>
@@ -187,7 +187,7 @@
                         <source src="https://drive.google.com/uc?export=view&id=1BLZzFjJNw254O957rnbzTHMKdI7TSd0i">
                     </audio>
 
-                    <div class="contenedor-principal-2">
+                    <div class="contenedor-principal-2" translate="no">
                         <div class="carousel-2" id="canciones-carrusales">
 
                             <div class="cancion" id="1" href="https://drive.google.com/uc?export=download&id=1RP8gf9cY8J5PV6V4JRhpZdChWhKSLH4N">
