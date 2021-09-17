@@ -96,7 +96,7 @@
                         <p>Inicio</p></a>
                     </div>
                     <div class="option">
-                        <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.html"><i class="icon-th-large-outline"></i>
+                        <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.php"><i class="icon-th-large-outline"></i>
                         <p>Biblioteca DS</p></a>
                     </div>
 
@@ -159,6 +159,47 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="contenedor-carrusel">
+                    <div class="descripcion-bottum">
+                        <h2>Tenemos a un nuevos Dreamers...</h2>
+                        <i class="icon-right-open-mini" id="flechaDe"></i>
+                        <i class="icon-left-open-mini" id="flechaIz"></i>
+                    </div>
+
+                    <div class="contenedor-principal">
+                        <div class="carousel" translate="no">
+                        <?php
+
+                            $new = $conexion->prepare("SELECT * FROM artistas_dreams WHERE id_art = '19'");
+                            $new->execute();
+
+
+
+                            while($new_art = $new->fetch(PDO::FETCH_ASSOC)){
+                                echo "
+                                <div class='artista temporal' id='hola_".$new_art["id_art"]."'>
+                                    <img src='".$new_art["img_artist"]."' alt='img'>
+                                    <h4>".$new_art["name_artist"]."</h4>
+                                    <i class='icon-play-circled'></i>
+                                </div>
+
+
+                                <script>
+                                    var newartistSelect = document.getElementById('hola_".$new_art["id_art"]."');
+
+                                    newartistSelect.addEventListener('click', function(){
+                                        var reference = ".$new_art['id_art'].";
+                                        window.location.href = window.location.href + '?w1=' + reference;
+                                    });
+                                </script>";
+                            }
+                        ?>
+                        </div>
+                    </div>
+                </div>
+
+                
 
                 <div class="second-container" >
                     <div class="title-icon">
@@ -261,12 +302,12 @@
                                     </div>
 
                                     <script>
-                                var artistSelect = document.getElementById('num_".$playlist["id_play"]."');
-                                artistSelect.addEventListener('click', function(){
-                                    var reference2 = ".$playlist["id_play"].";
-                                    window.location.href = window.location.href + '?w2=' + reference2;
-                                });
-                                </script>";
+                                        var artistSelect = document.getElementById('num_".$playlist["id_play"]."');
+                                        artistSelect.addEventListener('click', function(){
+                                            var reference2 = ".$playlist["id_play"].";
+                                            window.location.href = window.location.href + '?w2=' + reference2;
+                                        });
+                                    </script>";
                                 }
                             ?>
 
