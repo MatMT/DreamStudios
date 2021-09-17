@@ -52,6 +52,13 @@
     cursor: pointer;
 }
 
+/*Temporal*/
+
+.temporal{
+    min-width: none;
+    width: 22%;
+}
+
 
 
 .carousel .artista:hover{

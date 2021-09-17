@@ -118,19 +118,23 @@ header{
     margin-left: 20px;
   }
   
-.buton-play i{
+.buton-play .icon-play-1{
     margin-left: 6px;
     font-size: 2.2rem;
-  }
+}
   
 .buton-play:hover{
     transform: scale(1.03);
 }
-  
+
+.buton-play .icon-pause-1{
+    margin-left: 0px;
+    font-size: 2.2rem;
+}
   /*Ir a Albums*/
   
 .ir-albums{
-    width: 130px;
+    width: 150px;
     height: 40px;
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.664);
@@ -142,7 +146,7 @@ header{
     color: rgba(255, 255, 255, 0.664);
     transition: 0.4s ease-in-out;
 
-    margin: 0px 30px;
+    margin: 0px 50px;
   }
   .controls-play-list a{
     text-decoration: none;
@@ -198,14 +202,20 @@ header{
 
 /* ---------- ----------- --------- lista de Reproducción -------- ------------- ---------*/
 
-.play-list-songs{
+
+.play-list-songs {
     width: 100%;
-    margin-top: 5vh;
-
+    padding: 25px;
+  
     overflow-y: auto;
-}
-
-.data-song{
+  }
+  .play-list-songs h1{
+    margin-left: 50px;
+    margin-bottom: 50px;
+    font-size: 1.6rem;
+  }
+  
+  .data-song {
     width: 90%;
     height: 45px;
     display: flex;
@@ -213,56 +223,63 @@ header{
     margin-right: auto;
     align-items: center;
     justify-content: space-around;
-
+  
     border-bottom: #878787 solid 1px;
-
-}
-
-.data-song h4{
+  }
+  
+  .data-song h4 {
     font-weight: normal;
-
+  
     width: 20%;
     text-align: center;
-
+  
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.song-description-playlist{
+  }
+  
+  .song-description-playlist {
     width: 90%;
-    height: 45px;
+    height: 50px;
     display: flex;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
     justify-content: space-around;
-
-    border-bottom: #c5c5c5 solid 1px;
-
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.song-description-playlist:hover{
-    background-color: rgba(182, 182, 182, 0.514);
-}
-
-.song-description-playlist p{
+    color: rgb(201, 200, 200);
+  
+    /*border-bottom: #c5c5c5 solid 1px;*/
+  
+    transition: 0.3s;
+    border-radius: 4px;
+  }
+  
+  .song-description-playlist:hover {
+    background-color: rgba(255, 255, 255, 0.425);
+  }
+  
+  .song-description-playlist p {
     font-weight: normal;
-    font-size: 1.7vh;
-
+    font-size: 1.6vh;
+  
     width: 20%;
     text-align: center;
-
+  
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-#number{
+  }
+  
+  #number {
     width: 10%;
-}
+  }
+  
+  .active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.212);
+    width: 90%;
+    height: 50px;
+  }
 
 /*----- ------ ------ ----- NUEVAS mEDIA Q ----- ------ -------  ------*/
 

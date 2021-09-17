@@ -1,15 +1,16 @@
 .title_library {
   padding-left: 4.5%;
+  margin: 35px 10px;
 }
 
 .yourLibrary {
-  font-size: 5em;
+  font-size: 6em;
   margin-right: 14px;
 }
 
 .name-user-title {
   color: #c4c4c4;
-  font-size: 2.5em;
+  font-size: 3em;
   padding-bottom: 1.5rem;
 }
 

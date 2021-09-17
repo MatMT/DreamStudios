@@ -166,7 +166,7 @@
          <header>
             <div class="back">
                 <nav class="">
-                    <a href="../../Pagina General/Página-general-Oficial/Paginageneral.html">
+                    <a href="../../Pagina General/general_pagina/general.html">
                         <img src="../../Pagina General/Página-general-oficial/imagenes/white-logo.svg" alt="img" id="white-mod">
                         <img src="../../Pagina General/Página-general-oficial/imagenes/black-logo.svg" alt="img" id="black-mod">
                     </a>
