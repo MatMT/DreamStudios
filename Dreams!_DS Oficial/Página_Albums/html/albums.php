@@ -89,9 +89,9 @@
                     <i class='icon-play-1' id="buton-pua"></i>
                 </div>
 
-                <a href="#alb-arti">
+                <a href="../../Página Artista/html/Artistas.php">
                     <div class="ir-albums">
-                        <p>Volver al artista</p>
+                        <p>Vamos al Artista</p>
                     </div>
                 </a>
 
