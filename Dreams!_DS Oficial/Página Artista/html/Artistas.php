@@ -81,16 +81,16 @@
                     </div>
                     <div class="option">
                         <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.html"><i class="icon-th-large-outline"></i>
-                        <p>Mi biblioteca</p></a>
+                        <p>Biblioteca DS</p></a>
                     </div>
-                    <div class="option">
+                    <!-- <div class="option">
                         <a href=""><i class="icon-heart-empty"></i>
                         <p>Mis favoritos</p></a>
-                    </div>
-                    <div class="option">
+                    </div> -->
+                    <!-- <div class="option">
                         <a href="../../Pagina DreamMaker J/html/DreaMaker.html"><i class="icon-music-1"></i>
                         <p>DreaMaker</p></a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -259,7 +259,7 @@
 
                 <div class="center-song" translate="no">
                     <p id="name-song">Esperando canción...</p>
-                    <i class="icon-heart-empty" id="megusta"></i>
+                    <!-- <i class="icon-heart-empty" id="megusta"></i> -->
                     <?php
                         echo "<p id='name-artist-2' translate='no'>".$results["name_artist"]."</p>"
                     ?>
