@@ -1,315 +1,293 @@
-:root{
-    --our-font: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    --border-cont: 1px solid white;
+:root {
+  --our-font: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  --border-cont: 1px solid white;
 }
 
 /* ----    ----    ---- CAROUSEL ----    ---- ----- */
-.contenedor-carrusel{
-    margin-top: 50px;
+.contenedor-carrusel {
+  margin-top: 50px;
 }
 
 /* Titulo del carrucel: Artistas recomendados*/
-.descripcion-bottum h2{
-    float: left;
-    font-size: 1.7vw;
+.descripcion-bottum h2 {
+  float: left;
+  font-size: 1.7vw;
 }
 
-.descripcion-bottum i{
-    float: right;
-    font-size: 2.5vw;
-    cursor: pointer;
-
+.descripcion-bottum i {
+  float: right;
+  font-size: 2.5vw;
+  cursor: pointer;
 }
 
-.icon-left-open-mini.active{
-    color: rgb(175, 173, 173);
-    cursor:inherit;
+.icon-left-open-mini.active {
+  color: rgb(175, 173, 173);
+  cursor: inherit;
 }
-
-
-
 
 /*------------------- Carousel ----------------------------------*/
-.contenedor-principal{
-    width: 100%;
-    padding: 15px 0px;
-    overflow: hidden;
-    scroll-behavior: smooth;
+.contenedor-principal {
+  width: 100%;
+  padding: 15px 0px;
+  overflow: hidden;
+  scroll-behavior: smooth;
 }
 
-.contenedor-principal .carousel{
-    display: flex;
-    flex-wrap: nowrap;
+.contenedor-principal .carousel {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
-.carousel .artista{
-    min-width: 22%;
-    transition: 0.3s ease all;
-    margin: 0px 15px;
+.carousel .artista {
+  min-width: 22%;
+  transition: 0.3s ease all;
+  margin: 0px 15px;
 
-    padding: 10px;
-    position: relative;
-    cursor: pointer;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
 }
 
 /*Temporal*/
 
-.temporal{
-    min-width: none;
-    width: 22%;
+.temporal {
+  min-width: none;
+  width: 22%;
 }
 
+.carousel .artista:hover {
+  transform: scale(1.05);
+  transform-origin: center;
+  transition: 0.5s;
 
-
-.carousel .artista:hover{
-    transform: scale(1.05);
-    transform-origin: center;
-    transition: 0.5s;
-
-    background-color: rgba(0, 0, 0, 0.452);
-    border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.452);
+  border-radius: 15px;
 }
 
-
-.carousel .artista img{
-    width: 100%;
-    vertical-align: top;
-    border-radius: 50%;
-    /*box-shadow: -3px 3px 6px #000;
+.carousel .artista img {
+  width: 100%;
+  vertical-align: top;
+  border-radius: 50%;
+  /*box-shadow: -3px 3px 6px #000;
     -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.733);*/
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.carousel .artista h4{
-    margin-top: 10px;
-    text-align: center;
-    font-weight: normal;
-    
+.carousel .artista h4 {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: normal;
 }
-
-
 
 /*Hover circulo play*/
 
-.carousel .artista i{
-    font-size: 4vmin;
-    position: absolute;
-    left: 67%;
-    top: 60%;
-    text-shadow: -3px 4px 10px #000;
+.carousel .artista i {
+  font-size: 4vmin;
+  position: absolute;
+  left: 67%;
+  top: 60%;
+  text-shadow: -3px 4px 10px #000;
 
-    opacity: 0;
-    transition: 0.5s;
-
+  opacity: 0;
+  transition: 0.5s;
 }
 
-
-
-.carousel .artista:hover i{
-    opacity: 1;
+.carousel .artista:hover i {
+  opacity: 1;
 }
 
 /*------     --------------  Segundo carousell --------- ------------*/
 
-.second-container{
-    margin-top: 25px;
+.second-container {
+  margin-top: 25px;
 }
 
-.title-icon h2{
-    float: left;
-    font-size: 1.6vw;
+.title-icon h2 {
+  float: left;
+  font-size: 1.6vw;
 }
 
-.title-icon i{
-    float: right;
-    font-size: 2.5vw;
+.title-icon i {
+  float: right;
+  font-size: 2.5vw;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /*-------------Segundo carousel*/
 
-.contenedor-principal-2{
-    width: 100%;
-    padding: 15px 0px;
-    overflow: hidden;
-    scroll-behavior: smooth;
+.contenedor-principal-2 {
+  width: 100%;
+  padding: 15px 0px;
+  overflow: hidden;
+  scroll-behavior: smooth;
 }
 
-.contenedor-principal-2 .carousel-2{
-    display: flex;
-    flex-wrap: nowrap;
+.contenedor-principal-2 .carousel-2 {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
+.carousel-2 .cancion {
+  min-width: 18%;
+  transition: 0.3s ease all;
+  margin: 0px 10px;
 
-.carousel-2 .cancion{
-    min-width: 18%;
-    transition: 0.3s ease all;
-    margin: 0px 10px;
-
-    padding: 10px;
-    position: relative;
-
+  padding: 10px;
+  position: relative;
 }
-.carousel-2 .cancion:hover{
-    transform: scale(1.05);
-    transform-origin: center;
-    transition: 0.5s;
+.carousel-2 .cancion:hover {
+  transform: scale(1.05);
+  transform-origin: center;
+  transition: 0.5s;
 
-    background-color: rgba(0, 0, 0, 0.452);
-    border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.452);
+  border-radius: 15px;
 }
 
-.carousel-2 .cancion img{
-    width: 100%;
-    vertical-align: top;
-    border-radius: 5px;
-    /*box-shadow: -3px 3px 6px #000;
+.carousel-2 .cancion img {
+  width: 100%;
+  vertical-align: top;
+  border-radius: 5px;
+  /*box-shadow: -3px 3px 6px #000;
     -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.733);*/
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    margin-bottom: 10px;
-
+  margin-bottom: 10px;
 }
 
 .cancion h4,
-.cancion h5{
-    font-weight: normal;
-    text-align: center;
+.cancion h5 {
+  font-weight: normal;
+  text-align: center;
 }
 
-.cancion h5{
-    color: rgb(179, 179, 179);
+.cancion h5 {
+  color: rgb(179, 179, 179);
 }
 
-.circulo-i{
-    width: 5vmin;
-    height: 5vmin;
-    position: absolute;
-	top: 25%;
-	left: 35%;
-    opacity: 0;
-    border-radius: 5vmin;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 3px;
+.circulo-i {
+  width: 5vmin;
+  height: 5vmin;
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  opacity: 0;
+  border-radius: 5vmin;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 3px;
 
-    box-shadow: 0px 3px 6px #000;
-    -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.733);
-    
-    transition: 0.6s;
+  box-shadow: 0px 3px 6px #000;
+  -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.733);
+
+  transition: 0.6s;
 }
 
-.circulo-i i{
-    color: black;
-    font-size: 1.5rem;
-
+.circulo-i i {
+  color: black;
+  font-size: 1.5rem;
 }
 
-.cancion:hover .circulo-i{
-    opacity: 1;
+.cancion:hover .circulo-i {
+  opacity: 1;
 }
-
 
 /*Contenedor 3*/
 
-.tercer-contenedor{
-    width: 100%;
-    margin: 10px;
+.tercer-contenedor {
+  width: 100%;
+  margin: 10px;
 }
 
-.contenedor-principal-3{
-    width: 100%;
-    margin-top: 30px;
-    padding: 20px 0px;
-    overflow: hidden;
-    scroll-behavior: smooth;
+.contenedor-principal-3 {
+  width: 100%;
+  margin-top: 30px;
+  padding: 20px 0px;
+  overflow: hidden;
+  scroll-behavior: smooth;
 }
 
-
-.carousel-3{
-    display: flex;
-    flex-wrap: nowrap;
+.carousel-3 {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
-.carousel-3 .cancion{
-    width: 22%;
-    transition: 0.3s ease all;
-    margin: 0px 15px;
+.carousel-3 .cancion {
+  width: 22%;
+  transition: 0.3s ease all;
+  margin: 0px 15px;
 
-    padding: 10px;
-    position: relative;
+  padding: 10px;
+  position: relative;
 }
 
-.carousel-3 .cancion img{
-    width: 100%;
-    border-radius: 5px;
+.carousel-3 .cancion img {
+  width: 100%;
+  border-radius: 5px;
 }
 
-.carousel-3 .cancion:hover{
-    transform: scale(1.05);
-    transform-origin: center;
-    transition: 0.5s;
+.carousel-3 .cancion:hover {
+  transform: scale(1.05);
+  transform-origin: center;
+  transition: 0.5s;
 
-    background-color: rgba(0, 0, 0, 0.452);
-    border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.452);
+  border-radius: 15px;
 }
 
+.circulo-i-3 {
+  width: 5vmin;
+  height: 5vmin;
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  opacity: 0;
+  border-radius: 5vmin;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 3px;
 
-.circulo-i-3{
-    width: 5vmin;
-    height: 5vmin;
-    position: absolute;
-	top: 35%;
-	left: 40%;
-    opacity: 0;
-    border-radius: 5vmin;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 3px;
+  box-shadow: 0px 3px 6px #000;
+  -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.733);
 
-    box-shadow: 0px 3px 6px #000;
-    -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.733);
-    
-    transition: 0.6s;
+  transition: 0.6s;
 }
 
-.circulo-i-3 i{
-    color: black;
-    font-size: 1.5rem;
-
+.circulo-i-3 i {
+  color: black;
+  font-size: 1.5rem;
 }
 
-.cancion:hover .circulo-i-3{
-    opacity: 1;
+.cancion:hover .circulo-i-3 {
+  opacity: 1;
 }
-
 
 /*---------------- ---------------- cONDICIONES ---------------------*/
 @media screen and (min-width: 1910px) {
-    .carousel .artista{
-        min-width: 15%;
-    }
+  .carousel .artista {
+    min-width: 15%;
+  }
 
-    .carousel-2 .cancion{
-        min-width: 13%;
-    }
+  .carousel-2 .cancion {
+    min-width: 13%;
+  }
 
-    .carousel-3 .cancion{
-        width: 15%;
-    }
+  .carousel-3 .cancion {
+    width: 15%;
+  }
 
-    .temporal{
-        width: 15%;
-    }
+  .temporal {
+    width: 15%;
+  }
 }
