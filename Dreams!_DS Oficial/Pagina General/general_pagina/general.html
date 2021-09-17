@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dreams! Home</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="archivos_css/general_style1.css">
+    </head>
+    <body>
+        <div class="portada">
+            <div class="header-container">
+                <nav>
+                    <img src="img/white-logo.svg" alt="img" id="white-mod">
+                    <img src="img/black-logo.svg" alt="img" id="black-mod">
+                    <ul class="navigation" data-animation="left-rigth">
+                        <li>
+                            <!--traduccion-------------------------->
+                            <div id="google_translate_element_id" class="google"></div>
+                               
+                            <script type="text/javascript" src="../../Recursos/Otros/js/traductor.js"></script>
+                            <!------------------------------------->
+                           </li>
+                        <li><a href="../../Inicio de sesión/Html/Inicio_Personal.php">Iniciar Sesion</a></li>
+                        <li><a href="../../Página Registro/Html/Forms_Personal.php">Registrarse</a></li>
+                        <li><a href="../../About us/Html/Nosotros.html">Sobre Nosotros</a></li>
+                        
+                     
+                    </ul>
+                </nav>
+            </div>
+            <div class="title-container">
+                <div class="cuadro-dreams">
+                    <p>LOVE MUSIC</p>
+                </div>
+                <h1>Dreams!</h1>
+                <h2>Si puedes soñarlo, puedes hacerlo</h2>
+                <h3>Comparte grandes momentos escuchando la musica que disfrutas</h3>
+                <a href="../../Inicio de sesión/Html/Inicio_Personal.php"><div class="boton-pley">
+                    <p>Play</p>
+                    <img src="img/Recurso 2.png" alt="img">
+                </div></a>
+            </div>
+            <a href="#seccion-1">
+                <div class="flecha-abajo">
+                    <img src="img/flecha-abajo.png" alt="">
+                </div>
+            </a>
+           
+        </div>
+
+        <section class="contenedor-contenido" id="seccion-1">
+            <article class="seccion_1">
+                <h1>Conoce más acerca de</h1>
+                <h2>Dreams!</h2>
+                <div class="funcionalidad">
+                    <div class="fun-1 contenedores">
+                        <img src="img/nota1.png" alt="img">
+                        <div class="cont">
+                            <h1>Escucha música a todo Volumén</h1>
+                            <p>Reproduce canciones que te haran cantar de emoción, escucha enteras las listas de reprodución para cada momento de la vida.</p>
+                        </div>
+                    </div>
+                    <div class="fun-2 contenedores">
+                        
+                        <div class="cont">
+                            <h1>Encuentra a tus Artistas Favoritos</h1>
+                            <p>Busca dentro de la lista de Dreams a ese artista que te tanto te encanta.</p>
+                        </div>
+                        <img src="img/nota2.png" alt="img">
+                        
+                    </div>
+                </div>
+            </article>
+            <article class="seccion_2">
+                <div class="container-img">
+                    <h2>¿Traes tus</h2>
+                    <h1>Auriculares?</h1>
+                    <h3>Disfruta el momento, recrea tus sueños</h3>
+                </div>
+            </article>
+
+            <article class="seccion_3">
+                <h1 class="titulo">¿Qué esperas por probar Dreams!?</h1>
+                <div class="box">
+                    <div class="text_3">
+                        <h1>Elige tu Música favorita</h1>
+                        <p>Escucha la música de tu preferencia, repite las veces que quieras esa canción que disfrutas, explora las PlayLists de tus Artistas preferidos. ¡Y sobre todo Vive el Momento!</p>
+                    </div>
+                    <div class="img_3">
+                        <img src="img/A-2184482-1624617975-1271.jpeg.jpg" alt="">
+                    </div>
+                </div>
+                
+            </article>
+        </section>
+
+        <footer>
+            <div class="contenedor_img">
+                <img src="img/transparent.png" alt="">
+            </div>
+            <div class="box_text_1 contact">
+                <h3>Desarrollada por</h3>
+                <h4>DreamStudios</h4>
+            </div>
+            <div class="box_text_2 contact">
+                <h3>Contáctanos</h3>
+                <h4>Tel: 7614-4883</h4>
+                <h4>dreamstudiosv.net@gmail.com</h4>
+            </div>
+            
+        </footer>
+
+    </body>
+    <script>
+        window.addEventListener("scroll", function(){
+            const header = document.querySelector("nav");
+
+            const logo_white = document.getElementById("white-mod");
+
+            const logo_black = document.getElementById("black-mod")
+
+            header.classList.toggle("sticky", window.scrollY > 0);
+
+            logo_white.classList.add("remove", window.scrollY > 0);
+            logo_black.classList.toggle("active", window.scrollY > 0);
+
+
+        });
+    </script>
+</html>

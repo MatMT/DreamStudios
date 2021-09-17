@@ -58,7 +58,7 @@
                         <p>Inicio</p></a>
                     </div>
                     <div class="active-option">
-                        <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.html"><i class="icon-th-large-outline"></i>
+                        <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.php"><i class="icon-th-large-outline"></i>
                         <p>Biblioteca DS</p></a>
                     </div>
 
@@ -78,6 +78,10 @@
                     <div class="buton-play" id="player">
                         <i class='icon-play-1' id="buton-pua"></i>
                     </div>
+
+                    <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.html"><div class="ir-albums">
+                        <p>Ir a Biblioteca</p>
+                    </div></a>
 
                     <i class="icon-dot-3"></i>
                 </div>

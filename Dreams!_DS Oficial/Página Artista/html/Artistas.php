@@ -24,8 +24,12 @@
 
         //------- Obtener Albums-------
 
-        $albumsprepare = $conexion->prepare("SELECT * FROM dreamaker_artist_".$_SESSION['reference_artist']."");
-        $albumsprepare->execute();
+        if($_SESSION['reference_artist'] != "19"){
+            $albumsprepare = $conexion->prepare("SELECT * FROM dreamaker_artist_".$_SESSION['reference_artist']."");
+            $albumsprepare->execute();
+        }
+
+        
     }
 
     if (isset($_GET["w2"])){
@@ -80,16 +84,12 @@
                         <p>Inicio</p></a>
                     </div>
                     <div class="option">
-                        <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.html"><i class="icon-th-large-outline"></i>
-                        <p>Mi biblioteca</p></a>
-                    </div>
-                    <div class="option">
-                        <a href=""><i class="icon-heart-empty"></i>
-                        <p>Mis favoritos</p></a>
+                        <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.php"><i class="icon-th-large-outline"></i>
+                        <p>Biblioteca DS</p></a>
                     </div>
                     <div class="option">
                         <a href="../../Pagina DreamMaker J/html/DreaMaker.html"><i class="icon-music-1"></i>
-                        <p>DreaMaker</p></a>
+                        <p>Buscador</p></a>
                     </div>
                 </div>
             </div>
@@ -160,24 +160,27 @@
                     <div class="albums-artista">
 
                         <?php
-
-                            while($listAlbum = $albumsprepare->fetch(PDO::FETCH_ASSOC)){
-                                echo "
-                                <div class='album' id='album_".$listAlbum["id_album"]."'>
-                                    <img src='".$listAlbum["imgAlbum"]."' alt='img'>
-                                    <h4 translate='no'>".$listAlbum["nameAlbum"]."</h4>
-                                    <h5>13 March 2020</h5>
-                                    <i class='icon-play-circled'></i>
-                                </div>
-                                <script>
-                                    var albumSelect = document.getElementById('album_".$listAlbum["id_album"]."');
-
-                                    albumSelect.addEventListener('click', function(){
-                                        var reference = ".$listAlbum['id_album'].";
-                                        window.location.href = window.location.href + '?w2=' + reference;
-                                    });
-                                </script>";
+                            
+                            if($_SESSION['reference_artist'] != "19"){
+                                while($listAlbum = $albumsprepare->fetch(PDO::FETCH_ASSOC)){
+                                    echo "
+                                    <div class='album' id='album_".$listAlbum["id_album"]."'>
+                                        <img src='".$listAlbum["imgAlbum"]."' alt='img'>
+                                        <h4 translate='no'>".$listAlbum["nameAlbum"]."</h4>
+                                        <h5>13 March 2020</h5>
+                                        <i class='icon-play-circled'></i>
+                                    </div>
+                                    <script>
+                                        var albumSelect = document.getElementById('album_".$listAlbum["id_album"]."');
+    
+                                        albumSelect.addEventListener('click', function(){
+                                            var reference = ".$listAlbum['id_album'].";
+                                            window.location.href = window.location.href + '?w2=' + reference;
+                                        });
+                                    </script>";
+                                }
                             }
+                            
                         ?>
                     </div>
                 </div>

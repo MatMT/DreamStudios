@@ -273,9 +273,11 @@ function run(song, pista, link){
     }) 
 }
 
-
+var startplay;
 
 function elementos(pista) {
+    
+    startplay = document.getElementById("buton-pua");
     
     barra = document.getElementById("barra");
     progreso =  document.getElementById("progress");
@@ -324,10 +326,12 @@ function reproduccion() {
         pista.volume = 0.5;
         pista.pause();
         icono.className = "icon-play-1";
+        startplay.className = "icon-play-1";
 
     }else{
         pista.play();
         icono.className = "icon-pause-1";
+        startplay.className = "icon-pause-1";
 
         load = setInterval(rep, 1);
     }

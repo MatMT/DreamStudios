@@ -1,3 +1,24 @@
+<?php
+    session_start();
+
+    require("../../conexion_mysql/conection-basedatos.php");
+    
+    // sLECCIONAR SEGÚN LA CATEGORIA DE LA CANCIÓN
+    
+    //CANCIONES CASUALES
+
+    $casuales = $conexion->prepare("SELECT * FROM biblioteca_dreams WHERE categoria = 'casual'");
+    $casuales->execute();
+
+    $_1list = $casuales->fetch(PDO::FETCH_ASSOC);
+
+   
+
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -43,45 +64,33 @@
     
             </div>
 
-            <!--Importanteeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-->
+
 
             <section class="main-contaier">
+
                 <div class="planet-backg">
                     <img src="../../Recursos/Otros/planetas.svg" alt="img">
                 </div>
                 <div class="title_library">
-                    <h1 class="yourLibrary">Tu biblioteca</h1>
-                    <h2 class="name-user-title">Mateo Elías</h2>
-                    <div class="list-group">
-                        <br>
-                        <a href="#" class="list_library">Tus Play List</a>
-                        <a href="#" class="list_library">Tus favoritos</a>
-                        <a href="#" class="list_library">DreamStudios</a>
-                    </div>
-                    <div class="line-library"></div>
-                    <div class="line-library-select"></div>
+                    <h1 class="yourLibrary">Biblioteca</h1>
+                    <h2 class="name-user-title">Dreams!</h2>
+                    
                 </div>
-                <div class="flex-container">
-                    <div class="flex-subcontainer">
-                        <a href="../../Página Play List/html/Playlist.html" class="flex-item"></a>
-                        <h3 class="name-list">De todo</h3>
-                        <span class="descrip-list">Lo que quieres escuchar</span>
+
+                <div class="main-container-playlist">
+                    
+                    <div class="tipo-1">
+                        <div class="carrucel-1">
+                            
+
+                            
+                        </div>
                     </div>
 
-                    <div class="flex-subcontainer">
-                        <a href="#" class="flex-item"></a>
-                        <h3 class="name-list"></h3>
-                    </div>
-                    <div class="flex-subcontainer">
-                        <a href="#" class="flex-item"></a>
-                        <h3 class="name-list"></h3>
-                    </div>
-                    <div class="flex-subcontainer">
-                        <a href="#" class="flex-item"></a>
-                        <h3 class="name-list"></h3>
-                    </div>
 
-                <!--solo trabajaran en la etiqueta section-->
+                </div>
+
+                
                 
             </section>   
 

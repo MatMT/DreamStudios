@@ -133,11 +133,13 @@ body {
   height: 45px;
   padding: 12px 0px;
 }
-
-.option :hover {
-  /* color: white; */
-  color: rgba(104, 104, 104, 0.295);
+.option{
   transition: 0.5s;
+}
+
+.option a:hover{
+  /* color: white; */
+  color: rgb(255, 255, 255);
 }
 
 /*Pestaña Activida "Inicio"*/
@@ -155,6 +157,7 @@ body {
 .active-option a {
   color: #07175f;
 }
+
 
 
 /*------------------------------------------------------------header contairne*/
@@ -457,7 +460,7 @@ footer {
 }
 
 .progress:hover {
-  background-color: #7664f9;
+  background-color: #f4266ed0;
 }
 
 /*MOnitor del Audio*/

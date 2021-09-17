@@ -1,0 +1,487 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar{
+    width: 7px;
+    background-color: transparent;
+}
+  
+body::-webkit-scrollbar-thumb{
+    background-color: #6b6b6b;
+    border-radius: 15px;
+}
+
+/*--- Diseño del aportada del La página Gneral-----*/
+.portada{
+    background-image: url(../img/cute-dj-woman-having-fun-playing-music-at-club-party.jpg);
+    width: 100%;
+    height: 95vh;
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.portada::before{
+    content: "";
+    width: 100%;
+    height: 95vh;
+    background-color: rgba(0, 0, 0, 0.377);
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+/*Header Contenedor*/
+nav {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    z-index: 100;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+  
+    padding: 25px 40px;
+  }
+  
+  nav.sticky {
+    background-color: rgb(255, 255, 255);
+    padding: 15px 35px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.555);
+  }
+  
+  nav img {
+    max-width: 200px;
+    width: 12%;
+    min-width: 130px;
+  }
+  
+  .navigation {
+    position: relative;
+    display: flex;
+  }
+  
+  .navigation li {
+    list-style: none;
+    margin-left: 30px;
+  }
+  
+  .navigation li a {
+    text-decoration: none;
+    color: white;
+    font-size: var(--our-font);
+    font-weight: 500;
+    font-size: 1rem;
+    display: block;
+    padding: 5px;
+  
+    position: relative;
+  }
+  
+  .navigation li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    z-index: 1;
+  
+    transform: scale(0);
+    transform-origin: left;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .navigation li a:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .navigation[data-animation="left-rigth"] a::before {
+    transform-origin: right;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .navigation[data-animation="left-rigth"] a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+  }
+  
+  /*- -------- ------------------------------------------ Animación
+  
+  
+  /*Cambio de color de logo*/
+nav.sticky li a {
+    color: black;
+  }
+  
+#black-mod {
+    display: none;
+  }
+  
+ nav.sticky #black-mod {
+    display: block;
+  }
+  
+nav.sticky #white-mod {
+    display: none;
+  }
+  
+nav.sticky .navigation li a::before {
+    background-color: black;
+  }
+
+.title-container{
+    position: absolute;
+    bottom: 10%;
+    left: 0%;
+    width: 100%;
+    padding: 30px;
+    padding-left: 50px;
+    padding-bottom: 0px;
+}
+.cuadro-dreams{
+    border: white 2px solid;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+.title-container h1{
+    font-size: 8.5rem;
+}
+
+.title-container h2{
+    font-size: 2rem;
+}
+
+.title-container h3{
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: rgb(179, 179, 179);
+    width: 400px;
+}
+
+.boton-pley{
+    width: 220px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #e83669;
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+
+    transition: 0.5s ease-in-out;
+    cursor: pointer;    
+}
+
+.boton-pley img{
+    width: 15px;
+    margin-left: 10px;
+}
+
+
+.boton-pley:hover{
+    transform: translateX(5px);
+}
+
+
+.title-container a{
+    text-decoration: none;
+    color: white;
+}
+@media screen and (min-width: 1820px){
+    .title-container h1{
+        font-size: 9rem;
+    }
+    
+    .title-container h2{
+        font-size: 2.2rem;
+    }
+    
+    .title-container h3{
+        font-size: 1.4rem;
+        width: 500px;
+    }
+}
+/*---- ---- ---- Boton para bajar --- --- --- ---*/
+.flecha-abajo{
+    position: absolute;
+    bottom: 10%;
+    right: 20px;
+    background-color: white;
+    border-radius: 60px;
+    width: 60px;
+    height: 60px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.555);
+
+    transition: 0.5s ease-in-out;
+    cursor: pointer;   
+}
+
+.flecha-abajo img{
+    width: 20px;
+}
+
+.flecha-abajo:hover{
+    transform: scale(1.05);
+}
+
+.flecha-abajo:active{
+    transform: translateY(140px);
+}
+
+
+/*Cuerpo de l apágina web*/
+
+section{
+    width: 100%;
+    padding: 150px 0px;
+    margin: 0px auto;
+}
+
+/*----------------------Contenido 1 ----------- ----- */
+.seccion_1{
+    text-align: center;
+    padding: 0px 10vw;
+    margin: 100px 0px;
+}
+
+@media screen and (min-width: 1650px) {
+    .seccion_1{
+        padding: 0px 15vw;
+    }
+}
+
+.seccion_1 h1{
+    color: rgb(82, 82, 82);
+    font-size: 2rem;
+}
+
+.seccion_1 h2{
+    font-size: 3rem;
+}
+
+.funcionalidad{
+    width: 100%;
+    display: flex;
+    margin: 50px 0px;
+}
+
+.funcionalidad .contenedores{
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.1rem;
+    color: rgb(121, 121, 121);
+}
+
+.funcionalidad img{
+    width: 100px;
+    float: right;
+}
+
+.funcionalidad h1{
+    color: #f43776;
+    font-size: 1.6rem;
+}
+
+.funcionalidad .fun-1{
+    border-right: rgb(61, 61, 61) 1px solid;
+    text-align: right;
+}
+.fun-1 h1{
+    color: #2765c1;
+}
+
+.fun-1 img{
+    width: 150px;
+}
+
+.cont{
+    margin: 10px 25px;
+}
+
+/*--------- Sección dos--- ---- --- */
+
+section img{
+    width: 100%;
+}
+
+.seccion_2{
+    background-image: url(../img/wepik-2021811-164044.jpg);
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    position: relative;
+}
+.container-img{
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    height: 80vh;
+    padding: 100px 0px 150px 0px;
+
+}
+
+.container-img h1{
+    font-size: 6vw;
+}
+
+.container-img h2{
+    font-size: 4.5vw;
+    color: rgb(92, 92, 92);
+}
+
+.container-img h3{
+    font-size: 2vw;
+    font-weight: normal;
+    text-align: left;
+    color: rgb(77, 77, 77);
+}
+
+/*--------------  Seccion 3 ---------- ----- */
+
+.seccion_3{
+    width: 80%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.titulo{
+    font-size: 5vw;
+    color: #fc1d62;
+}
+
+.box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.text_3{
+    width: 40%;
+    font-size: 1.2rem;
+    color: rgb(70, 70, 70);
+}
+.text_3 h1{
+    font-size: 3vw;
+}
+
+.img_3{
+    width: 50%;
+}
+.img_3 img{
+    width: 100%;
+}
+
+/*--- ---- --- --Foooter ----- ---- ---- */
+
+footer{
+    width: 100%;
+    height: 220px;
+    background-color: rgb(43, 43, 43);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+footer div{
+    height: 90%;
+    width: 30%;
+    color: white;
+}
+.contenedor_img{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.contenedor_img img{
+    height: 90%;
+}
+
+.box_text_1{
+    border-right: rgb(194, 194, 194) 1px solid;
+}
+.contact{
+    padding: 50px;
+}
+
+.contact h4{
+    font-weight: normal;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+/*--------traductor---------------*/
+.google {
+    position: relative;
+    z-index: 500;
+    font-size: 0px;
+    border-radius: 36px;
+  }
+  
+  .translated-ltr {
+    margin-top: -40px;
+  }
+  .translated-ltr {
+    margin-top: -40px;
+  }
+  .goog-te-banner-frame {
+    display: none;
+    margin-top: -20px;
+  }
+  
+  .goog-logo-link {
+    display: none !important;
+  }
+  
+  .goog-te-gadget {
+    color: transparent !important;
+  }
+  
+  .goog-te-combo,
+  .goog-te-ftab,
+  .goog-te-menu,
+  .goog-te-menu2,
+  .goog-te-balloon {
+    background-color: transparent !important;
+    color: white;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif !important;
+    font-size: 1rem !important;
+  }
+  nav.sticky li .goog-te-combo {
+    color: black;
+  }
+  
+  #google_translate_element_id option {
+    color: black;
+  }
+  
