@@ -373,7 +373,7 @@
 
                 <div class="center-song" translate="no">
                     <p id="name-song">Esperando canción...</p>
-                    <!-- <i class="icon-heart-empty" id="megusta"></i> -->
+                    <i class="icon-heart-empty" id="megusta"></i>
                     <p id='name-artist-2' translate='no'>Puedes soñar en grande</p>
                 </div>
 
