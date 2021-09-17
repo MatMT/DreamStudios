@@ -154,7 +154,9 @@
 
                 <div class="container-albums" id="alb-arti">
                     <?php
-                        echo "<h1>Albums de ".$results["name_artist"]."</h1>";
+                        if($_SESSION['reference_artist'] != "19"){
+                            echo "<h1>Albums de ".$results["name_artist"]."</h1>";
+                        }  
                     ?>
 
                     <div class="albums-artista">

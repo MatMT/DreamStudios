@@ -178,22 +178,21 @@
 
                             while($new_art = $new->fetch(PDO::FETCH_ASSOC)){
                                 echo "
-                                <div class='artista temporal' id='".$new_art["id_art"]."'>
-                                    <img src='".$new_art["img_artist"] ."' alt='img'>
+                                <div class='artista temporal' id='hola_".$new_art["id_art"]."'>
+                                    <img src='".$new_art["img_artist"]."' alt='img'>
                                     <h4>".$new_art["name_artist"]."</h4>
                                     <i class='icon-play-circled'></i>
                                 </div>
 
 
-                            <script>
-                                var newartistSelect = document.getElementById('".$new_art["id_art"]."');
+                                <script>
+                                    var newartistSelect = document.getElementById('hola_".$new_art["id_art"]."');
 
-                                newartistSelect.addEventListener('click', function(){
-                                    var reference = ".$new_art['id_art'].";
-                                    window.location.href = window.location.href + '?w1=' + reference;
-                                });
-                            </script>"
-                            ;
+                                    newartistSelect.addEventListener('click', function(){
+                                        var reference = ".$new_art['id_art'].";
+                                        window.location.href = window.location.href + '?w1=' + reference;
+                                    });
+                                </script>";
                             }
                         ?>
                         </div>
