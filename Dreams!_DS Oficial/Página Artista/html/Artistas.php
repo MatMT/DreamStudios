@@ -264,7 +264,7 @@
 
                 <div class="center-song" translate="no">
                     <p id="name-song">Esperando canción...</p>
-                    <i class="icon-heart-empty" id="megusta"></i>
+                    <!-- <i class="icon-heart-empty" id="megusta"></i> -->
                     <?php
                         echo "<p id='name-artist-2' translate='no'>".$results["name_artist"]."</p>"
                     ?>
