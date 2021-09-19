@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-09-2021 a las 05:22:13
+-- Tiempo de generación: 19-09-2021 a las 05:29:25
 -- Versión del servidor: 10.4.20-MariaDB
 -- Versión de PHP: 8.0.9
 
@@ -385,7 +385,8 @@ CREATE TABLE `album_6_1` (
 
 INSERT INTO `album_6_1` (`id_song_a`, `name_song`, `name_album`, `name_artist`, `direction_song`) VALUES
 (1, 'Jason ', 'Endless summer ', 'The Midnight - ft Nikki Flores ', 'https://drive.google.com/uc?export=download&id=1NV4pJqRGdnxULvh4GWT2XHgB_SKcwPtR\r\n'),
-(2, 'Crockett\'s Revenge', 'Endless summer ', 'The Midnight ', 'https://drive.google.com/uc?export=download&id=1_y8Hnir0gXfooV5vMas39jYHBXhNUXKt\r\n');
+(2, 'Crockett\'s Revenge', 'Endless summer ', 'The Midnight ', 'https://drive.google.com/uc?export=download&id=1_y8Hnir0gXfooV5vMas39jYHBXhNUXKt\r\n'),
+(3, 'Sunset', 'Endless Summer', 'The Midnight', 'https://drive.google.com/uc?export=download&id=1lakLAnPqHKoyD5nW5BLca5819ZVKpquk');
 
 -- --------------------------------------------------------
 
@@ -406,7 +407,8 @@ CREATE TABLE `album_6_2` (
 --
 
 INSERT INTO `album_6_2` (`id_song_a`, `name_song`, `name_album`, `name_artist`, `direction_song`) VALUES
-(1, 'Deep Blue ', 'Monsters ', 'The Midnight ', 'https://drive.google.com/uc?export=download&id=1THQPMYeEdtWpnhGGASX5qlyOk85qG_5f\r\n');
+(1, 'Deep Blue ', 'Monsters ', 'The Midnight ', 'https://drive.google.com/uc?export=download&id=1THQPMYeEdtWpnhGGASX5qlyOk85qG_5f\r\n'),
+(2, 'Last Train', 'Monsters', 'The Midnight', 'https://drive.google.com/uc?export=download&id=1OaVRpP9nGjXEeKDsmBNRdHNyexH9SpRs');
 
 -- --------------------------------------------------------
 
@@ -427,7 +429,8 @@ CREATE TABLE `album_6_3` (
 --
 
 INSERT INTO `album_6_3` (`id_song_a`, `name_song`, `name_album`, `name_artist`, `direction_song`) VALUES
-(1, 'Becase The Night ', 'Horror Show ', 'The Midnight - ft. Nikki Flores\r\n', 'https://drive.google.com/uc?export=download&id=1BrBUR0i5Fb8SOyTcjI5VR2D9OlRX1Zzj\r\n');
+(1, 'Becase The Night ', 'Horror Show ', 'The Midnight - ft. Nikki Flores\r\n', 'https://drive.google.com/uc?export=download&id=1BrBUR0i5Fb8SOyTcjI5VR2D9OlRX1Zzj\r\n'),
+(2, 'Neon Medusa', 'Horror Show', 'The Midnight', 'https://drive.google.com/uc?export=download&id=1dLMeh1gRxcwW0gsSRERW_1sj0FgQMRaV');
 
 -- --------------------------------------------------------
 
@@ -448,7 +451,8 @@ CREATE TABLE `album_6_4` (
 --
 
 INSERT INTO `album_6_4` (`id_song_a`, `name_song`, `name_album`, `name_artist`, `direction_song`) VALUES
-(1, 'Days of Thunder ', 'Days of Thunder ', 'The Midnight ', 'https://drive.google.com/uc?export=download&id=14I3huXXDbyCo8WWPp2-XN24r89DPdL1q\r\n');
+(1, 'Days of Thunder ', 'Days of Thunder ', 'The Midnight ', 'https://drive.google.com/uc?export=download&id=14I3huXXDbyCo8WWPp2-XN24r89DPdL1q\r\n'),
+(2, 'Los Angeles', 'Days of Thunder', 'The Midnight', 'https://drive.google.com/uc?export=download&id=1R6-sBCOPhuJuihATtTPkfhgT0DiS5Kut');
 
 -- --------------------------------------------------------
 
@@ -1346,7 +1350,7 @@ CREATE TABLE `artistas_dreams` (
   `id_art` int(11) NOT NULL,
   `name_artist` varchar(50) NOT NULL,
   `description_art` varchar(500) NOT NULL,
-  `e-mail_art` varchar(50) DEFAULT NULL,
+  `e_mail_art` varchar(50) DEFAULT NULL,
   `img_artist` varchar(600) NOT NULL,
   `bg_img_artist` varchar(600) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -1355,7 +1359,7 @@ CREATE TABLE `artistas_dreams` (
 -- Volcado de datos para la tabla `artistas_dreams`
 --
 
-INSERT INTO `artistas_dreams` (`id_art`, `name_artist`, `description_art`, `e-mail_art`, `img_artist`, `bg_img_artist`) VALUES
+INSERT INTO `artistas_dreams` (`id_art`, `name_artist`, `description_art`, `e_mail_art`, `img_artist`, `bg_img_artist`) VALUES
 (1, 'Niall Horan', 'Niall es un cantante y compositor irlandés. Fue miembro de One Direction y ahora se ha dado a conocer como solista.', 'niall_oficial@gmail.com', 'https://drive.google.com/uc?export=view&id=1i65JZS-baABPxcukXAjIpJVSvbp9wDft', 'https://drive.google.com/uc?export=view&id=17OPxkqn1UvO0SyEUULXrOZ_Y9FR1CdZ5'),
 (2, 'Maroon 5', 'Maroon 5 es una banda musical de pop rock​ estadounidense. El grupo se formó originalmente entre 1994 y 1995 como Kara\'s Flowers mientras sus integrantes cursaban la secundaria.', 'maroon_5@gmail.com', 'https://drive.google.com/uc?export=view&id=12KJVRZO_kuK0Cpw9XbgOS6LGVQUMzgE1 ', 'https://drive.google.com/uc?export=view&id=1gFcMqhCPMTLq3K9qwtqs5gwJyL1cbCA5'),
 (3, 'Cuco', 'Omar Baños, conocido profesionalmente como Cuco, es un cantautor y productor discográfico estadounidense de Hawthorne, California. Su fama escaló después de lanzar \"Lo Que Siento\".', 'cuco_omar@gmail.com', 'https://drive.google.com/uc?export=view&id=1dFeCjT53Xe2-3X-nqolo4xLVVrY7Uoo2', 'https://drive.google.com/uc?export=view&id=1-0M1wKHILt1wvi4XWN3oxqC2brb8ESfT'),
@@ -1367,13 +1371,38 @@ INSERT INTO `artistas_dreams` (`id_art`, `name_artist`, `description_art`, `e-ma
 (9, 'Lady Gaga', 'Stefani Joanne Angelina Germanotta, más conocida por su nombre artístico Lady Gaga, es una cantante, compositora, productora, bailarina, actriz, activista y diseñadora de moda estadounidense.', 'lady_gg@gmail.com', 'https://drive.google.com/uc?export=view&id=1ZR_wIu3MBXLIy5889-x9o0kDmHQCiOrQ', 'https://drive.google.com/uc?export=view&id=1RwQEEyn0NtoJSyXD7Ykt3AOXaCuaRzK5'),
 (10, 'Dua Lipa', 'Dua Lipa es una cantante y compositora británica de etnia albanokosovar. Después de trabajar como modelo, firmó con Warner Bros. Records en 2014 y lanzó su álbum debut homónimo en 2017.', 'dua_lipa@gmail.com', 'https://drive.google.com/uc?export=view&id=1mczwYG2gdhybEJHp3-qx3Oig3LZKTkab', 'https://drive.google.com/uc?export=view&id=1mczwYG2gdhybEJHp3-qx3Oig3LZKTkab'),
 (11, 'Soda Stereo', 'Soda Stereo fue una banda argentina de rock formada originalmente en Buenos Aires en 1982 por Gustavo Cerati, Héctor «Zeta» Bosio y Carlos Alberto Ficicchia «Charly Alberti».', 'soda_stero@gmail.com', 'https://drive.google.com/uc?export=view&id=17jcGRDeYSAIQ7GEuzsE9l8l-Z8fL4lAO', 'https://drive.google.com/uc?export=view&id=1tyreZGyaEoNkKl2o93vKGSbkVr3PVUYn'),
-(12, 'Taylor Swift', 'Taylor Alison Swift es una cantante, compositora, productora, filántropa y actriz estadounidense. Criada en Wyomissing, se mudó a Nashville a los 14 años para realizar una carrera de música country.', 'taylor_st@gmail.com', 'https://drive.google.com/uc?export=view&id=1SncEnLxnGP7mHQPwCL3NY-cO1uFM_4Ey', 'https://drive.google.com/uc?export=view&id=1H3CH2skm1GjveJrjAg8sdtJbF4Y8vqZ_'),
+(12, 'Taylor Swift', 'Taylor Alison Swift es una cantante, compositora, productora, filántropa y actriz estadounidense. Criada en Wyomissing, se mudó a Nashville a los 14 años para realizar una carrera de música country.', 'taylor_st@gmail.com', 'https://drive.google.com/uc?export=view&id=10SkGq-6cCzRrcI1fqsyG_jzcmxOsFunW', 'https://drive.google.com/uc?export=view&id=1H3CH2skm1GjveJrjAg8sdtJbF4Y8vqZ_'),
 (13, 'LIT Killah', 'Mauro Monzón, conocido artísticamente como Lit Killah, es un cantante, rapero y freestyler argentino.​', 'lit_ka@gmail.com', 'https://drive.google.com/uc?export=view&id=1gNRVdR9h1rnowpz4a40eJU10ops5Alep', 'https://drive.google.com/uc?export=view&id=168wzei3xw_3IsO8QmWXfOUbTFmEiQIMe'),
 (14, 'Daft Punk ', 'Daft Punk fue un dúo francés de french house formado por los DJ y productores Guy-Manuel de Homem-Christo y Thomas Bangalter.​​​ ', 'daft_punk21@gmail.com', 'https://drive.google.com/uc?export=view&id=1BCQcXuZ73YFfxQJSTUjwdT36tUpN7m2F', 'https://drive.google.com/uc?export=view&id=1DPmPh_PBZpGknponhDZeL_ggBb_UFT7w'),
 (15, 'One Direction', 'One Direction  es una boy band británico-irlandesa compuesto en aquel entonces por Harry Styles, Liam Payne, Zayn Malik, Niall Horan y Louis Tomlinson.', 'one_direction@gmail.com', 'https://drive.google.com/uc?export=view&id=1gwv-hH8exq3juo5ptswNNQ1Vo-J3TUUV', 'https://drive.google.com/uc?export=view&id=1CebwWTaYdH0RHWVHJ62l5nBHNEwnZzWW'),
 (16, '5 Seconds Of Summer', '5 Seconds of Summer es una banda Australiana, de género pop rock,  integrada por Luke Hemmings (vocalista principal, piano y guitarra), Calum Hood (voz, piano y bajo), Ashton Irwin (batería y voz) y Michael Clifford (guitarrista principal y voz).', '5_seconds_of_summer@gmail.com', 'https://drive.google.com/uc?export=view&id=1qVAex3Cw7lIQx8cit2rDSuPGqHcxjPmp', 'https://drive.google.com/uc?export=view&id=1KVy3QdzPuv4MKDtea5XnMzpIEuDF7DSF'),
 (17, 'Cerati', 'Gustavo Adrián Cerati fue un músico, cantautor, actor, y productor discográfico argentino que obtuvo reconocimiento internacional por haber sido el líder de la banda de rock Soda Stereo. ', 'cerati_g@gmail.com', 'https://drive.google.com/uc?export=view&id=1EiflvclMPqImyTTTXGYAI-M-LaKIr1gw', 'https://drive.google.com/uc?export=view&id=1XIDx1oXDsrMlLeGNo98iQZMwJAEoPU2T'),
-(18, 'Maldita Vecindad Y Los Hijos Del 5to. Patio', 'Maldita Vecindad y los Hijos del Quinto Patio es un grupo musical mexicano, formado en la Ciudad de México que fusiona ritmos como el rock, el ska, el reggae, el punk e influencias tradicionales de la música mexicana como el danzón y el bolero.', 'vecindad_hijos@gmail.com', 'https://drive.google.com/uc?export=view&id=1lQKUFEHYt0WMvZ9F3skmQztsoHkjmdfv', 'https://drive.google.com/uc?export=view&id=1e2i_LqFq28wHCaep1qLoQDq4hvNPXawN');
+(18, 'Maldita Vecindad Y Los Hijos Del 5to. Patio', 'Maldita Vecindad y los Hijos del Quinto Patio es un grupo musical mexicano, formado en la Ciudad de México que fusiona ritmos como el rock, el ska, el reggae, el punk e influencias tradicionales de la música mexicana como el danzón y el bolero.', 'vecindad_hijos@gmail.com', 'https://drive.google.com/uc?export=view&id=1lQKUFEHYt0WMvZ9F3skmQztsoHkjmdfv', 'https://drive.google.com/uc?export=view&id=1e2i_LqFq28wHCaep1qLoQDq4hvNPXawN'),
+(19, 'Bryan Carbajal', 'Es un adolescente de 16 años, quien se ha a desempeñado en le mundo de la música, compartiendo sus grandes habilidades musicales y la destreza para cualquier instrumento.', 'bryan_carbajal@gmail.com', 'https://drive.google.com/uc?export=view&id=1GjQ1lPkhBawei8ZhT7zlA1Ja7ApY8jEc', 'https://drive.google.com/uc?export=view&id=1STGlm_sL9_OO35iUQEQNOFELGorsdC_N');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `biblioteca_dreams`
+--
+
+CREATE TABLE `biblioteca_dreams` (
+  `id_play` int(11) NOT NULL,
+  `name_play` varchar(50) NOT NULL,
+  `creator_play` varchar(50) NOT NULL,
+  `img_plalist` varchar(250) NOT NULL,
+  `description_playlist` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `biblioteca_dreams`
+--
+
+INSERT INTO `biblioteca_dreams` (`id_play`, `name_play`, `creator_play`, `img_plalist`, `description_playlist`) VALUES
+(1, 'Random', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1WKYbS7YChQphh4PdLRte4kt4Z2itWfPa', ''),
+(2, 'Electrolove', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1CinY0-LjrB98ph1rmzQsEQCwR1PrkB9Y', ''),
+(3, 'Heart Brake', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1rhc1ZRI_tMJ9LPNq6n5TaNoroSQlPe7m', ''),
+(4, 'Para Hispanohablantes', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1KIdInUz6LaAM3wK4SzjXdFeiKbzLSVve', '');
 
 -- --------------------------------------------------------
 
@@ -1431,7 +1460,7 @@ INSERT INTO `biblio_playlist_2` (`id_song`, `name_song`, `name_artista`, `song_a
 (3, 'Automaton', 'Jamiroquai', 'Automaton', 'https://drive.google.com/uc?export=download&id=12q1wmGtUsDM060tsNao5m_cVFPyUGBRJ', 'https://drive.google.com/uc?export=view&id=1DKi-PtVzAkC5bP7gT50-h5eBO2VO7l0V'),
 (4, 'Neon Medusa', 'The Midnight', 'Horror Show', 'https://drive.google.com/uc?export=download&id=1dLMeh1gRxcwW0gsSRERW_1sj0FgQMRaV', 'https://drive.google.com/uc?export=view&id=1pspPlMgr4IGyorG17W96PHHRyZ87TCDr'),
 (5, 'Poker Face', 'Lady Gaga', 'The Fame', 'https://drive.google.com/uc?export=download&id=1SDCayfLOlKe-OL8qTzM7dVFGgN0zSg8z', 'https://drive.google.com/uc?export=view&id=1BNq2SMx70StBykLppyXthQ8YIVFb9opP'),
-(6, 'Deep Blue', 'The Midnight', 'Monsters', 'https://drive.google.com/uc?export=download&id=1_y8Hnir0gXfooV5vMas39jYHBXhNUXKt', 'https://drive.google.com/uc?export=view&id=1KQReoN1Ky5CdLXK0ofblr0liGQCOnf-O\r\n'),
+(6, 'Deep Blue', 'The Midnight', 'Monsters', 'https://drive.google.com/uc?export=download&id=1THQPMYeEdtWpnhGGASX5qlyOk85qG_5f', 'https://drive.google.com/uc?export=view&id=1KQReoN1Ky5CdLXK0ofblr0liGQCOnf-O\r\n'),
 (7, 'Bad Romance', 'Lady Gaga', 'The Fame Monster', 'https://drive.google.com/uc?export=download&id=1fV0J4NyiCakiX6-5SsvDk86RKB8EMiDy', 'https://drive.google.com/uc?export=view&id=1N8Cb12T9hY9gZ6ux9JfOR7aI6Amo6fZ9'),
 (8, 'Give Life Back to Music', 'Daft Punk', 'Random Access Memories', '//drive.google.com/uc?export=download&id=12MzLdN2BdvdTF6xDqccY5jDJspnFyQpZ', 'https://drive.google.com/uc?export=view&id=1BCQcXuZ73YFfxQJSTUjwdT36tUpN7m2F'),
 (9, 'Robot Rock', 'Daft Punk', 'Human After All', '//drive.google.com/uc?export=download&id=1FNAS5j4NMpACvhbMaUV6wKUjrQ4kKWZd', 'https://drive.google.com/uc?export=view&id=1ja6XlVb0tgFicvRXxW03F39Yq94Kkej9'),
@@ -1566,10 +1595,10 @@ CREATE TABLE `dreamaker_artist_3` (
 --
 
 INSERT INTO `dreamaker_artist_3` (`id_album`, `nameAlbum`, `nameArtist`, `imgAlbum`, `direction_song`, `tipo_song`) VALUES
-(3, 'Songs4u', 'Cuco', 'https://drive.google.com/uc?export=view&id=1DrIBdLCR1LYj58aqNe9hQQwZDAmjiCop', NULL, 'Album'),
-(4, 'Chiquito', 'Cuco', 'https://drive.google.com/uc?export=view&id=1GtAMyi3fUZHBDMDaw5OG5fvjqfxU9Xg7', NULL, 'Album'),
-(5, 'Para mi', 'Cuco', 'https://drive.google.com/uc?export=view&id=1x2NknWujaZSCSEGoGRSj241V9kvrUGhq', NULL, 'Album'),
-(6, 'Lo que siento', 'Cuco', 'https://drive.google.com/uc?export=view&id=1FzBiGnm-R7ogskPCrDns3a-TYg3ZRiWD', 'https://drive.google.com/uc?export=download&id=1-hirz8pb4ZmgGomb8L5I6Xq5G6ZUXRBd', 'Solo');
+(1, 'Songs4u', 'Cuco', 'https://drive.google.com/uc?export=view&id=1DrIBdLCR1LYj58aqNe9hQQwZDAmjiCop', NULL, 'Album'),
+(2, 'Chiquito', 'Cuco', 'https://drive.google.com/uc?export=view&id=1GtAMyi3fUZHBDMDaw5OG5fvjqfxU9Xg7', NULL, 'Album'),
+(3, 'Para mi', 'Cuco', 'https://drive.google.com/uc?export=view&id=1x2NknWujaZSCSEGoGRSj241V9kvrUGhq', NULL, 'Album'),
+(4, 'Lo que siento', 'Cuco', 'https://drive.google.com/uc?export=view&id=1FzBiGnm-R7ogskPCrDns3a-TYg3ZRiWD', 'https://drive.google.com/uc?export=download&id=1-hirz8pb4ZmgGomb8L5I6Xq5G6ZUXRBd', 'Solo');
 
 -- --------------------------------------------------------
 
@@ -1591,9 +1620,9 @@ CREATE TABLE `dreamaker_artist_4` (
 --
 
 INSERT INTO `dreamaker_artist_4` (`id_album`, `nameAlbum`, `nameArtist`, `imgAlbum`, `direction_song`, `tipo_song`) VALUES
-(6, 'After Hours', 'The Weekend', 'https://drive.google.com/uc?export=view&id=15ILTlx7PxJvnCI-09I28eygf-OfVYpQ5', NULL, 'Album'),
-(7, 'Echoes of Silence', 'The Weekend', 'https://drive.google.com/uc?export=view&id=1n6KZrvFeOF33MMoAaBfkgfIK2PvqSp3Y', NULL, 'Album'),
-(8, 'Earned It', 'The Weekend', 'https://drive.google.com/uc?export=view&id=1yKeCYNyiKrBsNOtiZPiUBYYFoyYv38t0', 'https://drive.google.com/uc?export=download&id=1PkYv5PfDE5J1kJ7ODShI92114jAWHT3X', 'Solo');
+(1, 'After Hours', 'The Weekend', 'https://drive.google.com/uc?export=view&id=15ILTlx7PxJvnCI-09I28eygf-OfVYpQ5', NULL, 'Album'),
+(2, 'Echoes of Silence', 'The Weekend', 'https://drive.google.com/uc?export=view&id=1n6KZrvFeOF33MMoAaBfkgfIK2PvqSp3Y', NULL, 'Album'),
+(3, 'Earned It', 'The Weekend', 'https://drive.google.com/uc?export=view&id=1yKeCYNyiKrBsNOtiZPiUBYYFoyYv38t0', 'https://drive.google.com/uc?export=download&id=1PkYv5PfDE5J1kJ7ODShI92114jAWHT3X', 'Solo');
 
 -- --------------------------------------------------------
 
@@ -1615,11 +1644,11 @@ CREATE TABLE `dreamaker_artist_5` (
 --
 
 INSERT INTO `dreamaker_artist_5` (`id_album`, `nameAlbum`, `nameArtist`, `imgAlbum`, `direction_song`, `tipo_song`) VALUES
-(9, 'The Return of The Space Cowboy', 'Jamiroquai', 'https://drive.google.com/uc?export=view&id=1XT9ugNWQnhPkp7hmsqx_00a3uMSWHcjN', NULL, 'Album'),
-(10, 'A Funk Odyssey', 'Jamiroquai', 'https://drive.google.com/uc?export=view&id=1a_6DeaKqU_NDAszgdaLpW9ADmNrm_Gjn', NULL, 'Album'),
-(11, 'Travelling Without Moving', 'Jamiroquai', 'https://drive.google.com/uc?export=view&id=17xwPgYRhRfwJC9dq8S8wQKyKqt55V2fB', NULL, 'Album'),
-(12, 'Synkronized', 'Jamiroquai', 'https://drive.google.com/uc?export=view&id=19xtYXpyo2b-SgFFs0ZBCFaJIBy5xfSeg', NULL, 'Album'),
-(13, 'Automaton', 'Jamiroquai', 'https://drive.google.com/uc?export=view&id=1DKi-PtVzAkC5bP7gT50-h5eBO2VO7l0V', NULL, 'Album');
+(1, 'The Return of The Space Cowboy', 'Jamiroquai', 'https://drive.google.com/uc?export=view&id=1XT9ugNWQnhPkp7hmsqx_00a3uMSWHcjN', NULL, 'Album'),
+(2, 'A Funk Odyssey', 'Jamiroquai', 'https://drive.google.com/uc?export=view&id=1a_6DeaKqU_NDAszgdaLpW9ADmNrm_Gjn', NULL, 'Album'),
+(3, 'Travelling Without Moving', 'Jamiroquai', 'https://drive.google.com/uc?export=view&id=17xwPgYRhRfwJC9dq8S8wQKyKqt55V2fB', NULL, 'Album'),
+(4, 'Synkronized', 'Jamiroquai', 'https://drive.google.com/uc?export=view&id=19xtYXpyo2b-SgFFs0ZBCFaJIBy5xfSeg', NULL, 'Album'),
+(5, 'Automaton', 'Jamiroquai', 'https://drive.google.com/uc?export=view&id=1DKi-PtVzAkC5bP7gT50-h5eBO2VO7l0V', NULL, 'Album');
 
 -- --------------------------------------------------------
 
@@ -1641,10 +1670,10 @@ CREATE TABLE `dreamaker_artist_6` (
 --
 
 INSERT INTO `dreamaker_artist_6` (`id_album`, `nameAlbum`, `nameArtist`, `imgAlbum`, `direction_song`, `tipo_song`) VALUES
-(14, 'Endless Summer', 'The Midnight', 'https://drive.google.com/uc?export=view&id=1Byg0Tz-Q22dvwxngFNGUk6OIl-s43jW8', NULL, 'Album'),
-(15, 'Monsters', 'The Midnight', 'https://drive.google.com/uc?export=view&id=1KQReoN1Ky5CdLXK0ofblr0liGQCOnf-O\r\n\r\n', NULL, 'Album'),
-(16, 'Days of Thunder', 'The Midnight', 'https://drive.google.com/uc?export=view&id=1PVa6Ex3ByKEh3jZKdPlvZLmr8PV3K_ui\r\n\r\n', NULL, 'Album'),
-(17, 'Horror Show', 'The Midnight', 'https://drive.google.com/uc?export=view&id=1pspPlMgr4IGyorG17W96PHHRyZ87TCDr', NULL, 'Album');
+(1, 'Endless Summer', 'The Midnight', 'https://drive.google.com/uc?export=view&id=1Byg0Tz-Q22dvwxngFNGUk6OIl-s43jW8', NULL, 'Album'),
+(2, 'Monsters', 'The Midnight', 'https://drive.google.com/uc?export=view&id=1KQReoN1Ky5CdLXK0ofblr0liGQCOnf-O\r\n\r\n', NULL, 'Album'),
+(3, 'Days of Thunder', 'The Midnight', 'https://drive.google.com/uc?export=view&id=1PVa6Ex3ByKEh3jZKdPlvZLmr8PV3K_ui\r\n\r\n', NULL, 'Album'),
+(4, 'Horror Show', 'The Midnight', 'https://drive.google.com/uc?export=view&id=1pspPlMgr4IGyorG17W96PHHRyZ87TCDr', NULL, 'Album');
 
 -- --------------------------------------------------------
 
@@ -1666,10 +1695,10 @@ CREATE TABLE `dreamaker_artist_7` (
 --
 
 INSERT INTO `dreamaker_artist_7` (`id_album`, `nameAlbum`, `nameArtist`, `imgAlbum`, `direction_song`, `tipo_song`) VALUES
-(18, 'Led Zeppelin II', 'Led Zeppelin', 'https://drive.google.com/uc?export=view&id=1lCPabgj5cdnEeZhtM68kOntGmXW-rul9', NULL, 'Album'),
-(19, 'Physical Graffiti', 'Led Zeppelin', 'https://drive.google.com/uc?export=view&id=1MalScK_d5xFLSTyLWO0cWES8j3CUNfjN\r\n\r\n', NULL, 'Album'),
-(20, 'Led Zeppelin IV', 'Led Zeppelin', 'https://drive.google.com/uc?export=view&id=1mY1ieEQCs-QmQ_QpH4Zdbu27zuV8_EP3', NULL, 'Album'),
-(21, 'Led Zeppelin III', 'Led Zeppelin', 'https://drive.google.com/uc?export=view&id=17MIruufjMWdLU1HzmaBTCkN7SYuSzU8_\r\n\r\n', NULL, 'Album');
+(1, 'Led Zeppelin II', 'Led Zeppelin', 'https://drive.google.com/uc?export=view&id=1lCPabgj5cdnEeZhtM68kOntGmXW-rul9', NULL, 'Album'),
+(2, 'Physical Graffiti', 'Led Zeppelin', 'https://drive.google.com/uc?export=view&id=1MalScK_d5xFLSTyLWO0cWES8j3CUNfjN\r\n\r\n', NULL, 'Album'),
+(3, 'Led Zeppelin IV', 'Led Zeppelin', 'https://drive.google.com/uc?export=view&id=1mY1ieEQCs-QmQ_QpH4Zdbu27zuV8_EP3', NULL, 'Album'),
+(4, 'Led Zeppelin III', 'Led Zeppelin', 'https://drive.google.com/uc?export=view&id=17MIruufjMWdLU1HzmaBTCkN7SYuSzU8_\r\n\r\n', NULL, 'Album');
 
 -- --------------------------------------------------------
 
@@ -1691,11 +1720,11 @@ CREATE TABLE `dreamaker_artist_8` (
 --
 
 INSERT INTO `dreamaker_artist_8` (`id_album`, `nameAlbum`, `nameArtist`, `imgAlbum`, `direction_song`, `tipo_song`) VALUES
-(22, 'Mother\'s Milk', 'Red Hot Chili Peppers', 'https://drive.google.com/uc?export=view&id=1TC3pD9_53bus1e5hxHiXfdL7G71-anFk\r\n\r\n', NULL, 'Album'),
-(23, 'Blood Sugar Sex Magik', 'Red Hot Chili Peppers', 'https://drive.google.com/uc?export=view&id=18bCS5fGNEmm7kcVG3lXzFZJAbDFCle5O\r\n', NULL, 'Album'),
-(24, 'Stadium Arcadium', 'Red Hot Chili Peppers', 'https://drive.google.com/uc?export=view&id=1-KovWjOrXbWXY3-bA0yVsGOM6H6DrF1t\r\n', NULL, 'Album'),
-(25, 'By the way', 'Red Hot Chili Peppers', 'https://drive.google.com/uc?export=view&id=1bWsZPNhAlJTdymepMWLTVSM2DakAUfRy', NULL, 'Album'),
-(26, 'Californication', 'Red Hot Chili Peppers', 'https://drive.google.com/uc?export=view&id=1Eg7Jjrzvvz_vcEapVx_MZUThplnUGpaq\r\n\r\n', NULL, 'Album');
+(1, 'Mother\'s Milk', 'Red Hot Chili Peppers', 'https://drive.google.com/uc?export=view&id=1TC3pD9_53bus1e5hxHiXfdL7G71-anFk\r\n\r\n', NULL, 'Album'),
+(2, 'Blood Sugar Sex Magik', 'Red Hot Chili Peppers', 'https://drive.google.com/uc?export=view&id=18bCS5fGNEmm7kcVG3lXzFZJAbDFCle5O\r\n', NULL, 'Album'),
+(3, 'Stadium Arcadium', 'Red Hot Chili Peppers', 'https://drive.google.com/uc?export=view&id=1-KovWjOrXbWXY3-bA0yVsGOM6H6DrF1t\r\n', NULL, 'Album'),
+(4, 'By the way', 'Red Hot Chili Peppers', 'https://drive.google.com/uc?export=view&id=1bWsZPNhAlJTdymepMWLTVSM2DakAUfRy', NULL, 'Album'),
+(5, 'Californication', 'Red Hot Chili Peppers', 'https://drive.google.com/uc?export=view&id=1Eg7Jjrzvvz_vcEapVx_MZUThplnUGpaq\r\n\r\n', NULL, 'Album');
 
 -- --------------------------------------------------------
 
@@ -1717,9 +1746,9 @@ CREATE TABLE `dreamaker_artist_9` (
 --
 
 INSERT INTO `dreamaker_artist_9` (`id_album`, `nameAlbum`, `nameArtist`, `imgAlbum`, `direction_song`, `tipo_song`) VALUES
-(27, 'The Fame', 'Lady Gaga', 'https://drive.google.com/uc?export=view&id=1BNq2SMx70StBykLppyXthQ8YIVFb9opP', NULL, 'Album'),
-(28, 'The Fame Monster', 'Lady Gaga', 'https://drive.google.com/uc?export=view&id=1N8Cb12T9hY9gZ6ux9JfOR7aI6Amo6fZ9', NULL, 'Album'),
-(29, 'Artpop', 'Lady Gaga', 'https://drive.google.com/uc?export=view&id=1xonm71_Bn0lZsv5UqxnkAeO59ds45M7X', NULL, 'Album');
+(1, 'The Fame', 'Lady Gaga', 'https://drive.google.com/uc?export=view&id=1BNq2SMx70StBykLppyXthQ8YIVFb9opP', NULL, 'Album'),
+(2, 'The Fame Monster', 'Lady Gaga', 'https://drive.google.com/uc?export=view&id=1N8Cb12T9hY9gZ6ux9JfOR7aI6Amo6fZ9', NULL, 'Album'),
+(3, 'Artpop', 'Lady Gaga', 'https://drive.google.com/uc?export=view&id=1xonm71_Bn0lZsv5UqxnkAeO59ds45M7X', NULL, 'Album');
 
 -- --------------------------------------------------------
 
@@ -1741,7 +1770,7 @@ CREATE TABLE `dreamaker_artist_10` (
 --
 
 INSERT INTO `dreamaker_artist_10` (`id_album`, `nameAlbum`, `nameArtist`, `imgAlbum`, `direction_song`, `tipo_song`) VALUES
-(30, 'Future Nostalgia', 'Dua Lipa', 'https://drive.google.com/uc?export=view&id=18y2id5JNUxApb6Vi8dLl1b567fMpR06p', NULL, 'Album');
+(1, 'Future Nostalgia', 'Dua Lipa', 'https://drive.google.com/uc?export=view&id=18y2id5JNUxApb6Vi8dLl1b567fMpR06p', NULL, 'Album');
 
 -- --------------------------------------------------------
 
@@ -1763,12 +1792,12 @@ CREATE TABLE `dreamaker_artist_11` (
 --
 
 INSERT INTO `dreamaker_artist_11` (`id_album`, `nameAlbum`, `nameArtist`, `imgAlbum`, `direction_song`, `tipo_song`) VALUES
-(31, 'Canción animal', 'Soda Stereo', 'https://drive.google.com/uc?export=view&id=1KD4SFEQnCuSSFOKBqvnGq_bIjQfvUw8y', NULL, 'Album'),
-(32, 'Bocanada', 'Gustavo Cerati', 'https://drive.google.com/uc?export=view&id=1OMvRs7uaLfFjOIPWnd982-KClGE44PCn', NULL, 'Album'),
-(33, 'Signos', 'Soda Stereo', 'https://drive.google.com/uc?export=view&id=151G-6TgNxXe8USpejg1QPQd0ZOY0TtCG', NULL, 'Album'),
-(34, 'Nada personal', 'Soda Stereo', 'https://drive.google.com/uc?export=view&id=140yKhfkf_L-t49G6HkZIOTwdAykyodAN', NULL, 'Album'),
-(35, 'Spinetta y las bandas eternas', 'Spinetta - ft. Cerati', 'https://drive.google.com/uc?export=view&id=1fvzDe1S_qaSqa-mh_-GbSaADSYg0OIeK', NULL, 'Album'),
-(36, 'Ahí vamos', 'Gustavo Cerati', 'https://drive.google.com/uc?export=view&id=1MfplSxzAxsBZnLplVdlCqW1MHHYCIh75', NULL, 'Album');
+(1, 'Canción animal', 'Soda Stereo', 'https://drive.google.com/uc?export=view&id=1KD4SFEQnCuSSFOKBqvnGq_bIjQfvUw8y', NULL, 'Album'),
+(2, 'Bocanada', 'Gustavo Cerati', 'https://drive.google.com/uc?export=view&id=1OMvRs7uaLfFjOIPWnd982-KClGE44PCn', NULL, 'Album'),
+(3, 'Signos', 'Soda Stereo', 'https://drive.google.com/uc?export=view&id=151G-6TgNxXe8USpejg1QPQd0ZOY0TtCG', NULL, 'Album'),
+(4, 'Nada personal', 'Soda Stereo', 'https://drive.google.com/uc?export=view&id=140yKhfkf_L-t49G6HkZIOTwdAykyodAN', NULL, 'Album'),
+(5, 'Spinetta y las bandas eternas', 'Spinetta - ft. Cerati', 'https://drive.google.com/uc?export=view&id=1fvzDe1S_qaSqa-mh_-GbSaADSYg0OIeK', NULL, 'Album'),
+(6, 'Ahí vamos', 'Gustavo Cerati', 'https://drive.google.com/uc?export=view&id=1MfplSxzAxsBZnLplVdlCqW1MHHYCIh75', NULL, 'Album');
 
 -- --------------------------------------------------------
 
@@ -1790,8 +1819,8 @@ CREATE TABLE `dreamaker_artist_12` (
 --
 
 INSERT INTO `dreamaker_artist_12` (`id_album`, `nameAlbum`, `nameArtist`, `imgAlbum`, `direction_song`, `tipo_song`) VALUES
-(37, '1989', 'Taylor Swift', 'https://drive.google.com/uc?export=view&id=1RcHbhdp5l-zR1H3QMwJNg_NLuRpHxnS3', NULL, 'Album'),
-(38, 'Reputation ', 'Taylor Swift', 'https://drive.google.com/uc?export=view&id=1hQofphObysBRb63e3y1lCmBW-yaOWjDf', NULL, 'Album');
+(1, '1989', 'Taylor Swift', 'https://drive.google.com/uc?export=view&id=1RcHbhdp5l-zR1H3QMwJNg_NLuRpHxnS3', NULL, 'Album'),
+(2, 'Reputation ', 'Taylor Swift', 'https://drive.google.com/uc?export=view&id=1hQofphObysBRb63e3y1lCmBW-yaOWjDf', NULL, 'Album');
 
 -- --------------------------------------------------------
 
@@ -1813,9 +1842,9 @@ CREATE TABLE `dreamaker_artist_13` (
 --
 
 INSERT INTO `dreamaker_artist_13` (`id_album`, `nameAlbum`, `nameArtist`, `imgAlbum`, `direction_song`, `tipo_song`) VALUES
-(39, 'MAWZ', 'LIT Killah', 'https://drive.google.com/uc?export=view&id=1gNRVdR9h1rnowpz4a40eJU10ops5Alep', NULL, 'Album'),
-(40, 'Se Terminó', 'LIT Killah', 'https://drive.google.com/uc?export=view&id=1eehCtL507U9XXLRfR9SG1NMQnLWEdsHz', NULL, 'Album'),
-(41, 'Flexin\'', 'LIT Killah', 'https://drive.google.com/uc?export=view&id=1LZVY5Et763QydzXGeuml_oH7LvZkfxbg', NULL, 'Album');
+(1, 'MAWZ', 'LIT Killah', 'https://drive.google.com/uc?export=view&id=1gNRVdR9h1rnowpz4a40eJU10ops5Alep', NULL, 'Album'),
+(2, 'Se Terminó', 'LIT Killah', 'https://drive.google.com/uc?export=view&id=1eehCtL507U9XXLRfR9SG1NMQnLWEdsHz', NULL, 'Album'),
+(3, 'Flexin\'', 'LIT Killah', 'https://drive.google.com/uc?export=view&id=1LZVY5Et763QydzXGeuml_oH7LvZkfxbg', NULL, 'Album');
 
 -- --------------------------------------------------------
 
@@ -1837,9 +1866,9 @@ CREATE TABLE `dreamaker_artist_14` (
 --
 
 INSERT INTO `dreamaker_artist_14` (`id_album`, `nameAlbum`, `nameArtist`, `imgAlbum`, `direction_song`, `tipo_song`) VALUES
-(42, 'Random Access Memories', 'Daft Punk', 'https://drive.google.com/uc?export=view&id=1BCQcXuZ73YFfxQJSTUjwdT36tUpN7m2F', NULL, 'Album'),
-(43, 'Human After All', 'Daft Punk', 'https://drive.google.com/uc?export=view&id=1ja6XlVb0tgFicvRXxW03F39Yq94Kkej9', NULL, 'Album'),
-(44, 'Discovery', 'Daft Punk', 'https://drive.google.com/uc?export=view&id=1D1mMywu7C6raa8ubelgsgp7N6s4axddP', NULL, 'Album');
+(1, 'Random Access Memories', 'Daft Punk', 'https://drive.google.com/uc?export=view&id=1BCQcXuZ73YFfxQJSTUjwdT36tUpN7m2F', NULL, 'Album'),
+(2, 'Human After All', 'Daft Punk', 'https://drive.google.com/uc?export=view&id=1ja6XlVb0tgFicvRXxW03F39Yq94Kkej9', NULL, 'Album'),
+(3, 'Discovery', 'Daft Punk', 'https://drive.google.com/uc?export=view&id=1D1mMywu7C6raa8ubelgsgp7N6s4axddP', NULL, 'Album');
 
 -- --------------------------------------------------------
 
@@ -1861,10 +1890,10 @@ CREATE TABLE `dreamaker_artist_15` (
 --
 
 INSERT INTO `dreamaker_artist_15` (`id_album`, `nameAlbum`, `nameArtist`, `imgAlbum`, `direction_song`, `tipo_song`) VALUES
-(45, 'Four', 'One Direction', 'https://drive.google.com/uc?export=view&id=1TcecN470j6vQcl-vShgXGhVubVlJAZ-j', NULL, 'Album'),
-(46, 'Midnight Memories', 'One Direction', 'https://drive.google.com/uc?export=view&id=1f6qxWqpjH0Mj3p-rkNvutMK4bO_JT3E0', NULL, 'Album'),
-(47, 'Take me Home', 'One Direction', 'https://drive.google.com/uc?export=view&id=1F-fYDb4xFTCrLf9X77iSDA7Jkn-4No8H', NULL, 'Album'),
-(48, 'Up All Night', 'One Direction', 'https://drive.google.com/uc?export=view&id=1-k9M5hcFCgMoywXVPDeljSY3KE4IcNZN', NULL, 'Album');
+(1, 'Four', 'One Direction', 'https://drive.google.com/uc?export=view&id=1TcecN470j6vQcl-vShgXGhVubVlJAZ-j', NULL, 'Album'),
+(2, 'Midnight Memories', 'One Direction', 'https://drive.google.com/uc?export=view&id=1f6qxWqpjH0Mj3p-rkNvutMK4bO_JT3E0', NULL, 'Album'),
+(3, 'Take me Home', 'One Direction', 'https://drive.google.com/uc?export=view&id=1F-fYDb4xFTCrLf9X77iSDA7Jkn-4No8H', NULL, 'Album'),
+(4, 'Up All Night', 'One Direction', 'https://drive.google.com/uc?export=view&id=1-k9M5hcFCgMoywXVPDeljSY3KE4IcNZN', NULL, 'Album');
 
 -- --------------------------------------------------------
 
@@ -2400,14 +2429,41 @@ INSERT INTO `playlist_artist_18` (`id_song`, `name_song`, `name_artista`, `song_
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `playlist_artist_19`
+--
+
+CREATE TABLE `playlist_artist_19` (
+  `id_song` int(11) NOT NULL,
+  `name_song` varchar(50) NOT NULL,
+  `name_artista` varchar(50) NOT NULL,
+  `song_album` varchar(50) NOT NULL,
+  `direction_song` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `playlist_artist_19`
+--
+
+INSERT INTO `playlist_artist_19` (`id_song`, `name_song`, `name_artista`, `song_album`, `direction_song`) VALUES
+(1, 'Tun turún', 'Bryan Carbajal', 'Sencillo', 'https://drive.google.com/uc?export=view&id=1xmJ-iPAbKz_HOLP9vVO1imfxtmMSvs6I'),
+(2, 'Si no te tengo', 'Bryan Carbajal', 'Sencillo', 'https://drive.google.com/uc?export=view&id=1a7eixfJkYix5aO2NNXPfclPHZ4T9eaFW'),
+(3, 'Your fault', 'Bryan Carbajal', 'Sencillo', 'https://drive.google.com/uc?export=view&id=1g-Hz89iiWFQd3UQ9bzDfAI1nvyCXCBV-'),
+(4, 'Black lives Matter', 'Bryan Carbajal', 'Sencillo', 'https://drive.google.com/uc?export=view&id=1-PC5T5IzG-mbj1ClEvTVWnvGjgGXvEfD'),
+(5, 'BOOP', 'Bryan Carbajal', 'Sencillo', 'https://drive.google.com/uc?export=view&id=1o0RyyAzcoPxQKuomIm-TXRrKkugbvpiD'),
+(6, 'Cactus', 'Bryan Carbajal', 'Sencillo', 'https://drive.google.com/uc?export=view&id=1opUhqpUt4RoSa4GG4ztsDeLZnoHeDQcS'),
+(7, 'Esa canción', 'Bryan Carbajal', 'Sencillo', 'https://drive.google.com/uc?export=view&id=1FUpe0trlW5uurTjbznql2a_ag3s7O3_h');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usuarios_dreams`
 --
 
 CREATE TABLE `usuarios_dreams` (
   `id_users` int(6) NOT NULL,
   `name_user` varchar(50) NOT NULL,
-  `e-mail` varchar(50) NOT NULL,
-  `pasware` varchar(50) NOT NULL,
+  `e_mail` varchar(50) NOT NULL,
+  `pasware` varchar(256) NOT NULL,
   `genero` varchar(50) NOT NULL,
   `age_users` int(3) NOT NULL,
   `if_artista` int(1) NOT NULL
@@ -2417,7 +2473,7 @@ CREATE TABLE `usuarios_dreams` (
 -- Volcado de datos para la tabla `usuarios_dreams`
 --
 
-INSERT INTO `usuarios_dreams` (`id_users`, `name_user`, `e-mail`, `pasware`, `genero`, `age_users`, `if_artista`) VALUES
+INSERT INTO `usuarios_dreams` (`id_users`, `name_user`, `e_mail`, `pasware`, `genero`, `age_users`, `if_artista`) VALUES
 (1, 'Niall Horan', 'niall_oficial@gmail.com', 'hello_im_niall', 'hombre', 28, 1),
 (2, 'Maroon 5', 'maroon_5@gmail.com', 'hello_maroon5', 'hombre', 27, 1),
 (3, 'Cuco', 'cuco_omar@gmail.com', 'hello_im_cuco', 'hombre', 23, 1),
@@ -2435,7 +2491,11 @@ INSERT INTO `usuarios_dreams` (`id_users`, `name_user`, `e-mail`, `pasware`, `ge
 (15, 'One Direction', 'one_direction@gmail.com', 'hello_1D', 'hombre', 11, 1),
 (16, '5 Seconds Of Summer', '5_seconds_of_summer@gmail.com', 'hi_5sos', 'hombre', 10, 1),
 (17, 'Cerati', 'cerati_g@gmail.com', 'hello_cerati', 'hombre', 55, 1),
-(18, 'Maldita Vecindad Y Los Hijos Del 5to. Patio', 'vecindad_hijos@gmail.com', 'hello_maldita', 'hombre', 28, 1);
+(18, 'Maldita Vecindad Y Los Hijos Del 5to. Patio', 'vecindad_hijos@gmail.com', 'hello_maldita', 'hombre', 28, 1),
+(19, 'Eduardo', 'eduar10.mart@gmail.com', '$2y$10$TjxDGNrDiHtmEG/niXo2PuPsIiOAJty9S4uuLwKu50m', 'Masculino', 16, 0),
+(20, 'Martín', 'estudiante20150471@cdb.edu.sv', '$2y$10$4jologGY6I8AOQge38SZmOUQTc72cso.Qo0BJm2vZMM', 'Masculino', 14, 0),
+(21, 'miguel', 'impresionessti@gmail.com', '$2y$10$qOYeeDOXgcrNu42BGVsayOkXdfIhTOCGMpC5bqrIOPD1Tz3QSFFNa', 'Masculino', 16, 0),
+(24, 'Mateo Elías', 'oscarmateoelias@gmail.com', '$2y$10$ir0vkbnNfxLi6WWaqd9Bzuo0RBuSTItGbpqJsLl.i6mJwEtYppO6a', 'Masculino', 16, 0);
 
 --
 -- Índices para tablas volcadas
@@ -2814,6 +2874,12 @@ ALTER TABLE `artistas_dreams`
   ADD PRIMARY KEY (`id_art`);
 
 --
+-- Indices de la tabla `biblioteca_dreams`
+--
+ALTER TABLE `biblioteca_dreams`
+  ADD PRIMARY KEY (`id_play`);
+
+--
 -- Indices de la tabla `biblio_playlist_1`
 --
 ALTER TABLE `biblio_playlist_1`
@@ -3054,6 +3120,12 @@ ALTER TABLE `playlist_artist_18`
   ADD PRIMARY KEY (`id_song`);
 
 --
+-- Indices de la tabla `playlist_artist_19`
+--
+ALTER TABLE `playlist_artist_19`
+  ADD PRIMARY KEY (`id_song`);
+
+--
 -- Indices de la tabla `usuarios_dreams`
 --
 ALTER TABLE `usuarios_dreams`
@@ -3163,25 +3235,25 @@ ALTER TABLE `album_5_5`
 -- AUTO_INCREMENT de la tabla `album_6_1`
 --
 ALTER TABLE `album_6_1`
-  MODIFY `id_song_a` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_song_a` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `album_6_2`
 --
 ALTER TABLE `album_6_2`
-  MODIFY `id_song_a` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_song_a` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `album_6_3`
 --
 ALTER TABLE `album_6_3`
-  MODIFY `id_song_a` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_song_a` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `album_6_4`
 --
 ALTER TABLE `album_6_4`
-  MODIFY `id_song_a` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_song_a` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `album_7_1`
@@ -3433,7 +3505,13 @@ ALTER TABLE `album_18_3`
 -- AUTO_INCREMENT de la tabla `artistas_dreams`
 --
 ALTER TABLE `artistas_dreams`
-  MODIFY `id_art` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_art` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT de la tabla `biblioteca_dreams`
+--
+ALTER TABLE `biblioteca_dreams`
+  MODIFY `id_play` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `biblio_playlist_1`
@@ -3475,79 +3553,79 @@ ALTER TABLE `dreamaker_artist_2`
 -- AUTO_INCREMENT de la tabla `dreamaker_artist_3`
 --
 ALTER TABLE `dreamaker_artist_3`
-  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `dreamaker_artist_4`
 --
 ALTER TABLE `dreamaker_artist_4`
-  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `dreamaker_artist_5`
 --
 ALTER TABLE `dreamaker_artist_5`
-  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `dreamaker_artist_6`
 --
 ALTER TABLE `dreamaker_artist_6`
-  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `dreamaker_artist_7`
 --
 ALTER TABLE `dreamaker_artist_7`
-  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `dreamaker_artist_8`
 --
 ALTER TABLE `dreamaker_artist_8`
-  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `dreamaker_artist_9`
 --
 ALTER TABLE `dreamaker_artist_9`
-  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `dreamaker_artist_10`
 --
 ALTER TABLE `dreamaker_artist_10`
-  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `dreamaker_artist_11`
 --
 ALTER TABLE `dreamaker_artist_11`
-  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `dreamaker_artist_12`
 --
 ALTER TABLE `dreamaker_artist_12`
-  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `dreamaker_artist_13`
 --
 ALTER TABLE `dreamaker_artist_13`
-  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `dreamaker_artist_14`
 --
 ALTER TABLE `dreamaker_artist_14`
-  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `dreamaker_artist_15`
 --
 ALTER TABLE `dreamaker_artist_15`
-  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `dreamaker_artist_16`
@@ -3676,10 +3754,16 @@ ALTER TABLE `playlist_artist_18`
   MODIFY `id_song` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT de la tabla `playlist_artist_19`
+--
+ALTER TABLE `playlist_artist_19`
+  MODIFY `id_song` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT de la tabla `usuarios_dreams`
 --
 ALTER TABLE `usuarios_dreams`
-  MODIFY `id_users` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_users` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
