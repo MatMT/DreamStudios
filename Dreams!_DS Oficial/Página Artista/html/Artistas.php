@@ -66,6 +66,7 @@
         <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/icons-dreams-home-embedded.css">
         <link rel="stylesheet" type="text/css" href="../../Recursos/Iconos/Font-icons/css/animation.css">
 
+        <script src="../archivos-js/ir-a.js"></script>
     </head>
     <body>
         <div class="big-container">
@@ -96,7 +97,7 @@
 
             <!--Importanteeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-->
 
-            <section class="main-contaier">
+            <section class="main-contaier" id="ir-a-albums">
                             
                 <div class="planet-backg">
                     <img src="../../Recursos/Otros/planetas.svg" alt="img">
@@ -108,9 +109,9 @@
                         <i class='icon-play-1' id="buton-pua"></i>
                     </div>
 
-                    <a href="#alb-arti"><div class="ir-albums">
+                    <div class="ir-albums" onclick="recorrerScroll()">
                         <p>Ir a Albums</p>
-                    </div></a>
+                    </div>
 
 
                     <?php
@@ -151,41 +152,54 @@
 
                 </div>
 
-
-                <div class="container-albums" id="alb-arti">
-                    <?php
-                        if($_SESSION['reference_artist'] != "19"){
-                            echo "<h1>Albums de ".$results["name_artist"]."</h1>";
-                        }  
-                    ?>
-
-                    <div class="albums-artista">
-
+                <div class="contenedor-albums">
+                    <div class="flechas-carrucel">
+                        <?php
+                            if($_SESSION['reference_artist'] != "19"){
+                              echo "<h1>Albums de ".$results["name_artist"]."</h1>
+                                    <div class='icons-flec'>
+                                        <i class='icon-left-open-mini' id='flechaIz'></i>
+                                        <i class='icon-right-open-mini' id='flechaDe'></i>                            
+                                    </div>
+                              ";
+                            }  
+                        ?>
+                       
+                    </div>
+                    <div class="box-carrucel">
+                        <div class="carrucel-1">
                         <?php
                             
                             if($_SESSION['reference_artist'] != "19"){
-                                while($listAlbum = $albumsprepare->fetch(PDO::FETCH_ASSOC)){
-                                    echo "
-                                    <div class='album' id='album_".$listAlbum["id_album"]."'>
-                                        <img src='".$listAlbum["imgAlbum"]."' alt='img'>
-                                        <h4 translate='no'>".$listAlbum["nameAlbum"]."</h4>
-                                        <h5>13 March 2020</h5>
-                                        <i class='icon-play-circled'></i>
-                                    </div>
-                                    <script>
-                                        var albumSelect = document.getElementById('album_".$listAlbum["id_album"]."');
-    
-                                        albumSelect.addEventListener('click', function(){
-                                            var reference = ".$listAlbum['id_album'].";
-                                            window.location.href = window.location.href + '?w2=' + reference;
-                                        });
-                                    </script>";
-                                }
+                            while($listAlbum = $albumsprepare->fetch(PDO::FETCH_ASSOC)){
+                                echo "
+                                <div class='album tem-alb' id='album_".$listAlbum["id_album"]."'>
+                                    <img src='".$listAlbum["imgAlbum"]."' alt='img'>
+                                    <h4 translate='no'>".$listAlbum["nameAlbum"]."</h4>
+                                    <h5>13 March 2020</h5>
+                                    <i class='icon-play-circled'></i>
+                                </div>
+                                <script>
+                                    var albumSelect = document.getElementById('album_".$listAlbum["id_album"]."');
+
+                                    albumSelect.addEventListener('click', function(){
+                                        var reference = ".$listAlbum['id_album'].";
+                                        window.location.href = window.location.href + '?w2=' + reference;
+                                    });
+                                </script>";
                             }
-                            
+                            }
+                    
                         ?>
+                            
+                        </div>
                     </div>
+                    
                 </div>
+
+                
+
+
                 <div class="header-container">
                     <div class="post-autor">
                         <?php
@@ -298,5 +312,7 @@
             </div>
         </footer>
         <script src="../../reproductor/play_list.js"></script>
+        <script src="../archivos-js/carrucel.js"></script>
+        
     </body>
 </html>

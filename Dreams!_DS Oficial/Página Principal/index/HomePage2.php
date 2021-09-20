@@ -66,7 +66,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dreams!- Reproductor de Música</title>
+        <title>Dreams!- La música en las estrellas</title>
         <link rel="icon" href="../../Recursos/Iconos/icono_dark.ico">
         <link rel="stylesheet" href="../Archisvos_DS_CSS/Home-style.css"> <!-- Estilo General -->
         <!--Iconos-->
@@ -114,7 +114,7 @@
                 </div>
 
                 <div class="title-name-user">
-                    <p id="weilcome">Buenas Tardes</p>
+                    <p id="weilcome"></p>
                     <?php if(!empty($user)):?>
 
                     <p id="name-user-title" translate="no"><?= $user["name_user"]?>!</p>
@@ -295,7 +295,7 @@
                                     <div class='cancion' id='num_".$playlist["id_play"]."'>
                                         <img src='". $playlist["img_plalist"] ."' alt='img'>
                                         <h4>".$playlist["name_play"]."</h4>
-                                        <h5>".$playlist["creator_play"]."</h5>
+                                        <h5>De ".$playlist["creator_play"]."</h5>
                                         <span class='circulo-i-3'>
                                             <i class='icon-play-1'></i>
                                         </span>
@@ -405,5 +405,23 @@
             </div>
         </footer>
         <script src="../../reproductor/player_home.js"></script>
+        <script>
+            var lugar = document.getElementById("weilcome");
+            
+            let datatime = new Date();
+            let hour = parseInt(datatime.getHours()); 
+            
+            if(hour >= 5 && hour <=11){
+                //Escribir en html
+                lugar.innerHTML = "¡Buenos días";
+            }else{
+                if(hour >= 12 && hour <=18){
+                    lugar.innerHTML = "¡Buenos tardes";
+                }else{
+                    lugar.innerHTML = "¡Buenos noches";
+                }
+            }
+
+        </script>
     </body>
 </html>

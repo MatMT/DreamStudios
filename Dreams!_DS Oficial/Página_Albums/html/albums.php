@@ -84,6 +84,26 @@
                 <img src="../../Recursos/Otros/planetas.svg" alt="img">
             </div>
 
+            <div class="container-info-playlis">
+                <?php
+                        echo "
+                            <img src='".$resultsData["imgAlbum"]."' alt=''>
+                        ";
+                    ?>
+
+                <div class="content-playlist">
+                    <?php 
+                        
+                        echo "
+                            <h2>ÁLBUM</h2>
+                            <h1>".$resultsData["nameAlbum"]."</h1>
+                            <h2>".$resultsData["nameArtist"]."</h2>
+                        ";
+                        ?>
+
+                </div>
+            </div>
+
             <div class="controls-play-list">
                 <div class="buton-play" id="player">
                     <i class='icon-play-1' id="buton-pua"></i>
@@ -140,29 +160,7 @@
 
         </section>
         <!----------------------------->
-
-        <header class="header-container">
-
-            <div class="container-info-playlis">
-                <?php
-                        echo "
-                            <img src='".$resultsData["imgAlbum"]."' alt=''>
-                        ";
-                    ?>
-
-                <div class="content-playlist">
-                    <?php 
-                        
-                        echo "
-                            <h2>ÁLBUM</h2>
-                            <h1>".$resultsData["nameAlbum"]."</h1>
-                            <h2>".$resultsData["nameArtist"]."</h2>
-                        ";
-                        ?>
-
-                </div>
-            </div>
-        </header>
+        <header></header>
 
         <div class="searcher-container">
             <form action="albums.php" method="post">

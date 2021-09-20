@@ -79,7 +79,7 @@
                         <i class='icon-play-1' id="buton-pua"></i>
                     </div>
 
-                    <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.html"><div class="ir-albums">
+                    <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.php"><div class="ir-albums">
                         <p>Ir a Biblioteca</p>
                     </div></a>
 
@@ -193,7 +193,6 @@
 
             <div class="more-icons">
                 <i class="icon-loop-1" id="repetir"></i>
-                <i class="icon-shuffle-1"></i>
             </div>
 
             <div class="line-time-song">

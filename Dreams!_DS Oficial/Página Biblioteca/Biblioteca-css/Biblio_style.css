@@ -1,10 +1,10 @@
 .title_library {
-  padding-left: 4.5%;
+  padding-left: 2%;
   margin: 35px 10px;
 }
 
 .yourLibrary {
-  font-size: 6em;
+  font-size: 5.5em;
   margin-right: 14px;
 }
 
@@ -12,6 +12,11 @@
   color: #c4c4c4;
   font-size: 3em;
   padding-bottom: 1.5rem;
+}
+
+.title_library p{
+  width: 80%;
+  font-size: 1.1rem;
 }
 
 .list_group {
@@ -78,4 +83,118 @@
 
 .descrip-list {
   color: #fffa;
+}
+
+/*-----------------Carruceles De las cateorias de las layList------------------*/
+
+.tipo{
+  width: 100%;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  padding: 10px 40px;
+  margin-top: 30px;
+}
+
+.carrucel-playlist{
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 50px;
+}
+
+.play_lists{
+  min-width: 22%;
+  width: 22%;
+  margin: 0px 15px;
+  transition: 0.5s ease-in-out;
+  
+  padding: 15px;
+  position: relative;
+}
+
+.play_lists img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.play_lists:hover{
+  transform: scale(1.04);
+  transform-origin: center;
+
+  background-color: rgba(0, 0, 0, 0.452);
+  border-radius: 10px;
+}
+
+.play_lists h4,
+.play_lists h5{
+  font-weight: normal;
+  text-align: center;
+}
+
+.play_lists h5{
+  color: rgb(179, 179, 179);
+}
+
+
+.circulo-i-3 {
+  width: 5vmin;
+  height: 5vmin;
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+  opacity: 0;
+  border-radius: 5vmin;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 3px;
+
+  box-shadow: 0px 3px 6px #000;
+  -webkit-box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.733);
+
+  transition: 0.5s;
+}
+
+.circulo-i-3 i {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.play_lists:hover .circulo-i-3{
+  transform: translateY(-70px);
+  opacity: 1;
+}
+
+/*Area de la Línea*/
+
+
+.linea-albums{
+  width: 100%;
+  position: relative;
+  margin-top: 9vh;
+}
+
+.tus-creaciones{
+  display: flex;
+  justify-content: space-around;
+  width: 45%;
+
+}
+
+.linia-grande{
+  background-color: #ffffffc9;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 1px;
+  z-index: -1;
+}
+
+
+.tus-creaciones h1{
+  padding: 6px 0px;
+}
+
+.you-albums{
+  border-bottom: white 4px solid;
 }

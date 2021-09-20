@@ -15,8 +15,8 @@ body {
 
 
 header{
-    height: 45vh;
-    min-height: 375px;
+    height: 100px;
+
     background-color: rgba(0, 0, 0, 0.507);
     
     color: white;
@@ -32,8 +32,7 @@ header{
 
 .main-contaier{
     width: calc(100% - 232px);
-    height: calc(100% - 45vh);
-    margin-top: 45vh;
+    height: calc(100% - 90px);
 
     overflow-y: auto;
     background-color: rgba(0, 0, 0, 0.507);
@@ -42,15 +41,14 @@ header{
 
 .container-info-playlis{
     width: 100%;
-    height: 65%;
-
-    margin-top: 15vh;
-
+    height: 50%;
     display: flex;
+    align-items: center;
+    padding: 20px 50px;
 }
 
 .container-info-playlis img{
-    height: 100%;
+    height: 80%;
     min-height: 189.75px;
     border-radius: 15px;
 
@@ -59,7 +57,7 @@ header{
 }
 
 .content-playlist{
-    min-width: 180px;
+    min-width: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -73,14 +71,14 @@ header{
     text-decoration: none;
 }
 
-.content-playlist a h2{
+.content-playlist h2{
     font-weight: normal;
     font-size: 3vh;
     color: white;
     
 }
 .content-playlist h1{
-    font-size: 5vw;
+    font-size: 6vw;
     /*white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;*/
@@ -94,7 +92,7 @@ header{
 .controls-play-list{
     width: 100%;
     height: 18%;
-    padding: 10px 18px;
+    padding: 10px 50px;
     display: flex;
     align-items: center;
 
@@ -154,14 +152,20 @@ header{
 
     margin: 0px 30px;
   }
-  .controls-play-list a{
+.controls-play-list a{
     text-decoration: none;
     margin: 0px;
-  }
+    text-align: center;
+    color: rgba(255, 255, 255, 0.664);
+}
   
 .ir-albums:hover{
     color: white;
     border: white 1px solid;
+}
+
+.ir-albums a:hover{
+    color: white;
 }
 
 
@@ -281,25 +285,8 @@ header{
 
 /*----- ------ ------ ----- NUEVAS mEDIA Q ----- ------ -------  ------*/
 
-@media screen and (max-height: 836px) {
-    .main-contaier{
-        height: calc(100% - 375px);
-        margin-top: 375px;
-    }
-
-
-    
-    .container-info-playlis{
-        margin-top: 110px;
-    }
-
-}
 @media screen and (min-width: 1919px) {
     
-    
-    header{
-        height: 500px;
-    }
     .main-contaier{
         height: calc(100% - 500px);
         margin-top: 500px;

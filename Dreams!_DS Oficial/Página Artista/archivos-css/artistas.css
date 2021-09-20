@@ -81,6 +81,7 @@ body {
 
 .artista h2{
   font-size: 4rem;
+  margin-left: 200px;
 }
 .img{
   width: 250px;
@@ -312,29 +313,57 @@ body {
 }
 /*------  ---- ---- --CARRUCEL DE LA lISTA DE ALBUMS ---- ---- ---- ---- --- --- ---*/
 
-.container-albums {
-  margin-top: 50px;
-  padding: 15px 90px;
-}
-
-.albums-artista {
+.contenedor-albums{
   width: 100%;
-  padding: 15px 30px;
+  padding: 25px;
+}
+
+/*Botones*/
+.flechas-carrucel{
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0px 40px 0px 60px;
 }
 
-.album {
-  width: 220px;
-  transition: 0.3s ease all;
-  margin: 0px 15px;
-  padding: 15px;
+.flechas-carrucel i{
+  font-size: 2.5vw;
+
   cursor: pointer;
+  color: #878787;
 }
 
-.album:hover {
-  transform: scale(1.05);
+.flechas-carrucel i:hover{
+  color: white;
+}
+
+/*---- Contenedores del Carrucel de Albums---- */
+
+.box-carrucel{
+  width: 100%;
+  overflow: hidden;
+  padding: 15px 20px;
+  scroll-behavior: smooth;
+}
+
+.box-carrucel .carrucel-1{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.album{
+  min-width: 22%;
+  transition: 0.3s ease all;
+  margin: 0px 20px;
+
+  padding: 15px;
+  position: relative;
+}
+.tem-alb{
+  width: 22%;
+}
+.album:hover{
+  transform: scale(1.04);
   transform-origin: center;
   transition: 0.5s;
 
@@ -342,32 +371,33 @@ body {
   border-radius: 15px;
 }
 
-.album img {
+.album img{
   width: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
-.album h4 {
-  margin-top: 10px;
+.album h4,
+.album h5{
   text-align: center;
-}
-
-.album h5 {
   font-weight: normal;
-  text-align: center;
 }
 
-.album i {
-  font-size: 4vmin;
+.album h5{
+  color: rgb(179, 179, 179);
+}
+
+.album i{
+  font-size: 5vmin;
   position: absolute;
-  left: 67%;
-  top: 60%;
-  text-shadow: -3px 3px 6px #000;
+  right: 20px;
+  bottom: 0px;
+  text-shadow: 0px 5px 10px #000;
 
   opacity: 0;
   transition: 0.5s;
 }
 
-.album:hover i {
+.album:hover i{
   opacity: 1;
+  transform: translateY(-70px);
 }
