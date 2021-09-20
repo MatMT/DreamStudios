@@ -1,0 +1,162 @@
+:root {
+  --blanco: #f0f0f1;
+  --negro: #1a1a1a;
+  --rosa: #e16372;
+  --morado: #794bf0;
+  --our-font: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+/* Globales */
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-image: url(../Assets/girl.jpg);
+  background-size: cover;
+  font-family: var(--our-font);
+  font-size: 16px; /* 1rem = 10px*/
+}
+
+/* header */
+.menu-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 10%;
+}
+
+.logo {
+  padding-left: 1rem;
+  display: flex;
+}
+
+.logo img {
+  width: 5rem;
+  height: 5rem;
+  align-items: center;
+}
+
+.logo_text {
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+}
+.menu-top .links a {
+  padding: 0 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--negro);
+}
+
+/* Contenido principal */
+
+.content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  main {
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+  }
+
+  .content-left {
+    gap: 2rem;
+    margin: 0 auto;
+  }
+}
+
+/* Formulario */
+
+h1.Title_principal {
+  text-align: center;
+  font-size: 3.6rem;
+}
+
+.Title_principal + p {
+  font-weight: 500;
+  text-align: center;
+}
+
+.formulario {
+  width: 100%;
+}
+
+.formulario fieldset {
+  border: none;
+  padding: 0;
+  width: 100%;
+}
+
+.campo {
+  margin-bottom: 1.7rem;
+}
+
+.campo label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.campo input {
+  font-size: 1.4rem;
+  border: 1.4px solid #808080;
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 100%;
+}
+
+/* footer del forms */
+
+.footer_forms {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lost_pass {
+  text-align: center;
+  color: #5e5d5d;
+  text-decoration: none;
+}
+
+hr {
+  width: 80%;
+  border: 1px solid var(--negro);
+  margin-bottom: 0;
+}
+
+.enviar {
+  width: 70%;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem;
+  font-weight: 900;
+  color: var(--blanco);
+  background-image: linear-gradient(
+    to right,
+    var(--rosa) 0%,
+    var(--morado) 100%
+  );
+}
