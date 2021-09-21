@@ -58,6 +58,18 @@
         }
     }
 
+
+
+    //BUSCADOR VERSIÓN 0.1  SOLO ARTISTAS
+
+    if(!empty($_POST["buscador01"])){
+        
+        $_SESSION["palabra"] = $_POST["buscador01"];
+        header("Location: ../../buscador_01/html/buscadorDS.php");
+
+        //$buscar = $conexion->prepare("SELECT * FROM `artistas_dreams` WHERE `name_artist` LIKE '%".$palabra."%'");
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -323,7 +335,9 @@
             </header>
 
             <div class="searcher-container">
-                <input type="text" class="searcher-user" placeholder="Buscar canciones, artistas..." required>
+                <form method="post" action="HomePage2.php">
+                    <input type="text" class="searcher-user" name="buscador01" placeholder="Buscar artistas..." required>
+                </form>
                 <i class="icon-note" id="nota"></i>
 
                 <div class="contariner-menu">
