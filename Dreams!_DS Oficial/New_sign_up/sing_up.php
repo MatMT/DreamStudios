@@ -93,7 +93,7 @@
             <p class="logo_text">Dreams!</p>
         </div>
         <nav class="links">
-            <a href="../New_log_in/log_in.html">Inicia Sesión</a>
+            <a href="../New_log_in/log_in.php">Inicia Sesión</a>
             <a href="../About us/Html/Nosotros.html">Sobre nosotros</a>
         </nav>
     </hader> 
