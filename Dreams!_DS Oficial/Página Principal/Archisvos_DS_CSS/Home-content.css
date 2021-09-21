@@ -232,6 +232,7 @@
 }
 
 .carousel-3 .cancion {
+  min-width: 18%;
   width: 18%;
   transition: 0.3s ease all;
   margin: 0px 10px;
@@ -319,6 +320,7 @@
   }
 
   .carousel-3 .cancion {
+    min-width: 15%;
     width: 15%;
   }
 
