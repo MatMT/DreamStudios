@@ -71,12 +71,12 @@
                         <p>Inicio</p></a>
                     </div>
                     <div class="active-option">
-                        <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.html"><i class="icon-th-large-outline"></i>
+                        <a href="../../Página Biblioteca/BIblioteca-html/Biblioteca.php"><i class="icon-th-large-outline"></i>
                         <p>Biblioteca DS</p></a>
                     </div>
 
                     <div class="option">
-                        <a href="../../Pagina DreamMaker J/html/DreaMaker.html"><i class="icon-music-1"></i>
+                        <a href="../../buscador_01/html/buscadorDS.php"><i class="icon-music-1"></i>
                         <p translate="no">Buscar</p></a>
                     </div>
                 </div>

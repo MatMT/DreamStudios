@@ -110,11 +110,14 @@
                         ¿Hay música en la luna?
                     </p>
                 </div>
+                
                 <?php if(!empty($mensaje)): ?>
                     <div class="respuesta">
                         <p><?= $mensaje ?></p>
                     </div>
                 <?php endif; ?>
+
+
                 <div class="formulario_registro">
                     <form action="" method="post">
                         <fieldset>
