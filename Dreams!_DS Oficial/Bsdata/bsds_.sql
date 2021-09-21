@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-09-2021 a las 10:41:57
+-- Tiempo de generación: 21-09-2021 a las 10:56:58
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.10
 
@@ -1423,14 +1423,14 @@ CREATE TABLE `biblioteca_dreams` (
 --
 
 INSERT INTO `biblioteca_dreams` (`id_play`, `name_play`, `creator_play`, `img_plalist`, `description_playlist`, `categoria`) VALUES
-(1, 'Random', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1WKYbS7YChQphh4PdLRte4kt4Z2itWfPa', '', 'Casual'),
-(2, 'Electrolove', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1CinY0-LjrB98ph1rmzQsEQCwR1PrkB9Y', '', 'Romantica'),
-(3, 'Heart Brake', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1rhc1ZRI_tMJ9LPNq6n5TaNoroSQlPe7m', '', 'Sad'),
-(4, 'Para Hispanohablantes', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1KIdInUz6LaAM3wK4SzjXdFeiKbzLSVve', '', 'Latino'),
-(5, 'Rock Forever', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1GMT4nqxmupASHkek1pn5Ls7AeoYIcPAq\r\n', '', 'Rock'),
-(6, 'Relaxing a bit', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1WTJJPqMwK9JKzozlk07as9uihbAJvMX_', '', 'Casual'),
-(7, 'All Time Pop!', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1tBVdmFjVgaxk4C_dahN5B1JfN-_Uhgtd', '', 'Pop'),
-(8, 'Love Story', 'Dreams!', 'https://drive.google.com/uc?export=download&id=1BdNn9S-jq1CiCU-PjHNPElRVJjHOyWKy', '', 'Romantica');
+(1, 'Random', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1WKYbS7YChQphh4PdLRte4kt4Z2itWfPa', '', 'casual'),
+(2, 'Electrolove', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1CinY0-LjrB98ph1rmzQsEQCwR1PrkB9Y', '', 'romantica'),
+(3, 'Heart Brake', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1rhc1ZRI_tMJ9LPNq6n5TaNoroSQlPe7m', '', 'sad'),
+(4, 'Para Hispanohablantes', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1KIdInUz6LaAM3wK4SzjXdFeiKbzLSVve', '', 'latino'),
+(5, 'Rock Forever', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1GMT4nqxmupASHkek1pn5Ls7AeoYIcPAq\r\n', '', 'rock'),
+(6, 'Relaxing a bit', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1WTJJPqMwK9JKzozlk07as9uihbAJvMX_', '', 'casual'),
+(7, 'All Time Pop!', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1tBVdmFjVgaxk4C_dahN5B1JfN-_Uhgtd', '', 'pop'),
+(8, 'Love Story', 'Dreams!', 'https://drive.google.com/uc?export=download&id=1BdNn9S-jq1CiCU-PjHNPElRVJjHOyWKy', '', 'romantica');
 
 -- --------------------------------------------------------
 
@@ -2650,7 +2650,8 @@ INSERT INTO `usuarios_dreams` (`id_users`, `name_user`, `e_mail`, `pasware`, `ge
 (18, 'Maldita Vecindad Y Los Hijos Del 5to. Patio', 'vecindad_hijos@gmail.com', 'hello_maldita', 'hombre', 28, 1),
 (19, 'Eduardo', 'eduar10.mart@gmail.com', '$2y$10$TjxDGNrDiHtmEG/niXo2PuPsIiOAJty9S4uuLwKu50m', 'Masculino', 16, 0),
 (20, 'Martín', 'estudiante20150471@cdb.edu.sv', '$2y$10$4jologGY6I8AOQge38SZmOUQTc72cso.Qo0BJm2vZMM', 'Masculino', 14, 0),
-(21, 'miguel', 'impresionessti@gmail.com', '$2y$10$qOYeeDOXgcrNu42BGVsayOkXdfIhTOCGMpC5bqrIOPD1Tz3QSFFNa', 'Masculino', 16, 0);
+(21, 'miguel', 'impresionessti@gmail.com', '$2y$10$qOYeeDOXgcrNu42BGVsayOkXdfIhTOCGMpC5bqrIOPD1Tz3QSFFNa', 'Masculino', 16, 0),
+(22, 'Mateo Elías', 'oscarmateoelias@gmail.com', '$2y$10$W583k5C1DWZ0/WQ1y4TySemuucGe9bmKdC8h8NOgwmiZ.uTE6JxFe', 'Masculino', 16, 0);
 
 --
 -- Índices para tablas volcadas
@@ -3978,7 +3979,7 @@ ALTER TABLE `playlist_artist_19`
 -- AUTO_INCREMENT de la tabla `usuarios_dreams`
 --
 ALTER TABLE `usuarios_dreams`
-  MODIFY `id_users` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_users` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

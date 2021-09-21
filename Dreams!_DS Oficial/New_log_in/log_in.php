@@ -1,7 +1,7 @@
 <?php 
     session_start();
     
-    require("../../conexion_mysql/conection-basedatos.php");
+    require("../conexion_mysql/conection-basedatos.php");
 
     if(!empty($_POST['EmailType']) && !empty($_POST['password'])){
         
@@ -54,8 +54,8 @@
             <p class="logo_text">Dreams!</p>
         </div>
         <nav class="links">
-            <a href="#">Registrarse</a>
-            <a href="#">Sobre nosotros</a>
+            <a href="../New_sign_up/sing_up.php">Registrarse</a>
+            <a href="../About us/Html/Nosotros.html">Sobre nosotros</a>
         </nav>
     </hader>
     <main>
@@ -85,13 +85,13 @@
                             <input type="password" placeholder="contraseña" required>
                         </div>
                     </fieldset>
-                </form>
-                <div class="footer_forms">
+                    <div class="footer_forms">
                     <a href="#" class="lost_pass">¿Olvidaste tu contraseña?</a>
                 <hr>
                     <p>¿No tienes una cuenta?</p>
                     <input type="submit" value="Iniciar Sesión  ➜" class="enviar"></input>
                 </div>
+                </form>
             </div>
     </main>
 </body>

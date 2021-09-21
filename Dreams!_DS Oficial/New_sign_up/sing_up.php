@@ -30,7 +30,7 @@
             $stmt -> bindParam(":ege", $_POST['AgeType']);
 
 
-             if($_POST["PassType"] = $_POST['repitPasware']){
+            //  if($_POST["PassType"] = $_POST['repitPasware']){
                 
                  if($stmt->execute()){
                     
@@ -49,7 +49,7 @@
                         $contenido .= "";
 
                         mail($email,"Te registraste en Dreams!",$contenido, "Bienvenid@ a Dreams 🎶");
-                        header("Location:../../Inicio de sesión/Html/Inicio_Personal.php");
+                        header("Location:../New_log_in/log_in.php");
                 
                         }
 
@@ -57,9 +57,9 @@
                  }else{
                      $mensaje = "Parace que existe un error";
                  }
-             }else{
-                 $mensaje = "Las contraseñas deben de coincidir";
-             }
+            //  }else{
+            //      $mensaje = "Las contraseñas deben de coincidir";
+            //  }
     }
 
         // AVISO : Viejo las lineas que comente, fue por que en su momento me daban error y no me dejaban 
@@ -129,11 +129,11 @@
                             </div>
                             <div class="campo">
                                 <label for="NameType">¿Como te llamaremos?</label>
-                                <input type="password" placeholder="Tu contraseña" name="NameType" class="nombre" id="NameType" required>
+                                <input type="text" placeholder="Tu Nombre de usuario" name="NameType" class="nombre" id="NameType" required>
                             </div>
                             <div class="campo">
                                 <label for="PassType">Crea una contraseña</label>
-                                <input type="password" placeholder="Tu Nombre de usuario" name="PassType" class="nombre" id="PassType" required>
+                                <input type="password" placeholder="Tu contraseña" name="PassType" class="nombre" id="PassType" required>
                             </div>
                             <div class="campo">
                                 <label for="AgeType">Dinos tu edad</label>
