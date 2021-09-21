@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-09-2021 a las 08:51:47
+-- Tiempo de generación: 21-09-2021 a las 10:41:57
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.10
 
@@ -647,6 +647,27 @@ INSERT INTO `album_8_5` (`id_song_a`, `name_song`, `name_album`, `name_artist`, 
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `album_8_6`
+--
+
+CREATE TABLE `album_8_6` (
+  `id_song_a` int(3) NOT NULL,
+  `name_song` varchar(50) NOT NULL,
+  `name_album` varchar(50) NOT NULL,
+  `name_artist` varchar(300) NOT NULL,
+  `direction_song` varchar(300) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `album_8_6`
+--
+
+INSERT INTO `album_8_6` (`id_song_a`, `name_song`, `name_album`, `name_artist`, `direction_song`) VALUES
+(1, 'Dark Necessities', 'The Getaway', 'Red Hot Chili Peppers', 'https://drive.google.com/uc?export=download&id=1nSC_BIMJj_9MNOh0tw9zTwpjLFihLMzJ');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `album_9_1`
 --
 
@@ -993,7 +1014,8 @@ CREATE TABLE `album_14_1` (
 
 INSERT INTO `album_14_1` (`id_song_a`, `name_song`, `name_album`, `name_artist`, `direction_song`) VALUES
 (1, 'Fragments of Time', 'Random Access Memories', 'Draft Punk ', 'https://drive.google.com/uc?export=download&id=10B2neT6kWt_6vyV0WqEqPXH-PT6KGQfX'),
-(2, 'Give Life Back to Music', 'Random Access Memories', 'Draft Punk ', 'https://drive.google.com/uc?export=download&id=12MzLdN2BdvdTF6xDqccY5jDJspnFyQpZ');
+(2, 'Give Life Back to Music', 'Random Access Memories', 'Draft Punk ', 'https://drive.google.com/uc?export=download&id=12MzLdN2BdvdTF6xDqccY5jDJspnFyQpZ'),
+(3, 'Game of Love', 'Random Access Memories', 'Daft Punk', 'https://drive.google.com/uc?export=download&id=1WSAvHaCElofMTYgW5Gq37HRQq6AyBUg6');
 
 -- --------------------------------------------------------
 
@@ -1014,7 +1036,8 @@ CREATE TABLE `album_14_2` (
 --
 
 INSERT INTO `album_14_2` (`id_song_a`, `name_song`, `name_album`, `name_artist`, `direction_song`) VALUES
-(1, 'Robot Rock ', 'Human After All', 'Draft Punk ', 'https://drive.google.com/uc?export=download&id=1FNAS5j4NMpACvhbMaUV6wKUjrQ4kKWZd');
+(1, 'Robot Rock ', 'Human After All', 'Draft Punk ', 'https://drive.google.com/uc?export=download&id=1FNAS5j4NMpACvhbMaUV6wKUjrQ4kKWZd'),
+(2, 'Make Love', 'Human After All', 'Daft Punk', 'https://drive.google.com/uc?export=download&id=1FAYxdKy8C3hJuwORAArCHF7KOaYx63Ng');
 
 -- --------------------------------------------------------
 
@@ -1371,13 +1394,14 @@ INSERT INTO `artistas_dreams` (`id_art`, `name_artist`, `description_art`, `e_ma
 (9, 'Lady Gaga', 'Stefani Joanne Angelina Germanotta, más conocida por su nombre artístico Lady Gaga, es una cantante, compositora, productora, bailarina, actriz, activista y diseñadora de moda estadounidense.', 'lady_gg@gmail.com', 'https://drive.google.com/uc?export=view&id=1ZR_wIu3MBXLIy5889-x9o0kDmHQCiOrQ', 'https://drive.google.com/uc?export=view&id=1RwQEEyn0NtoJSyXD7Ykt3AOXaCuaRzK5'),
 (10, 'Dua Lipa', 'Dua Lipa es una cantante y compositora británica de etnia albanokosovar. Después de trabajar como modelo, firmó con Warner Bros. Records en 2014 y lanzó su álbum debut homónimo en 2017.', 'dua_lipa@gmail.com', 'https://drive.google.com/uc?export=view&id=1mczwYG2gdhybEJHp3-qx3Oig3LZKTkab', 'https://drive.google.com/uc?export=view&id=1mczwYG2gdhybEJHp3-qx3Oig3LZKTkab'),
 (11, 'Soda Stereo', 'Soda Stereo fue una banda argentina de rock formada originalmente en Buenos Aires en 1982 por Gustavo Cerati, Héctor «Zeta» Bosio y Carlos Alberto Ficicchia «Charly Alberti».', 'soda_stero@gmail.com', 'https://drive.google.com/uc?export=view&id=17jcGRDeYSAIQ7GEuzsE9l8l-Z8fL4lAO', 'https://drive.google.com/uc?export=view&id=1tyreZGyaEoNkKl2o93vKGSbkVr3PVUYn'),
-(12, 'Taylor Swift', 'Taylor Alison Swift es una cantante, compositora, productora, filántropa y actriz estadounidense. Criada en Wyomissing, se mudó a Nashville a los 14 años para realizar una carrera de música country.', 'taylor_st@gmail.com', 'https://drive.google.com/uc?export=view&id=10SkGq-6cCzRrcI1fqsyG_jzcmxOsFunW', 'https://drive.google.com/uc?export=view&id=1H3CH2skm1GjveJrjAg8sdtJbF4Y8vqZ_'),
+(12, 'Taylor Swift', 'Taylor Alison Swift es una cantante, compositora, productora, filántropa y actriz estadounidense. Criada en Wyomissing, se mudó a Nashville a los 14 años para realizar una carrera de música country.', 'taylor_st@gmail.com', 'https://drive.google.com/uc?export=view&id=1SncEnLxnGP7mHQPwCL3NY-cO1uFM_4Ey', 'https://drive.google.com/uc?export=view&id=1H3CH2skm1GjveJrjAg8sdtJbF4Y8vqZ_'),
 (13, 'LIT Killah', 'Mauro Monzón, conocido artísticamente como Lit Killah, es un cantante, rapero y freestyler argentino.​', 'lit_ka@gmail.com', 'https://drive.google.com/uc?export=view&id=1gNRVdR9h1rnowpz4a40eJU10ops5Alep', 'https://drive.google.com/uc?export=view&id=168wzei3xw_3IsO8QmWXfOUbTFmEiQIMe'),
 (14, 'Daft Punk ', 'Daft Punk fue un dúo francés de french house formado por los DJ y productores Guy-Manuel de Homem-Christo y Thomas Bangalter.​​​ ', 'daft_punk21@gmail.com', 'https://drive.google.com/uc?export=view&id=1BCQcXuZ73YFfxQJSTUjwdT36tUpN7m2F', 'https://drive.google.com/uc?export=view&id=1DPmPh_PBZpGknponhDZeL_ggBb_UFT7w'),
 (15, 'One Direction', 'One Direction  es una boy band británico-irlandesa compuesto en aquel entonces por Harry Styles, Liam Payne, Zayn Malik, Niall Horan y Louis Tomlinson.', 'one_direction@gmail.com', 'https://drive.google.com/uc?export=view&id=1gwv-hH8exq3juo5ptswNNQ1Vo-J3TUUV', 'https://drive.google.com/uc?export=view&id=1CebwWTaYdH0RHWVHJ62l5nBHNEwnZzWW'),
 (16, '5 Seconds Of Summer', '5 Seconds of Summer es una banda Australiana, de género pop rock,  integrada por Luke Hemmings (vocalista principal, piano y guitarra), Calum Hood (voz, piano y bajo), Ashton Irwin (batería y voz) y Michael Clifford (guitarrista principal y voz).', '5_seconds_of_summer@gmail.com', 'https://drive.google.com/uc?export=view&id=1qVAex3Cw7lIQx8cit2rDSuPGqHcxjPmp', 'https://drive.google.com/uc?export=view&id=1KVy3QdzPuv4MKDtea5XnMzpIEuDF7DSF'),
 (17, 'Cerati', 'Gustavo Adrián Cerati fue un músico, cantautor, actor, y productor discográfico argentino que obtuvo reconocimiento internacional por haber sido el líder de la banda de rock Soda Stereo. ', 'cerati_g@gmail.com', 'https://drive.google.com/uc?export=view&id=1EiflvclMPqImyTTTXGYAI-M-LaKIr1gw', 'https://drive.google.com/uc?export=view&id=1XIDx1oXDsrMlLeGNo98iQZMwJAEoPU2T'),
-(18, 'Maldita Vecindad Y Los Hijos Del 5to. Patio', 'Maldita Vecindad y los Hijos del Quinto Patio es un grupo musical mexicano, formado en la Ciudad de México que fusiona ritmos como el rock, el ska, el reggae, el punk e influencias tradicionales de la música mexicana como el danzón y el bolero.', 'vecindad_hijos@gmail.com', 'https://drive.google.com/uc?export=view&id=1lQKUFEHYt0WMvZ9F3skmQztsoHkjmdfv', 'https://drive.google.com/uc?export=view&id=1e2i_LqFq28wHCaep1qLoQDq4hvNPXawN');
+(18, 'Maldita Vecindad Y Los Hijos Del 5to. Patio', 'Maldita Vecindad y los Hijos del Quinto Patio es un grupo musical mexicano, formado en la Ciudad de México que fusiona ritmos como el rock, el ska, el reggae, el punk e influencias tradicionales de la música mexicana como el danzón y el bolero.', 'vecindad_hijos@gmail.com', 'https://drive.google.com/uc?export=view&id=1lQKUFEHYt0WMvZ9F3skmQztsoHkjmdfv', 'https://drive.google.com/uc?export=view&id=1e2i_LqFq28wHCaep1qLoQDq4hvNPXawN'),
+(19, 'Bryan Carbajal', 'Es un adolescente de 16 años, quien se ha a desempeñado en le mundo de la música, compartiendo sus grandes habilidades musicales y la destreza para cualquier instrumento.', 'bryan_carbajal@gmail.com', 'https://drive.google.com/uc?export=view&id=1GjQ1lPkhBawei8ZhT7zlA1Ja7ApY8jEc', 'https://drive.google.com/uc?export=view&id=1STGlm_sL9_OO35iUQEQNOFELGorsdC_N');
 
 -- --------------------------------------------------------
 
@@ -1390,18 +1414,23 @@ CREATE TABLE `biblioteca_dreams` (
   `name_play` varchar(50) NOT NULL,
   `creator_play` varchar(50) NOT NULL,
   `img_plalist` varchar(250) NOT NULL,
-  `description_playlist` varchar(256) NOT NULL
+  `description_playlist` varchar(256) NOT NULL,
+  `categoria` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `biblioteca_dreams`
 --
 
-INSERT INTO `biblioteca_dreams` (`id_play`, `name_play`, `creator_play`, `img_plalist`, `description_playlist`) VALUES
-(1, 'Random', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1WKYbS7YChQphh4PdLRte4kt4Z2itWfPa', ''),
-(2, 'Electrolove', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1CinY0-LjrB98ph1rmzQsEQCwR1PrkB9Y', ''),
-(3, 'Heart Brake', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1rhc1ZRI_tMJ9LPNq6n5TaNoroSQlPe7m', ''),
-(4, 'Para Hispanohablantes', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1KIdInUz6LaAM3wK4SzjXdFeiKbzLSVve', '');
+INSERT INTO `biblioteca_dreams` (`id_play`, `name_play`, `creator_play`, `img_plalist`, `description_playlist`, `categoria`) VALUES
+(1, 'Random', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1WKYbS7YChQphh4PdLRte4kt4Z2itWfPa', '', 'Casual'),
+(2, 'Electrolove', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1CinY0-LjrB98ph1rmzQsEQCwR1PrkB9Y', '', 'Romantica'),
+(3, 'Heart Brake', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1rhc1ZRI_tMJ9LPNq6n5TaNoroSQlPe7m', '', 'Sad'),
+(4, 'Para Hispanohablantes', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1KIdInUz6LaAM3wK4SzjXdFeiKbzLSVve', '', 'Latino'),
+(5, 'Rock Forever', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1GMT4nqxmupASHkek1pn5Ls7AeoYIcPAq\r\n', '', 'Rock'),
+(6, 'Relaxing a bit', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1WTJJPqMwK9JKzozlk07as9uihbAJvMX_', '', 'Casual'),
+(7, 'All Time Pop!', 'Dreams!', 'https://drive.google.com/uc?export=view&id=1tBVdmFjVgaxk4C_dahN5B1JfN-_Uhgtd', '', 'Pop'),
+(8, 'Love Story', 'Dreams!', 'https://drive.google.com/uc?export=download&id=1BdNn9S-jq1CiCU-PjHNPElRVJjHOyWKy', '', 'Romantica');
 
 -- --------------------------------------------------------
 
@@ -1526,6 +1555,130 @@ INSERT INTO `biblio_playlist_4` (`id_song`, `name_song`, `name_artista`, `song_a
 (8, 'Té para tres', 'Soda Stereo', 'Canción animal', 'https://drive.google.com/uc?export=download&id=1-QauD1La0jsiLqE8zNTpBgYxnxTxCZ0T', 'https://drive.google.com/uc?export=view&id=1KD4SFEQnCuSSFOKBqvnGq_bIjQfvUw8y'),
 (9, 'Dame Una Nite', 'LIT Killah', 'MAWZ', 'https://drive.google.com/uc?export=download&id=1tvEa5WTS3bT2ElFFHWe5oeRgeiew3YA4', 'https://drive.google.com/uc?export=view&id=1gNRVdR9h1rnowpz4a40eJU10ops5Alep'),
 (10, 'Cuando pase el temblor', 'Soda Stereo', 'Nada personal', 'https://drive.google.com/uc?export=download&id=1cFi8hQzl2LTjMYm9WM06fLHS5GhEXk2c', 'https://drive.google.com/uc?export=view&id=140yKhfkf_L-t49G6HkZIOTwdAykyodAN');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `biblio_playlist_5`
+--
+
+CREATE TABLE `biblio_playlist_5` (
+  `id_song` int(11) NOT NULL,
+  `name_song` varchar(50) NOT NULL,
+  `name_artista` varchar(50) NOT NULL,
+  `song_album` varchar(50) NOT NULL,
+  `direction_song` varchar(500) NOT NULL,
+  `imgAlbum` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `biblio_playlist_5`
+--
+
+INSERT INTO `biblio_playlist_5` (`id_song`, `name_song`, `name_artista`, `song_album`, `direction_song`, `imgAlbum`) VALUES
+(1, 'Dark Necessities', 'Red Hot Chili Peppers', 'The Getaway', 'https://drive.google.com/uc?export=download&id=1nSC_BIMJj_9MNOh0tw9zTwpjLFihLMzJ', 'https://drive.google.com/uc?export=view&id=1Bwvly-TWcTMN3QGSLGvym-EZgLP7S-p7'),
+(2, 'Pachuco', 'Maldita Vecindad Y Los Hijos Del 5to. Patio', 'El Circo', 'https://drive.google.com/uc?export=download&id=1DvjoImgcw7W4Hg-XLF-A3tUcTP_UtrtX', 'https://drive.google.com/uc?export=view&id=1MRzwuBZCM7R8pbxHfIoXzUMmd-lBbAYn'),
+(3, 'Whole Lotta Love', 'Led Zeppelin', 'Led Zeppelin II', 'https://drive.google.com/uc?export=download&id=1uH9-82n5g5BithAeiTOJZme5Ct964dCA', 'https://drive.google.com/uc?export=view&id=1lCPabgj5cdnEeZhtM68kOntGmXW-rul9'),
+(4, 'Californication ', 'Red Hot Chili Peppers', 'Californication', 'https://drive.google.com/uc?export=download&id=18Ebx12l0SCetn0LM-67FqKLhiTx92qQ2', 'https://drive.google.com/uc?export=view&id=1Eg7Jjrzvvz_vcEapVx_MZUThplnUGpaq'),
+(5, 'Immigrant Song', 'Led Zeppelin', 'Zeppelin lll ', 'https://drive.google.com/uc?export=download&id=1hSeeoa-6_ZudvpDXZC0YONy75S6EMXEI', ''),
+(6, 'Jeat Black Heart', '5 Seconds Of Summer', 'Sounds Good Feels Good', 'https://drive.google.com/uc?export=download&id=1gI_S5T_wFx5nfHHXTcx5ojWiaVFSGDUS', ''),
+(7, 'Bajan', 'Gustavo Cerati', 'Amor amarillo', 'https://drive.google.com/uc?export=download&id=1J61Urr9-EGstxGqfNfeNoWWXlbizVG82', ''),
+(8, 'Heartbreaker', 'Led Zeppelin', 'Led Zeppelin II', 'https://drive.google.com/uc?export=download&id=1KxSgSOrB3LMewmhQLphTfBI41idph2Cq', ''),
+(9, 'De Música Ligera', 'Soda Stereo', 'Canción animal', 'https://drive.google.com/uc?export=download&id=1DJ6zlWBGNthV91_NUgjwnI5kjr4iChTX', ''),
+(10, 'Give it away', 'Red Hot Chili Peppers', 'Sugar Sex Magik', 'https://drive.google.com/uc?export=download&id=1w72ZwpsZjOCL_sQCuj0THoYQ2YgIJ0BI', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `biblio_playlist_6`
+--
+
+CREATE TABLE `biblio_playlist_6` (
+  `id_song` int(11) NOT NULL,
+  `name_song` varchar(50) NOT NULL,
+  `name_artista` varchar(50) NOT NULL,
+  `song_album` varchar(50) NOT NULL,
+  `direction_song` varchar(500) NOT NULL,
+  `imgAlbum` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `biblio_playlist_6`
+--
+
+INSERT INTO `biblio_playlist_6` (`id_song`, `name_song`, `name_artista`, `song_album`, `direction_song`, `imgAlbum`) VALUES
+(1, 'Space Cowboy', 'Jamiroquai', 'The Return of the Space Cowboy', 'https://drive.google.com/uc?export=download&id=1_KTGWO03y-LAkQKZ_Cfh1pzSMNeHE5EQ', ''),
+(2, 'Crockett\'s Revenge', 'The Midnight', 'Endless Summer', 'https://drive.google.com/uc?export=download&id=1_y8Hnir0gXfooV5vMas39jYHBXhNUXKt', ''),
+(3, 'This Town', 'Niall Horan', 'Flicker', 'https://drive.google.com/uc?export=download&id=1-8SMTxY7V2aoTbOf-vQ_BxUC4RqVHp4M', ''),
+(4, 'Lo que siento', 'Cuco', 'Solo', 'https://drive.google.com/uc?export=download&id=1-hirz8pb4ZmgGomb8L5I6Xq5G6ZUXRBd', ''),
+(5, 'Last Train', 'The Midnight', 'Monsters', 'https://drive.google.com/uc?export=download&id=1OaVRpP9nGjXEeKDsmBNRdHNyexH9SpRs', ''),
+(6, 'Stay for a bit', 'Cuco', 'Songs4u', 'https://drive.google.com/uc?export=download&id=1ftBNX9CEfYpQgYGVv9tSohAdNJF3A9Vd', ''),
+(7, 'Make Love', 'Daft Punk', 'Human After All', 'https://drive.google.com/uc?export=download&id=1FAYxdKy8C3hJuwORAArCHF7KOaYx63Ng', ''),
+(8, 'Bossa No sé', 'Cuco', 'Para Mi', 'https://drive.google.com/uc?export=download&id=1fcWF1Iedwx9FH2UuMr2bXZWjIN2WPuE2', ''),
+(9, 'Game of Love', 'Daft Punk', 'Random Access Memories', 'https://drive.google.com/uc?export=download&id=1WSAvHaCElofMTYgW5Gq37HRQq6AyBUg6', ''),
+(10, 'Summer Time High Time', 'Cuco', 'Chiquito', 'https://drive.google.com/uc?export=download&id=1gLNpi12CPMCAWA15mVXrIFm09M7Zowlt', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `biblio_playlist_7`
+--
+
+CREATE TABLE `biblio_playlist_7` (
+  `id_song` int(11) NOT NULL,
+  `name_song` varchar(50) NOT NULL,
+  `name_artista` varchar(50) NOT NULL,
+  `song_album` varchar(50) NOT NULL,
+  `direction_song` varchar(500) NOT NULL,
+  `imgAlbum` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `biblio_playlist_7`
+--
+
+INSERT INTO `biblio_playlist_7` (`id_song`, `name_song`, `name_artista`, `song_album`, `direction_song`, `imgAlbum`) VALUES
+(1, 'Future Nostalgia', 'Dua Lipa', 'Future Nostalgia', 'https://drive.google.com/uc?export=download&id=1JfBMek80HY0b-4DEKZ4BToHJ4bbzCJF4', 'https://drive.google.com/uc?export=view&id=18y2id5JNUxApb6Vi8dLl1b567fMpR06p'),
+(2, 'Canned Heat', 'Jamiroquai', 'Synkronized', 'https://drive.google.com/uc?export=download&id=1aIvNWVjVOYhc1KeXZ1lFUy4hWvxA_t7D', 'https://drive.google.com/uc?export=view&id=19xtYXpyo2b-SgFFs0ZBCFaJIBy5xfSeg'),
+(3, 'Love Again', 'Dua Lipa', 'Future Nostalgia', 'https://drive.google.com/uc?export=download&id=1bAqgNrcE66dXmgdMpphmKXl4IlmTA7nv', 'https://drive.google.com/uc?export=view&id=18y2id5JNUxApb6Vi8dLl1b567fMpR06p'),
+(4, 'Shake it Off', 'Taylor Swift', '1989', 'https://drive.google.com/uc?export=download&id=182oJA2BZMg8_k3sXOAtGxEnZpsu02e4Z', 'https://drive.google.com/uc?export=view&id=1RcHbhdp5l-zR1H3QMwJNg_NLuRpHxnS3'),
+(5, 'Alejandro', 'Lady Gaga', 'The Fame Monster', 'https://drive.google.com/uc?export=download&id=1y4CLPasVbTvEdagU4DQtdogSluno2QiJ', 'https://drive.google.com/uc?export=view&id=1N8Cb12T9hY9gZ6ux9JfOR7aI6Amo6fZ9'),
+(6, 'Amnesia', '5 Seconds Of Summer', '5 Seconds Of Summer', 'https://drive.google.com/uc?export=download&id=1agRrddQsh6xPDyFMO6wXU6AQPQLJbFLQ', 'https://drive.google.com/uc?export=view&id=1uTQ17RYnENvEarlGeR5H7r_nRVRRymgT'),
+(7, 'Break My Heart', 'Dua Lipa', 'Future Nostalgia', 'https://drive.google.com/uc?export=download&id=1IIiIndXtGFaG-Ec-R9atA14jNTF0b8hw', 'https://drive.google.com/uc?export=view&id=18y2id5JNUxApb6Vi8dLl1b567fMpR06p'),
+(8, 'Blank Space', 'Taylor Swift', '1989', 'https://drive.google.com/uc?export=download&id=12SbmxJbTnjr9Oi1ZGLmshgPb9Z5AMWq8', 'https://drive.google.com/uc?export=view&id=1RcHbhdp5l-zR1H3QMwJNg_NLuRpHxnS3'),
+(9, 'Little L', 'Jamiroquai', 'A Funk Odyssey', 'https://drive.google.com/uc?export=download&id=1tNcppbRP0kOxPmjr2dwaCCTn8TEqaafb', 'https://drive.google.com/uc?export=view&id=1a_6DeaKqU_NDAszgdaLpW9ADmNrm_Gjn'),
+(10, 'Irresistible', 'One Direction', 'Take me Home', 'https://drive.google.com/uc?export=download&id=1Y94umTCpDscpHlPHGaztwKPVfikT3neG', 'https://drive.google.com/uc?export=view&id=1F-fYDb4xFTCrLf9X77iSDA7Jkn-4No8H');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `biblio_playlist_8`
+--
+
+CREATE TABLE `biblio_playlist_8` (
+  `id_song` int(11) NOT NULL,
+  `name_song` varchar(50) NOT NULL,
+  `name_artista` varchar(50) NOT NULL,
+  `song_album` varchar(50) NOT NULL,
+  `direction_song` varchar(500) NOT NULL,
+  `imgAlbum` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `biblio_playlist_8`
+--
+
+INSERT INTO `biblio_playlist_8` (`id_song`, `name_song`, `name_artista`, `song_album`, `direction_song`, `imgAlbum`) VALUES
+(1, 'Put A Little Love On Me', 'Niall Horan', 'Flicker', 'https://drive.google.com/uc?export=download&id=1EJLFZO_kVPcBJQv8U6ijMXHJm7hSDyWc', 'https://drive.google.com/uc?export=view&id=1Lc25LhDHDgusn_uIUEb6WPuly0MTtQjA'),
+(2, 'Lovesick', 'Maroon 5', 'Jordi', 'https://drive.google.com/uc?export=download&id=1iA_wFejbiwln1YKwKAnhBzXbzqZr23ff', 'https://drive.google.com/uc?export=view&id=1-F8PYT2ogjOFrVZxzwfycV_9ygLzh3MP'),
+(3, 'Love Again', 'Dua Lipa', 'Future Nostalgia', 'https://drive.google.com/uc?export=download&id=1bAqgNrcE66dXmgdMpphmKXl4IlmTA7nv', 'https://drive.google.com/uc?export=view&id=18y2id5JNUxApb6Vi8dLl1b567fMpR06p'),
+(4, 'Adiós', 'Gustavo Cerati', 'Ahí vamos', 'https://drive.google.com/uc?export=download&id=1lVdxu5hWuaH-FZjgvU0U68X3ybEOv_if', 'https://drive.google.com/uc?export=view&id=1MfplSxzAxsBZnLplVdlCqW1MHHYCIh75'),
+(5, 'Se Terminó ', 'LIT Killah', 'Se Terminó', ' https://drive.google.com/uc?export=download&id=1FM_ZNO0f-_6c8CRYPgxw1GqoujCWEiXO', 'https://drive.google.com/uc?export=view&id=1eehCtL507U9XXLRfR9SG1NMQnLWEdsHz'),
+(6, 'Something About Us', 'Daft Punk', 'Discovery', '//drive.google.com/uc?export=download&id=1L9g15_8Rwt2tUvUwg5HtNjicsV7VSjqv', 'https://drive.google.com/uc?export=view&id=1D1mMywu7C6raa8ubelgsgp7N6s4axddP'),
+(7, 'Instant Crush', 'Daft Punk', 'Random Access Memories', '//drive.google.com/uc?export=download&id=1MjPtowU-YrZEbztZwgxE3DEt5tCgTZVb', 'https://drive.google.com/uc?export=view&id=1BCQcXuZ73YFfxQJSTUjwdT36tUpN7m2F'),
+(8, 'Bajan', 'Gustavo Cerati', 'Amor amarillo', 'https://drive.google.com/uc?export=download&id=1J61Urr9-EGstxGqfNfeNoWWXlbizVG82', 'https://drive.google.com/uc?export=view&id=1sFY_Zx2Z3jGekBjI101cOw9IBmzeY0Kf'),
+(9, 'Lie To Me', '5 Seconds Of Summer', 'Youngblood', 'https://drive.google.com/uc?export=download&id=1HPRqldQWMmYhoPZBU5vUSBoxog057Wlu', 'https://drive.google.com/uc?export=view&id=1q8ly0hHzLlRigmPB_1Hu04wqZLwMSUnD'),
+(10, 'Lo pasado pasado', 'Maldita Vecindad Y Los Hijos Del 5to. Patio', 'A 30 Años', 'https://drive.google.com/uc?export=download&id=16FaxhVuc93cpQTc2rGFi0y3O3z-S1Vmt', 'https://drive.google.com/uc?export=view&id=1Wa4chJxytckyhxi293e-2j5S5PQv7otQ');
 
 -- --------------------------------------------------------
 
@@ -1723,7 +1876,8 @@ INSERT INTO `dreamaker_artist_8` (`id_album`, `nameAlbum`, `nameArtist`, `imgAlb
 (2, 'Blood Sugar Sex Magik', 'Red Hot Chili Peppers', 'https://drive.google.com/uc?export=view&id=18bCS5fGNEmm7kcVG3lXzFZJAbDFCle5O\r\n', NULL, 'Album'),
 (3, 'Stadium Arcadium', 'Red Hot Chili Peppers', 'https://drive.google.com/uc?export=view&id=1-KovWjOrXbWXY3-bA0yVsGOM6H6DrF1t\r\n', NULL, 'Album'),
 (4, 'By the way', 'Red Hot Chili Peppers', 'https://drive.google.com/uc?export=view&id=1bWsZPNhAlJTdymepMWLTVSM2DakAUfRy', NULL, 'Album'),
-(5, 'Californication', 'Red Hot Chili Peppers', 'https://drive.google.com/uc?export=view&id=1Eg7Jjrzvvz_vcEapVx_MZUThplnUGpaq\r\n\r\n', NULL, 'Album');
+(5, 'Californication', 'Red Hot Chili Peppers', 'https://drive.google.com/uc?export=view&id=1Eg7Jjrzvvz_vcEapVx_MZUThplnUGpaq\r\n\r\n', NULL, 'Album'),
+(6, 'The Getaway', 'Red Hot Chili Peppers', 'https://drive.google.com/uc?export=view&id=1Bwvly-TWcTMN3QGSLGvym-EZgLP7S-p7', NULL, 'Album');
 
 -- --------------------------------------------------------
 
@@ -2015,7 +2169,7 @@ INSERT INTO `playlist_artist_2` (`id_song`, `name_song`, `name_artista`, `song_a
 (2, 'Seasons', 'Maroon 5', 'Jordi', 'https://drive.google.com/uc?export=download&id=13jcymGjhBvd7-pILgbROjl2RLCuBVKtb'),
 (3, 'Lovesick', 'Maroon 5', 'Jordi', 'https://drive.google.com/uc?export=download&id=1iA_wFejbiwln1YKwKAnhBzXbzqZr23ff'),
 (4, 'Lost', 'Maroon 5', 'Jordi', 'https://drive.google.com/uc?export=download&id=1LDpdJ5RoZUd2-kVKbezuxzmZBYGBB4Aa'),
-(5, 'Echo', 'Maroon 5 - ft. Blackbear', 'Jordi', 'https://drive.google.com/uc?export=16-1OTvx4DbrXOXolzIoPmkJ5rhvwuUUy');
+(5, 'Echo', 'Maroon 5 - ft. Blackbear', 'Jordi', 'https://drive.google.com/uc?export=download&id=16-1OTvx4DbrXOXolzIoPmkJ5rhvwuUUy');
 
 -- --------------------------------------------------------
 
@@ -2112,7 +2266,7 @@ CREATE TABLE `playlist_artist_6` (
 
 INSERT INTO `playlist_artist_6` (`id_song`, `name_song`, `name_artista`, `song_album`, `direction_song`) VALUES
 (1, 'Jason', 'The Midnight - ft. Nikki Flores', 'Endless Summer', 'https://drive.google.com/uc?export=download&id=1NV4pJqRGdnxULvh4GWT2XHgB_SKcwPtR'),
-(2, 'Deep Blue', 'The Midnight', 'Monsters', 'https://drive.google.com/uc?export=download&id=1_y8Hnir0gXfooV5vMas39jYHBXhNUXKt'),
+(2, 'Deep Blue', 'The Midnight', 'Monsters', 'https://drive.google.com/uc?export=download&id=1THQPMYeEdtWpnhGGASX5qlyOk85qG_5f'),
 (3, 'Crockett\'s Revenge', 'The Midnight', 'Endless Summer', 'https://drive.google.com/uc?export=download&id=1_y8Hnir0gXfooV5vMas39jYHBXhNUXKt'),
 (4, 'Because The Night', 'The Midnight - ft. Nikki Flores', 'Horror Show', 'https://drive.google.com/uc?export=download&id=1BrBUR0i5Fb8SOyTcjI5VR2D9OlRX1Zzj'),
 (5, 'Days of Thunder', 'The Midnight', 'Days of Thunder', 'https://drive.google.com/uc?export=download&id=14I3huXXDbyCo8WWPp2-XN24r89DPdL1q'),
@@ -2169,7 +2323,8 @@ INSERT INTO `playlist_artist_8` (`id_song`, `name_song`, `name_artista`, `song_a
 (2, 'Give it away', 'Red Hot Chili Peppers', 'Sugar Sex Magik', 'https://drive.google.com/uc?export=download&id=1w72ZwpsZjOCL_sQCuj0THoYQ2YgIJ0BI'),
 (3, 'Dani California ', 'Red Hot Chili Peppers ', 'Stadium Arcadium ', 'https://drive.google.com/uc?export=download&id=1R3LlUwTPl8pElH0aAzD_gP6skVlXJ96i'),
 (4, 'Can\'t Stop', 'Red Hot Chili Peppers', 'By the way', 'https://drive.google.com/uc?export=download&id=19bBCq-M4yGjDqK1nyKlssdsWHpmWYyW8'),
-(5, 'Californication ', 'Red Hot Chili Peppers', 'Californication', 'https://drive.google.com/uc?export=download&id=18Ebx12l0SCetn0LM-67FqKLhiTx92qQ2');
+(5, 'Californication ', 'Red Hot Chili Peppers', 'Californication', 'https://drive.google.com/uc?export=download&id=18Ebx12l0SCetn0LM-67FqKLhiTx92qQ2'),
+(6, 'Dark Necessities', 'Red Hot Chili Peppers', 'The Getaway', 'https://drive.google.com/uc?export=download&id=1nSC_BIMJj_9MNOh0tw9zTwpjLFihLMzJ');
 
 -- --------------------------------------------------------
 
@@ -2317,11 +2472,13 @@ CREATE TABLE `playlist_artist_14` (
 --
 
 INSERT INTO `playlist_artist_14` (`id_song`, `name_song`, `name_artista`, `song_album`, `direction_song`) VALUES
-(1, 'Fragments of Time', 'Daft Punk', 'Random Access Memories', 'https: //drive.google.com/uc?export=download&id=10B2neT6kWt_6vyV0WqEqPXH-PT6KGQfX\r\n\r\n'),
+(1, 'Fragments of Time', 'Daft Punk', 'Random Access Memories', 'https://drive.google.com/uc?export=download&id=10B2neT6kWt_6vyV0WqEqPXH-PT6KGQfX\r\n\r\n'),
 (2, 'Give Life Back to Music', 'Daft Punk', 'Random Access Memories', '//drive.google.com/uc?export=download&id=12MzLdN2BdvdTF6xDqccY5jDJspnFyQpZ\r\n'),
 (3, 'Robot Rock', 'Daft Punk', 'Human After All', '//drive.google.com/uc?export=download&id=1FNAS5j4NMpACvhbMaUV6wKUjrQ4kKWZd'),
 (4, 'Something About Us', 'Daft Punk', 'Discovery', '//drive.google.com/uc?export=download&id=1L9g15_8Rwt2tUvUwg5HtNjicsV7VSjqv\r\n'),
-(5, 'Instant Crush', 'Daft Punk', 'Instant Crush', '//drive.google.com/uc?export=download&id=1MjPtowU-YrZEbztZwgxE3DEt5tCgTZVb');
+(5, 'Instant Crush', 'Daft Punk', 'Instant Crush', '//drive.google.com/uc?export=download&id=1MjPtowU-YrZEbztZwgxE3DEt5tCgTZVb'),
+(6, 'Make Love', 'Daft Punk', 'Human After All', 'https://drive.google.com/uc?export=download&id=1FAYxdKy8C3hJuwORAArCHF7KOaYx63Ng'),
+(7, 'Game of Love', 'Daft Punk', 'Random Access Memories', 'https://drive.google.com/uc?export=download&id=1WSAvHaCElofMTYgW5Gq37HRQq6AyBUg6');
 
 -- --------------------------------------------------------
 
@@ -2424,6 +2581,33 @@ INSERT INTO `playlist_artist_18` (`id_song`, `name_song`, `name_artista`, `song_
 (4, 'Los agachados ', 'Maldita Vecindad Y Los Hijos Del 5to. Patio', 'A 30 Años', 'https://drive.google.com/uc?export=download&id=15-Q4PYHmGm64j7rwHEK8wyp9Z-RXiqSO'),
 (5, 'El Cocodrilo', 'Maldita Vecindad Y Los Hijos Del 5to. Patio', 'Mostro', 'https://drive.google.com/uc?export=download&id=1_GW12MX9bDn_kcGcCxSwIWrcCnCCrmaN'),
 (6, 'Caer', 'Maldita Vecindad Y Los Hijos Del 5to. Patio', 'Mostro', 'https://drive.google.com/uc?export=download&id=1Lidc-vEq6XLTrD1G6vfO32mlFGFkgY2j');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `playlist_artist_19`
+--
+
+CREATE TABLE `playlist_artist_19` (
+  `id_song` int(11) NOT NULL,
+  `name_song` varchar(50) NOT NULL,
+  `name_artista` varchar(50) NOT NULL,
+  `song_album` varchar(50) NOT NULL,
+  `direction_song` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `playlist_artist_19`
+--
+
+INSERT INTO `playlist_artist_19` (`id_song`, `name_song`, `name_artista`, `song_album`, `direction_song`) VALUES
+(1, 'Tun turún', 'Bryan Carbajal', 'Sencillo', 'https://drive.google.com/uc?export=view&id=1xmJ-iPAbKz_HOLP9vVO1imfxtmMSvs6I'),
+(2, 'Si no te tengo', 'Bryan Carbajal', 'Sencillo', 'https://drive.google.com/uc?export=view&id=1a7eixfJkYix5aO2NNXPfclPHZ4T9eaFW'),
+(3, 'Your fault', 'Bryan Carbajal', 'Sencillo', 'https://drive.google.com/uc?export=view&id=1g-Hz89iiWFQd3UQ9bzDfAI1nvyCXCBV-'),
+(4, 'Black lives Matter', 'Bryan Carbajal', 'Sencillo', 'https://drive.google.com/uc?export=view&id=1-PC5T5IzG-mbj1ClEvTVWnvGjgGXvEfD'),
+(5, 'BOOP', 'Bryan Carbajal', 'Sencillo', 'https://drive.google.com/uc?export=view&id=1o0RyyAzcoPxQKuomIm-TXRrKkugbvpiD'),
+(6, 'Cactus', 'Bryan Carbajal', 'Sencillo', 'https://drive.google.com/uc?export=view&id=1opUhqpUt4RoSa4GG4ztsDeLZnoHeDQcS'),
+(7, 'Esa canción', 'Bryan Carbajal', 'Sencillo', 'https://drive.google.com/uc?export=view&id=1FUpe0trlW5uurTjbznql2a_ag3s7O3_h');
 
 -- --------------------------------------------------------
 
@@ -2644,6 +2828,12 @@ ALTER TABLE `album_8_4`
 -- Indices de la tabla `album_8_5`
 --
 ALTER TABLE `album_8_5`
+  ADD PRIMARY KEY (`id_song_a`);
+
+--
+-- Indices de la tabla `album_8_6`
+--
+ALTER TABLE `album_8_6`
   ADD PRIMARY KEY (`id_song_a`);
 
 --
@@ -2875,6 +3065,30 @@ ALTER TABLE `biblio_playlist_4`
   ADD PRIMARY KEY (`id_song`);
 
 --
+-- Indices de la tabla `biblio_playlist_5`
+--
+ALTER TABLE `biblio_playlist_5`
+  ADD PRIMARY KEY (`id_song`);
+
+--
+-- Indices de la tabla `biblio_playlist_6`
+--
+ALTER TABLE `biblio_playlist_6`
+  ADD PRIMARY KEY (`id_song`);
+
+--
+-- Indices de la tabla `biblio_playlist_7`
+--
+ALTER TABLE `biblio_playlist_7`
+  ADD PRIMARY KEY (`id_song`);
+
+--
+-- Indices de la tabla `biblio_playlist_8`
+--
+ALTER TABLE `biblio_playlist_8`
+  ADD PRIMARY KEY (`id_song`);
+
+--
 -- Indices de la tabla `dreamaker_artist_1`
 --
 ALTER TABLE `dreamaker_artist_1`
@@ -3091,6 +3305,12 @@ ALTER TABLE `playlist_artist_18`
   ADD PRIMARY KEY (`id_song`);
 
 --
+-- Indices de la tabla `playlist_artist_19`
+--
+ALTER TABLE `playlist_artist_19`
+  ADD PRIMARY KEY (`id_song`);
+
+--
 -- Indices de la tabla `usuarios_dreams`
 --
 ALTER TABLE `usuarios_dreams`
@@ -3275,6 +3495,12 @@ ALTER TABLE `album_8_5`
   MODIFY `id_song_a` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT de la tabla `album_8_6`
+--
+ALTER TABLE `album_8_6`
+  MODIFY `id_song_a` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT de la tabla `album_9_1`
 --
 ALTER TABLE `album_9_1`
@@ -3368,13 +3594,13 @@ ALTER TABLE `album_13_3`
 -- AUTO_INCREMENT de la tabla `album_14_1`
 --
 ALTER TABLE `album_14_1`
-  MODIFY `id_song_a` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_song_a` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `album_14_2`
 --
 ALTER TABLE `album_14_2`
-  MODIFY `id_song_a` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_song_a` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `album_14_3`
@@ -3470,13 +3696,13 @@ ALTER TABLE `album_18_3`
 -- AUTO_INCREMENT de la tabla `artistas_dreams`
 --
 ALTER TABLE `artistas_dreams`
-  MODIFY `id_art` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_art` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `biblioteca_dreams`
 --
 ALTER TABLE `biblioteca_dreams`
-  MODIFY `id_play` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_play` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `biblio_playlist_1`
@@ -3500,6 +3726,30 @@ ALTER TABLE `biblio_playlist_3`
 -- AUTO_INCREMENT de la tabla `biblio_playlist_4`
 --
 ALTER TABLE `biblio_playlist_4`
+  MODIFY `id_song` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de la tabla `biblio_playlist_5`
+--
+ALTER TABLE `biblio_playlist_5`
+  MODIFY `id_song` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de la tabla `biblio_playlist_6`
+--
+ALTER TABLE `biblio_playlist_6`
+  MODIFY `id_song` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de la tabla `biblio_playlist_7`
+--
+ALTER TABLE `biblio_playlist_7`
+  MODIFY `id_song` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de la tabla `biblio_playlist_8`
+--
+ALTER TABLE `biblio_playlist_8`
   MODIFY `id_song` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
@@ -3548,7 +3798,7 @@ ALTER TABLE `dreamaker_artist_7`
 -- AUTO_INCREMENT de la tabla `dreamaker_artist_8`
 --
 ALTER TABLE `dreamaker_artist_8`
-  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_album` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `dreamaker_artist_9`
@@ -3656,7 +3906,7 @@ ALTER TABLE `playlist_artist_7`
 -- AUTO_INCREMENT de la tabla `playlist_artist_8`
 --
 ALTER TABLE `playlist_artist_8`
-  MODIFY `id_song` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_song` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `playlist_artist_9`
@@ -3692,7 +3942,7 @@ ALTER TABLE `playlist_artist_13`
 -- AUTO_INCREMENT de la tabla `playlist_artist_14`
 --
 ALTER TABLE `playlist_artist_14`
-  MODIFY `id_song` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_song` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `playlist_artist_15`
@@ -3717,6 +3967,12 @@ ALTER TABLE `playlist_artist_17`
 --
 ALTER TABLE `playlist_artist_18`
   MODIFY `id_song` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT de la tabla `playlist_artist_19`
+--
+ALTER TABLE `playlist_artist_19`
+  MODIFY `id_song` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios_dreams`

@@ -87,7 +87,9 @@
 
     <hader class="menu-top">
         <div class="logo">
-            <img src="../New_log_in/Assets/Logo_dark.png" class="logo_img"> 
+            <a href="../Pagina General/general_pagina/general.html">
+                <img src="../New_log_in/Assets/Logo_dark.png" class="logo_img">
+            </a>
             <p class="logo_text">Dreams!</p>
         </div>
         <nav class="links">
