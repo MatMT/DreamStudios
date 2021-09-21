@@ -146,6 +146,7 @@
                                 <br>
                                 <input type="radio" name="GenderType" id="masc" value="Masculino">
                                 <label for="masc" class="gender">Masculino</label>
+                                
                             </div>
                         </fieldset>
                     <div class="footer_forms">
