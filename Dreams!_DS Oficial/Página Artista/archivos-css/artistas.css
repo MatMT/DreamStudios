@@ -105,7 +105,7 @@ body {
 /*SeHER */
 
 .searcher-container{
-  width: calc(100% - 232px);
+  width: calc(100% - 239px);
   height: 80px;
   background-color: rgba(0, 0, 0, 0.219);
   -webkit-backdrop-filter: blur(8px);
@@ -380,6 +380,7 @@ body {
 .album h5{
   text-align: center;
   font-weight: normal;
+  margin-top: 5px;
 }
 
 .album h5{
@@ -400,4 +401,16 @@ body {
 .album:hover i{
   opacity: 1;
   transform: translateY(-70px);
+}
+
+
+/*------ cONDICIONES PARA LA PANTALLA DEL COLEGIO --------*/
+
+@media screen and (max-height: 780px){
+  .album{
+    min-width: 17%;
+  }
+  .tem-alb{
+    width: 17%;
+  }
 }

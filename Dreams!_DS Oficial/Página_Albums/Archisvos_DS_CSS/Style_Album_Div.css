@@ -285,11 +285,3 @@ header{
 
 /*----- ------ ------ ----- NUEVAS mEDIA Q ----- ------ -------  ------*/
 
-@media screen and (min-width: 1919px) {
-    
-    .main-contaier{
-        height: calc(100% - 500px);
-        margin-top: 500px;
-    }
-
-}

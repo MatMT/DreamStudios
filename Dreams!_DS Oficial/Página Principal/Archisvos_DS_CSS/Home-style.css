@@ -48,7 +48,7 @@ body {
   width: 232px;
   height: calc(100% - 100px);
 
-  z-index: 0;
+  z-index: 9;
 }
 
 .main-contaier {
@@ -76,17 +76,18 @@ body {
 
 .logo_box_aside {
   width: 100%;
-  min-width: 232px;
+  min-width: 210px;
   height: 25%;
   min-height: 200px;
   margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo_box_aside img {
   width: 120px;
   min-width: 120px;
-  margin-left: 58px;
-  margin-right: 58px;
   margin-top: 18%;
 }
 
@@ -129,7 +130,7 @@ body {
 }
 .main_menu_aside div {
   margin-bottom: 1px;
-  width: 232px;
+  width: 248px;
   height: 45px;
   padding: 12px 0px;
 }
@@ -760,4 +761,36 @@ input:checked ~ .menu-dreams-usuario {
 
 #google_translate_element_id option {
   color: black;
+}
+
+
+/*-------- Media---- para la resolución de las pantallas del colegio*/
+
+
+@media screen and (max-height: 780px){
+  .imit-aside{
+    width: 210px;
+  }
+
+  .main_menu_aside div{
+    width: 228px;
+  }
+
+  .main-contaier {
+    width: calc(100% - 210px);
+  }
+
+  header{
+    width: calc(100% - 210px);
+    left: 210px;
+  }
+
+  .searcher-container{
+    width: calc(100% - 210px);
+    left: 210px;
+  }
+  
+  .logo_box_aside{
+    margin-top: 0px;
+  }
 }

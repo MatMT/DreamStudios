@@ -301,8 +301,6 @@ function elementos(pista) {
     //Etiqueta de audio
 
     var volum = document.getElementById("volumen");
-    
-
 
     volum.addEventListener("change",function(ev){	
         pista.volume = ev.currentTarget.value;	
@@ -313,7 +311,6 @@ function elementos(pista) {
 
 function reproduccion() {
     if((pista.paused==false) && (pista.ended==false)){
-        pista.volume = 0.5;
         pista.pause();
         icono.className = "icon-play-1";
 

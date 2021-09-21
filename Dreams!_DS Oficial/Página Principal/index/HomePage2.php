@@ -128,7 +128,7 @@
 
                 <div class="contenedor-carrusel">
                     <div class="descripcion-bottum">
-                        <h2>Veamos que tenemos para ti...</h2>
+                        <h2>Disfruta de sus obras de arte...</h2>
                         <i class="icon-right-open-mini" id="flechaDe"></i>
                         <i class="icon-left-open-mini" id="flechaIz"></i>
 
@@ -160,9 +160,9 @@
                     </div>
                 </div>
 
-                <div class="contenedor-carrusel">
+                <div class="contenedor-carrusel segundo-cc">
                     <div class="descripcion-bottum">
-                        <h2>Tenemos a un nuevos Dreamers...</h2>
+                        <h2>Tenemos a nuevos Dreamers...</h2>
                         <i class="icon-right-open-mini" id="flechaDe"></i>
                         <i class="icon-left-open-mini" id="flechaIz"></i>
                     </div>

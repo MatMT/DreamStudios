@@ -54,7 +54,9 @@
 }
 
 /*Temporal*/
-
+.segundo-cc{
+  margin-top: 5px;
+}
 .temporal {
   min-width: none;
   width: 22%;
@@ -230,9 +232,9 @@
 }
 
 .carousel-3 .cancion {
-  width: 22%;
+  width: 18%;
   transition: 0.3s ease all;
-  margin: 0px 15px;
+  margin: 0px 10px;
 
   padding: 10px;
   position: relative;
@@ -256,8 +258,8 @@
   width: 5vmin;
   height: 5vmin;
   position: absolute;
-  top: 35%;
-  left: 40%;
+  bottom: 0px;
+  right: 20px;
   opacity: 0;
   border-radius: 5vmin;
   background-color: white;
@@ -278,6 +280,7 @@
 }
 
 .cancion:hover .circulo-i-3 {
+  transform: translateY(-75px);
   opacity: 1;
 }
 
@@ -298,4 +301,25 @@
   .temporal {
     width: 15%;
   }
+}
+
+
+@media screen and (max-height: 780px){
+  .contenedor-carrusel .artista{
+    width: 17%;
+    min-width: 17%;
+  }
+
+  .temporal{
+    width: 17%;
+  }
+
+  .carousel-2 .cancion {
+    min-width: 15%;
+  }
+
+  .carousel-3 .cancion {
+    width: 15%;
+  }
+
 }

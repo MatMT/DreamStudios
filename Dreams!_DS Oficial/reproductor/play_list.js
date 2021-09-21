@@ -312,7 +312,7 @@ function elementos(pista) {
 
     var volum = document.getElementById("volumen");
     
-
+    pista.volume = 0.5;
 
     volum.addEventListener("change",function(ev){	
         pista.volume = ev.currentTarget.value;	
@@ -323,7 +323,6 @@ function elementos(pista) {
 
 function reproduccion() {
     if((pista.paused==false) && (pista.ended==false)){
-        pista.volume = 0.5;
         pista.pause();
         icono.className = "icon-play-1";
         startplay.className = "icon-play-1";

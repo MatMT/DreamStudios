@@ -176,7 +176,7 @@
                                 <div class='album tem-alb' id='album_".$listAlbum["id_album"]."'>
                                     <img src='".$listAlbum["imgAlbum"]."' alt='img'>
                                     <h4 translate='no'>".$listAlbum["nameAlbum"]."</h4>
-                                    <h5>13 March 2020</h5>
+                                    <h5>".$listAlbum["nameArtist"]."</h5>
                                     <i class='icon-play-circled'></i>
                                 </div>
                                 <script>
