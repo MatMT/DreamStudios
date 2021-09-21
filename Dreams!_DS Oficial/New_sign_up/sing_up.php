@@ -139,8 +139,11 @@
                             </div>
                             <div class="campo genero">
                                 <label for="GenderType">¿Cúal es tu género?</label>
-                                <input type="radio" required>
-                                <input type="radio" required>
+                                <input type="radio" name="GenderType" id="fem" value="Femenino">
+                                <label for="fem" class="gender">Femenino</label>
+                                <br>
+                                <input type="radio" name="GenderType" id="masc" value="Masculino">
+                                <label for="masc" class="gender">Masculino</label>
                             </div>
                         </fieldset>
                     <div class="footer_forms">
