@@ -1,3 +1,39 @@
+<?php 
+    session_start();
+    
+    require("../../conexion_mysql/conection-basedatos.php");
+
+    if(!empty($_POST['EmailType']) && !empty($_POST['password'])){
+        
+        $records = $conexion->prepare("SELECT id_users, e_mail, pasware FROM usuarios_dreams WHERE  e_mail=:email");
+        $records->bindParam(":email", $_POST["EmailType"]);
+        $records->execute();
+
+        $results = $records->fetch(PDO::FETCH_ASSOC);
+        
+        $message = "";
+        
+
+        if(is_array($results)){
+            if(count($results) > 0 && password_verify($_POST['password'], $results["pasware"])){
+               
+                $_SESSION["id_user"] = $results["id_users"];
+
+                $message = "Iniciaste sesión en Dreams!";
+                header('Location: ./../../Página Principal/index/HomePage2.php');
+                
+            }else{
+
+                $message = "Lo sentimos, usuario o contraseñas incorrectos";
+            }
+        }else{
+            $message = "El usuario es incorrecto";
+        }
+        
+        
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -28,9 +64,14 @@
                 <p>
                     Es un gusto tener por aquí <br> ¿Listo para el despegue?
                 </p>
+                <?php if(!empty($message)): ?>
+                    <div class="respuesta">
+                        <p><?= $message ?></p>
+                    </div>
+                <?php endif; ?>
             </div>
             <div class="formulario">
-                <form>
+                <form action="log_in.php" method="post">
                     <fieldset>
                         <div class="campo">
                             <label>Tu correo electrónico</label>
