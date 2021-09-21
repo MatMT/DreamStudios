@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DreamStudios</title>
-        <link rel="icon" href="../../Recursos/Iconos/Ds_logo.ico">
+        <link rel="icon" href="../../Recursos/Iconos/icono_dark.ico">
         <link rel="stylesheet" href="Style.css">
     </head>
 <body>

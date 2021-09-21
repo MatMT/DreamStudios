@@ -182,3 +182,30 @@ hr {
     var(--morado) 100%
   );
 }
+
+/*-------------- botones --------------------*/
+
+input[type="radio"] {
+  display: none;
+}
+
+label.gender {
+  margin-left: 37%;
+  margin-right: 37%;
+  position: relative;
+  color: rgb(27, 27, 27);
+  font-size: 1.4rem;
+  border: 3px solid rgb(27, 27, 27);
+  border-radius: 5px;
+  padding: 0.5em 0.5em;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+}
+
+input[type="radio"]:checked + label.gender {
+  border-color: rgb(180, 16, 71);
+  color: rgb(180, 16, 71);
+}
+

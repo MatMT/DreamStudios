@@ -40,6 +40,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../Recursos/Iconos/icono_dark.ico">
     <title>Inicia Sesión</title>
     <link rel="icon" href="../Recursos/Iconos/icono_dark.ico">
     <link rel="stylesheet" href="Css/Style_log.css">
@@ -48,12 +49,14 @@
 <body>
     <hader class="menu-top">
         <div class="logo">
-            <img src="Assets/Logo_dark.png" class="logo_img"> 
+            <a href="../Pagina General/general_pagina/general.html">
+                <img src="Assets/Logo_dark.png" class="logo_img"> 
+            </a>
             <p class="logo_text">Dreams!</p>
         </div>
         <nav class="links">
-            <a href="#">Registrarse</a>
-            <a href="#">Sobre nosotros</a>
+            <a href="../New_sign_up/sing_up.php">Registrarse</a>
+            <a href="../About us/Html/Nosotros.html">Sobre nosotros</a>
         </nav>
     </hader>
     <main>

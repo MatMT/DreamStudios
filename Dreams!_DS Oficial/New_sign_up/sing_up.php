@@ -30,7 +30,7 @@
             $stmt -> bindParam(":ege", $_POST['AgeType']);
 
 
-             if($_POST["PassType"] = $_POST['repitPasware']){
+            //  if($_POST["PassType"] = $_POST['repitPasware']){
                 
                  if($stmt->execute()){
                     
@@ -49,7 +49,7 @@
                         $contenido .= "";
 
                         mail($email,"Te registraste en Dreams!",$contenido, "Bienvenid@ a Dreams 🎶");
-                        header("Location:../../Inicio de sesión/Html/Inicio_Personal.php");
+                        header("Location:../New_log_in/log_in.php");
                 
                         }
 
@@ -57,9 +57,9 @@
                  }else{
                      $mensaje = "Parace que existe un error";
                  }
-             }else{
-                 $mensaje = "Las contraseñas deben de coincidir";
-             }
+            //  }else{
+            //      $mensaje = "Las contraseñas deben de coincidir";
+            //  }
     }
 
         // AVISO : Viejo las lineas que comente, fue por que en su momento me daban error y no me dejaban 
@@ -87,7 +87,9 @@
 
     <hader class="menu-top">
         <div class="logo">
-            <img src="../New_log_in/Assets/Logo_dark.png" class="logo_img"> 
+            <a href="../Pagina General/general_pagina/general.html">
+                <img src="../New_log_in/Assets/Logo_dark.png" class="logo_img">
+            </a>
             <p class="logo_text">Dreams!</p>
         </div>
         <nav class="links">
@@ -127,11 +129,11 @@
                             </div>
                             <div class="campo">
                                 <label for="NameType">¿Como te llamaremos?</label>
-                                <input type="password" placeholder="Tu contraseña" name="NameType" class="nombre" id="NameType" required>
+                                <input type="text" placeholder="Tu Nombre de usuario" name="NameType" class="nombre" id="NameType" required>
                             </div>
                             <div class="campo">
                                 <label for="PassType">Crea una contraseña</label>
-                                <input type="password" placeholder="Tu Nombre de usuario" name="PassType" class="nombre" id="PassType" required>
+                                <input type="password" placeholder="Tu contraseña" name="PassType" class="nombre" id="PassType" required>
                             </div>
                             <div class="campo">
                                 <label for="AgeType">Dinos tu edad</label>
@@ -139,8 +141,12 @@
                             </div>
                             <div class="campo genero">
                                 <label for="GenderType">¿Cúal es tu género?</label>
-                                <input type="radio" required>
-                                <input type="radio" required>
+                                <input type="radio" name="GenderType" id="fem" value="Femenino">
+                                <label for="fem" class="gender">Femenino</label>
+                                <br>
+                                <input type="radio" name="GenderType" id="masc" value="Masculino">
+                                <label for="masc" class="gender">Masculino</label>
+                                
                             </div>
                         </fieldset>
                     <div class="footer_forms">
