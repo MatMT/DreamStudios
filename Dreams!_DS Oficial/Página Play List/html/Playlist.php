@@ -52,7 +52,7 @@
                     <img src="../../Recursos/Imágenes/1x/Recurso 1.png">
                 </div>
                 <!---Menú de Dreams-->
-                <<div class="main_menu_aside">
+                <div class="main_menu_aside">
                     <div class="option">
                         <a href="../../Página Principal/index/HomePage2.php"><i class="icon-music-2"></i>
                         <p>Inicio</p></a>

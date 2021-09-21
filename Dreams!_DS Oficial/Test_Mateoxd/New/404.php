@@ -12,7 +12,9 @@
     <header>
         <div class="back">
             <nav class="">
+                <a href="../../Pagina General/general_pagina/general.html">
                 <img src="../../Pagina General/Página-general-Oficial/imagenes/white-logo.svg" alt="img" id="white-mod">
+                </a>
                 <ul class="navigation" data-animation="left-rigth">
                     <li>
                         <!--traduccion-------------------------->
