@@ -21,13 +21,12 @@
                         <script type="text/javascript" src="../../Recursos/Otros/js/traductor.js"></script>
                         <!------------------------------------->
                        </li>
-                    <li><a href="../../Inicio de sesión/Html/Inicio_Personal.php">Iniciar Sesion</a></li>
-                    <li><a href="../../Página Registro/Html/Forms_Personal.php">Registrarse</a></li>
+                    <li><a href="../../New_log_in/log_in.php">Iniciar Sesion</a></li>
+                    <li><a href="../../New_sign_up/sing_up.php">Registrarse</a></li>
                 </ul>
             </nav>
         </header>
             <div class="background-img-black">
-                <img class="fondo-estelar" src="../../Pagina General/Página-general-Oficial/imagenes/fondo-header.svg" alt="img">
                 <div class="logo-contenedor">
                     <h1 id="Ops">¡Oops!
                     </h1>
@@ -35,7 +34,7 @@
                     </h2>
 
                     <div class="boton">
-                        <a href="../../Pagina General/Página-general-Oficial/Paginageneral.html"><button>Inicio</button></a>
+                        <a href="../../Pagina General/general_pagina/general.html"><button>Inicio</button></a>
                     </div>
                 </div>
                 
