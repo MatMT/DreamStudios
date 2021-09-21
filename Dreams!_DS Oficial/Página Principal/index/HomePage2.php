@@ -66,8 +66,6 @@
         
         $_SESSION["palabra"] = $_POST["buscador01"];
         header("Location: ../../buscador_01/html/buscadorDS.php");
-
-        //$buscar = $conexion->prepare("SELECT * FROM `artistas_dreams` WHERE `name_artist` LIKE '%".$palabra."%'");
     }
 
 ?>
@@ -113,7 +111,7 @@
                     </div>
 
                     <div class="option">
-                        <a href="../../Pagina DreamMaker J/html/DreaMaker.html"><i class="icon-music-1"></i>
+                        <a href="../../buscador_01/html/buscadorDS.php""><i class="icon-music-1"></i>
                         <p translate="no">Buscar</p></a>
                     </div>
                 </div>

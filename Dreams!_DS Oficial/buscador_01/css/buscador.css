@@ -1,0 +1,86 @@
+:root {
+   --our-font: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+   --border-cont: 1px solid white;
+}
+
+/*---- Titulo del Buscador -----*/
+.title{
+    margin: 10px 20px;
+    width: 100%;
+}
+
+.title h1{
+    font-size: 4rem;
+    margin: 20px 0px;
+}
+
+.title h4{
+    font-weight: normal;
+    width: 70%;
+    font-size: 1.3rem;
+    color: rgb(207, 207, 207);
+    margin: 20px 0px;
+}
+
+/*---- ----- -- Resultados de la Busqueda ---- ---- ---*/
+
+.box-info{
+    width: 100%;
+    margin: 50px 20px 10px 20px;
+    padding: 20px 10px;
+}
+
+.content-results{
+    display: flex;
+    flex-wrap: wrap;
+}
+.artista{
+    width: 22%;
+    margin: 50px;
+    text-align: center;
+    font-weight: normal;
+    position: relative;
+    padding: 10px;
+    transition: 0.5s ease-in;
+}
+
+.artista:hover {
+    transform: scale(1.05);
+    transform-origin: center;
+    transition: 0.5s ease-in-out;
+  
+    background-color: rgba(0, 0, 0, 0.452);
+    border-radius: 15px;
+}
+
+.artista img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.artista h4{
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+
+.artista i {
+    font-size: 5vmin;
+    position: absolute;
+    right: 30px;
+    bottom: 0%;
+    text-shadow: -3px 4px 10px #000;
+  
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.artista:hover i {
+    opacity: 1;
+    transform: translateY(-60px);
+}
+
+.num-resul{
+    margin: 20px auto;
+    text-align: center;
+}

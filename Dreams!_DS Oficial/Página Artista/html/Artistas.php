@@ -48,6 +48,13 @@
         }
 
     }
+
+    if(!empty($_POST["buscador01"])){
+        
+        $_SESSION["palabra"] = $_POST["buscador01"];
+        header("Location: ../../buscador_01/html/buscadorDS.php");
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -89,7 +96,7 @@
                         <p>Biblioteca DS</p></a>
                     </div>
                     <div class="option">
-                        <a href="../../Pagina DreamMaker J/html/DreaMaker.html"><i class="icon-music-1"></i>
+                        <a href="../../buscador_01/html/buscadorDS.php"><i class="icon-music-1"></i>
                         <p>Buscador</p></a>
                     </div>
                 </div>
@@ -219,7 +226,9 @@
             </section>
 
             <div class="searcher-container">
-                <input type="text" class="searcher-user" placeholder="Buscar canciones, artistas..." required>
+                <form method="post" action="Artistas.php">
+                    <input type="text" class="searcher-user" name="buscador01" placeholder="Buscar artistas..." required>
+                </form>
                 <i class="icon-note" id="nota"></i>
                 <div class="grupo">
                     <?php
