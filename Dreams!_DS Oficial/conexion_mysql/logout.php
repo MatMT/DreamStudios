@@ -5,5 +5,5 @@
 
     session_destroy();
 
-    header("Location: ../Inicio de sesión/Html/Inicio_Personal.php")
+    header("Location: ../New_log_in/log_in.php")
 ?>
