@@ -3,7 +3,7 @@
     require("../conexion_mysql/conection-basedatos.php");
 
     if(isset($_SESSION["id_user"])){
-        $usuario = $conexion->prepare("SELECT id_users, name_user, e_mail FROM usuarios_dreams WHERE id_users= :id");
+        $usuario = $conexion->prepare("SELECT id_users, name_user, e_mail, age_users, genero FROM usuarios_dreams WHERE id_users= :id");
         $usuario->bindParam(":id", $_SESSION["id_user"]);
         $usuario->execute();
 
@@ -13,6 +13,7 @@
         if(count($inicio) > 0){
             $user = $inicio;
         }
+        
     }
 
 ?>
@@ -46,15 +47,16 @@
                 	   <!--==========================
                         =            Iconos            =
                         ===========================-->
-                    <li><i class="icono fas fa-map-signs"></i> Direccion de usuario:</li>
-                    <li><i class="icono fas fa-phone-alt"></i> Telefono:</li>
-                    <li><i class="icono fas fa-map-marker-alt"></i> Ubicacion.</li>
+
+                <?php if(!empty($user)):?>
+                    <li><i class="icono fas fa-map-signs"></i>Edad: <?= $user["age_users"]?></li>
+                    <li><i class="icono fas fa-share-alt"></i>Correo: <?= $user["e_mail"]?></li>
+                <?php endif; ?>
                 </ul>
                 <ul class="lista-datos">
-                    
-                    <li><i class="icono fas fa-calendar-alt"></i> Fecha nacimiento.</li>
-                    <li><i class="icono fas fa-user-check"></i> Registro.</li>
-                    <li><i class="icono fas fa-share-alt"></i> Genero .</li>
+                    <?php if(!empty($user)):?>
+                        <li><i class="icono fas fa-calendar-alt"></i>Genero: <?= $user["genero"]?></li>
+                    <?php endif; ?>
                 </ul>
                </div>
         </div>

@@ -91,8 +91,8 @@
             <p class="logo_text">Dreams!</p>
         </div>
         <nav class="links">
-            <a href="#">Registrarse</a>
-            <a href="#">Sobre nosotros</a>
+            <a href="../New_log_in/log_in.html">Inicia Sesión</a>
+            <a href="../About us/Html/Nosotros.html">Sobre nosotros</a>
         </nav>
     </hader> 
     <!-- Nice -->
@@ -116,34 +116,34 @@
                     </div>
                 <?php endif; ?>
                 <div class="formulario_registro">
-                    <form>
+                    <form action="" method="post">
                         <fieldset>
                             <div class="campo">
-                                <label>Tu correo electrónico</label>
+                                <label for="EmailType">Tu correo electrónico</label>
                                 <input type="email" placeholder="Tu email" name="EmailType" class="nombre" id="EmailType" required>
                             </div>
                             <div class="campo">
-                                <label>¿Como te llamaremos?</label>
+                                <label for="NameType">¿Como te llamaremos?</label>
                                 <input type="password" placeholder="Tu contraseña" name="NameType" class="nombre" id="NameType" required>
                             </div>
                             <div class="campo">
-                                <label>Crea una contraseña</label>
+                                <label for="PassType">Crea una contraseña</label>
                                 <input type="password" placeholder="Tu Nombre de usuario" name="PassType" class="nombre" id="PassType" required>
                             </div>
                             <div class="campo">
-                                <label>Dinos tu edad</label>
+                                <label for="AgeType">Dinos tu edad</label>
                                 <input type="number" name="AgeType" min="0" max="120" placeholder="0" id="AgeType" required>
                             </div>
                             <div class="campo genero">
-                                <label>¿Cúal es tu género?</label>
+                                <label for="GenderType">¿Cúal es tu género?</label>
                                 <input type="radio" required>
                                 <input type="radio" required>
                             </div>
                         </fieldset>
-                    </form>
                     <div class="footer_forms">
                         <input type="submit" value="Unete a Dreams!  ➜" class="enviar" name="enviar"></input>
                     </div>
+                    </form>
                 </div>
                 </div>
             </div>
