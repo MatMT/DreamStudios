@@ -22,6 +22,8 @@
         }
     }else{
         $newMess = "no hay";
+        $b_palabra = "0000";
+        $mensaje = "No se encontró";
     }
 
 
@@ -48,6 +50,7 @@
             $newMess = "Si hay";
         }else{
             $newMess = "no hay";
+            $b_palabra = "0000";
         }
     }
 
@@ -132,9 +135,9 @@
                             if($newMess == "no hay"){
                                 echo "<h1>Ingresa el nombre de un artista en el buscador</h1>";
                             }else{
-                                echo "<h1>No logramos encontrar ".$b_palabra."</h1>
-                                    <h2>Intentalo de nuevo</h2>
-                                    <h2>Puede ser que no hace faltado ese artista</h2>
+                                echo "<h1 class='title-1' >No logramos encontrar <span>".$b_palabra."</span></h1>
+                                    <h2 class='title-2'>Intentalo de nuevo</h2>
+                                    <h2 class='title-2'>Puede ser que no hace faltado ese artista</h2>
                                 ";
                             }
                             
@@ -144,6 +147,7 @@
                             $comprobar = "comprobado";
                         }
                     ?>
+                    
                     <div class="content-results">
                         <?php 
                             $contador = 0;

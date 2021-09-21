@@ -1,7 +1,7 @@
 <?php 
     session_start();
     
-    require("../../conexion_mysql/conection-basedatos.php");
+    require("../conexion_mysql/conection-basedatos.php");
 
     if(!empty($_POST['EmailType']) && !empty($_POST['password'])){
         
@@ -20,7 +20,7 @@
                 $_SESSION["id_user"] = $results["id_users"];
 
                 $message = "Iniciaste sesión en Dreams!";
-                header('Location: ./../../Página Principal/index/HomePage2.php');
+                header('Location: ../Página Principal/index/HomePage2.php');
                 
             }else{
 
@@ -41,6 +41,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicia Sesión</title>
+    <link rel="icon" href="../Recursos/Iconos/icono_dark.ico">
     <link rel="stylesheet" href="Css/Style_log.css">
 </head>
 
@@ -75,20 +76,21 @@
                     <fieldset>
                         <div class="campo">
                             <label>Tu correo electrónico</label>
-                            <input type="email" placeholder="email" required>
+                            <input type="email" name="EmailType" placeholder="email" required>
                         </div>
                         <div class="campo">
                             <label>Tu contraseña</label>
-                            <input type="password" placeholder="contraseña" required>
+                            <input type="password" name="password" placeholder="contraseña" required>
                         </div>
                     </fieldset>
-                </form>
-                <div class="footer_forms">
+                    <div class="footer_forms">
                     <a href="#" class="lost_pass">¿Olvidaste tu contraseña?</a>
-                <hr>
+                    <hr>
                     <p>¿No tienes una cuenta?</p>
                     <input type="submit" value="Iniciar Sesión  ➜" class="enviar"></input>
                 </div>
+                </form>
+                
             </div>
     </main>
 </body>

@@ -198,3 +198,19 @@
 .you-albums{
   border-bottom: white 4px solid;
 }
+
+
+.no-hay{
+  background-color: rgba(0, 0, 0, 0.26);
+  width: 22%;
+  min-width: 22%;
+  height: 200px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.623);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -14,12 +14,36 @@
 
     // CANCIONES SAD
 
-    $triste =  $conexion->prepare("SELECT * FROM biblioteca_dreams WHERE categoria = 'melancolico'");
+    $triste =  $conexion->prepare("SELECT * FROM biblioteca_dreams WHERE categoria = 'sad'");
     $triste->execute();
 
     $triste = $triste->fetch(PDO::FETCH_ASSOC);
 
-    //
+    // CANCIONES ROMANTICAS
+
+    $romanticas = $conexion->prepare("SELECT * FROM biblioteca_dreams WHERE categoria = 'romantico'");
+    $romanticas->execute();
+    $amor = $romanticas->fetch(PDO::FETCH_ASSOC);
+
+    // CANCIONES POP
+
+    $pop_list = $conexion->prepare("SELECT * FROM biblioteca_dreams WHERE categoria = 'pop'");
+    $pop_list->execute();
+    $pop_1 = $pop_list->fetch(PDO::FETCH_ASSOC);
+
+    // CANCIONES ROCK
+
+
+    $rock_get = $conexion->prepare("SELECT * FROM biblioteca_dreams WHERE categoria = 'rock'");
+    $rock_get->execute();
+    $rock_array = $rock_get->fetch(PDO::FETCH_ASSOC);
+
+    // CANCIONES LATINAS
+
+    $latin_get = $conexion->prepare("SELECT * FROM biblioteca_dreams WHERE categoria = 'latinas'");
+    $latin_get->execute();
+    $latin_array = $latin_get->fetch(PDO::FETCH_ASSOC);
+
 
     if(isset($_GET["w3"])){
 
@@ -161,7 +185,7 @@
                             <?php
                                 if(is_array($triste)){
 
-                                    $list_2 = $conexion->prepare("SELECT * FROM biblioteca_dreams WHERE categoria = 'melancolico'");
+                                    $list_2 = $conexion->prepare("SELECT * FROM biblioteca_dreams WHERE categoria = 'sad'");
                                     $list_2->execute();
                                    
                                     while($new_sad = $list_2->fetch(PDO::FETCH_ASSOC)){
@@ -180,6 +204,182 @@
                                                 var listSelect = document.getElementById('casual_".$new_sad["id_play"]."');
                                                 listSelect.addEventListener('click', function(){
                                                     var referencelist = ".$new_sad["id_play"].";
+                                                    window.location.href = window.location.href + '?w3=' + referencelist;
+                                                });
+                                            </script>";
+                                    }
+
+                                }else{
+                                    echo "
+                                    <div class='no-hay'>
+                                        <h1>¡Upps! Pararece que aún faltan trabajo por hacer</h1>
+                                    </div>
+                                    ";
+                                }
+                            ?>                            
+                        </div>
+                    </div>
+
+                    <div class="tipo">
+                        
+                        <h1>Para dos corazones unidos</h1>
+                        
+                        <div class="carrucel-playlist">
+                            
+                            <?php
+                                if(is_array($amor)){
+
+                                    $list_3 = $conexion->prepare("SELECT * FROM biblioteca_dreams WHERE categoria = 'romantico'");
+                                    $list_3->execute();
+                                   
+                                    while($new_amor = $list_3->fetch(PDO::FETCH_ASSOC)){
+                                        
+                                        echo "
+
+                                            <div class='play_lists' id='casual_".$new_amor["id_play"]."'>
+                                                <img src='". $new_amor["img_plalist"] ."' alt='img'>
+                                                <h4>".$new_amor["name_play"]."</h4>
+                                                <h5>De ".$new_amor["creator_play"]."</h5>
+                                                <span class='circulo-i-3'>
+                                                    <i class='icon-play-1'></i>
+                                                </span>
+                                            </div>
+                                            <script>
+                                                var listSelect = document.getElementById('casual_".$new_amor["id_play"]."');
+                                                listSelect.addEventListener('click', function(){
+                                                    var referencelist = ".$new_amor["id_play"].";
+                                                    window.location.href = window.location.href + '?w3=' + referencelist;
+                                                });
+                                            </script>";
+                                    }
+
+                                }else{
+                                    echo "
+                                    <div class='no-hay'>
+                                        <h1>¡Upps! Pararece que aún faltan trabajo por hacer</h1>
+                                    </div>
+                                    ";
+                                }
+                            ?>                            
+                        </div>
+                    </div>
+
+                    <div class="tipo">
+                        
+                        <h1>Nivel del POP</h1>
+                        
+                        <div class="carrucel-playlist">
+                            
+                            <?php
+                                if(is_array($pop_1)){
+
+                                    $list_4 = $conexion->prepare("SELECT * FROM biblioteca_dreams WHERE categoria = 'pop'");
+                                    $list_4->execute();
+                                   
+                                    while($new_pop = $list_4->fetch(PDO::FETCH_ASSOC)){
+                                        
+                                        echo "
+
+                                            <div class='play_lists' id='casual_".$new_pop["id_play"]."'>
+                                                <img src='". $new_pop["img_plalist"] ."' alt='img'>
+                                                <h4>".$new_pop["name_play"]."</h4>
+                                                <h5>De ".$new_pop["creator_play"]."</h5>
+                                                <span class='circulo-i-3'>
+                                                    <i class='icon-play-1'></i>
+                                                </span>
+                                            </div>
+                                            <script>
+                                                var listSelect = document.getElementById('casual_".$new_pop["id_play"]."');
+                                                listSelect.addEventListener('click', function(){
+                                                    var referencelist = ".$new_pop["id_play"].";
+                                                    window.location.href = window.location.href + '?w3=' + referencelist;
+                                                });
+                                            </script>";
+                                    }
+
+                                }else{
+                                    echo "
+                                    <div class='no-hay'>
+                                        <h1>¡Upps! Pararece que aún faltan trabajo por hacer</h1>
+                                    </div>
+                                    ";
+                                }
+                            ?>                            
+                        </div>
+                    </div>
+
+                    <div class="tipo">
+                        
+                        <h1>Nivel del Rock</h1>
+                        
+                        <div class="carrucel-playlist">
+                            
+                            <?php
+                                if(is_array($rock_array)){
+
+                                    $list_5 = $conexion->prepare("SELECT * FROM biblioteca_dreams WHERE categoria = 'rock'");
+                                    $list_5->execute();
+                                   
+                                    while($new_rock = $list_5->fetch(PDO::FETCH_ASSOC)){
+                                        
+                                        echo "
+
+                                            <div class='play_lists' id='casual_".$new_rock["id_play"]."'>
+                                                <img src='". $new_rock["img_plalist"] ."' alt='img'>
+                                                <h4>".$new_rock["name_play"]."</h4>
+                                                <h5>De ".$new_rock["creator_play"]."</h5>
+                                                <span class='circulo-i-3'>
+                                                    <i class='icon-play-1'></i>
+                                                </span>
+                                            </div>
+                                            <script>
+                                                var listSelect = document.getElementById('casual_".$new_rock["id_play"]."');
+                                                listSelect.addEventListener('click', function(){
+                                                    var referencelist = ".$new_rock["id_play"].";
+                                                    window.location.href = window.location.href + '?w3=' + referencelist;
+                                                });
+                                            </script>";
+                                    }
+
+                                }else{
+                                    echo "
+                                    <div class='no-hay'>
+                                        <h1>¡Upps! Pararece que aún faltan trabajo por hacer</h1>
+                                    </div>
+                                    ";
+                                }
+                            ?>                            
+                        </div>
+                    </div>
+
+                    <div class="tipo">
+                        
+                        <h1>Nivel del Rock</h1>
+                        
+                        <div class="carrucel-playlist">
+                            
+                            <?php
+                                if(is_array($latin_array)){
+
+                                    $list_6 = $conexion->prepare("SELECT * FROM biblioteca_dreams WHERE categoria = 'latinas'");
+                                    $list_6->execute();
+                                   
+                                    while($new_latin = $list_6->fetch(PDO::FETCH_ASSOC)){
+                                        
+                                        echo "
+
+                                            <div class='play_lists' id='casual_".$new_latin["id_play"]."'>
+                                                <img src='". $new_latin["img_plalist"] ."' alt='img'>
+                                                <h4>".$new_latin["name_play"]."</h4>
+                                                <h5>De ".$new_latin["creator_play"]."</h5>
+                                                <span class='circulo-i-3'>
+                                                    <i class='icon-play-1'></i>
+                                                </span>
+                                            </div>
+                                            <script>
+                                                var listSelect = document.getElementById('casual_".$new_latin["id_play"]."');
+                                                listSelect.addEventListener('click', function(){
+                                                    var referencelist = ".$new_latin["id_play"].";
                                                     window.location.href = window.location.href + '?w3=' + referencelist;
                                                 });
                                             </script>";

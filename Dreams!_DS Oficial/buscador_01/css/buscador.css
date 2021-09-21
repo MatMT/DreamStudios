@@ -81,6 +81,20 @@
 }
 
 .num-resul{
-    margin: 20px auto;
+    margin: 40px auto;
     text-align: center;
+}
+.title-1{
+    text-align: center;
+}
+.title-1 span{
+    color: rgba(255, 255, 255, 0.507);
+    margin-bottom: 20px;
+}
+
+.title-2{
+    font-weight: normal;
+    text-align: center;
+    margin: 10px;
+    font-size: 1.2rem;
 }
